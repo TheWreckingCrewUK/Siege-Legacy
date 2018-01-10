@@ -26,7 +26,7 @@ highestPlayerCountReached = 0; // the highest count reached of total connected p
 	totalPoints = totalPoints + _this;
 	
 	if (totalPoints >= pointLimit) then {
-		"pointVictory" call BIS_fnc_endMissionServer;
+		execVM "Siege_Core\server\sys_controllers\missionsuccess.sqf";
 	};
 	
 	if(totalPoints < 0)then{totalPoints = 0};
