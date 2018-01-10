@@ -1,6 +1,6 @@
 @ECHO OFF
 
-echo Making hard junction links to Siege core within mission folders...
+echo Making hard junction links to siege core within mission folders...
 
 for /d %%i in (*) do (
 	IF /I "%%i" == "Siege_Core" (
