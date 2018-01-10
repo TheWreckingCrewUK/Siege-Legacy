@@ -1,0 +1,1 @@
+execVM "siege_core\server\sys_cleanup\deadbodies.sqf";

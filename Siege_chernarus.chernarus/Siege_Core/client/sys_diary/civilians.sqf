@@ -1,0 +1,1 @@
+player CreateDiaryRecord ["Diary",["Civilians","The civilian presence has evacuated as a result of the intense fighting. Nothing here but fighters."]];

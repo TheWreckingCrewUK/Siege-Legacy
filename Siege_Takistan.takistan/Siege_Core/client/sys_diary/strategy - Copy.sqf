@@ -1,0 +1,1 @@
+player CreateDiaryRecord ["Diary",["Siren","If you hear a series of short, harsh tones coming from the loudspeakers then enemy infantry are within the base walls and you have 60 seconds to neutralise them before the mission is considered a failure. A single, long tone indicates an incoming mortar attack."]];

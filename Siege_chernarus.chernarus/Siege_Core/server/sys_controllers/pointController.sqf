@@ -1,0 +1,48 @@
+/*
+* Author: [TWC] Bosenator
+* Server controller for handling point increases/decreases, and their eventual completion screen (or failure)
+*
+* Arguments:
+* 0: "TWC_Insurgency_adjustPoints" <String>
+* 1: Integer
+*
+* Return Value:
+* <NONE>
+*
+* Example:
+* ["TWC_Insurgency_adjustPoints", -5] call CBA_fnc_serverEvent;
+*
+* Public: No
+*/
+pointLimit = 200;
+if(isNil "totalPoints") then{
+totalPoints = 0;
+publicVariable "totalPoints"; // init once
+};
+
+highestPlayerCountReached = 0; // the highest count reached of total connected players
+
+["TWC_Insurgency_adjustPoints", {
+	totalPoints = totalPoints + _this;
+	
+	if (totalPoints >= pointLimit) then {
+		"pointVictory" call BIS_fnc_endMissionServer;
+	};
+	
+	if(totalPoints < 0)then{totalPoints = 0};
+	
+	publicVariable "totalPoints";
+}] call CBA_fnc_addEventHandler;
+
+["playerConnectedEHandler", "onPlayerConnected", {
+	_playerCount = count (allPlayers - entities "HeadlessClient_F");
+	
+	if (_playerCount > highestPlayerCountReached) then {
+		highestPlayerCountReached = _playerCount;
+		
+		if (highestPlayerCountReached > 8) then {
+			pointLimit = pointLimit + 50;
+		};
+	};
+	publicVariable "pointLimit";
+}] call BIS_fnc_addStackedEventHandler;
