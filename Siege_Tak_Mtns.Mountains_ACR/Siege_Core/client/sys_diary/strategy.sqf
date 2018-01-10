@@ -1,1 +1,0 @@
-player CreateDiaryRecord ["Diary",["Strategy","The enemy has a finite amount of personnel, which you can see an approximation of by ACE self-interacting and selecting Mission Status. Once they have all died the mission will be complete."]];
