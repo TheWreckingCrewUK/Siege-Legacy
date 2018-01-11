@@ -74,7 +74,7 @@ _box addItemCargoGlobal ["ACE_atropine",5];
 _box addItemCargoGlobal ["ACE_epinephrine",5 + _low];
 _box addItemCargoGlobal ["ACE_morphine",5 + _low];
 
-_box addItemCargoGlobal ["HandGrenade",2];
+_box addItemCargoGlobal ["HandGrenade",3 - _low];
 _box addItemCargoGlobal ["SmokeShell",2];
 _box addItemCargoGlobal ["SmokeShellRed",2];
 
