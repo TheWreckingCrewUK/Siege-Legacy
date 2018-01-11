@@ -56,7 +56,7 @@ _script = execVM "siege_core\SHK_pos\shk_pos_init.sqf";
 waitUntil{scriptDone _script};
 
 
-badTownArray = ["Airport north","iedrestrictionzone","Falar","Faro","Guran","Feas"];
+badTownArray = ["Airport north","Kakaru","Falar","Faro","Guran","Feas"];
 
 [missionNamespace,"base","Main Base"] call BIS_fnc_addRespawnPosition;
 
