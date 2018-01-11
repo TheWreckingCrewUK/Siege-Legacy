@@ -25,6 +25,8 @@ _random = random 100;
 	_enemies = 1;
 	[_pos] spawn twc_spawnDefend;
 
+twc_currentenemy= {alive _x && side _x == east} count allUnits;
+publicVariable "twc_currentenemy";
 
 _random = random 100;
 

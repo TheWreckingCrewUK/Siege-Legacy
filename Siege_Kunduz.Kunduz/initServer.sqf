@@ -22,7 +22,7 @@ twc_surrenderVote = false;
 */
 TWC_Building_Style = "MidEast";
 
-twc_difficulty = 2.5;
+twc_difficulty = 2;
 publicVariable "twc_difficulty";
 
 sirenlist = [idfalarm,idfalarm_1,idfalarm_2,idfalarm_3,idfalarm_4,idfalarm_5];

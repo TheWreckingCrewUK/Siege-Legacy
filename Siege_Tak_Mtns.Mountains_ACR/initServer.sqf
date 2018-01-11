@@ -22,7 +22,7 @@ twc_surrenderVote = false;
 */
 TWC_Building_Style = "Med";
 
-twc_difficulty = 0.1;
+twc_difficulty = 0.7;
 publicVariable "twc_difficulty";
 
 sirenlist = [idfalarm];
@@ -56,7 +56,7 @@ _script = execVM "siege_core\SHK_pos\shk_pos_init.sqf";
 waitUntil{scriptDone _script};
 
 
-badTownArray = ["Airport north","iedrestrictionzone","Bosquet","Faro","Guran","Feas"];
+badTownArray = ["Airport north","iedrestrictionzone","Bosquet","Jilavur","Guran","Feas"];
 
 [missionNamespace,"base","Main Base"] call BIS_fnc_addRespawnPosition;
 
@@ -64,8 +64,7 @@ badTownArray = ["Airport north","iedrestrictionzone","Bosquet","Faro","Guran","F
 idfbasesize = 70;
 publicvariable "idfbasesize";
 
-totalPoints = 350;
-publicVariable "totalPoints";
+
 
 //Sets up the unit Caching. I have no idea why i have to sleep and wait.
 []spawn{sleep 120;

@@ -22,6 +22,9 @@ twc_surrenderVote = false;
 */
 TWC_Building_Style = "Med";
 
+pointLimit = 40;
+publicVariable "pointLimit";
+
 twc_difficulty = 0.2;
 publicVariable "twc_difficulty";
 
