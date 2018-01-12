@@ -9,7 +9,7 @@
 
 
 if ((twc_ammotime-time) > 0) then {
-	hint format ["You can only spawn a crate every %1 seconds currently. %2 seconds remaining.", twc_ammotime_amount, ceil (twc_ammotime-time)];
+	hint format ["The spawner is on cooldown currently. %2 seconds remaining.", twc_ammotime_amount, ceil (twc_ammotime-time)];
 	waituntil {(twc_ammotime-time) < 0};
 	hint "More Ammunition Is Now Available From The Spawner";
 	

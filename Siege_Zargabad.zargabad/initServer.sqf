@@ -22,7 +22,7 @@ twc_surrenderVote = false;
 */
 TWC_Building_Style = "Med";
 
-twc_difficulty = 0.9;
+twc_difficulty = 0.7;
 publicVariable "twc_difficulty";
 
 sirenlist = [idfalarm];
