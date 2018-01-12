@@ -78,6 +78,9 @@ if((typeOf player) in ["Modern_British_Squadleader","Modern_British_2IC_COIN"])t
 
 	_alphaaction5 = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "siege_core\client\sys_player\boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction5,true] call ace_interact_menu_fnc_addActionToClass;	
+	
+	_alphaaction6 = ["SpawnmineCreate","Spawn Claymores","",{execvm "siege_core\client\sys_player\boxes\smallcratemines.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction6,true] call ace_interact_menu_fnc_addActionToClass;	
 };
 
 if((typeOf player) in ["Modern_USMC_Squadleader","Modern_USMC_Teamleader"])then{
@@ -93,6 +96,9 @@ if((typeOf player) in ["Modern_USMC_Squadleader","Modern_USMC_Teamleader"])then{
 
 	_charlieaction4 = ["spawn762","Spawn 7.62 Ammo","",{execvm "siege_core\client\sys_player\boxes\762ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_charlieaction4,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_charlieaction5 = ["SpawnmineCreate","Spawn Claymores","",{execvm "siege_core\client\sys_player\boxes\smallcratemines.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_charlieaction5,true] call ace_interact_menu_fnc_addActionToClass;	
 
 		
 };
