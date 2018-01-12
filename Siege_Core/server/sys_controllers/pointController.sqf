@@ -21,7 +21,7 @@ if(isNil "twc_difficulty") then{
 	};
 
 if(isNil "pointLimit") then{
-pointLimit = 20+((ceil(twc_difficulty*6))*10);
+pointLimit = 20+((ceil(twc_difficulty*7))*10);
 publicVariable "pointLimit"; // init once
 };
 

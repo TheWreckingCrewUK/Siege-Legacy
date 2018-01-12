@@ -322,7 +322,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={6717.623,357.27084,6934.019};
-			angle=4.0111675;
+			angle=4.011167;
 			class Attributes
 			{
 				condition="call{count thislist >2;}";
