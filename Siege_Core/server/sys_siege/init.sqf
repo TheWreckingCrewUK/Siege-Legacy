@@ -7,10 +7,7 @@ twc_currentenemy=0;
 publicVariable "twc_currentenemy";
 
 //difficulty setup, lower is easier. Use lower values for maps where the players spawn in areas that are more difficult to defend (like a woodland camp instead of a FOB). 1 is the default value as set here, set a new one in initserver of the mission folder to set a difficulty on a particular mission.
-if(isNil "twc_difficulty") then{
-		twc_difficulty = 1;
-		publicVariable "twc_difficulty";
-	};
+
 	
 while {true} do {
 twc_maxenemy=((30*twc_difficulty)+(count(allPlayers - entities "HeadlessClient_F")*(6*twc_difficulty))) min 90;

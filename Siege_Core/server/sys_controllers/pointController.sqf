@@ -15,11 +15,17 @@
 * Public: No
 */
 
+if(isNil "twc_difficulty") then{
+		twc_difficulty = 1;
+		publicVariable "twc_difficulty";
+	};
+
 if(isNil "pointLimit") then{
-pointLimit = 150;
+pointLimit = 20+((ceil(twc_difficulty*6))*10);
 publicVariable "pointLimit"; // init once
 };
-if(isNil "totalPoints") then{
+
+	if(isNil "totalPoints") then{
 totalPoints = 0;
 publicVariable "totalPoints"; // init once
 };

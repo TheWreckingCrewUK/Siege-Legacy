@@ -12,10 +12,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6755.6587,428.3223,6837.0645};
-		dir[]={-0.1876893,-0.6419028,0.74361914};
-		up[]={-0.15708178,0.76682717,0.62234968};
-		aside[]={0.96971554,-2.4621841e-008,0.24475911};
+		pos[]={6722.8574,385.52261,6913.3193};
+		dir[]={-0.20614128,-0.74745578,0.6317063};
+		up[]={-0.2318646,0.66438061,0.71053141};
+		aside[]={0.95078534,-5.470356e-007,0.31026691};
 	};
 };
 binarizationWanted=0;
@@ -321,7 +321,7 @@ class Mission
 		class Item7
 		{
 			dataType="Trigger";
-			position[]={6717.623,357.27036,6934.019};
+			position[]={6717.623,357.27084,6934.019};
 			angle=4.0111675;
 			class Attributes
 			{
@@ -331,12 +331,13 @@ class Mission
 				sizeB=45;
 				timeout[]={60,60,60};
 				interuptable=1;
+				repeatable=1;
 				activationBy="EAST";
 				isServerOnly=1;
 			};
 			id=77;
 			type="EmptyDetectorAreaR50";
-			atlOffset=0.50650024;
+			atlOffset=0.50698853;
 		};
 		class Item8
 		{
@@ -398,7 +399,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={6717.7061,356.79083,6934.1743};
-			angle=4.0111675;
+			angle=4.011167;
 			class Attributes
 			{
 				name="warning";

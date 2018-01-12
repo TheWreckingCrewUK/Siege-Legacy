@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1487;
+		nextID=1488;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3474.0234,22.498745,4904.9233};
-		dir[]={-0.73519564,-0.40344629,0.54487121};
-		up[]={-0.3241671,0.91498452,0.2402461};
-		aside[]={0.59547579,8.2864426e-007,0.8034777};
+		pos[]={3427.709,27.607862,4856.9111};
+		dir[]={-0.96053362,-0.14205997,0.23955888};
+		up[]={-0.13791564,0.98984426,0.034394339};
+		aside[]={0.24201103,1.2534438e-006,0.9703722};
 	};
 };
 binarizationWanted=0;
@@ -339,7 +339,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=420;
+		items=421;
 		class Item0
 		{
 			dataType="Marker";
@@ -16070,11 +16070,11 @@ class Mission
 			angle=0.35445893;
 			class Attributes
 			{
-				condition="call{this}";
+				condition="call{count thislist > 1}";
 				onActivation="call{""baselost"" call BIS_fnc_endMissionServer;}";
 				sizeA=65;
 				sizeB=55;
-				timeout[]={300,300,300};
+				timeout[]={60,60,60};
 				interuptable=1;
 				activationBy="EAST";
 				isRectangle=1;
@@ -16099,6 +16099,7 @@ class Mission
 			};
 			id=1485;
 			type="Land_InfoStand_V1_F";
+			atlOffset=-0.00018835068;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16163,6 +16164,27 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item420
+		{
+			dataType="Trigger";
+			position[]={3404.134,4.7901945,4915.7319};
+			angle=0.35445893;
+			class Attributes
+			{
+				name="warning";
+				condition="call{this}";
+				onActivation="call{execVM ""Siege_core\server\sys_basedefence\INF_Alarm.sqf"";}";
+				sizeA=65;
+				sizeB=55;
+				interuptable=1;
+				activationBy="EAST";
+				isRectangle=1;
+				isServerOnly=1;
+			};
+			id=1487;
+			type="EmptyDetectorAreaR50";
+			atlOffset=-0.015999794;
 		};
 	};
 };

@@ -22,6 +22,9 @@ twc_surrenderVote = false;
 */
 TWC_Building_Style = "Med";
 
+twc_difficulty = 0.8;
+publicVariable "twc_difficulty";
+
 sirenlist = [idfalarm,idfalarm_1];
 publicvariable "sirenlist";
 
@@ -53,7 +56,7 @@ _script = execVM "siege_core\SHK_pos\shk_pos_init.sqf";
 waitUntil{scriptDone _script};
 
 
-badTownArray = ["Tap Ka","Loymanara","Jaza","sultansafe","loy manara oilfield","iedrestrictionzone","Bosquet","Faro","Guran","Feas"];
+badTownArray = ["Naqel","Loymanara","Jaza","sultansafe","loy manara oilfield","iedrestrictionzone","Bosquet","Faro","Guran","Feas"];
 
 [missionNamespace,"base","Main Base"] call BIS_fnc_addRespawnPosition;
 
