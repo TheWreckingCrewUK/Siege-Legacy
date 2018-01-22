@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1930.1718,219.0555,5045.2192};
-		dir[]={-0.5851292,-0.49815938,0.6398946};
-		up[]={-0.33616942,0.86708468,0.36763343};
-		aside[]={0.73798329,6.7404471e-008,0.67482263};
+		pos[]={1844.7001,208.92918,5141.5645};
+		dir[]={0.9089365,-0.0032973392,-0.41701955};
+		up[]={0.0030030552,0.99999607,-0.0013776281};
+		aside[]={-0.4170208,4.9243681e-007,-0.90894437};
 	};
 };
 binarizationWanted=0;
@@ -2250,7 +2250,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={1903.198,194.0555,5075.6958};
-			angle=3.280102;
+			angle=3.2801015;
 			class Attributes
 			{
 				condition="call{count thislist > 1}";
@@ -2572,7 +2572,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={1903.209,194.05368,5075.6738};
-			angle=3.280102;
+			angle=3.2801015;
 			class Attributes
 			{
 				name="warning";

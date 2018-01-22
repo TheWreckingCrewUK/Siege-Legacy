@@ -53,7 +53,7 @@ townSquadWave = ["twc_greek_officer","twc_greek_rifleman","twc_greek_rifleman_fa
 
 vehicleList = ["CUP_C_UAZ_Unarmed_TK_CIV", "CUP_C_Skoda_Blue_CIV", "CUP_C_Datsun_Plain", "CUP_C_Ural_Open_Civ_03"];
 
-enemyTechnical = ["CUP_O_LR_MG_TKM", "CUP_O_LR_SPG9_TKM"];
+enemyTechnical = ["CUP_O_UAZ_MG_RU"];
 
 _script = execVM "siege_core\SHK_pos\shk_pos_init.sqf";
 waitUntil{scriptDone _script};

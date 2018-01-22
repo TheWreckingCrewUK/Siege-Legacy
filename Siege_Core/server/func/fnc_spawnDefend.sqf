@@ -21,7 +21,7 @@ _total = (([_pos] call twc_fnc_calculateSpawnAmount) * 2) max 20;
 _group = createGroup East;
 //for "_i" from 1 to _total do{
 while {twc_currentenemy<twc_maxenemy} do {
-	_unit = _group createUnit [(townSpawn select (floor random (count townspawn))), _spawnPos,[], 5,"NONE"];
+	_unit = _group createUnit [(townSpawn select (floor random (count townspawn))), _spawnPos,[], 0.3,"NONE"];
 	twc_currentenemy=twc_currentenemy+1;
 	publicVariable "twc_currentenemy";
 	_unit addEventHandler ["Killed",{
@@ -34,7 +34,7 @@ while {twc_currentenemy<twc_maxenemy} do {
 	_unit addMagazines ["handGrenade",2];
 	_unit setVariable ["unitsHome",_pos,false];
 	_num = _num + 1;
-	sleep 0.2;
+	sleep 1 + random 1;
 	};
 //};
 _group setFormation "LINE";

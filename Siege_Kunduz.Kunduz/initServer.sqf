@@ -33,6 +33,9 @@ civilianType = ["Tak_Civ_Men_KTL1", "CUP_C_TK_Man_04_Jack", "Tak_Civ_Men_KTL2","
 publicvariable "civiliantype";
 homeEnemy = ["twc_greek_rifleman"];
 
+technicals = 2 + random 3;
+publicVariable "technicals";
+
 AA_VEHICLE_TYPE = "CUP_O_ZU23_TK_INS";
 AATeams = 6;
 AATeam = ["twc_greek_officer", "twc_greek_aa", "twc_greek_aa", "twc_greek_aa"];
@@ -50,7 +53,7 @@ townSquadWave = ["CUP_O_TK_INS_Soldier_AR","Tak_twc_ins_Men_R1","CUP_O_TK_INS_So
 
 vehicleList = ["CUP_C_UAZ_Unarmed_TK_CIV", "CUP_C_Skoda_Blue_CIV", "CUP_C_Datsun_Plain", "CUP_C_Ural_Open_Civ_03"];
 
-enemyTechnical = ["CUP_O_LR_MG_TKM", "CUP_O_LR_SPG9_TKM"];
+enemyTechnical = ["CUP_O_LR_MG_TKM", "CUP_O_LR_MG_TKM", "CUP_O_LR_SPG9_TKM", "CUP_O_LR_SPG9_TKM", "CUP_O_LR_MG_TKM", "CUP_O_LR_MG_TKM", "CUP_O_Ural_ZU23_TKM"];
 
 _script = execVM "Siege_Core\SHK_pos\shk_pos_init.sqf";
 waitUntil{scriptDone _script};

@@ -10,15 +10,14 @@ publicVariable "twc_currentenemy";
 
 	
 while {true} do {
-twc_maxenemy=((30*twc_difficulty)+(count(allPlayers - entities "HeadlessClient_F")*(6*twc_difficulty))) min 90;
+twc_maxenemy=((30*twc_difficulty)+(count(allPlayers - entities "HeadlessClient_F")*(6*twc_difficulty))) min 70;
 publicVariable "twc_maxenemy";
 sleep 0.2;
-if ((pointLimit-totalpoints)<(twc_maxenemy*1.5)) then {
-	twc_maxenemy=twc_maxenemy*2;
-	systemchat "final round";
+if ((pointLimit-totalpoints)<(twc_maxenemy)) then {
+	twc_maxenemy=twc_maxenemy*1.3;
 
 	execVM "Siege_Core\server\sys_townLocations\getLocations.sqf";
-	sleep 600;};
+	sleep 6000;};
 execVM "Siege_Core\server\sys_townLocations\getLocations.sqf";
 
 sleep 30;};
