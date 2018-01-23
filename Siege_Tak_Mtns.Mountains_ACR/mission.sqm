@@ -8,7 +8,7 @@ class EditorData
 	toggles=522;
 	class ItemIDProvider
 	{
-		nextID=1632;
+		nextID=1633;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1844.7001,208.92918,5141.5645};
-		dir[]={0.9089365,-0.0032973392,-0.41701955};
-		up[]={0.0030030552,0.99999607,-0.0013776281};
-		aside[]={-0.4170208,4.9243681e-007,-0.90894437};
+		pos[]={1942.9178,209.28189,5107.1538};
+		dir[]={-0.74365932,-0.33775145,-0.57709885};
+		up[]={-0.26683402,0.94124168,-0.20706981};
+		aside[]={-0.61312366,6.1711762e-007,0.79007983};
 	};
 };
 binarizationWanted=0;
@@ -46,7 +46,8 @@ addons[]=
 	"A3_Structures_F_Mil_BagFence",
 	"twc_objects",
 	"UK3CB_BAF_Vehicles_Coyote_Jackal",
-	"twc_framework_public_modern_us"
+	"twc_framework_public_modern_us",
+	"A3_Structures_F_Argo_Military_Fortifications"
 };
 class AddonsMetaData
 {
@@ -538,7 +539,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=49;
+		items=50;
 		class Item0
 		{
 			dataType="Marker";
@@ -2250,7 +2251,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={1903.198,194.0555,5075.6958};
-			angle=3.2801015;
+			angle=3.2801013;
 			class Attributes
 			{
 				condition="call{count thislist > 1}";
@@ -2572,7 +2573,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={1903.209,194.05368,5075.6738};
-			angle=3.2801015;
+			angle=3.2801013;
 			class Attributes
 			{
 				name="warning";
@@ -3515,6 +3516,22 @@ class Mission
 				};
 				nAttributes=2;
 			};
+		};
+		class Item49
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1909.604,196.16856,5092.3076};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=1632;
+			type="Land_SandbagBarricade_01_F";
+			atlOffset=0.061798096;
 		};
 	};
 };

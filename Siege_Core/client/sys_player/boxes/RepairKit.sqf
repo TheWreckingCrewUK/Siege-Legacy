@@ -8,7 +8,7 @@
 */
 
 if (( count(allPlayers - entities "HeadlessClient_F"))<10) then {
-[10] execVM "Domination_Core\client\sys_restrict\restrictedkit.sqf";} else {
+[10] execVM "Siege_Core\client\sys_restrict\restrictedkit.sqf";} else {
 _boxClass = "ACE_Box_Ammo";
 
 _box = _boxClass createVehicle (getPos AmmoBoxSpawner);
