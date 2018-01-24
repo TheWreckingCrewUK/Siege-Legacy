@@ -17,7 +17,7 @@
 */
 
 //Recieved Parameters
-params ["_pos","_groupradius","_thisList"];
+params ["_pos","_groupradius","_thisList", "_chance"];
 
 //Selects a direction generally oposite of incoming friendlies
 _dir = (_thisList select 0) getDir _pos;
@@ -33,6 +33,8 @@ _group = createGroup East;
 _spawnPos = [_pos,_groupradius,[_dir1,_dir2]] call SHK_pos;
 //for "_i" from 1 to _total do{
 while {twc_currentenemy<twc_maxenemy} do {
+
+if (_chance > random 1) then {
 	_unit = _group createUnit [(townSpawn select (floor random (count townspawn))), _spawnPos,[], 0.3,"NONE"];
 	twc_currentenemy=twc_currentenemy+1;
 	publicVariable "twc_currentenemy";
@@ -46,7 +48,7 @@ while {twc_currentenemy<twc_maxenemy} do {
 	_unit setVariable ["unitsHome",_pos,false];
 	//_num = _num + 1;
 	sleep 1 + random 1;
-	
+} else {sleep 30;}	
 
 };
 //};

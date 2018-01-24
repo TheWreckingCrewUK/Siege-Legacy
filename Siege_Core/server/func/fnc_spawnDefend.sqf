@@ -20,8 +20,11 @@ _num = 0;
 _total = (([_pos] call twc_fnc_calculateSpawnAmount) * 2) max 20;
 _group = createGroup East;
 //for "_i" from 1 to _total do{
-while {twc_currentenemy<twc_maxenemy} do {
-	_unit = _group createUnit [(townSpawn select (floor random (count townspawn))), _spawnPos,[], 0.3,"NONE"];
+
+_flag = _spawnpos nearEntities [["CUP_C_Skoda_Blue_CIV"], 300] select 0; 
+
+while {twc_currentenemy<(twc_maxenemy+20)} do {
+	_unit = _group createUnit [(townSpawn select (floor random (count townspawn))), [_spawnPos,50] call CBA_fnc_randPos,[], 0.3,"NONE"];
 	twc_currentenemy=twc_currentenemy+1;
 	publicVariable "twc_currentenemy";
 	_unit addEventHandler ["Killed",{
@@ -29,16 +32,18 @@ while {twc_currentenemy<twc_maxenemy} do {
 		twc_currentenemy=twc_currentenemy-1;
 		publicVariable "twc_currentenemy";
 		["TWC_Insurgency_adjustPoints", 1] call CBA_fnc_serverEvent;
-		
+_flag = _unit nearEntities [["CUP_C_Skoda_Blue_CIV"], 100] select 0; 
+_act = (_flag getvariable "active") / 0.8; _flag setVariable ["active",2]; systemchat format ["%1", _home];
 	}];
 	_unit addMagazines ["handGrenade",2];
-	_unit setVariable ["unitsHome",_pos,false];
+	_unit setVariable ["unitsHome",_spawnpos,false];
 	_num = _num + 1;
 	sleep 1 + random 1;
 	};
 //};
 _group setFormation "LINE";
-_group addwaypoint [getmarkerpos "base", 300] call CBA_fnc_randPos;
-_group addwaypoint [getmarkerpos "base", 50] call CBA_fnc_randPos;
-_group addwaypoint [getmarkerpos "base", 50] call CBA_fnc_randPos;
-_group addwaypoint [getmarkerpos "base", 10] call CBA_fnc_randPos;
+_group addwaypoint [_spawnpos, 50] call CBA_fnc_randPos;
+_group addwaypoint [_spawnpos, 50] call CBA_fnc_randPos;
+_group addwaypoint [_spawnpos, 50] call CBA_fnc_randPos;
+_group addwaypoint [_spawnpos, 50] call CBA_fnc_randPos;
+_group addwaypoint [_spawnpos, 50] call CBA_fnc_randPos;

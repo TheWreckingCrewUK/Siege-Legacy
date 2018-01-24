@@ -1,3 +1,5 @@
+sleep random 10;
+
 if (twc_currentenemy<twc_maxenemy) then{
 //adding in enemy count just to save a bit of overhead
 {
@@ -9,12 +11,33 @@ if (twc_currentenemy<twc_maxenemy) then{
 		_count = count _houseList;
 		_count = round (_count / 20);
 		
+_spawnpos = getpos _x;
+
+
+
+_flagpos = [_spawnpos,[100,100],random 360,0,[0,100]] call SHK_pos;
+//		_flag = "rhs_Flag_Insurgents" createVehicle _flagpos;
+
+
+
+if (_flagpos distance getmarkerpos "base" <2000) then {
+
+
+if (count(_flagpos nearEntities [["CUP_C_Skoda_Blue_CIV"], 300]) ==0) then {
+
+	_flag = "CUP_C_Skoda_Blue_CIV" createVehicle _flagpos;
+_flag allowDamage false;
+_flag setVariable ["active",1];
+systemchat "first spawn";
+} 
+};
 
 		_trg = createTrigger ["EmptyDetector", getPos _x];
 		_trg setTriggerArea [1500, 1500, 0, false];
 		_trg setTriggerActivation ["West", "PRESENT", False];
 		_trg setTriggerTimeout[2, 2, 2, true];
-		_trg setTriggerStatements ["this",format["[(getPos thisTrigger),%1,100,[100,200],thisList] spawn twc_townSetup",_count],""];
+		_trg setTriggerStatements ["this",format["[(getPos thisTrigger),%1,100,[100,200],thisList,_flag] spawn twc_townSetup;",_count],""];
+
 
 // Creates a marker that marks the town
 /*
@@ -23,6 +46,8 @@ if (twc_currentenemy<twc_maxenemy) then{
 		_markerstr setMarkerType "mil_flag";
 		_markerstr setMarkerText (text _x);
 */
+
+
 	};
 }forEach townLocationArray;
 };

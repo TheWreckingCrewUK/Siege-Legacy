@@ -2,7 +2,7 @@ _list=[
 		["CUP_B_M119_US", [
 		["gunner", 
 			["Modern_Artillery_Gunner"]
-		]],20,9
+		]],20,0
 	],
 	
 			["UK3CB_BAF_Static_L16_Deployed", [
@@ -295,7 +295,7 @@ TWC_fnc_checkVehicleSlot = {
 		_count = (_x select (count (_x)-1));
 		_maxcount = (_x select (count (_x)-2));
 		_currentcount = ( count(allPlayers - entities "HeadlessClient_F"));
-		_snipercount = 5;
+		_snipercount = 0;
 		
 		
  if((typeOf player) in ["Modern_British_Sniper_coin", "Modern_British_Spotter_coin","Modern_Artillery_Commander","Modern_Artillery_Gunner"]) then {if (_snipercount > _currentcount) then {[_playerUnit,_snipercount,_currentcount,"low"] call TWC_fnc_notenoughplayers};};

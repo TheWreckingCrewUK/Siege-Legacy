@@ -30,6 +30,9 @@ player addEventHandler ["InventoryClosed", {
 	_infaction1 = ["clearbox","Clear Boxes","",{execvm "siege_core\client\sys_player\boxes\clearboxes.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_infaction1,true] call ace_interact_menu_fnc_addActionToClass;
 	
+	_infaction2 = ["SpawnAlphaCreate","Spawn arty Crate","",{execvm "siege_core\client\sys_player\boxes\105he.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_infaction2,true] call ace_interact_menu_fnc_addActionToClass;
+	
 
 if((typeOf player) in ["Modern_British_HeliPilot","Modern_USMC_HeliPilot"])then{
 

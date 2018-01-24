@@ -13,7 +13,7 @@
 * Creates a trigger to spawn the town capture and cleanup
 */ 
 						  
-params["_pos","_civnum","_civradius","_groupradius","_thisList",["_spawnCivs",true],["_forceSpawn",false]];
+params["_pos","_civnum","_civradius","_groupradius","_thisList", ["_spawnCivs",true],["_forceSpawn",false]];
 /*
 if(_spawnCivs)then{
 	[_pos, _civnum, _civradius] call twc_spawnCiv;
@@ -21,17 +21,27 @@ if(_spawnCivs)then{
 */
 _enemies = 0;
 _random = random 100;
+_flag = _pos nearEntities [["CUP_C_Skoda_Blue_CIV"], 300] select 0; 
+
+if (_flag getvariable "active" == 1) then {systemchat "yes"};
 
 	_enemies = 1;
-	[_pos] spawn twc_spawnDefend;
+	_dis = (getmarkerpos "base" distance _pos)/3;
+_trg = createTrigger ["EmptyDetector", _pos];
+_trg setTriggerArea [_dis, _dis, 0, false];
+_trg setTriggerActivation ["west", "PRESENT", True];
+_trg setTriggerTimeout [1,1,1, true];
+_trg setTriggerStatements ["this","	[getPos thisTrigger] spawn twc_spawnDefend;systemchat 'come at me bro'",""];
+
 
 twc_currentenemy= {alive _x && side _x == east} count allUnits;
 publicVariable "twc_currentenemy";
 
-_random = random 100;
 
+_random = random 100;
+_chance = _flag getvariable "active";
 	_enemies = 1;
-	[_pos, _groupradius,_thisList] spawn twc_spawnAIUnits;
+	[_pos, _groupradius,_thisList, _chance] spawn twc_spawnAIUnits;
 
 if(_enemies == 0)exitWith{};
 
