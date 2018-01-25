@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1646.886,15.30435,1411.6591};
-		dir[]={0.91743863,-0.30024087,0.26110494};
-		up[]={0.28877786,0.95386553,0.082186811};
-		aside[]={0.27373391,-1.5145633e-007,-0.96181351};
+		pos[]={1667.4355,23.923756,1431.9774};
+		dir[]={0.70815343,-0.53395259,0.4621532};
+		up[]={0.44716054,0.84551895,0.29182422};
+		aside[]={0.54657465,-1.9278377e-007,-0.83751285};
 	};
 };
 binarizationWanted=0;
@@ -1186,8 +1186,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1651.4727,11.216548,1427.407};
-				angles[]={0,2.9958897,6.2711854};
+				position[]={1683.1863,10.225561,1441.1542};
+				angles[]={0.027990974,4.2279482,6.247201};
 			};
 			side="Empty";
 			flags=4;
@@ -1196,7 +1196,6 @@ class Mission
 			};
 			id=1470;
 			type="UK3CB_BAF_LandRover_Snatch_FFR_Sand_A";
-			atlOffset=-0.02983284;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1226,8 +1225,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1639.1306,11.675862,1430.4838};
-				angles[]={6.2671871,3.0026391,0.0039967569};
+				position[]={1694.5607,10.428573,1429.6183};
+				angles[]={0.012000273,4.3944654,6.2551947};
 			};
 			side="Empty";
 			flags=4;
@@ -1236,7 +1235,6 @@ class Mission
 			};
 			id=1473;
 			type="UK3CB_BAF_LandRover_WMIK_HMG_FFR_Sand_A";
-			atlOffset=0.0075674057;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1266,8 +1264,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1643.593,11.630287,1431.0127};
-				angles[]={6.2711854,3.0228641,0};
+				position[]={1694.7059,10.413788,1423.7693};
+				angles[]={6.2711902,4.64784,6.259192};
 			};
 			side="Empty";
 			flags=4;
@@ -1276,7 +1274,6 @@ class Mission
 			};
 			id=1474;
 			type="UK3CB_BAF_LandRover_WMIK_HMG_FFR_Sand_A";
-			atlOffset=-0.0066242218;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1306,8 +1303,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1654.9004,11.166898,1427.9771};
-				angles[]={0.0039967569,2.9997301,6.2671871};
+				position[]={1671.1376,10.504398,1422.0292};
+				angles[]={6.259192,5.3848715,6.2591896};
 			};
 			side="Empty";
 			flags=4;
@@ -1316,7 +1313,6 @@ class Mission
 			};
 			id=1475;
 			type="UK3CB_BAF_LandRover_Snatch_FFR_Sand_A";
-			atlOffset=-0.068052292;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4225,6 +4221,7 @@ class Mission
 			};
 			id=1667;
 			type="CUP_O_Datsun_PK";
+			atlOffset=-3.8146973e-005;
 		};
 	};
 };
