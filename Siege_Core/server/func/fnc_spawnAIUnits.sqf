@@ -58,7 +58,7 @@ if (_chance > random 1) then {
 
 };
 //};
-sleep 1 + random 1;
+sleep 2;
 	if (totalPoints > (pointLimit / 2)) then {
 		if (technicals > 0) then {
 			if (random 1 > 0.7) then {
