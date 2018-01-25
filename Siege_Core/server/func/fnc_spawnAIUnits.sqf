@@ -53,7 +53,7 @@ if (_chance > random 1) then {
 	}];
 	_unit setVariable ["unitsHome",_pos,false];
 	//_num = _num + 1;
-	sleep 1 + random 1;
+	sleep 2;
 } else {sleep 30;}	
 
 };
@@ -80,7 +80,7 @@ _group2 addwaypoint [getmarkerpos "base", 300] call CBA_fnc_randPos;
 _group2 addwaypoint [getmarkerpos "base", 300] call CBA_fnc_randPos;
 _group2 addwaypoint [getmarkerpos "base", 300] call CBA_fnc_randPos;
  [_group, 5] setWaypointType "CYCLE";
-sleep 1 + random 1;
+sleep 2;
 
 //being excessive with the counting code because sometimes it counts at strange times so technicals ==1 could spawn 2 or more technicals
 technicals = technicals +9;

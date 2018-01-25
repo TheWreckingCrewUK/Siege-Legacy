@@ -46,7 +46,7 @@ _act = (_flag getvariable "active") / 1.1; _flag setVariable ["active",_act]; ;
 	_unit addMagazines ["handGrenade",2];
 	_unit setVariable ["unitsHome",_spawnpos,false];
 	_num = _num + 1;
-	sleep 1 + random 1;
+	sleep 2;
 	
 	};
 //};
