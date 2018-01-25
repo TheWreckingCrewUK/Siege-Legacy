@@ -31,6 +31,12 @@ _total = [_pos] call twc_fnc_calculateSpawnAmount;
 //Spawning hostiles
 _group = createGroup East;
 _spawnPos = [_pos,_groupradius,[_dir1,_dir2]] call SHK_pos;
+
+
+_flag = _pos nearEntities [["CUP_C_Skoda_Blue_CIV"], 300] select 0;
+
+
+//if (_flag getvariable "fighting" == 1) then {systemchat "spawn blocked"} else {
 //for "_i" from 1 to _total do{
 while {twc_currentenemy<twc_maxenemy} do {
 
@@ -92,3 +98,4 @@ _group addwaypoint [getmarkerpos "base", 300] call CBA_fnc_randPos;
 _group addwaypoint [getmarkerpos "base", 50] call CBA_fnc_randPos;
 _group addwaypoint [getmarkerpos "base", 50] call CBA_fnc_randPos;
 _group addwaypoint [getmarkerpos "base", 10] call CBA_fnc_randPos;
+//};

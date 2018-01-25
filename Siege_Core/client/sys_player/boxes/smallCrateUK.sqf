@@ -64,6 +64,7 @@ _box AddMagazineCargoGlobal ["rhsusf_mag_17Rnd_9x19_JHP",8 + _low];
 _box AddMagazineCargoGlobal ["UK3CB_BAF_12G_Pellets",8];
 _box AddMagazineCargoGlobal ["UK3CB_BAF_12G_Slugs",8];
 
+_box AddMagazineCargoGlobal ["UK3CB_BAF_338_5Rnd",10];
 _box addItemCargoGlobal ["ACE_fieldDressing",5 + _mid];
 _box addItemCargoGlobal ["ACE_elasticBandage",5 + _mid];
 _box addItemCargoGlobal ["ACE_quikclot",5 + _mid];

@@ -31,12 +31,9 @@ clearitemCargoGlobal _box;
 
 
 //supplies
-_box AddMagazineCargoGlobal ["ACE_CUP_30Rnd_105mmHE_M119_M",10];
-_box AddMagazineCargoGlobal ["ACE_CUP_30Rnd_105mmSMOKE_M119_M",10];
-_box AddMagazineCargoGlobal ["ACE_CUP_30Rnd_105mmILLUM_M119_M",10];
-_box AddMagazineCargoGlobal ["ACE_CUP_30Rnd_105mmWP_M119_M",10];
-_box AddMagazineCargoGlobal ["ACE_CUP_30Rnd_105mmHE_M119_M",10];
-_box AddMagazineCargoGlobal ["ACE_CUP_30Rnd_105mmHE_M119_M",10];
+_box AddMagazineCargoGlobal ["ACE_CUP_30Rnd_105mmHE_M119_M",15];
+_box AddMagazineCargoGlobal ["ACE_CUP_30Rnd_105mmSMOKE_M119_M",7];
+_box AddMagazineCargoGlobal ["ACE_CUP_30Rnd_105mmILLUM_M119_M",7];
 
 [player, _box] call ace_cargo_fnc_startLoadIn;
 };

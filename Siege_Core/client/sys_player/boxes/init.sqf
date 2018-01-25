@@ -30,9 +30,13 @@ player addEventHandler ["InventoryClosed", {
 	_infaction1 = ["clearbox","Clear Boxes","",{execvm "siege_core\client\sys_player\boxes\clearboxes.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_infaction1,true] call ace_interact_menu_fnc_addActionToClass;
 	
-	_infaction2 = ["SpawnAlphaCreate","Spawn arty Crate","",{execvm "siege_core\client\sys_player\boxes\105he.sqf"},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_infaction2,true] call ace_interact_menu_fnc_addActionToClass;
+
 	
+	
+if((typeOf player) in ["Modern_Artillery_Commander","Modern_Artillery_Gunner"])then{
+	_infaction2 = ["SpawnAlphaCreate","Spawn 105mm Ammo","",{execvm "siege_core\client\sys_player\boxes\105he.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_infaction2,true] call ace_interact_menu_fnc_addActionToClass;
+};
 
 if((typeOf player) in ["Modern_British_HeliPilot","Modern_USMC_HeliPilot"])then{
 
@@ -84,6 +88,25 @@ if((typeOf player) in ["Modern_British_Squadleader","Modern_British_2IC_COIN"])t
 	
 	_alphaaction6 = ["SpawnmineCreate","Spawn Claymores","",{execvm "siege_core\client\sys_player\boxes\smallcratemines.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction6,true] call ace_interact_menu_fnc_addActionToClass;	
+};
+
+
+if((typeOf player) in ["twc_men_1990_us_w_SquadLeader","twc_men_1990_us_w_teamleader"])then{
+
+	_usaction = ["SpawnsmallAlphaCreate","Spawn Small US Crate","",{execvm "siege_core\client\sys_player\boxes\smallCrateUS90.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_usaction,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_usaction3 = ["spawn50","Spawn .50 Ammo","",{execvm "siege_core\client\sys_player\boxes\50calammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_usaction3,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_usaction4 = ["spawn762","Spawn 7.62 Ammo","",{execvm "siege_core\client\sys_player\boxes\762ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_usaction4,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_usaction5 = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "siege_core\client\sys_player\boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_usaction5,true] call ace_interact_menu_fnc_addActionToClass;	
+	
+	_usaction6 = ["SpawnmineCreate","Spawn Claymores","",{execvm "siege_core\client\sys_player\boxes\smallcratemines.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_usaction6,true] call ace_interact_menu_fnc_addActionToClass;	
 };
 
 if((typeOf player) in ["Modern_USMC_Squadleader","Modern_USMC_Teamleader"])then{

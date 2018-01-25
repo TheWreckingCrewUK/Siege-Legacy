@@ -8,7 +8,7 @@ class EditorData
 	toggles=522;
 	class ItemIDProvider
 	{
-		nextID=1657;
+		nextID=1658;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1597.3937,24.771725,1395.1259};
-		dir[]={0.82152098,-0.32738855,0.46710056};
-		up[]={0.28461936,0.94491595,0.16183138};
-		aside[]={0.49432319,-2.7182978e-007,-0.86938268};
+		pos[]={1604.51,23.340158,1407.9093};
+		dir[]={0.98517883,-0.16678257,-0.043147158};
+		up[]={0.16665469,0.98602027,-0.0072979038};
+		aside[]={-0.043753017,-4.2392639e-007,-0.99913037};
 	};
 };
 binarizationWanted=0;
@@ -198,7 +198,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=88;
+		items=89;
 		class Item0
 		{
 			dataType="Marker";
@@ -1174,18 +1174,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1632.7014,11.370196,1387.8916};
+				position[]={1651.4727,11.216548,1427.407};
 				angles[]={0,2.9958897,6.2711854};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				lock="LOCKED";
 			};
 			id=1470;
 			type="UK3CB_BAF_LandRover_Snatch_FFR_Sand_A";
-			atlOffset=-0.00014305115;
+			atlOffset=-0.029762268;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1215,18 +1214,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1620.6858,11.747146,1387.0688};
+				position[]={1639.1306,11.675862,1430.4838};
 				angles[]={6.2671871,3.0026391,0.0039967569};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				lock="LOCKED";
 			};
 			id=1473;
 			type="UK3CB_BAF_LandRover_WMIK_HMG_FFR_Sand_A";
-			atlOffset=-0.00028705597;
+			atlOffset=0.0080757141;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1256,18 +1254,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1625.1387,11.771462,1387.5159};
+				position[]={1643.593,11.630287,1431.0127};
 				angles[]={6.2711854,3.0228641,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				lock="LOCKED";
 			};
 			id=1474;
 			type="UK3CB_BAF_LandRover_WMIK_HMG_FFR_Sand_A";
-			atlOffset=-0.00016403198;
+			atlOffset=-0.0064096451;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1297,18 +1294,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1636.1292,11.320546,1388.4617};
+				position[]={1654.9004,11.166898,1427.9771};
 				angles[]={0.0039967569,2.9997301,6.2671871};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				lock="LOCKED";
 			};
 			id=1475;
 			type="UK3CB_BAF_LandRover_Snatch_FFR_Sand_A";
-			atlOffset=-0.0004234314;
+			atlOffset=-0.067860603;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3808,6 +3804,61 @@ class Mission
 			id=1656;
 			type="EmptyDetectorAreaR50";
 			atlOffset=0.012999535;
+		};
+		class Item88
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1662.3979,8.6701145,1403.15};
+			};
+			areaSize[]={5,-1,5};
+			flags=1;
+			id=1657;
+			type="ModuleHideTerrainObjects_F";
+			atlOffset=0.018465042;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="#filter";
+					expression="_this setVariable [""#filter"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=15;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="#hideLocally";
+					expression="_this setVariable [""#hideLocally"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
 		};
 	};
 };

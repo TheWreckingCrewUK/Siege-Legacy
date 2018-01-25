@@ -9,7 +9,10 @@
 #include "sys_chat\init.sqf";
 #include "sys_basedefence\init.sqf";
 
-
+if(isNil "mortarcount") then{
+	mortarcount = 0;
+	publicvariable "mortarcount";
+};
 basemode = 1;
 publicvariable "basemode";
 

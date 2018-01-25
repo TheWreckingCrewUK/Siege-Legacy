@@ -23,18 +23,27 @@ _enemies = 0;
 _random = random 100;
 _flag = _pos nearEntities [["CUP_C_Skoda_Blue_CIV"], 300] select 0; 
 
-if (_flag getvariable "active" == 1) then {systemchat "yes"};
 
 	_enemies = 1;
-	_dis = (getmarkerpos "base" distance _pos)/3;
+	_dis = (getmarkerpos "base" distance _pos)/1.5;
 _trg = createTrigger ["EmptyDetector", _pos];
 _trg setTriggerArea [_dis, _dis, 0, false];
-_trg setTriggerActivation ["west", "PRESENT", True];
+_trg setTriggerActivation ["west", "PRESENT", false];
 _trg setTriggerTimeout [1,1,1, true];
-_trg setTriggerStatements ["this","	[getPos thisTrigger] spawn twc_spawnDefend;systemchat 'come at me bro'",""];
+_trg setTriggerStatements ["this","	[getPos thisTrigger] spawn twc_spawnDefend",""];
 
+	_dis2 = (getmarkerpos "base" distance _pos)/2;
+_trg = createTrigger ["EmptyDetector", _pos];
+_trg setTriggerArea [_dis2 , _dis2, 0, false];
+_trg setTriggerActivation ["west", "PRESENT", true];
+_trg setTriggerTimeout [1,1,1, true];
+_trg setTriggerStatements ["this","	_flag = getPos thisTrigger nearEntities [['CUP_C_Skoda_Blue_CIV'], 300] select 0; _flag setvariable ['fighting',1]; systemchat 'fighting' ","	_flag = getPos thisTrigger nearEntities [['CUP_C_Skoda_Blue_CIV'], 300] select 0; _flag setvariable ['fighting',0]; systemchat 'no fighting here'"];
 
-twc_currentenemy= {alive _x && side _x == east} count allUnits;
+for "_i" from 1 to mortarcount do{
+[_pos] spawn twc_spawnmortars;
+};
+
+twc_currentenemy= ({alive _x && side _x == east} count allUnits) - twc_currentdefender;
 publicVariable "twc_currentenemy";
 
 

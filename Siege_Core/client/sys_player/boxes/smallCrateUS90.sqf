@@ -17,6 +17,7 @@ _boxClass = "ACE_Box_Ammo";
 
 _box = _boxClass createVehicle (getPos AmmoBoxSpawner);
 
+
 //simple dynamic numbers system. Assign cost of each tier and then assign a tier to an item if you want that item's amount to scale with the player count.
 _players = ( count(allPlayers - entities "HeadlessClient_F"));
 _low = (_players * 0.3);
@@ -28,13 +29,14 @@ clearBackpackCargoGlobal _box;
 clearMagazineCargoGlobal _box;
 clearitemCargoGlobal _box;
 
-//Weapons
-_box AddWeaponCargoGlobal ["rhs_weap_m72a7",2];
 
+_box AddWeaponCargoGlobal ["rhs_weap_M136",1];
 
 //supplies
-_box AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd",20 + _high];
-_box AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd_T",5 + _mid];
+_box AddMagazineCargoGlobal ["30Rnd_556x45_Stanag",20 + _high];
+_box AddMagazineCargoGlobal ["30Rnd_556x45_Stanag_Tracer_Red",5 + _mid];
+
+_box AddMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",5 + _low];
 
 _box addItemCargoGlobal ["ACE_fieldDressing",5 + _high];
 _box addItemCargoGlobal ["ACE_elasticBandage",5 + _low];
