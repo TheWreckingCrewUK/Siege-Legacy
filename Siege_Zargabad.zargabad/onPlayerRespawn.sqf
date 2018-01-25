@@ -14,6 +14,14 @@ if(typeOf player in ["Modern_British_Medic","Modern_USMC_Medic"])then{
 	player setVariable ["ace_medical_medicClass",1];
 };
 
+
+//make the player middle eastern if they spawn as ANA. Sounds racist, but otherwise it looks dumb
+_me = player;
+if (faction player == "ana_units") then {
+[_me, "PersianHead_A3_01"] remoteExec ["setFace", 0, _me]
+};
+
+
 //Code to run if player spawns on forWardBase
 if((getMarkerPos "respawn_forwardBase") distance2D (getPos player) < 200)then{
 
