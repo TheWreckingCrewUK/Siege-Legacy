@@ -72,6 +72,26 @@ if((typeOf player) in ["Modern_British_HeliPilot","Modern_USMC_HeliPilot"])then{
 	
 };
 
+if((typeOf player) in ["twc_ana_commander","twc_ana_subcommander"])then{
+
+	_anaaction = ["SpawnsmallanaCreate","Spawn Small ANA Crate","",{execvm "siege_core\client\sys_player\boxes\smallcrateANA.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_anaaction,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_anaaction3 = ["spawn50","Spawn .50 Ammo","",{execvm "siege_core\client\sys_player\boxes\50calammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_anaaction3,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_anaaction4 = ["spawn762","Spawn 7.62 Ammo","",{execvm "siege_core\client\sys_player\boxes\762ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_anaaction4,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_anaaction5 = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "siege_core\client\sys_player\boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_anaaction5,true] call ace_interact_menu_fnc_addActionToClass;	
+	
+	_anaaction6 = ["SpawnmineCreate","Spawn Claymores","",{execvm "siege_core\client\sys_player\boxes\smallcratemines.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_anaaction6,true] call ace_interact_menu_fnc_addActionToClass;	
+};
+
+
+
 if((typeOf player) in ["Modern_British_Squadleader","Modern_British_2IC_COIN"])then{
 
 	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Small Alpha Crate","",{execvm "siege_core\client\sys_player\boxes\smallcrateuk.sqf"},{true}] call ace_interact_menu_fnc_createAction;
