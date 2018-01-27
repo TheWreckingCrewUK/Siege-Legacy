@@ -92,7 +92,7 @@ if((typeOf player) in ["twc_ana_commander","twc_ana_subcommander"])then{
 
 
 
-if((typeOf player) in ["Modern_British_Squadleader","Modern_British_2IC_COIN"])then{
+if((typeOf player) in ["Modern_British_Squadleader","Modern_British_2IC_COIN", "Modern_British_Spotter_coin", "Modern_British_Sniper_coin"])then{
 
 	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Small Alpha Crate","",{execvm "siege_core\client\sys_player\boxes\smallcrateuk.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction,true] call ace_interact_menu_fnc_addActionToClass;
@@ -166,14 +166,16 @@ if((typeOf player) in ["Modern_Artillery_Gunner","Modern_Artillery_Commander"])t
 
 };
 
-
+/*
 if((typeOf player) in ["Modern_British_Sniper_coin", "Modern_British_Spotter_coin"])then{
 
 	_snaction1 = ["Spawnsnipbox","Spawn Sniper Ammo Box","",{execvm "siege_core\client\sys_player\boxes\smallCratesniper.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_snaction1,true] call ace_interact_menu_fnc_addActionToClass;
 };
+?
+*/
 
-if((typeOf player) in ["Modern_British_Medic", "1990_British_Medic", "1990_British_Medic_Desert", "1990_RM_British_Medic_Mix", "Modern_USMC_Medic"])then{
+if((typeOf player) in ["Modern_British_Medic", "1990_British_Medic", "1990_British_Medic_Desert", "1990_RM_British_Medic_Mix", "Modern_USMC_Medic", "twc_ana_medic", ])then{
 
 	_medaction = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "siege_core\client\sys_player\boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_medaction,true] call ace_interact_menu_fnc_addActionToClass;

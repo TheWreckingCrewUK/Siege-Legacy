@@ -19,7 +19,7 @@ class Header {
 
 //Respawn settings
 respawn="BASE";
-respawndelay = 5;
+respawndelay = 20;
 respawnTemplates[] = {"MenuPosition"};
 respawnDialog = false;
 respawnOnStart = 1;

@@ -8,14 +8,14 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=221;
+		nextID=225;
 	};
 	class Camera
 	{
-		pos[]={6694.521,362.01682,6939.0815};
-		dir[]={0.97336793,-0.20784159,-0.098068245};
-		up[]={0.20683269,0.97817957,-0.020837888};
-		aside[]={-0.10025618,-1.3840036e-006,-0.99511129};
+		pos[]={6703.208,362.01682,6942.1895};
+		dir[]={0.93886632,-0.23366956,-0.25335643};
+		up[]={0.22563387,0.97233349,-0.060887296};
+		aside[]={-0.26057047,-1.4610705e-006,-0.96560931};
 	};
 };
 binarizationWanted=0;
@@ -2969,7 +2969,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6701.2939,359.31308,6927.4897};
+				position[]={6701.2969,359.15244,6927.4912};
 				angles[]={6.2738504,4.2206964,0.017332481};
 			};
 			side="Empty";
@@ -2977,8 +2977,9 @@ class Mission
 			class Attributes
 			{
 			};
-			id=216;
-			type="UK3CB_BAF_LandRover_WMIK_GPMG_Green_B";
+			id=221;
+			type="UK3CB_BAF_LandRover_WMIK_HMG_Green_B";
+			atlOffset=-0.0016784668;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3340,7 +3341,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6730.6533,359.22693,6949.1626};
+				position[]={6730.6538,359.06628,6949.1602};
 				angles[]={0.017329043,0.64359468,0.0026520467};
 			};
 			side="Empty";
@@ -3348,8 +3349,9 @@ class Mission
 			class Attributes
 			{
 			};
-			id=217;
-			type="UK3CB_BAF_LandRover_WMIK_GPMG_Green_B";
+			id=222;
+			type="UK3CB_BAF_LandRover_WMIK_HMG_Green_B";
+			atlOffset=-0.0016479492;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3711,7 +3713,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6734.4888,359.02161,6928.9351};
+				position[]={6734.4873,358.86105,6928.9404};
 				angles[]={6.2485347,2.4301028,6.2725158};
 			};
 			side="Empty";
@@ -3719,8 +3721,9 @@ class Mission
 			class Attributes
 			{
 			};
-			id=218;
-			type="UK3CB_BAF_LandRover_WMIK_GPMG_Green_B";
+			id=223;
+			type="UK3CB_BAF_LandRover_WMIK_HMG_Green_B";
+			atlOffset=-0.00051879883;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4082,16 +4085,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6691.188,359.1283,6950.1958};
-				angles[]={-0,5.0122757,0.043973263};
+				position[]={6691.1953,358.96777,6950.1963};
+				angles[]={0,5.0122757,0.043973263};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 			};
-			id=220;
-			type="UK3CB_BAF_LandRover_WMIK_GPMG_Green_B";
+			id=224;
+			type="UK3CB_BAF_LandRover_WMIK_HMG_Green_B";
+			atlOffset=-0.0083618164;
 			class CustomAttributes
 			{
 				class Attribute0
