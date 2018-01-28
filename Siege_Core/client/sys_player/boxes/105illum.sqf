@@ -34,9 +34,9 @@ clearitemCargoGlobal _box;
 
 
 //supplies
-_box AddMagazineCargoGlobal ["ACE_CUP_30Rnd_105mmHE_M119_M",5];
+//_box AddMagazineCargoGlobal ["ACE_CUP_30Rnd_105mmHE_M119_M",5];
 //_box AddMagazineCargoGlobal ["ACE_CUP_30Rnd_105mmSMOKE_M119_M",2];
-//_box AddMagazineCargoGlobal ["ACE_CUP_30Rnd_105mmILLUM_M119_M",2];
+_box AddMagazineCargoGlobal ["ACE_CUP_30Rnd_105mmILLUM_M119_M",5];
 
 [player, _box] call ace_cargo_fnc_startLoadIn;
 };
