@@ -25,7 +25,7 @@ TWC_Building_Style = "Med";
 pointLimit = 40;
 publicVariable "pointLimit";
 
-twc_difficulty = 0.3;
+twc_difficulty = 0.5;
 publicVariable "twc_difficulty";
 
 sirenlist = [idfalarm];
