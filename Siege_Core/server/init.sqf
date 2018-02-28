@@ -31,6 +31,10 @@ townLocationArray = townLocationArray + (nearestLocations [getpos _x, ["NameVill
 basemode = 1;
 publicvariable "basemode";
 
+[west, 20] call BIS_fnc_respawnTickets;
+
+
+
 execVM "Siege_Core\server\sys_townLocations\getLocations.sqf";
 
 // List of civilians who were already questioned

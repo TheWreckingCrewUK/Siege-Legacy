@@ -8,3 +8,4 @@
 #include "func\init.sqf";
 #include "sys_basedefence\init.sqf";
 "iedRestrictionZone" setMarkerAlpha 0;
+[west, 5] call BIS_fnc_respawnTickets;
