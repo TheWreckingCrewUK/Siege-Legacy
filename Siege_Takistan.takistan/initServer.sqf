@@ -25,6 +25,10 @@ TWC_Building_Style = "Med";
 twc_difficulty = 1.1;
 publicVariable "twc_difficulty";
 
+
+//add in an object name and the game will create a location there and spawn enemies from it
+customlocations = [camp1, camp2];
+
 sirenlist = [idfalarm];
 publicvariable "sirenlist";
 

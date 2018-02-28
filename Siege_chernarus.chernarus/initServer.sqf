@@ -22,6 +22,9 @@ twc_surrenderVote = false;
 */
 TWC_Building_Style = "Med";
 
+//add in an object name and the game will create a location there and spawn enemies from it
+customlocations = [camp1, camp2];
+
 pointLimit = 40;
 publicVariable "pointLimit";
 

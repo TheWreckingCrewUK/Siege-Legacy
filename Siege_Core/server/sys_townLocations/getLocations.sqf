@@ -20,7 +20,6 @@ _flagpos = [_spawnpos,[100,100],random 360,0,[0,100]] call SHK_pos;
 
 
 
-if (_flagpos distance getmarkerpos "base" <2000) then {
 
 
 if (count(_flagpos nearEntities [["CUP_C_Skoda_Blue_CIV"], 300]) ==0) then {
@@ -42,7 +41,7 @@ if (_flag getvariable "fighting" == 1) then {} else {
 		_trg setTriggerStatements ["this",format["[(getPos thisTrigger),%1,100,[100,200],thisList,_flag] spawn twc_townSetup;",_count],""];
 
 };
-};
+
 
 
 
