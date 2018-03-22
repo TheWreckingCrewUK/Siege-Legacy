@@ -10,13 +10,13 @@ _accuracy = if(isNil "idfbasesize") then {40
 } else {idfbasesize * 0.5};
 
 _distancescale = _accuracy * ((_distance * (_distance*0.2)) / 3500000);
-//systemchat format ["%1, %2", _distancescale, _distance];
+\\systemchat format ["%1, %2", _distancescale, _distance];
 
-if (side group _shooter isEqualTo East) then {
+
 	if (idfreported == 0) then {
 		if ((_shooter) distance _base < 5000) then
 {
-			if ((_shooter) distance _base > (idfbasesize *3)) then
+			if ((_shooter) distance _base > (idfbasesize *1)) then
 {
 
 				if ((_direction > ((360 - _accuracy) + (_distancescale))) or {_direction < ((0 + _accuracy) - ( _distancescale))}) then
@@ -30,27 +30,20 @@ publicvariable "idfreported";
 
 
 
-[_shooter,_distance] execvm "Insurgency_Core\server\sys_basedefence\IDF_marker.sqf";
-if (alarm == 0) then {
-alarm = 1;
-publicvariable "alarm";
-sleep _time;
+[_shooter,_distance] execvm "Siege_Core\server\sys_basedefence\IDF_marker.sqf";
 
-terminate execVM "Insurgency_Core\server\sys_basedefence\IDF_cram.sqf";
+terminate execVM "Siege_Core\server\sys_basedefence\IDF_cram.sqf";
 //systemchat "middle man sees the shell";
-sleep 2;
+
 if (idfon == 0) then {
-execVM "Insurgency_Core\server\sys_basedefence\IDF_Alarm.sqf";
+execVM "Siege_Core\server\sys_basedefence\IDF_Alarm.sqf";
 
 };
 if (clearing == 0) then {
-execVM "Insurgency_Core\server\sys_basedefence\IDF_Clear.sqf";
+execVM "Siege_Core\server\sys_basedefence\IDF_Clear.sqf";
+};
+};
+};
+};
 };
 
-
-};
-};
-};
-};
-};
-};

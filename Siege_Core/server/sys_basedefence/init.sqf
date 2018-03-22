@@ -1,9 +1,4 @@
 
-if(isNil "basemode") then{
-	basemode = 1;
-	publicVariable "basemode";
-};
-
 if(isNil "basesafe") then{
 	basesafe = 201;
 	publicVariable "basesafe";
@@ -44,3 +39,4 @@ if(isNil "idfGuns") then{
 	publicvariable "idfGuns";
 };
 
+twc_fnc_idf = compile preprocessfilelinenumbers "siege_Core\server\sys_basedefence\IDF_Alarmfire.sqf";

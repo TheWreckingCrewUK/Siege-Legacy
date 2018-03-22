@@ -11,7 +11,10 @@
 
 if(isNil "mortarcount") then{
 	mortarcount = 0;
-	publicvariable "mortarcount";
+};
+
+if(isNil "twc_is90") then{
+	twc_is90 = 0;
 };
 
 
