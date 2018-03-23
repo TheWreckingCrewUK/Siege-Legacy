@@ -11,6 +11,8 @@ twc_serverDebug = false;
 
 twc_surrenderVote = false;
 
+//add in an object name and the game will create a location there and spawn enemies from it
+customlocations = [camp_1, camp_2, camp_3, camp_4];
 /*
 * Denotes the style of building to be used, for dynamic compositions.
 * For example: the IED factory.
@@ -22,7 +24,7 @@ twc_surrenderVote = false;
 */
 TWC_Building_Style = "Med";
 
-twc_difficulty = 0.5;
+twc_difficulty = 0.8;
 publicVariable "twc_difficulty";
 
 sirenlist = [idfalarm];
