@@ -24,8 +24,12 @@ customlocations = [camp_1, camp_2, camp_3, camp_4];
 */
 TWC_Building_Style = "Med";
 
-twc_difficulty = 0.8;
+twc_difficulty = 1.2;
 publicVariable "twc_difficulty";
+
+//multiplier for how much the enemy increases with player count, 1 is the standard figure. Set higher with lower overall difficulty for maps where there's a lot of ground for a small group to cover. Set lower for maps where higher player count doesn't make much difference to how difficult the area is to defend.
+twc_diff_scaler = 0.7;
+publicVariable "twc_diff_scaler";
 
 sirenlist = [idfalarm];
 publicvariable "sirenlist";

@@ -13,7 +13,7 @@ publicVariable "twc_currentdefender";
 
 	
 while {true} do {
-twc_maxenemy=((30*twc_difficulty)+(count(allPlayers - entities "HeadlessClient_F")*(6*twc_difficulty))) min 70;
+twc_maxenemy=((30*twc_difficulty)+((count(allPlayers - entities "HeadlessClient_F")*twc_diff_scaler)*(6*twc_difficulty))) min 80;
 publicVariable "twc_maxenemy";
 sleep 0.2;
 if ((pointLimit-totalpoints)<(twc_maxenemy)) then {
