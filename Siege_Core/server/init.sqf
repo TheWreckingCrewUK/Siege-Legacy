@@ -41,7 +41,7 @@ townLocationArray = townLocationArray + (nearestLocations [getpos _x, ["NameVill
 basemode = 1;
 publicvariable "basemode";
 
-[west, 20] call BIS_fnc_respawnTickets;
+[west, 10] call BIS_fnc_respawnTickets;
 
 
 

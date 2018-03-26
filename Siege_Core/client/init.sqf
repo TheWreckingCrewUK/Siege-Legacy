@@ -8,7 +8,10 @@
 #include "func\init.sqf";
 #include "sys_basedefence\init.sqf";
 "iedRestrictionZone" setMarkerAlpha 0;
-[west, 5] call BIS_fnc_respawnTickets;
+[west, 6] call BIS_fnc_respawnTickets;
+
+player addEventHandler ["Killed",{[west, -1] call BIS_fnc_respawnTickets;
+	}];
 
 /*
 player addEventHandler ["Hit", {[] spawn {if !(vehicle player == player) exitwith{};if (stance player == "PRONE") exitwith {};if ((random 1)>1.5) exitwith{}; _this = player; _this setUnconscious true; sleep 0.1; _this setUnconscious false}}]
