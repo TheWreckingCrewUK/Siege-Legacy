@@ -23,7 +23,8 @@ _group = createGroup East;
 _flag = _spawnpos nearEntities [["CUP_C_Skoda_Blue_CIV"], 300] select 0; 
 _chance = _flag getvariable "active";
 
-_total = 10 * _chance;
+_total = (10 * _chance) / (twc_siege_baseside + 1);
+
 if ( _flag getvariable "defended" == 1) exitwith {};
 
 _flag setVariable ["defended",1];

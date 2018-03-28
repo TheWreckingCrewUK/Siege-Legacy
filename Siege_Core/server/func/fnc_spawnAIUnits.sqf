@@ -35,11 +35,14 @@ _spawnPos = [_pos,_groupradius,[_dir1,_dir2]] call SHK_pos;
 
 _flag = _pos nearEntities [["CUP_C_Skoda_Blue_CIV"], 300] select 0;
 
-
+_enemycount = (count allunits) - (count playableunits);
 //if (_flag getvariable "fighting" == 1) then {systemchat "spawn blocked"} else {
 //for "_i" from 1 to _total do{
-while {twc_currentenemy<twc_maxenemy} do {
 
+
+while {_enemycount<twc_maxenemy} do {
+
+_enemycount = (count allunits) - (count playableunits);
 if (_chance > random 1) then {
 	_unit = _group createUnit [(townSpawn select (floor random (count townspawn))), _spawnPos,[], 0.3,"NONE"];
 	twc_currentenemy=twc_currentenemy+1;
@@ -54,11 +57,48 @@ if (_chance > random 1) then {
 	_unit setVariable ["unitsHome",_pos,false];
 	//_num = _num + 1;
 	sleep 2;
+	
+		
+
 } else {sleep 30;}	
 
 };
 //};
 sleep 2;
+
+_group setFormation "LINE";
+if (twc_siege_baseside == 0) then {
+for "_i" from 1 to twc_wpcount do {
+_group addwaypoint [[getmarkerpos "base", 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos, 0]};
+_group addwaypoint [getmarkerpos "base", 50 * twc_roamsize] call CBA_fnc_randPos;
+_group addwaypoint [getmarkerpos "base", 20 * twc_roamsize] call CBA_fnc_randPos;
+[_group, twc_wpcount+2] setWaypointStatements ["true", "[this] call CBA_fnc_taskDefend"]
+} else
+{ if ((random 2) > 1) then {
+systemchat "chasing";
+_enemy = playableUnits select (floor (random (count playableunits)));
+
+_group addwaypoint [[getpos _enemy, 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos, 0];
+[_group] call twc_fnc_huntergroup;
+} else
+{
+for "_i" from 1 to twc_wpcount do {
+systemchat "base";
+
+
+deleteWaypoint [_group, currentwaypoint (_group)];
+_group addwaypoint [[getmarkerpos "dummybase", 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos, 0]};
+
+_group addwaypoint [getmarkerpos "dummybase", 20 * twc_roamsize];
+
+[_group, twc_wpcount + 1] setWaypointStatements ["true", "[this] call CBA_fnc_taskDefend"]
+}
+
+
+};
+
+
+
 	if (totalPoints > (pointLimit / 2)) then {
 		if (technicals > 0) then {
 			if (random 1 > 0.7) then {
@@ -93,11 +133,32 @@ _driver moveInGunner _technical;
 		};
 	};
 
-_group setFormation "LINE";
 
+
+
+
+
+/*
+
+
+
+if (twc_siege_baseside == 3) then {
 for "_i" from 1 to twc_wpcount do {
 _group addwaypoint [[getmarkerpos "base", 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos, 0]};
 _group addwaypoint [getmarkerpos "base", 50 * twc_roamsize] call CBA_fnc_randPos;
 _group addwaypoint [getmarkerpos "base", 20 * twc_roamsize] call CBA_fnc_randPos;
 [_group, twc_wpcount+2] setWaypointStatements ["true", "[this] call CBA_fnc_taskDefend"]
-//};
+} else
+{
+if ((count playableUnits) == 0) then {
+for "_i" from 1 to twc_wpcount do {
+_group addwaypoint [getmarkerpos "base", 20 * twc_roamsize] call CBA_fnc_randPos;
+
+[_group, twc_wpcount] setWaypointStatements ["true", "[this] call CBA_fnc_taskDefend"]
+}} else {
+_enemy = playableUnits select (floor (random (count playableunits)));
+_wp = _group addwaypoint [[getpos _enemy, 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos, 0]};
+[_group] call twc_fnc_huntergroup;
+};
+*/
+

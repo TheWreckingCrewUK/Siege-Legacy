@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1933.9518,218.27432,5041.3857};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		pos[]={1916.2079,214.25539,5068.9619};
+		dir[]={-0.57125127,-0.73111778,0.37309316};
+		up[]={-0.61211926,0.68226761,0.39978456};
+		aside[]={0.54683727,9.9185854e-008,0.8372758};
 	};
 };
 binarizationWanted=0;
@@ -14372,7 +14372,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={1903.198,194.0555,5075.6958};
-			angle=3.2801018;
+			angle=3.280102;
 			class Attributes
 			{
 				name="mainbase";
@@ -14380,7 +14380,7 @@ class Mission
 				onActivation="call{[""thistrigger""] call twc_fnc_changebase;}";
 				sizeA=10;
 				sizeB=16;
-				timeout[]={6,6,6};
+				timeout[]={60,60,60};
 				interuptable=1;
 				repeatable=1;
 				activationBy="EAST";
@@ -14695,7 +14695,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={1903.209,194.05368,5075.6738};
-			angle=3.2801011;
+			angle=3.280102;
 			class Attributes
 			{
 				name="warning";

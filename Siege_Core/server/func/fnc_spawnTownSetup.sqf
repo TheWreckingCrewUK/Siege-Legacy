@@ -37,7 +37,7 @@ _trg = createTrigger ["EmptyDetector", _pos];
 _trg setTriggerArea [_dis2 , _dis2, 0, false];
 _trg setTriggerActivation ["west", "PRESENT", true];
 _trg setTriggerTimeout [1,1,1, true];
-_trg setTriggerStatements ["this","	_flag = getPos thisTrigger nearEntities [['CUP_C_Skoda_Blue_CIV'], 300] select 0; _flag setvariable ['fighting',1]; systemchat 'fighting' ","	_flag = getPos thisTrigger nearEntities [['CUP_C_Skoda_Blue_CIV'], 300] select 0; _flag setvariable ['fighting',0]; systemchat 'no fighting here'"];
+_trg setTriggerStatements ["this","	_flag = getPos thisTrigger nearEntities [['CUP_C_Skoda_Blue_CIV'], 300] select 0; _flag setvariable ['fighting',1]","	_flag = getPos thisTrigger nearEntities [['CUP_C_Skoda_Blue_CIV'], 300] select 0; _flag setvariable ['fighting',0]; systemchat 'no fighting here'"];
 
 for "_i" from 1 to mortarcount do{
 [_pos] spawn twc_spawnmortars;

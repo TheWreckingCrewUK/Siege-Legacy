@@ -8,14 +8,14 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=227;
+		nextID=230;
 	};
 	class Camera
 	{
-		pos[]={7300.27,234.10628,6361.2505};
-		dir[]={0.84623057,-0.53208745,0.028025575};
-		up[]={0.5317992,0.84668797,0.017612115};
-		aside[]={0.033099901,-1.0378426e-007,-0.99945587};
+		pos[]={6721.5669,367.91156,6922.9404};
+		dir[]={-0.24028954,-0.47113276,0.84870774};
+		up[]={-0.1283472,0.88205755,0.45332426};
+		aside[]={0.96218538,3.2247044e-007,0.27241832};
 	};
 };
 binarizationWanted=0;
@@ -12664,7 +12664,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=54;
+		items=57;
 		class Item0
 		{
 			dataType="Object";
@@ -12803,11 +12803,11 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={6717.623,357.27084,6934.019};
-			angle=4.011167;
+			angle=4.011168;
 			class Attributes
 			{
 				condition="call{count thislist >2;}";
-				onActivation="call{""baselost"" call BIS_fnc_endMissionServer;}";
+				onActivation="call{[""thistrigger""] call twc_fnc_changebase;}";
 				sizeA=45;
 				sizeB=45;
 				timeout[]={60,60,60};
@@ -12879,8 +12879,8 @@ class Mission
 		class Item9
 		{
 			dataType="Trigger";
-			position[]={6717.7061,356.79083,6934.1743};
-			angle=4.011167;
+			position[]={6717.7061,356.79099,6934.1738};
+			angle=4.0111675;
 			class Attributes
 			{
 				name="warning";
@@ -12894,7 +12894,7 @@ class Mission
 			};
 			id=85;
 			type="EmptyDetectorAreaR50";
-			atlOffset=0.026855469;
+			atlOffset=0.027008057;
 		};
 		class Item10
 		{
@@ -16969,6 +16969,51 @@ class Mission
 			id=226;
 			type="Land_Fire_barrel";
 			atlOffset=-0.016937256;
+		};
+		class Item54
+		{
+			dataType="Marker";
+			position[]={6718.1787,356.77081,6936.1504};
+			name="forwardBase_itemSpawn";
+			type="Empty";
+			angle=101.344;
+			id=227;
+			atlOffset=-0.0026550293;
+		};
+		class Item55
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6723.8696,357.27536,6934.563};
+				angles[]={6.2671909,1.5351641,6.2778587};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=228;
+			type="Land_InfoStand_V2_F";
+			atlOffset=0.0026550293;
+		};
+		class Item56
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6724.4692,357.72424,6934.022};
+				angles[]={0,1.7485824,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{this setObjectTexture [0, ""twc_ui\insurgency\patrolbase.jpg""]; this allowDamage False;}";
+			};
+			id=229;
+			type="SignAd_Sponsor_F";
+			atlOffset=0.0026550293;
 		};
 	};
 };
