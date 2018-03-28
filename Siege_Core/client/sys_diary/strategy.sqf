@@ -1,1 +1,3 @@
-player CreateDiaryRecord ["Diary",["Strategy","The enemy has a finite amount of personnel, which you can see an approximation of by ACE self-interacting and selecting Mission Status. Once they have all died the mission will be complete."]];
+player CreateDiaryRecord ["Diary",["Strategy","The enemy has a finite amount of personnel, which you can see an approximation of by ACE self-interacting and selecting Mission Status. Once the enemy has run out of reinforcements the mission will be complete, provided you own the base.
+To control the base you need 2 people inside for 60 seconds. This is not a constant requirement, it's only necessary when the enemy has taken it previously and you're taking it back.
+If you lose the main base and you haven't set up a Patrol Base, you will not be able to respawn and the mission will fail when every player is dead."]];

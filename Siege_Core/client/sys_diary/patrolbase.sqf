@@ -1,0 +1,1 @@
+player CreateDiaryRecord ["Diary",["Patrol Base","Squad Leaders can spawn a Patrol Base kit from the 2 legged stand. This can be set up anywhere that's over 500m from base, provided the table and generator are closer than 200 meters away. You can spawn here even if you lose the main base."]];
