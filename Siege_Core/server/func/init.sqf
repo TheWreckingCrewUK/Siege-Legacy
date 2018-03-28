@@ -15,3 +15,4 @@ twc_fnc_randomBuildingPos = compile preprocessfilelinenumbers "siege_core\server
 twc_fnc_checkLastDamage = compile preprocessfilelinenumbers "siege_core\server\func\fnc_checkLastDamage.sqf";
 twc_fnc_addScore = compile preprocessfilelinenumbers "siege_core\server\func\fnc_addScore.sqf";
 twc_fnc_calculateSpawnAmount = compile preprocessfilelinenumbers "siege_core\server\func\fnc_calculateSpawnAmount.sqf";
+twc_fnc_changebase = compile preprocessfilelinenumbers "siege_core\server\func\fnc_changebase.sqf";

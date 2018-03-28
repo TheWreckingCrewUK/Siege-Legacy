@@ -73,12 +73,12 @@ _driver = _group2 createUnit [(townSpawn select (floor random (count townspawn))
 _gunner = _group2 createUnit [(townSpawn select (floor random (count townspawn))), _spawnPos,[], 0.3,"NONE"];
 _driver moveInDriver _technical;
 _gunner moveInGunner _technical;
-_group2 addwaypoint [getmarkerpos "base", 400] call CBA_fnc_randPos;
-_group2 addwaypoint [getmarkerpos "base", 350] call CBA_fnc_randPos;
-_group2 addwaypoint [getmarkerpos "base", 300] call CBA_fnc_randPos;
-_group2 addwaypoint [getmarkerpos "base", 300] call CBA_fnc_randPos;
-_group2 addwaypoint [getmarkerpos "base", 300] call CBA_fnc_randPos;
-_group2 addwaypoint [getmarkerpos "base", 300] call CBA_fnc_randPos;
+_group2 addwaypoint [getmarkerpos "base", 300 * twc_roamsize, 500 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos;
+_group2 addwaypoint [getmarkerpos "base", 200 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos;
+_group2 addwaypoint [getmarkerpos "base", 100 * twc_roamsize, 200 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos;
+_group2 addwaypoint [getmarkerpos "base", 100 * twc_roamsize, 150 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos;
+_group2 addwaypoint [getmarkerpos "base", 100 * twc_roamsize] call CBA_fnc_randPos;
+_group2 addwaypoint [getmarkerpos "base", 100 * twc_roamsize] call CBA_fnc_randPos;
  [_group, 5] setWaypointType "CYCLE";
 sleep 2;
 
@@ -94,8 +94,10 @@ _driver moveInGunner _technical;
 	};
 
 _group setFormation "LINE";
-_group addwaypoint [getmarkerpos "base", 300] call CBA_fnc_randPos;
-_group addwaypoint [getmarkerpos "base", 50] call CBA_fnc_randPos;
-_group addwaypoint [getmarkerpos "base", 50] call CBA_fnc_randPos;
-_group addwaypoint [getmarkerpos "base", 10] call CBA_fnc_randPos;
+
+for "_i" from 1 to twc_wpcount do {
+_group addwaypoint [[getmarkerpos "base", 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos, 0]};
+_group addwaypoint [getmarkerpos "base", 50 * twc_roamsize] call CBA_fnc_randPos;
+_group addwaypoint [getmarkerpos "base", 20 * twc_roamsize] call CBA_fnc_randPos;
+[_group, twc_wpcount+2] setWaypointStatements ["true", "[this] call CBA_fnc_taskDefend"]
 //};

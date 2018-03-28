@@ -32,8 +32,17 @@ twc_difficulty = 0.5;
 publicVariable "twc_difficulty";
 
 //multiplier for how much the enemy increases with player count, 1 is the standard figure. Set higher with lower overall difficulty for maps where there's a lot of ground for a small group to cover. Set lower for maps where higher player count doesn't make much difference to how difficult the area is to defend.
-twc_diff_scaler = 1.3;
+twc_diff_scaler = 1.4;
 publicVariable "twc_diff_scaler";
+
+
+//roamsize multiplies the size of the random waypoint divergence from base. A setting of 1 means each waypoint is up to 100-200 meters away from base. Set higher for maps where there's a lot of cover and you don't want the enemies to just swim in so that you can use higher difficulties without swamping the base. The downside is that they take longer to get to engagement range so there's more downtime at mission start.
+twc_roamsize = 0.8;
+
+
+//wpcount adds extra waypoints that scale by the roamsize variable. If left unset in the mission's initserver then it will default to 1. The game will add 2 waypoints near base regardless of this value. Set this to 0 to have them move straight to base, set to 2-4 if you want enemies to loiter around nearby a lot but not make a play for the base that often.
+	twc_wpcount = 3;
+
 
 sirenlist = [idfalarm];
 publicvariable "sirenlist";
