@@ -20,20 +20,20 @@ twc_surrenderVote = false;
 * "MidEast" - Middle East
 * "IRA" - Irish
 */
-TWC_Building_Style = "Med";
+TWC_Building_Style = "MidEast";
 
-twc_difficulty = 0.7;
+twc_difficulty = 1.7;
 
 //roamsize multiplies the size of the random waypoint divergence from base. A setting of 1 means each waypoint is up to 100-200 meters away from base. Set higher for maps where there's a lot of cover and you don't want the enemies to just swim in so that you can use higher difficulties without swamping the base. The downside is that they take longer to get to engagement range so there's more downtime at mission start.
 twc_roamsize = 1;
 
 
 //wpcount adds extra waypoints that scale by the roamsize variable. If left unset in the mission's initserver then it will default to 1. The game will add 2 waypoints near base regardless of this value. Set this to 0 to have them move straight to base, set to 2-4 if you want enemies to loiter around nearby a lot but not make a play for the base that often.
-	twc_wpcount = 3;
+	twc_wpcount = 0;
 
 
 //multiplier for how much the enemy increases with player count, 1 is the standard figure. Set higher with lower overall difficulty for maps where there's a lot of ground for a small group to cover. Set lower for maps where higher player count doesn't make much difference to how difficult the area is to defend.
-twc_diff_scaler = 1.6;
+twc_diff_scaler = 1;
 
 //add in an object name and the game will create a location there and spawn enemies from it
 customlocations = [camp1, camp2, camp3];
@@ -41,7 +41,7 @@ customlocations = [camp1, camp2, camp3];
 sirenlist = [idfalarm];
 publicvariable "sirenlist";
 
-technicals = 1 + random 2;
+technicals = 3 + random 2;
 
 
 civilianType = ["Tak_Civ_Men_KTL1", "CUP_C_TK_Man_04_Jack", "Tak_Civ_Men_KTL2","CUP_C_TK_Man_07_Coat", "Tak_Civ_Men_KTL3", "Tak_Civ_Men_KTL4", "Tak_Civ_Men_KTs1", "Tak_Civ_Men_KTs2", "Tak_Civ_Men_KTs3", "Tak_Civ_Men_KTs4",  "CUP_C_TK_Man_05_Jack", "Tak_Civ_Men_J1", "Tak_Civ_Men_J2", "Tak_Civ_Men_J3"];
@@ -66,7 +66,7 @@ townSquadWave = ["CUP_O_TK_INS_Soldier_AR","Tak_twc_ins_Men_R1","CUP_O_TK_INS_So
 
 vehicleList = ["CUP_C_UAZ_Unarmed_TK_CIV", "CUP_C_Skoda_Blue_CIV", "CUP_C_Datsun_Plain", "CUP_C_Ural_Open_Civ_03"];
 
-enemyTechnical = ["CUP_O_LR_MG_TKM", "CUP_O_LR_MG_TKM", "CUP_O_Ural_ZU23_TKA", "CUP_O_LR_SPG9_TKM"];
+enemyTechnical = ["CUP_O_LR_MG_TKM", "CUP_O_Ural_ZU23_TKA", "CUP_O_LR_SPG9_TKM"];
 
 _script = execVM "siege_core\SHK_pos\shk_pos_init.sqf";
 waitUntil{scriptDone _script};

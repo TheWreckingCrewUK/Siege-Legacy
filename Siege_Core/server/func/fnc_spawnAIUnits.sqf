@@ -72,7 +72,7 @@ for "_i" from 1 to twc_wpcount do {
 _group addwaypoint [[getmarkerpos "base", 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos, 0]};
 _group addwaypoint [getmarkerpos "base", 50 * twc_roamsize] call CBA_fnc_randPos;
 _group addwaypoint [getmarkerpos "base", 20 * twc_roamsize] call CBA_fnc_randPos;
-[_group, twc_wpcount+2] setWaypointStatements ["true", "[this] call CBA_fnc_taskDefend"]
+[_group, twc_wpcount+2] setWaypointStatements ["true", "[this, if (twc_siege_baseside == 0) then {getmarkerpos 'base'} else {getmarkerpos 'dummybase'},100] call CBA_fnc_taskDefend"]
 } else
 { if ((random 2) > 1) then {
 systemchat "chasing";

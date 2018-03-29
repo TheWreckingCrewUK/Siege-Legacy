@@ -59,7 +59,7 @@ publicvariable "basemode";
 
 [west, 10] call BIS_fnc_respawnTickets;
 
-
+twc_basepos = getmarkerpos "base";
 
 execVM "Siege_Core\server\sys_townLocations\getLocations.sqf";
 
