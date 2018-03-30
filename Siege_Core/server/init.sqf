@@ -68,7 +68,7 @@ nonQuestionableList = [];
 publicVariable "nonQuestionableList";
 
 // Array of the locations and the strongholds
-townLocationArray = townLocationArray + (nearestLocations [getmarkerpos "base", ["NameVillage","NameCity","NameCityCapital","nameLocal"], 2000]);
+townLocationArray = townLocationArray + (nearestLocations [twc_basepos, ["NameVillage","NameCity","NameCityCapital","nameLocal"], 2000]);
 _strongholdArray = [];
 
 /*

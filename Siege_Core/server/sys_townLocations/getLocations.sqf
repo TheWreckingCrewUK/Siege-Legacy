@@ -1,10 +1,12 @@
-sleep random 10;
 
-if (twc_currentenemy<twc_maxenemy) then{
+if (twc_currentenemy>twc_maxenemy) exitwith
+{systemchat "too much"};
+
 //adding in enemy count just to save a bit of overhead
 {
 // disreguards the towns in the badTown array in initServer
 	if(!((text _x) in badTownArray))then{
+systemchat "2";
 	
 //Calculates how many civilians based on number of houses.
 		_houseList = (getPos _x) nearObjects ["House",300]; 
@@ -20,7 +22,7 @@ _flagpos = [_spawnpos,[100,100],random 360,0,[0,100]] call SHK_pos;
 
 
 
-
+sleep random 5;
 
 if (count(_flagpos nearEntities [["CUP_C_Skoda_Blue_CIV"], 300]) ==0) then {
 
@@ -56,4 +58,3 @@ if (_flag getvariable "fighting" == 1) then {} else {
 
 	};
 }forEach townLocationArray;
-};

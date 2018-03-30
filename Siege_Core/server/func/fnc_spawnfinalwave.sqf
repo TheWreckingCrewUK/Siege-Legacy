@@ -15,7 +15,7 @@
 *
 * Public: No
 */
-
+/*
 //Recieved Parameters
 params ["_pos","_groupradius","_thisList"];
 

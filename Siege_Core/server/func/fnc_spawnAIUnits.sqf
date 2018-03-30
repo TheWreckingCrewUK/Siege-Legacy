@@ -23,7 +23,7 @@ params ["_pos","_groupradius","_thisList", "_chance"];
 _dir = (_thisList select 0) getDir _pos;
 _dir1 = _dir - 30;
 _dir2 = _dir + 30;
-
+systemchat "spawn called";
 //Calculating total enemies to spawn
 _num = 0;
 _total = [_pos] call twc_fnc_calculateSpawnAmount;
@@ -69,10 +69,10 @@ sleep 2;
 _group setFormation "LINE";
 if (twc_siege_baseside == 0) then {
 for "_i" from 1 to twc_wpcount do {
-_group addwaypoint [[getmarkerpos "base", 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos, 0]};
-_group addwaypoint [getmarkerpos "base", 50 * twc_roamsize] call CBA_fnc_randPos;
-_group addwaypoint [getmarkerpos "base", 20 * twc_roamsize] call CBA_fnc_randPos;
-[_group, twc_wpcount+2] setWaypointStatements ["true", "[this, if (twc_siege_baseside == 0) then {getmarkerpos 'base'} else {getmarkerpos 'dummybase'},100] call CBA_fnc_taskDefend"]
+_group addwaypoint [[twc_basepos, 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos, 0]};
+_group addwaypoint [twc_basepos, 50 * twc_roamsize] call CBA_fnc_randPos;
+_group addwaypoint [twc_basepos, 20 * twc_roamsize] call CBA_fnc_randPos;
+[_group, twc_wpcount+2] setWaypointStatements ["true", "[this, twc_basepos,100] call CBA_fnc_taskDefend"]
 } else
 { if ((random 2) > 1) then {
 systemchat "chasing";
@@ -87,11 +87,11 @@ systemchat "base";
 
 
 deleteWaypoint [_group, currentwaypoint (_group)];
-_group addwaypoint [[getmarkerpos "dummybase", 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos, 0]};
+_group addwaypoint [[twc_basepos, 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos, 0]};
 
-_group addwaypoint [getmarkerpos "dummybase", 20 * twc_roamsize];
+_group addwaypoint [twc_basepos, 20 * twc_roamsize];
 
-[_group, twc_wpcount + 1] setWaypointStatements ["true", "[this] call CBA_fnc_taskDefend"]
+[_group, twc_wpcount + 1] setWaypointStatements ["true", "[this, twc_basepos] call CBA_fnc_taskDefend"]
 }
 
 
@@ -113,12 +113,12 @@ _driver = _group2 createUnit [(townSpawn select (floor random (count townspawn))
 _gunner = _group2 createUnit [(townSpawn select (floor random (count townspawn))), _spawnPos,[], 0.3,"NONE"];
 _driver moveInDriver _technical;
 _gunner moveInGunner _technical;
-_group2 addwaypoint [getmarkerpos "base", 300 * twc_roamsize, 500 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos;
-_group2 addwaypoint [getmarkerpos "base", 200 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos;
-_group2 addwaypoint [getmarkerpos "base", 100 * twc_roamsize, 200 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos;
-_group2 addwaypoint [getmarkerpos "base", 100 * twc_roamsize, 150 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos;
-_group2 addwaypoint [getmarkerpos "base", 100 * twc_roamsize] call CBA_fnc_randPos;
-_group2 addwaypoint [getmarkerpos "base", 100 * twc_roamsize] call CBA_fnc_randPos;
+_group2 addwaypoint [[twc_basepos, 300 * twc_roamsize, 500 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
+_group2 addwaypoint [[twc_basepos, 200 * twc_roamsize, 400 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
+_group2 addwaypoint [[twc_basepos, 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
+_group2 addwaypoint [[twc_basepos, 100 * twc_roamsize, 200 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
+_group2 addwaypoint [twc_basepos, 100 * twc_roamsize] call CBA_fnc_randPos;
+_group2 addwaypoint [twc_basepos, 100 * twc_roamsize] call CBA_fnc_randPos;
  [_group, 5] setWaypointType "CYCLE";
 sleep 2;
 
@@ -144,15 +144,15 @@ _driver moveInGunner _technical;
 
 if (twc_siege_baseside == 3) then {
 for "_i" from 1 to twc_wpcount do {
-_group addwaypoint [[getmarkerpos "base", 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos, 0]};
-_group addwaypoint [getmarkerpos "base", 50 * twc_roamsize] call CBA_fnc_randPos;
-_group addwaypoint [getmarkerpos "base", 20 * twc_roamsize] call CBA_fnc_randPos;
+_group addwaypoint [[twc_basepos, 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos, 0]};
+_group addwaypoint [twc_basepos, 50 * twc_roamsize] call CBA_fnc_randPos;
+_group addwaypoint [twc_basepos, 20 * twc_roamsize] call CBA_fnc_randPos;
 [_group, twc_wpcount+2] setWaypointStatements ["true", "[this] call CBA_fnc_taskDefend"]
 } else
 {
 if ((count playableUnits) == 0) then {
 for "_i" from 1 to twc_wpcount do {
-_group addwaypoint [getmarkerpos "base", 20 * twc_roamsize] call CBA_fnc_randPos;
+_group addwaypoint [twc_basepos, 20 * twc_roamsize] call CBA_fnc_randPos;
 
 [_group, twc_wpcount] setWaypointStatements ["true", "[this] call CBA_fnc_taskDefend"]
 }} else {

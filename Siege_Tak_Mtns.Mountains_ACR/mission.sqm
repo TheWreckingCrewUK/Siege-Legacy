@@ -14372,7 +14372,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={1903.198,194.0555,5075.6958};
-			angle=3.280102;
+			angle=3.2801018;
 			class Attributes
 			{
 				name="mainbase";
@@ -14625,7 +14625,7 @@ class Mission
 			};
 			id=1602;
 			type="UK3CB_BAF_Jackal2_L111A1_D";
-			atlOffset=0.059814453;
+			atlOffset=0.059799194;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14666,7 +14666,7 @@ class Mission
 			};
 			id=1603;
 			type="UK3CB_BAF_Jackal2_L111A1_D";
-			atlOffset=-0.1038208;
+			atlOffset=-0.10383606;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14695,7 +14695,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={1903.209,194.05368,5075.6738};
-			angle=3.280102;
+			angle=3.2801018;
 			class Attributes
 			{
 				name="warning";
