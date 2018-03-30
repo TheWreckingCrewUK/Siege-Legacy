@@ -26194,7 +26194,7 @@ class Mission
 			class Attributes
 			{
 				name="mainbase";
-				condition="call{count thislist >2;}";
+				condition="call{this;}";
 				onActivation="call{[""thistrigger""] call twc_fnc_changebase;}";
 				sizeA=62.539433;
 				sizeB=39.02103;

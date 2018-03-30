@@ -12806,7 +12806,7 @@ class Mission
 			angle=4.011168;
 			class Attributes
 			{
-				condition="call{count thislist >2;}";
+				condition="call{this;}";
 				onActivation="call{[""thistrigger""] call twc_fnc_changebase;}";
 				sizeA=45;
 				sizeB=45;
