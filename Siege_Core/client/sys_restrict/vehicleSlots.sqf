@@ -65,7 +65,7 @@ _list=[
 		],
 		["commander", 
 			["Modern_British_VehicleCommander"]
-		]],10
+		]],7
 	],	
 	
 			["CUP_B_MCV80_GB_D_SLAT",[ 
@@ -77,7 +77,7 @@ _list=[
 		],
 		["commander", 
 			["Modern_British_VehicleCommander"]
-		]],10
+		]],7
 	],	
 	
 		["CUP_B_FV432_Bulldog_GB_W",[ 

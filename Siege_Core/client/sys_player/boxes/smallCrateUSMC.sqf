@@ -38,6 +38,14 @@ _box AddWeaponCargoGlobal ["twc_L5A4_white",1 + _low];
 _box AddWeaponCargoGlobal ["twc_L5A4_red",1 + _low];
 _box AddWeaponCargoGlobal ["twc_L5A4_green",1 + _low];
 
+
+if (twc_heavymode == 1) then {
+
+_box AddWeaponCargoGlobal ["UK3CB_BAF_AT4_CS_AP_Launcher",1 + _low];
+
+};
+
+
 //supplies
 
 _box AddMagazineCargoGlobal ["twc_l5a4_w",4 + _low];

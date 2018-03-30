@@ -15,17 +15,6 @@
 * Public: No
 */
 
-if(isNil "twc_difficulty") then{
-		twc_difficulty = 1;
-		publicVariable "twc_difficulty";
-	};
-
-	if (isNil "technicals") then {
-		technicals = 1;
-		publicVariable "technicals";
-	};
-	
-	
 if(isNil "pointLimit") then{
 pointLimit = 20+((ceil(twc_difficulty*7))*10);
 publicVariable "pointLimit"; // init once

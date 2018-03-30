@@ -1,4 +1,5 @@
 twc_spawnAIUnits = compile preprocessfilelinenumbers "siege_core\server\func\fnc_spawnAIUnits.sqf";
+twc_spawnheavyAIUnits = compile preprocessfilelinenumbers "siege_core\server\func\fnc_spawnheavyAIUnits.sqf";
 twc_spawnDefend = compile preprocessfilelinenumbers "siege_core\server\func\fnc_spawnDefend.sqf";
 twc_DespawnDefend = compile preprocessfilelinenumbers "siege_core\server\func\fnc_DeSpawnDefend.sqf";
 twc_spawnmortars = compile preprocessfilelinenumbers "siege_core\server\func\fnc_spawnmortars.sqf";

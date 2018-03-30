@@ -21,6 +21,8 @@ params ["_town"];
 if ((str _town) in defendedtownarray) exitwith {};
 _pos = getpos _town;
 
+if (twc_heavymode == 1) exitwith{[_town] call twc_spawnheavyAIUnits};
+
 //systemchat format ["spawn %1", _pos];
 
 
@@ -109,8 +111,7 @@ _group2 addwaypoint [[twc_basepos, 100 * twc_roamsize, 200 * twc_roamsize, 3, 0,
 _group2 addwaypoint [twc_basepos, 100 * twc_roamsize] call CBA_fnc_randPos;
 _group2 addwaypoint [twc_basepos, 100 * twc_roamsize] call CBA_fnc_randPos;
  [_group, 5] setWaypointType "CYCLE";
-sleep 2;
-
+ 
 //being excessive with the counting code because sometimes it counts at strange times so technicals ==1 could spawn 2 or more technicals
 technicals = technicals +9;
 publicVariable "technicals";

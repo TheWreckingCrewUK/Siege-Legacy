@@ -31,12 +31,12 @@ _trg setTriggerStatements ["this", format ["[(%1)] call twc_spawnDefend", getpos
 
 
 // Creates a marker that marks the town
-
+/*
 		_markerstr = createMarker [str (random 1000),getPos _x];
 		_markerstr setMarkerShape "ICON";
 		_markerstr setMarkerType "mil_flag";
 		_markerstr setMarkerText (text _x);
-
+*/
 
 
 	};

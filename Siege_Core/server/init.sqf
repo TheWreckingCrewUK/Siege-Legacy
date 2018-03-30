@@ -8,6 +8,13 @@
 #include "sys_score\init.sqf";
 #include "sys_chat\init.sqf";
 #include "sys_basedefence\init.sqf";
+#include "heavydefines.sqf";
+
+
+if(isNil "twc_heavymode") then{
+	twc_heavymode = 0;
+publicVariable "twc_heavymode";
+};
 
 if(isNil "mortarcount") then{
 	mortarcount = 0;
@@ -22,6 +29,27 @@ if(isNil "twc_siege_baseside") then{
 publicVariable "twc_siege_baseside";
 };
 
+if(isNil "twc_difficulty") then{
+		twc_difficulty = 1;
+		publicVariable "twc_difficulty";
+	};
+
+	if (isNil "technicals") then {
+		technicals = 1;
+		publicVariable "technicals";
+	};
+	
+	
+
+	if (isNil "enemyTechnical") then {
+		if (twc_heavymode == 1) then {
+enemyTechnical =["rhs_btr70_msv","rhs_bmp1_msv","rhs_t72ba_tv"];
+		publicVariable "enemyTechnical";} else {
+enemyTechnical = ["CUP_O_LR_MG_TKM"];
+		publicVariable "enemyTechnical";}
+	};
+	
+	
 
 //multiplier for how much the enemy increases with player count, 1 is the standard figure. Set higher with lower overall difficulty for maps where there's a lot of ground for a small group to cover. Set lower for maps where higher player count doesn't make much difference to how difficult the area is to defend.
 if(isNil "twc_diff_scaler") then{
@@ -40,6 +68,7 @@ if(isNil "twc_wpcount") then{
 	twc_wpcount = 1;
 publicVariable "twc_wpcount";
 };
+
 
 if(isNil "townLocationArray") then{
 	townLocationArray = [];
@@ -72,7 +101,7 @@ nonQuestionableList = [];
 publicVariable "nonQuestionableList";
 
 // Array of the locations and the strongholds
-townLocationArray = townLocationArray + (nearestLocations [twc_basepos, ["NameVillage","NameCity","NameCityCapital","nameLocal"], 2000]);
+townLocationArray = townLocationArray + (nearestLocations [twc_basepos, ["NameVillage","NameCity","NameCityCapital","nameLocal"], 2500]);
 _strongholdArray = [];
 
 /*
