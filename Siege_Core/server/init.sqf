@@ -84,8 +84,8 @@ while{count _strongholdArray < 3}do{
 
 //Mission time randomizer.
 //only is random between 4am-2pm.
-_time = random 10;
-_time = _time + 4;
-skipTime (_time - dayTime + 24)%24;
+_time = (random 10) + 4;
+_time = ((_time + 4) - dayTime + 24);
+skipTime (_time % 24);
 
 #include "sys_siege\init.sqf"; //needs to be included after townlocationarray is defined
