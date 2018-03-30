@@ -14,20 +14,22 @@
 * Author: [TWC] Fakematty / [TWC] Jayman
 */
 
-params["_pos"];
+params["_town"];
+
+_pos = getpos _town;
+systemchat "defence called";
 _spawnPos = [_pos, 50] call CBA_fnc_randPos;
 _num = 0;
 _group = createGroup East;
 //for "_i" from 1 to _total do{
 
-_flag = _spawnpos nearEntities [["CUP_C_Skoda_Blue_CIV"], 300] select 0; 
-_chance = _flag getvariable "active";
+_chance = _town getvariable "active";
 
 _total = (10 * _chance) / (twc_siege_baseside + 1);
 
-if ( _flag getvariable "defended" == 1) exitwith {};
+if ( _town getvariable "defended" == 1) exitwith {};
 
-_flag setVariable ["defended",1];
+_town setVariable ["defended",1];
 
 for "_i" from 1 to _total do{
 
@@ -41,8 +43,8 @@ for "_i" from 1 to _total do{
 		
 		twc_currentdefender=twc_currentdefender+1;
 		publicVariable "twc_currentdefender";
-_flag = _this select 0 nearEntities [["CUP_C_Skoda_Blue_CIV"], 400] select 0; 
-_act = (_flag getvariable "active") / 1.1; _flag setVariable ["active",_act]; ;
+		
+_act = (_town getvariable "active") / 1.1; _town setVariable ["active",_act]; ;
 	}];
 	_unit addMagazines ["handGrenade",2];
 	_unit setVariable ["unitsHome",_spawnpos,false];

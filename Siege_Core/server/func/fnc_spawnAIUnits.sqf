@@ -17,12 +17,9 @@
 */
 
 //Recieved Parameters
-params ["_pos","_groupradius","_thisList", "_chance"];
+params ["_pos"];
 
-//Selects a direction generally oposite of incoming friendlies
-_dir = (_thisList select 0) getDir _pos;
-_dir1 = _dir - 30;
-_dir2 = _dir + 30;
+
 systemchat "spawn called";
 //Calculating total enemies to spawn
 _num = 0;
@@ -30,10 +27,8 @@ _total = [_pos] call twc_fnc_calculateSpawnAmount;
 
 //Spawning hostiles
 _group = createGroup East;
-_spawnPos = [_pos,_groupradius,[_dir1,_dir2]] call SHK_pos;
+_spawnPos = [_pos,100] call SHK_pos;
 
-
-_flag = _pos nearEntities [["CUP_C_Skoda_Blue_CIV"], 300] select 0;
 
 _enemycount = (count allunits) - (count playableunits);
 //if (_flag getvariable "fighting" == 1) then {systemchat "spawn blocked"} else {
@@ -43,7 +38,6 @@ _enemycount = (count allunits) - (count playableunits);
 while {_enemycount<twc_maxenemy} do {
 
 _enemycount = (count allunits) - (count playableunits);
-if (_chance > random 1) then {
 	_unit = _group createUnit [(townSpawn select (floor random (count townspawn))), _spawnPos,[], 0.3,"NONE"];
 	twc_currentenemy=twc_currentenemy+1;
 	publicVariable "twc_currentenemy";
@@ -57,10 +51,6 @@ if (_chance > random 1) then {
 	_unit setVariable ["unitsHome",_pos,false];
 	//_num = _num + 1;
 	sleep 2;
-	
-		
-
-} else {sleep 30;}	
 
 };
 //};
@@ -132,33 +122,4 @@ _driver moveInGunner _technical;
 		};
 		};
 	};
-
-
-
-
-
-
-/*
-
-
-
-if (twc_siege_baseside == 3) then {
-for "_i" from 1 to twc_wpcount do {
-_group addwaypoint [[twc_basepos, 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos, 0]};
-_group addwaypoint [twc_basepos, 50 * twc_roamsize] call CBA_fnc_randPos;
-_group addwaypoint [twc_basepos, 20 * twc_roamsize] call CBA_fnc_randPos;
-[_group, twc_wpcount+2] setWaypointStatements ["true", "[this] call CBA_fnc_taskDefend"]
-} else
-{
-if ((count playableUnits) == 0) then {
-for "_i" from 1 to twc_wpcount do {
-_group addwaypoint [twc_basepos, 20 * twc_roamsize] call CBA_fnc_randPos;
-
-[_group, twc_wpcount] setWaypointStatements ["true", "[this] call CBA_fnc_taskDefend"]
-}} else {
-_enemy = playableUnits select (floor (random (count playableunits)));
-_wp = _group addwaypoint [[getpos _enemy, 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos, 0]};
-[_group] call twc_fnc_huntergroup;
-};
-*/
 

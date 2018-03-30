@@ -13,31 +13,36 @@
 * Creates a trigger to spawn the town capture and cleanup
 */ 
 						  
-params["_pos","_civnum","_civradius","_groupradius","_thisList", ["_spawnCivs",true],["_forceSpawn",false]];
+params["_town"];
 /*
 if(_spawnCivs)then{
 	[_pos, _civnum, _civradius] call twc_spawnCiv;
 };
 */
+_pos = getpos _town;
 _enemies = 0;
 _random = random 100;
-_flag = _pos nearEntities [["CUP_C_Skoda_Blue_CIV"], 300] select 0; 
 
+_markerstr = createMarker [str (random 1000),_pos];
+_markerstr setMarkerColor "colorEAST";
+_markerstr setMarkerShape "Ellipse";
+_markerstr setMarkerBrush "Grid";
+_markerstr setMarkerSize [100,100];
 
 	_enemies = 1;
-	_dis = (getmarkerpos "base" distance _pos)/1.5;
+	_dis = (twc_basepos distance _pos)/1.5;
 _trg = createTrigger ["EmptyDetector", _pos];
 _trg setTriggerArea [_dis, _dis, 0, false];
 _trg setTriggerActivation ["west", "PRESENT", false];
 _trg setTriggerTimeout [1,1,1, true];
-_trg setTriggerStatements ["this","	[getPos thisTrigger] spawn twc_spawnDefend",""];
+_trg setTriggerStatements ["this",format ["[%1] spawn twc_spawnDefend",_town],""];
 
-	_dis2 = (getmarkerpos "base" distance _pos)/2;
+	_dis2 = (twc_basepos distance _pos)/2;
 _trg = createTrigger ["EmptyDetector", _pos];
 _trg setTriggerArea [_dis2 , _dis2, 0, false];
 _trg setTriggerActivation ["west", "PRESENT", true];
 _trg setTriggerTimeout [1,1,1, true];
-_trg setTriggerStatements ["this","	_flag = getPos thisTrigger nearEntities [['CUP_C_Skoda_Blue_CIV'], 300] select 0; _flag setvariable ['fighting',1]","	_flag = getPos thisTrigger nearEntities [['CUP_C_Skoda_Blue_CIV'], 300] select 0; _flag setvariable ['fighting',0]; systemchat 'no fighting here'"];
+_trg setTriggerStatements ["this",format ["	%1 setvariable ['fighting',1]", _town],format ["%1 setvariable ['fighting',0]; systemchat 'no fighting here'", _town]];
 
 for "_i" from 1 to mortarcount do{
 [_pos] spawn twc_spawnmortars;
@@ -48,16 +53,5 @@ publicVariable "twc_currentenemy";
 
 
 _random = random 100;
-_chance = _flag getvariable "active";
-	_enemies = 1;
-	[_pos, _groupradius,_thisList, _chance] spawn twc_spawnAIUnits;
-
-if(_enemies == 0)exitWith{};
-
-_trg = createTrigger ["EmptyDetector", _pos];
-_trg setTriggerArea [1700, 1700, 0, false];
-_trg setTriggerActivation ["ANY", "PRESENT", False];
-_trg setTriggerTimeout [7,7,7, true];
-_trg setTriggerStatements ["this","[(thisTrigger getVariable 'unitsHome'),thisList] spawn twc_fnc_townDeciding",""];
-
-_trg setVariable ["unitsHome",_pos];
+_chance = _town getvariable "active";
+	[_pos] spawn twc_spawnAIUnits;
