@@ -20,14 +20,12 @@
 params ["_pos"];
 
 
-systemchat "spawn called";
-//Calculating total enemies to spawn
-_num = 0;
-_total = [_pos] call twc_fnc_calculateSpawnAmount;
+systemchat format ["spawn %1", _pos];
+
 
 //Spawning hostiles
 _group = createGroup East;
-_spawnPos = [_pos,100] call SHK_pos;
+_spawnPos = [_pos,100, random 360] call SHK_pos;
 
 
 _enemycount = (count allunits) - (count playableunits);

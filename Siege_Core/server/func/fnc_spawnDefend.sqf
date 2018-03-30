@@ -16,8 +16,9 @@
 
 params["_town"];
 
-_pos = getpos _town;
-systemchat "defence called";
+_pos = nearestlocation [_town, ""];
+
+systemchat format ["defence called at %1", _town];
 _spawnPos = [_pos, 50] call CBA_fnc_randPos;
 _num = 0;
 _group = createGroup East;
