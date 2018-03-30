@@ -17,10 +17,11 @@
 */
 
 //Recieved Parameters
-params ["_pos"];
+params ["_town"];
+if ((str _town) in defendedtownarray) exitwith {};
+_pos = getpos _town;
 
-
-systemchat format ["spawn %1", _pos];
+//systemchat format ["spawn %1", _pos];
 
 
 //Spawning hostiles

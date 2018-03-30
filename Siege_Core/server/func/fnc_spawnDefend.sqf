@@ -14,26 +14,31 @@
 * Author: [TWC] Fakematty / [TWC] Jayman
 */
 
-params["_town"];
+params["_pos"];
 
-_pos = nearestlocation [_town, ""];
+_town = nearestlocation [_pos, ""];
 
-systemchat format ["defence called at %1", _town];
+systemchat format ["defence called at %1", str _town];
 _spawnPos = [_pos, 50] call CBA_fnc_randPos;
 _num = 0;
 _group = createGroup East;
 //for "_i" from 1 to _total do{
 
-_chance = _town getvariable "active";
+//_chance = _town getvariable "active";
+_chance = 1;
 
 _total = (10 * _chance) / (twc_siege_baseside + 1);
 
-if ( _town getvariable "defended" == 1) exitwith {};
+//if ( _town getvariable "defended" == 1) exitwith {systemchat "already defended"};
 
 _town setVariable ["defended",1];
 
-for "_i" from 1 to _total do{
+if ((str _town) in defendedtownarray) exitwith {};
 
+defendedtownarray = defendedtownarray + [str _town];
+
+for "_i" from 1 to _total do{
+systemchat format ["spawning at %1", _spawnPos];
 	_unit = _group createUnit [(townSpawn select (floor random (count townspawn))), [_spawnPos,50] call CBA_fnc_randPos,[], 0.3,"NONE"];
 	
 		twc_currentdefender=twc_currentdefender+1;
@@ -45,12 +50,9 @@ for "_i" from 1 to _total do{
 		twc_currentdefender=twc_currentdefender+1;
 		publicVariable "twc_currentdefender";
 		
-_act = (_town getvariable "active") / 1.1; _town setVariable ["active",_act]; ;
+_act = (_town getvariable "active") / 1.1; _town setVariable ["active",_act];
 	}];
-	_unit addMagazines ["handGrenade",2];
-	_unit setVariable ["unitsHome",_spawnpos,false];
 	_num = _num + 1;
-	sleep 2;
 	
 	};
 //};

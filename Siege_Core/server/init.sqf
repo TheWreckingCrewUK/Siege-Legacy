@@ -46,6 +46,10 @@ if(isNil "townLocationArray") then{
 };
 
 
+if(isNil "defendedtownarray") then{
+	defendedtownarray = [];
+};
+
 if(isNil "customlocations") then{
 	customlocations = [];
 };

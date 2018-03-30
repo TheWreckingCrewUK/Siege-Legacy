@@ -14,14 +14,17 @@ _x setVariable ["active",1];
 _x setVariable ["fighting",0];
 _x setVariable ["defended",0];
 
-systemchat format ["%1", _x getVariable "active",1];
+//systemchat format ["%1", _x getVariable "active",1];
 
 	_dis2 = (twc_basepos distance _x)/2;
 _trg = createTrigger ["EmptyDetector", _spawnpos];
 _trg setTriggerArea [_dis2 , _dis2, 0, false];
 _trg setTriggerActivation ["west", "PRESENT", true];
 _trg setTriggerTimeout [1,1,1, true];
-_trg setTriggerStatements ["this", format ["[%1] call twc_fnc_spawndefend", getpos _x], "systemchat 'back to normal'"];
+_trg setTriggerStatements ["this", format ["[(%1)] call twc_spawnDefend", getpos _x], format ["[(%1)] call twc_DeSpawnDefend", getpos _x]];
+
+
+
 
 [_x] spawn twc_townSetup;
 
