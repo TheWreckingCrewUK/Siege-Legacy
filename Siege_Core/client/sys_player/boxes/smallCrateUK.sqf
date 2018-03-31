@@ -41,7 +41,8 @@ _box AddWeaponCargoGlobal ["twc_L5A4_green",1 + _low];
 if (twc_heavymode == 1) then {
 
 _box AddWeaponCargoGlobal ["rhs_weap_m72a7",1 + _low];
-_box AddWeaponCargoGlobal ["launch_NLAW_F",1 + _low];
+_box AddWeaponCargoGlobal ["UK3CB_BAF_Javelin_Slung_Tube",1];
+_box AddWeaponCargoGlobal ["UK3CB_BAF_Javelin_Slung_Tube",3 - _low];
 
 };
 

@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.78539819;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=522;
+	toggles=513;
 	class ItemIDProvider
 	{
 		nextID=2018;
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={19903.018,536.12671,14276.533};
-		dir[]={-0.27700183,-0.42849275,-0.86017931};
-		up[]={-0.13139442,0.90347022,-0.40802494};
-		aside[]={-0.95195681,1.0846416e-006,0.30655235};
+		pos[]={19858.758,527.32495,14136.612};
+		dir[]={0.5964393,-0.39759037,0.69743764};
+		up[]={0.25842124,0.91757023,0.30218089};
+		aside[]={0.76008636,-1.3429672e-006,-0.65000451};
 	};
 };
 binarizationWanted=0;
@@ -52,13 +52,34 @@ addons[]=
 	"CUP_CAMisc_E_WF",
 	"A3_Structures_F_Argo_Decals_Horizontal",
 	"twc_modern",
-	"twc_framework_public_modern_us"
+	"RKSL_LDS",
+	"UK3CB_BAF_Weapons_Accessories",
+	"UK3CB_BAF_Weapons_Ammo",
+	"UK3CB_BAF_Vehicles_LandRover",
+	"UK3CB_BAF_Weapons_Launchers",
+	"A3_Weapons_F",
+	"UK3CB_BAF_Equipment_Glasses",
+	"UK3CB_BAF_Equipment_Helmets",
+	"UK3CB_BAF_Equipment_Uniforms",
+	"ace_medical",
+	"rhsusf_c_troops",
+	"ace_compat_rhs_usf3",
+	"ace_hearing",
+	"acre_sys_prc343",
+	"UK3CB_BAF_Equipment_Vests",
+	"CUP_Weapons_Grenades",
+	"ace_realisticnames",
+	"ace_maptools",
+	"twc_framework_public_modern_us",
+	"ace_ballistics",
+	"rhsusf_sounds",
+	"acre_sys_prc148"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=24;
+		items=45;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -204,8 +225,151 @@ class AddonsMetaData
 		};
 		class Item23
 		{
+			className="RKSL_LDS";
+			name="RKSL_LDS";
+		};
+		class Item24
+		{
+			className="UK3CB_BAF_Weapons_Accessories";
+			name="3CB BAF Weapons - Accessories";
+			author="3 Commando Brigade";
+			url="www.3commandobrigade.com";
+		};
+		class Item25
+		{
+			className="UK3CB_BAF_Weapons_Ammo";
+			name="3CB BAF Weapons - Ammo";
+			author="3 Commando Brigade";
+			url="www.3commandobrigade.com";
+		};
+		class Item26
+		{
+			className="UK3CB_BAF_Vehicles_LandRover";
+			name="3CB BAF Vehicles - Land Rover";
+			author="3 Commando Brigade";
+			url="www.3commandobrigade.com";
+		};
+		class Item27
+		{
+			className="UK3CB_BAF_Weapons_Launchers";
+			name="3CB BAF Weapons - Launchers";
+			author="3 Commando Brigade";
+			url="www.3commandobrigade.com";
+		};
+		class Item28
+		{
+			className="A3_Weapons_F";
+			name="Arma 3 Alpha - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item29
+		{
+			className="UK3CB_BAF_Equipment_Glasses";
+			name="3CB BAF Equipment - Glasses";
+			author="3 Commando Brigade";
+			url="www.3commandobrigade.com";
+		};
+		class Item30
+		{
+			className="UK3CB_BAF_Equipment_Helmets";
+			name="3CB BAF Equipment - Helmets";
+			author="3 Commando Brigade";
+			url="www.3commandobrigade.com";
+		};
+		class Item31
+		{
+			className="UK3CB_BAF_Equipment_Uniforms";
+			name="3CB BAF Equipment - Uniforms";
+			author="3 Commando Brigade";
+			url="www.3commandobrigade.com";
+		};
+		class Item32
+		{
+			className="ace_medical";
+			name="ACE3 - Medical";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item33
+		{
+			className="rhsusf_c_troops";
+			name="RHSUSF Infantry & Equipment";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item34
+		{
+			className="ace_compat_rhs_usf3";
+			name="ACE3 - RHS USF Compatibility";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item35
+		{
+			className="ace_hearing";
+			name="ACE3 - Hearing";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item36
+		{
+			className="acre_sys_prc343";
+			name="ACRE2 - AN/PRC-343";
+			author="ACRE2Team";
+			url="https://github.com/IDI-Systems/acre2";
+		};
+		class Item37
+		{
+			className="UK3CB_BAF_Equipment_Vests";
+			name="3CB BAF Equipment - Vests";
+			author="3 Commando Brigade";
+			url="www.3commandobrigade.com";
+		};
+		class Item38
+		{
+			className="CUP_Weapons_Grenades";
+			name="CUP_Weapons_Grenades";
+		};
+		class Item39
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item40
+		{
+			className="ace_maptools";
+			name="ACE3 - Map Tools";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item41
+		{
 			className="twc_framework_public_modern_us";
 			name="twc_framework_public_modern_us";
+		};
+		class Item42
+		{
+			className="ace_ballistics";
+			name="ACE3 - Ballistics";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item43
+		{
+			className="rhsusf_sounds";
+			name="USF Sounds";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item44
+		{
+			className="acre_sys_prc148";
+			name="ACRE2 - AN/PRC-148";
+			author="ACRE2Team";
+			url="https://github.com/IDI-Systems/acre2";
 		};
 	};
 };
@@ -16184,7 +16348,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={19893.635,504.47449,14190.042};
+				position[]={19893.377,504.47806,14190.021};
 				angles[]={0,3.1646945,0};
 			};
 			side="Empty";
@@ -16200,7 +16364,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={19896.414,504.08435,14182.34};
+				position[]={19896.156,504.08566,14182.319};
 				angles[]={0,1.6053119,0};
 			};
 			side="Empty";
@@ -16216,7 +16380,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={19896.58,504.31384,14187.549};
+				position[]={19896.322,504.31772,14187.528};
 				angles[]={0,1.6053119,0};
 			};
 			side="Empty";
@@ -16636,7 +16800,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={19870.086,502.15118,14185.513};
+				position[]={19870.086,502.01334,14185.513};
 				angles[]={6.2302079,4.7188702,0.006118156};
 			};
 			side="Empty";
@@ -16646,6 +16810,7 @@ class Mission
 			};
 			id=1916;
 			type="TK_GUE_WarfareBFieldhHospital_Base_EP1";
+			atlOffset=-0.1378479;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16933,6 +17098,144 @@ class Mission
 					{
 						skill=0.40000001;
 						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="UK3CB_BAF_L85A2_RIS_ELCAN3D";
+								optics="RKSL_optic_LDS";
+								flashlight="UK3CB_BAF_LLM_IR_Black";
+								class primaryMuzzleMag
+								{
+									name="UK3CB_BAF_556_30Rnd";
+									ammoLeft=30;
+								};
+							};
+							class secondaryWeapon
+							{
+								name="UK3CB_BAF_Javelin_Slung_Tube";
+							};
+							class binocular
+							{
+								name="UK3CB_BAF_Javelin_CLU";
+							};
+							class uniform
+							{
+								typeName="UK3CB_BAF_U_CombatUniform_MTP";
+								isBackpack=0;
+								class ItemCargo
+								{
+									items=6;
+									class Item0
+									{
+										name="ACE_fieldDressing";
+										count=5;
+									};
+									class Item1
+									{
+										name="rhsusf_ANPVS_14";
+										count=1;
+									};
+									class Item2
+									{
+										name="ACE_EarPlugs";
+										count=1;
+									};
+									class Item3
+									{
+										name="ACRE_PRC343";
+										count=1;
+									};
+									class Item4
+									{
+										name="ACE_packingBandage";
+										count=5;
+									};
+									class Item5
+									{
+										name="ACE_elasticBandage";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="UK3CB_BAF_V_Osprey_Rifleman_F";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=4;
+									class Item0
+									{
+										name="UK3CB_BAF_556_30Rnd_T";
+										count=3;
+										ammoLeft=30;
+									};
+									class Item1
+									{
+										name="UK3CB_BAF_556_30Rnd";
+										count=4;
+										ammoLeft=30;
+									};
+									class Item2
+									{
+										name="CUP_HandGrenade_L109A2_HE";
+										count=2;
+										ammoLeft=1;
+									};
+									class Item3
+									{
+										name="SmokeShell";
+										count=2;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=6;
+									class Item0
+									{
+										name="ACE_elasticBandage";
+										count=4;
+									};
+									class Item1
+									{
+										name="ACE_quikclot";
+										count=2;
+									};
+									class Item2
+									{
+										name="ACE_morphine";
+										count=1;
+									};
+									class Item3
+									{
+										name="ACE_epinephrine";
+										count=1;
+									};
+									class Item4
+									{
+										name="ACE_tourniquet";
+										count=2;
+									};
+									class Item5
+									{
+										name="ACE_MapTools";
+										count=1;
+									};
+								};
+							};
+							class backpack
+							{
+								typeName="UK3CB_BAF_B_Bergen_MTP_Rifleman_L_B";
+								isBackpack=1;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							goggles="UK3CB_BAF_G_Tactical_Yellow";
+							headgear="UK3CB_BAF_H_Mk7_Scrim_F";
+						};
 					};
 					id=1926;
 					type="Modern_British_Rifleman";
@@ -17530,6 +17833,154 @@ class Mission
 					{
 						skill=0.40000001;
 						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="twc_rhs_weap_m16a4_acog_lazer";
+								optics="rhsusf_acc_ACOG_USMC";
+								flashlight="rhsusf_acc_anpeq15side_bk";
+								class primaryMuzzleMag
+								{
+									name="30Rnd_556x45_Stanag";
+									ammoLeft=30;
+								};
+							};
+							class secondaryWeapon
+							{
+								name="UK3CB_BAF_Javelin_Slung_Tube";
+							};
+							class handgun
+							{
+								name="rhsusf_weap_m1911a1";
+								class primaryMuzzleMag
+								{
+									name="rhsusf_mag_7x45acp_MHP";
+									ammoLeft=7;
+								};
+							};
+							class binocular
+							{
+								name="UK3CB_BAF_Javelin_CLU";
+							};
+							class uniform
+							{
+								typeName="rhs_uniform_FROG01_d";
+								isBackpack=0;
+								class ItemCargo
+								{
+									items=6;
+									class Item0
+									{
+										name="ACE_fieldDressing";
+										count=4;
+									};
+									class Item1
+									{
+										name="ACRE_PRC148";
+										count=1;
+									};
+									class Item2
+									{
+										name="ACE_EarPlugs";
+										count=1;
+									};
+									class Item3
+									{
+										name="rhsusf_ANPVS_14";
+										count=1;
+									};
+									class Item4
+									{
+										name="ACE_packingBandage";
+										count=5;
+									};
+									class Item5
+									{
+										name="ACE_elasticBandage";
+										count=2;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhsusf_spc_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=5;
+									class Item0
+									{
+										name="rhsusf_mag_7x45acp_MHP";
+										count=1;
+										ammoLeft=7;
+									};
+									class Item1
+									{
+										name="30Rnd_556x45_Stanag";
+										count=7;
+										ammoLeft=30;
+									};
+									class Item2
+									{
+										name="30Rnd_556x45_Stanag_Tracer_Red";
+										count=2;
+										ammoLeft=30;
+									};
+									class Item3
+									{
+										name="CUP_HandGrenade_L109A2_HE";
+										count=2;
+										ammoLeft=1;
+									};
+									class Item4
+									{
+										name="SmokeShell";
+										count=2;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=6;
+									class Item0
+									{
+										name="ACE_elasticBandage";
+										count=3;
+									};
+									class Item1
+									{
+										name="ACE_quikclot";
+										count=2;
+									};
+									class Item2
+									{
+										name="ACE_morphine";
+										count=1;
+									};
+									class Item3
+									{
+										name="ACE_epinephrine";
+										count=1;
+									};
+									class Item4
+									{
+										name="ACE_tourniquet";
+										count=2;
+									};
+									class Item5
+									{
+										name="ACE_MapTools";
+										count=1;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							goggles="rhs_googles_yellow";
+							headgear="rhsusf_lwh_helmet_marpatd";
+						};
 					};
 					id=1955;
 					type="Modern_USMC_Rifleman_d";

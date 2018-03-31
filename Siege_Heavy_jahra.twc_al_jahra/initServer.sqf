@@ -12,7 +12,7 @@ twc_serverDebug = false;
 twc_heavymode = 1;
 technicals = 30 + random 2;
 
-enemyTechnical =["rhs_btr70_msv","rhs_bmp1_msv","rhs_t72ba_tv", "rhs_bmd1", "rhs_bmd1pk", "rhs_bmd1r", "rhs_bmd2"];
+enemyTechnical =["rhs_btr70_msv","rhs_bmp1_msv","rhs_t72ba_tv", "rhs_bmd1", "rhs_bmd1r", "rhs_bmd2"];
 
 twc_surrenderVote = false;
 
@@ -27,7 +27,7 @@ twc_surrenderVote = false;
 */
 TWC_Building_Style = "MidEast";
 
-twc_difficulty = 0.3;
+twc_difficulty = 0.4;
 
 //roamsize multiplies the size of the random waypoint divergence from base. A setting of 1 means each waypoint is up to 100-200 meters away from base. Set higher for maps where there's a lot of cover and you don't want the enemies to just swim in so that you can use higher difficulties without swamping the base. The downside is that they take longer to get to engagement range so there's more downtime at mission start.
 twc_roamsize = 1.5;
