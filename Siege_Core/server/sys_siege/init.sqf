@@ -17,7 +17,7 @@ twc_maxenemy=((30*twc_difficulty)+((count(allPlayers - entities "HeadlessClient_
 publicVariable "twc_maxenemy";
 sleep 0.2;
 execVM "Siege_Core\server\sys_townLocations\getLocations.sqf";
-systemchat "getloc";
+
 if ((pointLimit-totalpoints)<(twc_maxenemy)) then {
 	twc_maxenemy=twc_maxenemy*1.3;
 

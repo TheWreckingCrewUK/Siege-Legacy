@@ -1,6 +1,8 @@
 
+if (twc_heavymode == 1) then {twc_currentenemy = (east countside allunits) - 40} else {twc_currentenemy = (east countside allunits)};
+
 if (twc_currentenemy>twc_maxenemy) exitwith
-{systemchat "too much"};
+{};
 
 //adding in enemy count just to save a bit of overhead
 {

@@ -22,7 +22,7 @@ if ((str _town) in defendedtownarray) exitwith {};
 _pos = getpos _town;
 
 
-twc_currentenemy = east countside allunits;
+twc_currentenemy = (east countside allunits) - 40;
 publicVariable "twc_currentenemy";
 
 //Spawning hostiles
