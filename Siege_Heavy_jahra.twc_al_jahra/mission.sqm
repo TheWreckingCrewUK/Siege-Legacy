@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={19855.252,506.31818,14172.446};
-		dir[]={0.95289302,-0.17976201,-0.24449241};
-		up[]={0.1741866,0.98370069,-0.044692516};
-		aside[]={-0.24854024,-1.6303966e-007,-0.9686659};
+		pos[]={20472.723,362.91959,8758.1367};
+		dir[]={-0.29173794,-0.34154341,-0.89350289};
+		up[]={-0.10600741,0.93987149,-0.32466647};
+		aside[]={-0.95066899,2.1827873e-007,0.31040522};
 	};
 };
 binarizationWanted=0;
@@ -16837,7 +16837,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20011.291,501.46027,14112.654};
+						position[]={20482.711,354.70514,8749.3848};
 					};
 					side="West";
 					flags=7;
@@ -16850,6 +16850,7 @@ class Mission
 					};
 					id=1925;
 					type="Modern_British_Squadleader";
+					atlOffset=3.0517578e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16879,7 +16880,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20014.291,501.46024,14109.654};
+						position[]={20485.711,354.46234,8746.3848};
 					};
 					side="West";
 					flags=5;
@@ -17028,6 +17029,7 @@ class Mission
 					};
 					id=1926;
 					type="Modern_British_Rifleman";
+					atlOffset=3.0517578e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17057,7 +17059,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20016.291,501.46024,14109.654};
+						position[]={20487.711,354.45544,8746.3848};
 					};
 					side="West";
 					flags=5;
@@ -17068,6 +17070,7 @@ class Mission
 					};
 					id=1927;
 					type="Modern_British_Grenadier";
+					atlOffset=3.0517578e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17097,7 +17100,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20018.291,501.46021,14109.654};
+						position[]={20489.711,354.44855,8746.3848};
 					};
 					side="West";
 					flags=5;
@@ -17108,6 +17111,7 @@ class Mission
 					};
 					id=1928;
 					type="Modern_British_Autorifleman";
+					atlOffset=3.0517578e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17137,7 +17141,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20020.291,501.46021,14109.654};
+						position[]={20491.711,354.4491,8746.3848};
 					};
 					side="West";
 					flags=5;
@@ -17148,6 +17152,7 @@ class Mission
 					};
 					id=1929;
 					type="Modern_British_2IC";
+					atlOffset=3.0517578e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17177,7 +17182,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20022.291,501.46021,14109.654};
+						position[]={20493.711,354.4509,8746.3848};
 					};
 					side="West";
 					flags=5;
@@ -17188,6 +17193,7 @@ class Mission
 					};
 					id=1930;
 					type="Modern_British_Autorifleman";
+					atlOffset=6.1035156e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17217,7 +17223,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20024.291,501.46021,14109.654};
+						position[]={20495.711,354.45242,8746.3848};
 					};
 					side="West";
 					flags=5;
@@ -17228,6 +17234,7 @@ class Mission
 					};
 					id=1931;
 					type="Modern_British_Machinegunner";
+					atlOffset=6.1035156e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17257,7 +17264,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20026.291,501.46021,14109.654};
+						position[]={20497.711,354.45395,8746.3848};
 					};
 					side="West";
 					flags=5;
@@ -17268,6 +17275,7 @@ class Mission
 					};
 					id=1932;
 					type="Modern_British_Marksman";
+					atlOffset=6.1035156e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17297,7 +17305,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20028.291,501.46021,14109.654};
+						position[]={20499.711,354.45547,8746.3848};
 					};
 					side="West";
 					flags=5;
@@ -17308,6 +17316,7 @@ class Mission
 					};
 					id=1933;
 					type="Modern_British_Medic";
+					atlOffset=6.1035156e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17337,6 +17346,7 @@ class Mission
 			{
 			};
 			id=1924;
+			atlOffset=3.0517578e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17373,7 +17383,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20013.867,501.46024,14101.611};
+						position[]={20485.287,353.8569,8738.3418};
 					};
 					side="West";
 					flags=7;
@@ -17414,7 +17424,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20016.867,501.46024,14098.611};
+						position[]={20488.287,353.6622,8735.3418};
 					};
 					side="West";
 					flags=5;
@@ -17454,7 +17464,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20018.867,501.46021,14098.611};
+						position[]={20490.287,353.65933,8735.3418};
 					};
 					side="West";
 					flags=5;
@@ -17465,6 +17475,7 @@ class Mission
 					};
 					id=1951;
 					type="Modern_USMC_Breacher_d";
+					atlOffset=3.0517578e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17494,7 +17505,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20020.867,501.46021,14098.611};
+						position[]={20492.287,353.6597,8735.3418};
 					};
 					side="West";
 					flags=5;
@@ -17505,6 +17516,7 @@ class Mission
 					};
 					id=1952;
 					type="Modern_USMC_Autorifleman_d";
+					atlOffset=3.0517578e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17534,7 +17546,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20022.867,501.46021,14098.611};
+						position[]={20494.287,353.6601,8735.3418};
 					};
 					side="West";
 					flags=5;
@@ -17545,6 +17557,7 @@ class Mission
 					};
 					id=1953;
 					type="Modern_USMC_AsstAutorifleman_d";
+					atlOffset=3.0517578e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17574,7 +17587,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20024.867,501.46021,14098.611};
+						position[]={20496.287,353.66159,8735.3418};
 					};
 					side="West";
 					flags=5;
@@ -17585,6 +17598,7 @@ class Mission
 					};
 					id=1954;
 					type="Modern_USMC_Teamleader_d";
+					atlOffset=3.0517578e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17614,7 +17628,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20026.867,501.46021,14098.611};
+						position[]={20498.287,353.66339,8735.3418};
 					};
 					side="West";
 					flags=5;
@@ -17773,6 +17787,7 @@ class Mission
 					};
 					id=1955;
 					type="Modern_USMC_Rifleman_d";
+					atlOffset=3.0517578e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17802,7 +17817,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20028.867,501.46021,14098.611};
+						position[]={20500.287,353.66519,8735.3418};
 					};
 					side="West";
 					flags=5;
@@ -17813,6 +17828,7 @@ class Mission
 					};
 					id=1956;
 					type="Modern_USMC_Autorifleman_d";
+					atlOffset=3.0517578e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17842,7 +17858,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20030.867,501.46021,14098.611};
+						position[]={20502.287,353.66705,8735.3418};
 					};
 					side="West";
 					flags=5;
@@ -17853,6 +17869,7 @@ class Mission
 					};
 					id=1957;
 					type="Modern_USMC_AsstAutorifleman_d";
+					atlOffset=3.0517578e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17882,7 +17899,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20032.867,501.46021,14098.611};
+						position[]={20504.287,353.66888,8735.3418};
 					};
 					side="West";
 					flags=5;
@@ -17893,6 +17910,7 @@ class Mission
 					};
 					id=1958;
 					type="Modern_USMC_Teamleader_d";
+					atlOffset=3.0517578e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17922,7 +17940,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20034.867,501.46021,14098.611};
+						position[]={20506.287,353.67148,8735.3418};
 					};
 					side="West";
 					flags=5;
@@ -17933,6 +17951,7 @@ class Mission
 					};
 					id=1959;
 					type="Modern_USMC_MachineGunner_d";
+					atlOffset=6.1035156e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17962,7 +17981,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20036.867,501.46021,14098.611};
+						position[]={20508.287,353.67426,8735.3418};
 					};
 					side="West";
 					flags=5;
@@ -17973,6 +17992,7 @@ class Mission
 					};
 					id=1960;
 					type="Modern_USMC_AsstMachineGunner_d";
+					atlOffset=6.1035156e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18002,7 +18022,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20038.867,501.46021,14098.611};
+						position[]={20510.287,353.67691,8735.3418};
 					};
 					side="West";
 					flags=5;
@@ -18013,6 +18033,7 @@ class Mission
 					};
 					id=1961;
 					type="Modern_USMC_Medic_d";
+					atlOffset=3.0517578e-005;
 					class CustomAttributes
 					{
 						class Attribute0
