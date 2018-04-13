@@ -47,6 +47,10 @@ if((typeOf player) in ["Modern_British_HeliPilot","Modern_USMC_HeliPilot"])then{
 	_hUKaction3 = ["SpawnsmallUKCreate","Spawn Small UK Crate","",{execvm "siege_core\client\sys_player\boxes\smallcrateuk.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_hUKaction3,true] call ace_interact_menu_fnc_addActionToClass;
 	
+	
+	_anaaction = ["SpawnsmallanaCreate","Spawn Small ANA Crate","",{execvm "siege_core\client\sys_player\boxes\smallcrateANA.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_anaaction,true] call ace_interact_menu_fnc_addActionToClass;
+	
 
 	_haction5 = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "siege_core\client\sys_player\boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_haction5,true] call ace_interact_menu_fnc_addActionToClass;
@@ -85,7 +89,7 @@ if((typeOf player) in ["twc_ana_commander","twc_ana_subcommander"])then{
 
 
 
-if((typeOf player) in ["Modern_British_Squadleader","Modern_British_2IC_COIN", "Modern_British_Spotter_coin", "Modern_British_Sniper_coin"])then{
+if((typeOf player) in ["Modern_British_Squadleader","Modern_British_2IC","Modern_British_2IC_COIN", "Modern_British_Spotter_coin", "Modern_British_Sniper_coin"])then{
 
 	_UKaction = ["SpawnsmallUKCreate","Spawn Small UK Crate","",{execvm "siege_core\client\sys_player\boxes\smallcrateuk.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;

@@ -115,6 +115,13 @@ while{count _strongholdArray < 3}do{
 //Strongholds
 */
 
+["TWC_PlayerDisconnected", "onPlayerDisconnected", {
+	
+	if ((count(allPlayers - entities "HeadlessClient_F")) == 0) then {
+		call BIS_fnc_endMission;
+	};
+}] call BIS_fnc_addStackedEventHandler;
+
 //Mission time randomizer.
 //only is random between 4am-2pm.
 _time = (random 10) + 4;
