@@ -1,6 +1,6 @@
 //spawn scripts do a quick check of if there are more enemies than max then don't spawn, so that it can never exceed a certain threshold
 
-twc_maxenemy=((30*twc_difficulty)+(count(allPlayers - entities "HeadlessClient_F")*6)) min 90;
+twc_maxenemy=((33*twc_difficulty)+(count(allPlayers - entities "HeadlessClient_F")*6)) min 90;
 publicVariable "twc_maxenemy";
 //persistent enemy count for the spawn system, every spawn adds a point and every enemy death takes one away
 twc_currentenemy=0;

@@ -12,10 +12,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6721.5669,367.91156,6922.9404};
-		dir[]={-0.24028954,-0.47113276,0.84870774};
-		up[]={-0.1283472,0.88205755,0.45332426};
-		aside[]={0.96218538,3.2247044e-007,0.27241832};
+		pos[]={4144.7817,179.71307,3560.7322};
+		dir[]={-0.9737938,-0.22639544,-0.021923954};
+		up[]={-0.22633822,0.97403592,-0.0050956826};
+		aside[]={-0.022508467,-1.0695658e-007,0.99975079};
 	};
 };
 binarizationWanted=0;
@@ -33,6 +33,7 @@ addons[]=
 	"ace_advanced_fatigue",
 	"acex_sitting",
 	"cba_xeh",
+	"OPXmisc",
 	"CUP_Misc3_Config",
 	"ace_trenches",
 	"A3_Signs_F_Signs_Ad",
@@ -44,7 +45,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=16;
+		items=17;
 		class Item0
 		{
 			className="A3_Structures_F_Mil";
@@ -118,31 +119,36 @@ class AddonsMetaData
 		};
 		class Item11
 		{
+			className="OPXmisc";
+			name="OPXmisc";
+		};
+		class Item12
+		{
 			className="CUP_Misc3_Config";
 			name="CUP_Misc3_Config";
 		};
-		class Item12
+		class Item13
 		{
 			className="ace_trenches";
 			name="ACE3 - Trenches";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item13
+		class Item14
 		{
 			className="A3_Signs_F";
 			name="Arma 3 - Signs";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item14
+		class Item15
 		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item15
+		class Item16
 		{
 			className="UK3CB_BAF_Vehicles_LandRover";
 			name="3CB BAF Vehicles - Land Rover";
@@ -12803,7 +12809,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={6717.623,357.27084,6934.019};
-			angle=4.011168;
+			angle=4.0111675;
 			class Attributes
 			{
 				condition="call{this;}";
@@ -12880,7 +12886,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={6717.7061,356.79099,6934.1738};
-			angle=4.0111675;
+			angle=4.011167;
 			class Attributes
 			{
 				name="warning";
@@ -12908,7 +12914,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4780.502,365.46378,5380.668};
+						position[]={4126.4248,166.98067,3556.9741};
 					};
 					side="West";
 					flags=7;
@@ -12950,7 +12956,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4773.6514,365.68341,5377.3315};
+						position[]={4119.5742,165.34256,3553.6377};
 					};
 					side="West";
 					flags=5;
@@ -12961,7 +12967,7 @@ class Mission
 					};
 					id=88;
 					type="Modern_British_Pointman";
-					atlOffset=3.0517578e-005;
+					atlOffset=1.5258789e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12991,7 +12997,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4775.6514,365.66742,5377.3315};
+						position[]={4121.5742,165.46255,3553.6377};
 					};
 					side="West";
 					flags=5;
@@ -13002,7 +13008,7 @@ class Mission
 					};
 					id=89;
 					type="Modern_British_Grenadier_COIN";
-					atlOffset=3.0517578e-005;
+					atlOffset=1.5258789e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13032,7 +13038,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4777.6514,365.65158,5377.3315};
+						position[]={4123.5742,165.58255,3553.6377};
 					};
 					side="West";
 					flags=5;
@@ -13043,6 +13049,7 @@ class Mission
 					};
 					id=90;
 					type="Modern_British_Autorifleman_COIN";
+					atlOffset=1.5258789e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13072,7 +13079,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4779.6514,365.59186,5377.3315};
+						position[]={4125.5742,165.6987,3553.6377};
 					};
 					side="West";
 					flags=5;
@@ -13083,7 +13090,6 @@ class Mission
 					};
 					id=91;
 					type="Modern_British_2IC_COIN";
-					atlOffset=3.0517578e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13113,7 +13119,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4781.6514,365.53055,5377.3315};
+						position[]={4127.5742,165.81157,3553.6377};
 					};
 					side="West";
 					flags=5;
@@ -13124,7 +13130,6 @@ class Mission
 					};
 					id=92;
 					type="Modern_British_Autorifleman_COIN";
-					atlOffset=3.0517578e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13154,7 +13159,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4783.6514,365.46921,5377.3315};
+						position[]={4129.5742,165.92891,3553.6377};
 					};
 					side="West";
 					flags=5;
@@ -13165,7 +13170,6 @@ class Mission
 					};
 					id=93;
 					type="Modern_British_Machinegunner";
-					atlOffset=3.0517578e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13195,7 +13199,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4785.6514,365.39719,5377.3315};
+						position[]={4131.5742,166.04623,3553.6377};
 					};
 					side="West";
 					flags=5;
@@ -13235,7 +13239,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4787.0425,365.32895,5377.1587};
+						position[]={4132.9648,166.06285,3553.4648};
 					};
 					side="West";
 					flags=5;
@@ -13348,7 +13352,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4731.2153,365.4534,5383.6772};
+						position[]={4077.1379,166.43837,3559.9834};
 					};
 					side="West";
 					flags=3;
@@ -13360,7 +13364,7 @@ class Mission
 					};
 					id=96;
 					type="Modern_USMC_Squadleader";
-					atlOffset=0.77850342;
+					atlOffset=0.77853394;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13390,7 +13394,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4734.2153,364.72348,5380.6772};
+						position[]={4080.1379,164.65788,3556.9834};
 					};
 					side="West";
 					flags=5;
@@ -13430,7 +13434,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4736.2153,364.80347,5380.6772};
+						position[]={4082.1379,164.68456,3556.9834};
 					};
 					side="West";
 					flags=5;
@@ -13470,7 +13474,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4738.2153,364.88708,5380.6772};
+						position[]={4084.1379,164.71121,3556.9834};
 					};
 					side="West";
 					flags=5;
@@ -13481,7 +13485,6 @@ class Mission
 					};
 					id=99;
 					type="Modern_USMC_Autorifleman";
-					atlOffset=3.0517578e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13511,7 +13514,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4740.2153,364.97153,5380.6772};
+						position[]={4086.1379,164.74323,3556.9834};
 					};
 					side="West";
 					flags=5;
@@ -13551,7 +13554,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4742.2153,365.04886,5380.6772};
+						position[]={4088.1379,164.79791,3556.9834};
 					};
 					side="West";
 					flags=5;
@@ -13591,7 +13594,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4744.2153,365.12619,5380.6772};
+						position[]={4090.1379,164.87259,3556.9834};
 					};
 					side="West";
 					flags=5;
@@ -13631,7 +13634,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4746.2153,365.20108,5380.6772};
+						position[]={4092.1379,164.94725,3556.9834};
 					};
 					side="West";
 					flags=5;
@@ -13671,7 +13674,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4748.2153,365.27383,5380.6772};
+						position[]={4094.1379,165.02907,3556.9834};
 					};
 					side="West";
 					flags=5;
@@ -13682,6 +13685,7 @@ class Mission
 					};
 					id=104;
 					type="Modern_USMC_AsstAutorifleman";
+					atlOffset=1.5258789e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13711,7 +13715,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4750.2153,365.34317,5380.6772};
+						position[]={4096.1377,165.1292,3556.9834};
 					};
 					side="West";
 					flags=5;
@@ -13751,7 +13755,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4752.2153,365.41068,5380.6772};
+						position[]={4098.1377,165.23853,3556.9834};
 					};
 					side="West";
 					flags=5;
@@ -13762,7 +13766,6 @@ class Mission
 					};
 					id=106;
 					type="Modern_USMC_MachineGunner";
-					atlOffset=3.0517578e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13792,7 +13795,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4754.2153,365.46936,5380.6772};
+						position[]={4100.1377,165.34787,3556.9834};
 					};
 					side="West";
 					flags=5;
@@ -13803,7 +13806,6 @@ class Mission
 					};
 					id=107;
 					type="Modern_USMC_AsstMachineGunner";
-					atlOffset=3.0517578e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13833,7 +13835,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4756.2153,365.52475,5380.6772};
+						position[]={4102.1377,165.46558,3556.9834};
 					};
 					side="West";
 					flags=5;
@@ -13873,7 +13875,7 @@ class Mission
 			{
 			};
 			id=95;
-			atlOffset=0.77850342;
+			atlOffset=0.77853394;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14727,7 +14729,7 @@ class Mission
 				name="idfalarm";
 			};
 			id=125;
-			type="Land_Antenna";
+			type="Land_antenna";
 			atlOffset=0.28656006;
 			class CustomAttributes
 			{
@@ -15272,7 +15274,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4719.9229,364.01544,5379.5503};
+						position[]={4065.8455,164.52272,3555.8564};
 					};
 					side="West";
 					flags=7;
@@ -15311,7 +15313,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4722.5479,364.10571,5377.623};
+						position[]={4068.4705,163.8372,3553.9292};
 					};
 					side="West";
 					flags=5;
@@ -15321,6 +15323,7 @@ class Mission
 					};
 					id=199;
 					type="Modern_British_FSTAssistant";
+					atlOffset=-1.5258789e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15350,7 +15353,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4717.3682,363.87091,5379.1001};
+						position[]={4063.2908,164.46819,3555.4063};
 					};
 					side="West";
 					flags=5;
@@ -15389,7 +15392,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4719.9038,363.91696,5375.6934};
+						position[]={4065.8264,163.32301,3551.9995};
 					};
 					side="West";
 					flags=5;
@@ -15486,7 +15489,7 @@ class Mission
 				class Attribute1
 				{
 					property="VehicleCustomization";
-					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['VehicleCustomization',_value]} else {([_this] + _value) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
 					class Value
 					{
 						class data
@@ -15858,7 +15861,7 @@ class Mission
 				class Attribute1
 				{
 					property="VehicleCustomization";
-					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['VehicleCustomization',_value]} else {([_this] + _value) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
 					class Value
 					{
 						class data
@@ -16230,7 +16233,7 @@ class Mission
 				class Attribute1
 				{
 					property="VehicleCustomization";
-					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['VehicleCustomization',_value]} else {([_this] + _value) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
 					class Value
 					{
 						class data
@@ -16602,7 +16605,7 @@ class Mission
 				class Attribute1
 				{
 					property="VehicleCustomization";
-					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['VehicleCustomization',_value]} else {([_this] + _value) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
 					class Value
 					{
 						class data
