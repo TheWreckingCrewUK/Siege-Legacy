@@ -12,10 +12,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4144.7817,179.71307,3560.7322};
-		dir[]={-0.9737938,-0.22639544,-0.021923954};
-		up[]={-0.22633822,0.97403592,-0.0050956826};
-		aside[]={-0.022508467,-1.0695658e-007,0.99975079};
+		pos[]={6717.623,382.27084,6909.019};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -12809,14 +12809,15 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={6717.623,357.27084,6934.019};
-			angle=4.0111675;
+			angle=4.011168;
 			class Attributes
 			{
-				condition="call{this;}";
+				condition="call{count thislist >2}";
 				onActivation="call{[""thistrigger""] call twc_fnc_changebase;}";
+				onDeactivation="call{[""thistrigger""] call twc_fnc_changebase;}";
 				sizeA=45;
 				sizeB=45;
-				timeout[]={60,60,60};
+				timeout[]={10,10,10};
 				interuptable=1;
 				repeatable=1;
 				activationBy="EAST";
@@ -12927,6 +12928,7 @@ class Mission
 					};
 					id=87;
 					type="Modern_British_Squadleader";
+					atlOffset=9.1552734e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12967,7 +12969,7 @@ class Mission
 					};
 					id=88;
 					type="Modern_British_Pointman";
-					atlOffset=1.5258789e-005;
+					atlOffset=9.1552734e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13008,7 +13010,7 @@ class Mission
 					};
 					id=89;
 					type="Modern_British_Grenadier_COIN";
-					atlOffset=1.5258789e-005;
+					atlOffset=9.1552734e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13049,7 +13051,7 @@ class Mission
 					};
 					id=90;
 					type="Modern_British_Autorifleman_COIN";
-					atlOffset=1.5258789e-005;
+					atlOffset=9.1552734e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13090,6 +13092,7 @@ class Mission
 					};
 					id=91;
 					type="Modern_British_2IC_COIN";
+					atlOffset=7.6293945e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13130,6 +13133,7 @@ class Mission
 					};
 					id=92;
 					type="Modern_British_Autorifleman_COIN";
+					atlOffset=9.1552734e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13170,6 +13174,7 @@ class Mission
 					};
 					id=93;
 					type="Modern_British_Machinegunner";
+					atlOffset=9.1552734e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13210,6 +13215,7 @@ class Mission
 					};
 					id=94;
 					type="Modern_British_Marksman_COIN";
+					atlOffset=9.1552734e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13249,6 +13255,7 @@ class Mission
 					};
 					id=130;
 					type="Modern_British_Medic";
+					atlOffset=9.1552734e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13316,6 +13323,7 @@ class Mission
 			{
 			};
 			id=86;
+			atlOffset=9.1552734e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -13364,7 +13372,7 @@ class Mission
 					};
 					id=96;
 					type="Modern_USMC_Squadleader";
-					atlOffset=0.77853394;
+					atlOffset=0.77861023;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13405,6 +13413,7 @@ class Mission
 					};
 					id=97;
 					type="Modern_USMC_Teamleader";
+					atlOffset=7.6293945e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13445,6 +13454,7 @@ class Mission
 					};
 					id=98;
 					type="Modern_USMC_Rifleman";
+					atlOffset=7.6293945e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13485,6 +13495,7 @@ class Mission
 					};
 					id=99;
 					type="Modern_USMC_Autorifleman";
+					atlOffset=7.6293945e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13525,6 +13536,7 @@ class Mission
 					};
 					id=100;
 					type="Modern_USMC_AsstAutorifleman";
+					atlOffset=7.6293945e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13565,6 +13577,7 @@ class Mission
 					};
 					id=101;
 					type="Modern_USMC_Teamleader";
+					atlOffset=7.6293945e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13605,6 +13618,7 @@ class Mission
 					};
 					id=102;
 					type="Modern_USMC_Rifleman";
+					atlOffset=7.6293945e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13645,6 +13659,7 @@ class Mission
 					};
 					id=103;
 					type="Modern_USMC_Autorifleman";
+					atlOffset=7.6293945e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13685,7 +13700,7 @@ class Mission
 					};
 					id=104;
 					type="Modern_USMC_AsstAutorifleman";
-					atlOffset=1.5258789e-005;
+					atlOffset=0.00010681152;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13726,6 +13741,7 @@ class Mission
 					};
 					id=105;
 					type="Modern_USMC_Teamleader";
+					atlOffset=9.1552734e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13766,6 +13782,7 @@ class Mission
 					};
 					id=106;
 					type="Modern_USMC_MachineGunner";
+					atlOffset=9.1552734e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13806,6 +13823,7 @@ class Mission
 					};
 					id=107;
 					type="Modern_USMC_AsstMachineGunner";
+					atlOffset=9.1552734e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13846,6 +13864,7 @@ class Mission
 					};
 					id=108;
 					type="Modern_USMC_Medic";
+					atlOffset=9.1552734e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13875,7 +13894,7 @@ class Mission
 			{
 			};
 			id=95;
-			atlOffset=0.77853394;
+			atlOffset=0.77861023;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15284,6 +15303,7 @@ class Mission
 					};
 					id=198;
 					type="Modern_British_FSTCommander";
+					atlOffset=7.6293945e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15323,7 +15343,7 @@ class Mission
 					};
 					id=199;
 					type="Modern_British_FSTAssistant";
-					atlOffset=-1.5258789e-005;
+					atlOffset=6.1035156e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15363,6 +15383,7 @@ class Mission
 					};
 					id=200;
 					type="Modern_British_FSTAssistant";
+					atlOffset=6.1035156e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15402,6 +15423,7 @@ class Mission
 					};
 					id=201;
 					type="Modern_British_FSTForwardObserver";
+					atlOffset=7.6293945e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15431,6 +15453,7 @@ class Mission
 			{
 			};
 			id=197;
+			atlOffset=7.6293945e-005;
 		};
 		class Item47
 		{

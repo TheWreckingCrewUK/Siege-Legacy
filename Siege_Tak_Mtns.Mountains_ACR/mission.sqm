@@ -14377,11 +14377,12 @@ class Mission
 			class Attributes
 			{
 				name="mainbase";
-				condition="call{this;}";
+				condition="call{count thislist > 2}";
 				onActivation="call{[""thistrigger""] call twc_fnc_changebase;}";
+				onDeactivation="call{[""thistrigger""] call twc_fnc_changebase;}";
 				sizeA=10;
 				sizeB=16;
-				timeout[]={60,60,60};
+				timeout[]={10,10,10};
 				interuptable=1;
 				repeatable=1;
 				activationBy="EAST";
@@ -14696,12 +14697,12 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={1903.209,194.05368,5075.6738};
-			angle=3.2801011;
+			angle=3.280102;
 			class Attributes
 			{
 				name="warning";
-				condition="call{this}";
-				onActivation="call{hint ""ENEMIES IN THE COMPOUND""}";
+				condition="call{twc_siege_baseside == 0 && this}";
+				onActivation="call{execVM ""Siege_core\server\sys_basedefence\INF_Alarm.sqf"";}";
 				sizeA=10;
 				sizeB=16;
 				interuptable=1;
@@ -16260,7 +16261,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={1907.9985,194.73598,5067.9546};
-				angles[]={0,1.7379786,-0};
+				angles[]={0,1.7379786,0};
 			};
 			side="Empty";
 			flags=5;

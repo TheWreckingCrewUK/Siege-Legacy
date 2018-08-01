@@ -29,6 +29,10 @@ publicVariable "twc_difficulty";
 twc_diff_scaler = 1.5;
 publicVariable "twc_diff_scaler";
 
+
+twc_is90 = 1;
+publicVariable "twc_is90";
+
 //add in an object name and the game will create a location there and spawn enemies from it
 customlocations = [camp1, camp2];
 

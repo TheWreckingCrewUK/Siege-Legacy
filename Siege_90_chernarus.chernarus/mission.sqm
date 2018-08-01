@@ -31,6 +31,7 @@ addons[]=
 	"ace_advanced_fatigue",
 	"acex_sitting",
 	"cba_xeh",
+	"OPXmisc",
 	"CUP_Misc3_Config",
 	"ace_trenches",
 	"A3_Signs_F_Signs_Ad",
@@ -44,7 +45,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=16;
+		items=17;
 		class Item0
 		{
 			className="A3_Structures_F_Mil";
@@ -108,43 +109,48 @@ class AddonsMetaData
 		};
 		class Item9
 		{
+			className="OPXmisc";
+			name="OPXmisc";
+		};
+		class Item10
+		{
 			className="CUP_Misc3_Config";
 			name="CUP_Misc3_Config";
 		};
-		class Item10
+		class Item11
 		{
 			className="ace_trenches";
 			name="ACE3 - Trenches";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item11
+		class Item12
 		{
 			className="A3_Signs_F";
 			name="Arma 3 - Signs";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item12
+		class Item13
 		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item13
+		class Item14
 		{
 			className="UK3CB_BAF_Vehicles_LandRover";
 			name="3CB BAF Vehicles - Land Rover";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item14
+		class Item15
 		{
 			className="twc_1990";
 			name="twc_1990";
 		};
-		class Item15
+		class Item16
 		{
 			className="CUP_WheeledVehicles_HMMWV";
 			name="CUP_WheeledVehicles_HMMWV";
@@ -12807,11 +12813,12 @@ class Mission
 			class Attributes
 			{
 				name="mainbase";
-				condition="call{this;}";
+				condition="call{count thislist > 2}";
 				onActivation="call{[""thistrigger""] call twc_fnc_changebase;}";
+				onDeactivation="call{[""thistrigger""] call twc_fnc_changebase;}";
 				sizeA=45;
 				sizeB=45;
-				timeout[]={60,60,60};
+				timeout[]={10,10,10};
 				interuptable=1;
 				repeatable=1;
 				activationBy="EAST";
@@ -12885,8 +12892,8 @@ class Mission
 			class Attributes
 			{
 				name="warning";
-				condition="call{this}";
-				onActivation="call{hint ""ENEMIES IN THE PERIMETER"";}";
+				condition="call{twc_siege_baseside == 0 && this}";
+				onActivation="call{execVM ""Siege_core\server\sys_basedefence\INF_Alarm.sqf"";}";
 				sizeA=45;
 				sizeB=45;
 				interuptable=1;
@@ -13726,7 +13733,7 @@ class Mission
 				name="idfalarm";
 			};
 			id=125;
-			type="Land_Antenna";
+			type="Land_antenna";
 			atlOffset=0.28656006;
 			class CustomAttributes
 			{
@@ -14316,7 +14323,7 @@ class Mission
 				class Attribute1
 				{
 					property="VehicleCustomization";
-					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['VehicleCustomization',_value]} else {([_this] + _value) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
 					class Value
 					{
 						class data
@@ -14688,7 +14695,7 @@ class Mission
 				class Attribute1
 				{
 					property="VehicleCustomization";
-					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['VehicleCustomization',_value]} else {([_this] + _value) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
 					class Value
 					{
 						class data

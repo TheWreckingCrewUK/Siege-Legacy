@@ -13,44 +13,47 @@ params ["_thistrigger"];
 if (!isServer) exitWith {};
 
 [_thistrigger] spawn {
- params ["_thistrigger"];
-if (!(getMarkerColor "base" == "")) then { 
-//systemchat "switched base to opfor"; 
-_marker = createmarker ["dummybase", getmarkerpos "base"]; 
-_marker setMarkerShape "ICON";
-_marker setMarkerType "b_hq";
-_marker setMarkerText "Base (ENEMY)";
-_marker setMarkerColor "colorred";
+	 params ["_thistrigger"];
+	if (!(getMarkerColor "base" == "")) then { 
+		//systemchat "switched base to opfor"; 
+		_marker = createmarker ["dummybase", getmarkerpos "base"]; 
+		_marker setMarkerShape "ICON";
+		_marker setMarkerType "b_hq";
+		_marker setMarkerText "Base (ENEMY)";
+		_marker setMarkerColor "colorred";
 
-pointLimit = pointLimit +30;
-publicVariable "pointLimit";
+		pointLimit = pointLimit +30;
+		publicVariable "pointLimit";
 
-deletemarker "base"; 
-twc_siege_baseside = 1;
-publicVariable "twc_siege_baseside";
-mainbase setTriggerActivation ["WEST", "PRESENT", true];
-waituntil {({isPlayer _x && alive _x} count allUnits)==0};
-if (getMarkerColor "base" == "") then { 
-if ((getMarkerColor "respawn_forwardBase" == "") ) then {
-//systemchat "no base and no backup";
-"baselost" call BIS_fnc_endMissionServer;} else {
-//systemchat "got a backup"
-}
-} 
-} 
-else 
-{ 
- 
-//systemchat "switching base to blufor"; 
-_marker = createmarker ["base", getmarkerpos "dummybase"]; 
-_marker setMarkerShape "ICON";
-_marker setMarkerType "b_hq";
-_marker setMarkerText "Base (FRIENDLY)";
-_marker setMarkerColor "colorBlufor";
-deletemarker "dummybase"; 
-twc_siege_baseside = 0;
-publicVariable "twc_siege_baseside";
-mainbase setTriggerActivation ["east", "PRESENT", true]; 
-} 
+		deletemarker "base"; 
+		twc_siege_baseside = 1;
+		publicVariable "twc_siege_baseside";
+
+		"CONTACTS IN BASE, RESPAWN DISABLED" remoteExec ["hint"];
+
+		waituntil {({isPlayer _x && alive _x} count allUnits)==0};
+		if (getMarkerColor "base" == "") then {
+			if ((getMarkerColor "respawn_forwardBase" == "") ) then {
+				//systemchat "no base and no backup";
+				"baselost" call BIS_fnc_endMissionServer;
+			} else {
+				//systemchat "got a backup"
+			};
+		};
+	}
+	else 
+	{ 
+		 
+		//systemchat "switching base to blufor"; 
+		_marker = createmarker ["base", getmarkerpos "dummybase"]; 
+		_marker setMarkerShape "ICON";
+		_marker setMarkerType "b_hq";
+		_marker setMarkerText "Base (FRIENDLY)";
+		_marker setMarkerColor "colorBlufor";
+		deletemarker "dummybase"; 
+		twc_siege_baseside = 0;
+		publicVariable "twc_siege_baseside";
+		"BASE MADE SAFE, RESPAWN RESTORED" remoteExec ["hint"];
+	} 
  
 }

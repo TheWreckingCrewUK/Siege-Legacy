@@ -159,7 +159,7 @@ _group2 addwaypoint [[twc_basepos, 200 * twc_roamsize, 300 * twc_roamsize, 3, 0,
 _group2 addwaypoint [[twc_basepos, 200 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
 _group2 addwaypoint [[twc_basepos, 200 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
  [_group, 4] setWaypointType "CYCLE";
- _wp1 setwaypointstatements ["true", "{this reveal _x} foreach (twc_basepos nearentities ['man', 500])"];
+ _wp1 setwaypointstatements ["true", "{this reveal [_x, 3];} foreach allplayers; {_x suppressfor 120} foreach thislist"];
 sleep 2;
 
 //being excessive with the counting code because sometimes it counts at strange times so technicals ==1 could spawn 2 or more technicals
