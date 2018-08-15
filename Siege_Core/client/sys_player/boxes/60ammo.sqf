@@ -30,7 +30,9 @@ clearitemCargoGlobal _box;
 
 
 //supplies
-_box AddMagazineCargoGlobal ["UK3CB_BAF_32Rnd_40mm_G_Box",5];
+_box addItemCargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Shells",20];
+_box addItemCargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Flare_White",10];
+_box addItemCargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White",10];
 
 [player, _box] call ace_cargo_fnc_startLoadIn;
 };

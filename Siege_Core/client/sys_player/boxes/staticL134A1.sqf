@@ -6,16 +6,15 @@
 *
 *
 */
-if ((twc_ammotime-time+600) > 0) then {
-	hint format ["The spawner is on cooldown currently and this is a special crate. %2 seconds remaining until this crate can be spawned.", twc_ammotime_amount, ceil (twc_ammotime-time+600)];
-	waituntil {(twc_ammotime-time+600) < 0};
+if ((twc_ammotime-time+300) > 0) then {
+	hint format ["The spawner is on cooldown currently and this is a special crate. %2 seconds remaining until this crate can be spawned.", twc_ammotime_amount, ceil (twc_ammotime-time+300)];
+	waituntil {(twc_ammotime-time+300) < 0};
 	hint "Special Ammunition Is Now Available From The Spawner";
 	
 	} else {
 
 
-if (( count(allPlayers - entities "HeadlessClient_F"))<7) then {
-[7] execVM "Siege_core\client\sys_restrict\restrictedkit.sqf";} else {
+
 
 _boxClass = "UK3CB_BAF_Box_L134A1";
 
@@ -48,5 +47,5 @@ _trg setTriggerStatements ["this", "_box = (getPos thisTrigger) nearestObject 'U
 _trg attachTo [_box];
 
 
-[player, _box] call ace_cargo_fnc_startLoadIn;};
+[player, _box] call ace_cargo_fnc_startLoadIn;
 };

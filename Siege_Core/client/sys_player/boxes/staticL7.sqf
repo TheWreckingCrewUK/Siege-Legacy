@@ -6,15 +6,14 @@
 *
 *
 */
-if ((twc_ammotime-time) > 0) then {
-	hint format ["You can only spawn a crate every %1 seconds currently. %2 seconds remaining.", twc_ammotime_amount, ceil (twc_ammotime-time)];
-	waituntil {(twc_ammotime-time) < 0};
+if ((twc_ammotime-time+300) > 0) then {
+	hint format ["You can only spawn a crate every %1 seconds currently. %2 seconds remaining.", twc_ammotime_amount, ceil (twc_ammotime-time+300)];
+	waituntil {(twc_ammotime-time+300) < 0};
 	hint "More Ammunition Is Now Available From The Spawner";
 	
 	} else {
 	
-	if (( count(allPlayers - entities "HeadlessClient_F"))<4) then {
-	[4] execVM "Siege_core\client\sys_restrict\restrictedkit.sqf";} else {
+
 	_boxClass = "UK3CB_BAF_Box_L7A2";
 
 _box = _boxClass createVehicle (getPos AmmoBoxSpawner);
@@ -46,5 +45,5 @@ _trg setTriggerStatements ["this", "_box = (getPos thisTrigger) nearestObject 'U
 _trg attachTo [_box];
 
 
-[player, _box] call ace_cargo_fnc_startLoadIn;}
-;};
+[player, _box] call ace_cargo_fnc_startLoadIn;
+};

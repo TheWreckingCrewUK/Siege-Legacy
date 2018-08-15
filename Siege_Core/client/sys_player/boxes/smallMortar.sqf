@@ -6,15 +6,14 @@
 *
 *
 */
-if ((twc_ammotime-time+600) > 0) then {
-	hint format ["The spawner is on cooldown currently and this is a special crate. %2 seconds remaining until this crate can be spawned.", twc_ammotime_amount, ceil (twc_ammotime-time+600)];
-	waituntil {(twc_ammotime-time+600) < 0};
+if ((twc_ammotime-time+300) > 0) then {
+	hint format ["The spawner is on cooldown currently and this is a special crate. %2 seconds remaining until this crate can be spawned.", twc_ammotime_amount, ceil (twc_ammotime-time+300)];
+	waituntil {(twc_ammotime-time+300) < 0};
 	hint "Special Ammunition Is Now Available From The Spawner";
 	
 	} else {
 	
-	if (( count(allPlayers - entities "HeadlessClient_F"))<4) then {
-[4] execVM "Siege_core\client\sys_restrict\restrictedkit.sqf";} else {
+
 
 twc_ammotime=time+twc_ammotime_amount;
 publicVariable "twc_ammotime";
@@ -34,9 +33,9 @@ _box AddWeaponCargoGlobal ["UK3CB_BAF_M6",1];
 
 //Ammo
 
-_box addItemCargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Shells",50];
+_box addItemCargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Shells",20];
 _box addItemCargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Flare_White",10];
-_box addItemCargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White",20];
+_box addItemCargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White",10];
 
 //Respawn/Despawn Script
 
@@ -49,5 +48,5 @@ _trg attachTo [_box];
 
 
 [player, _box] call ace_cargo_fnc_startLoadIn;
-};
+
 };

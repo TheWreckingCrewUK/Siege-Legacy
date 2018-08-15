@@ -2,7 +2,7 @@
 
 //Deletion of ieds so players can't scum score
 {
-	player removeItems _x;
+	player removeMagazines _x;
 }forEach ["ACE_IEDLandBig_Range_Ammo","ACE_IEDLandSmall_Range_Ammo","ACE_IEDUrbanBig_Range_Ammo","ACE_IEDUrbanSmall_Range_Ammo"];
 //If player isn't west then kick them. Apparently players respawning as civ is an issue?
 if(side player != west)then{

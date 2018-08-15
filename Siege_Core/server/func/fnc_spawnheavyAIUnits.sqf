@@ -21,50 +21,40 @@ params ["_town"];
 if ((str _town) in defendedtownarray) exitwith {};
 _pos = getpos _town;
 
+sleep random 5;
 
-twc_currentenemy = (east countside allunits) - 40;
-publicVariable "twc_currentenemy";
 
-//Spawning hostiles
 _group = createGroup East;
 _spawnPos = [_pos,100, random 360] call SHK_pos;
-
-
-_enemycount = (count allunits) - (count playableunits);
-//if (_flag getvariable "fighting" == 1) then {systemchat "spawn blocked"} else {
-//for "_i" from 1 to _total do{
-
-
 
 if(isNil "twc_tankcount") then{
 	twc_tankcount = random 3;
 };
 
-twc_tankcount = twc_tankcount * ( 1+ (random 0.5));
 
 if(isNil "twc_ifvcount") then{
 	twc_ifvcount = 2;
 };
 
-twc_ifvcount = twc_ifvcount * ( 1+ (random 0.5));
 
 if(isNil "twc_apccount") then{
 	twc_apccount = 2;
 };
 
-twc_apccount = twc_apccount * ( 1+ (random 0.5));
 
 if(isNil "twc_infcount") then{
 	twc_infcount = 5;
 };
-twc_infcount = twc_infcount * ( 1+ (random 0.5));
 
 
 if(isNil "twc_aainfcount") then{
 	twc_aainfcount = 3;
 };
 
-twc_aainfcount = twc_aainfcount * ( 1+ (random 0.5));
+if(isNil "twc_isspawning") then{
+	twc_isspawning = 0;
+};
+
 /* removing artillery for the moment until I stop them firing on people at really bad times
 if(isNil "twc_artycount") then{
 	twc_artycount = 3;
@@ -76,13 +66,22 @@ twc_artycount = 0;
 
 
 
+//_spawnPos = [(_spawnPos select 0) + 5,(_spawnPos select 1), (_spawnPos select 2)];
 
-_spawnPos = [(_spawnPos select 0) + 5,(_spawnPos select 1), (_spawnPos select 2)];
-		
 
-while {twc_currentenemy<twc_maxenemy} do {
+if (twc_currentenemy > twc_maxenemy) exitwith {};
+{if (count units _x==0) then {deleteGroup _x}} forEach allGroups;
 
-_enemycount = (count allunits) - (count playableunits);
+if (twc_isspawning ==1) exitwith {};
+[] spawn {twc_isspawning = 1;
+sleep 5;
+twc_isspawning = 0;
+};
+
+//for "_i" from 1 to (ceil((twc_maxenemy - twc_currentenemy) / 16)) do {
+for "_i" from 1 to 2 do {
+//while {(twc_currentenemy*8)<(twc_maxenemy)} do {
+
 
 
 	_spawnPos = [_pos,[0,250],random 360,0] call SHK_pos;
@@ -90,8 +89,6 @@ _enemycount = (count allunits) - (count playableunits);
 	
 	_squad = squad call BIS_fnc_selectRandom;
 	_group = [_spawnPos, EAST, _squad] call BIS_fnc_spawnGroup;
-	twc_currentenemy=twc_currentenemy+ (count _squad);
-	publicVariable "twc_currentenemy";
 	{_x addEventHandler ["Killed",{
 		[(_this select 0)] call twc_fnc_deleteDead;
 		twc_currentenemy=twc_currentenemy-1;
@@ -100,12 +97,9 @@ _enemycount = (count allunits) - (count playableunits);
 		
 	}]} foreach (units _group);
 	//_num = _num + 1;
-	sleep 2;
-
-};
-//};
-sleep 2;
-
+	sleep 2 + (random 2);
+	twc_currentenemy=twc_currentenemy+ (count units _group);
+	publicVariable "twc_currentenemy";
 _group setFormation "LINE";
 if (twc_siege_baseside == 0) then {
 for "_i" from 1 to twc_wpcount do {
@@ -136,6 +130,10 @@ _group addwaypoint [twc_basepos, 20 * twc_roamsize];
 
 
 };
+};
+//};
+sleep 2;
+
 
 
 
@@ -172,4 +170,5 @@ _driver moveInGunner _technical;
 		};
 		};
 	};
-
+//sleep 30;
+//[_town] spawn twc_spawnAIUnits;

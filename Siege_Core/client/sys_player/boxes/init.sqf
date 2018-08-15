@@ -108,6 +108,26 @@ if((typeOf player) in ["Modern_British_Squadleader","Modern_British_2IC","Modern
 };
 
 
+
+if((typeOf player) in ["Modern_pol_commander","Modern_pol_subcommander"])then{
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn Small Polish Crate","",{execvm "siege_core\client\sys_player\boxes\smallcratepol.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_UKaction3 = ["spawn50","Spawn .50 Ammo","",{execvm "siege_core\client\sys_player\boxes\50calammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction3,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction4 = ["spawn762","Spawn 7.62 Ammo","",{execvm "siege_core\client\sys_player\boxes\762ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction4,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction5 = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "siege_core\client\sys_player\boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction5,true] call ace_interact_menu_fnc_addActionToClass;	
+	
+	_UKaction6 = ["SpawnmineCreate","Spawn Claymores","",{execvm "siege_core\client\sys_player\boxes\smallcratemines.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction6,true] call ace_interact_menu_fnc_addActionToClass;	
+};
+
+
 if((typeOf player) in ["twc_men_1990_us_w_SquadLeader","twc_men_1990_us_w_teamleader"])then{
 
 	_usaction = ["SpawnsmallUKCreate","Spawn Small US Crate","",{execvm "siege_core\client\sys_player\boxes\smallCrateUS90.sqf"},{true}] call ace_interact_menu_fnc_createAction;
@@ -181,7 +201,7 @@ if((typeOf player) in ["Modern_British_Medic", "1990_British_Medic", "1990_Briti
 };
 
 
-if((typeOf player) in ["Modern_British_FSTAssistant","Modern_British_Quartermaster","Modern_British_FSTForwardObserver","Modern_British_FSTCommander"])then{
+if((typeOf player) in ["Modern_British_Quartermaster","Modern_British_FSTForwardObserver","Modern_British_FSTCommander"])then{
 
 	_fstaction1 = ["spawnl111","Spawn L111A1 HMG","",{execvm "siege_core\client\sys_player\boxes\staticL111A1.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_fstaction1,true] call ace_interact_menu_fnc_addActionToClass;
@@ -199,6 +219,9 @@ if((typeOf player) in ["Modern_British_FSTAssistant","Modern_British_Quartermast
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_fstaction4,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_fstaction5 = ["spawnm6","Spawn M6","",{execvm "siege_core\client\sys_player\boxes\smallMortar.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_fstaction5,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_fstaction5 = ["spawnm6","Spawn M6 Ammo","",{execvm "siege_core\client\sys_player\boxes\60ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_fstaction5,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_fstaction6 = ["spawn40","Spawn 40mm Ammo","",{execvm "siege_core\client\sys_player\boxes\40ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;

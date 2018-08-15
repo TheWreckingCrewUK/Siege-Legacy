@@ -16,6 +16,9 @@
 * Public: No
 */
 
+if(isNil "twc_isspawning") then{
+	twc_isspawning = 0;
+};
 //Recieved Parameters
 params ["_town"];
 if ((str _town) in defendedtownarray) exitwith {};
@@ -23,25 +26,34 @@ _pos = getpos _town;
 
 if (twc_heavymode == 1) exitwith{[_town] call twc_spawnheavyAIUnits};
 
-//systemchat format ["spawn %1", _pos];
-
+//systemchat "spawn";
 
 //Spawning hostiles
+
+
+sleep random 5;
+
+if (twc_currentenemy > twc_maxenemy) exitwith {};
+{if (count units _x==0) then {deleteGroup _x}} forEach allGroups;
+
+//systemchat format ["spawn %1", _spawnPos];
+if (twc_isspawning ==1) exitwith {};
+[] spawn {twc_isspawning = 1;
+sleep 5;
+twc_isspawning = 0;
+};
+
+
 _group = createGroup East;
+//while {twc_currentenemy<twc_maxenemy} do {
+for "_i" from 1 to (3 +(random 8)) do {
+
+
 _spawnPos = [_pos,100, random 360] call SHK_pos;
-
-
-_enemycount = (count allunits) - (count playableunits);
-//if (_flag getvariable "fighting" == 1) then {systemchat "spawn blocked"} else {
-//for "_i" from 1 to _total do{
-
-
-while {_enemycount<twc_maxenemy} do {
-
-_enemycount = (count allunits) - (count playableunits);
-	_unit = _group createUnit [(townSpawn select (floor random (count townspawn))), _spawnPos,[], 0.3,"NONE"];
+	_unit = _group createUnit [(selectRandom townSpawn), _spawnPos, [], 5, "NONE"];
 	twc_currentenemy=twc_currentenemy+1;
 	publicVariable "twc_currentenemy";
+	//systemchat format ["spawn %1", _unit];
 	_unit addEventHandler ["Killed",{
 		[(_this select 0)] call twc_fnc_deleteDead;
 		twc_currentenemy=twc_currentenemy-1;
@@ -49,13 +61,12 @@ _enemycount = (count allunits) - (count playableunits);
 		["TWC_Insurgency_adjustPoints", 1] call CBA_fnc_serverEvent;
 		
 	}];
-	_unit setVariable ["unitsHome",_pos,false];
+	
 	//_num = _num + 1;
-	sleep 2;
+	
 
 };
 //};
-sleep 2;
 
 _group setFormation "LINE";
 if (twc_siege_baseside == 0) then {

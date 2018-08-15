@@ -10,7 +10,7 @@ server\sys_vehicles\VBIED.sqf
 twc_serverDebug = false;
 
 twc_heavymode = 1;
-technicals = 30 + random 2;
+technicals = 3 + random 2;
 
 enemyTechnical =["rhs_btr70_msv","rhs_bmp1_msv","rhs_t72ba_tv", "rhs_bmd1", "rhs_bmd1r", "rhs_bmd2"];
 
@@ -27,7 +27,7 @@ twc_surrenderVote = false;
 */
 TWC_Building_Style = "MidEast";
 
-twc_difficulty = 0.7;
+twc_difficulty = 0.6;
 
 //roamsize multiplies the size of the random waypoint divergence from base. A setting of 1 means each waypoint is up to 100-200 meters away from base. Set higher for maps where there's a lot of cover and you don't want the enemies to just swim in so that you can use higher difficulties without swamping the base. The downside is that they take longer to get to engagement range so there's more downtime at mission start.
 twc_roamsize = 1.5;
@@ -36,11 +36,11 @@ pointLimit = 100;
 publicVariable "pointLimit";
 
 //wpcount adds extra waypoints that scale by the roamsize variable. If left unset in the mission's initserver then it will default to 1. The game will add 2 waypoints near base regardless of this value. Set this to 0 to have them move straight to base, set to 2-4 if you want enemies to loiter around nearby a lot but not make a play for the base that often.
-	twc_wpcount = 0;
+	twc_wpcount = 2;
 
 
 //multiplier for how much the enemy increases with player count, 1 is the standard figure. Set higher with lower overall difficulty for maps where there's a lot of ground for a small group to cover. Set lower for maps where higher player count doesn't make much difference to how difficult the area is to defend.
-twc_diff_scaler = 1.7;
+twc_diff_scaler = 1.5;
 
 //add in an object name and the game will create a location there and spawn enemies from it
 customlocations = [camp1, camp2, camp3, camp4, camp5, camp6];
@@ -48,7 +48,8 @@ customlocations = [camp1, camp2, camp3, camp4, camp5, camp6];
 sirenlist = [idfalarm, idfalarm_1];
 publicvariable "sirenlist";
 
-
+twc_is90 = 1;
+publicvariable "twc_is90";
 
 civilianType = ["Tak_Civ_Men_KTL1", "CUP_C_TK_Man_04_Jack", "Tak_Civ_Men_KTL2","CUP_C_TK_Man_07_Coat", "Tak_Civ_Men_KTL3", "Tak_Civ_Men_KTL4", "Tak_Civ_Men_KTs1", "Tak_Civ_Men_KTs2", "Tak_Civ_Men_KTs3", "Tak_Civ_Men_KTs4",  "CUP_C_TK_Man_05_Jack", "Tak_Civ_Men_J1", "Tak_Civ_Men_J2", "Tak_Civ_Men_J3"];
 
@@ -78,7 +79,7 @@ _script = execVM "siege_core\SHK_pos\shk_pos_init.sqf";
 waitUntil{scriptDone _script};
 
 
-badTownArray = ["Airport north","Zargabad","Falar","Faro","Guran","Feas"];
+badTownArray = ["Pihlajamaa","HuhtamÃ¤ki","Falar","Faro","Guran","Feas"];
 
 [missionNamespace,"base","Main Base"] call BIS_fnc_addRespawnPosition;
 

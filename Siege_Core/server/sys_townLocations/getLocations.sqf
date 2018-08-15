@@ -1,7 +1,7 @@
+_enemycount = 0;
+if (twc_heavymode == 1) then {_enemycount = (east countside allunits) - 40} else {_enemycount = (east countside allunits)};
 
-if (twc_heavymode == 1) then {twc_currentenemy = (east countside allunits) - 40} else {twc_currentenemy = (east countside allunits)};
-
-if (twc_currentenemy>twc_maxenemy) exitwith
+if (_enemycount>twc_maxenemy) exitwith
 {};
 
 //adding in enemy count just to save a bit of overhead
@@ -28,8 +28,20 @@ _trg setTriggerStatements ["this", format ["[(%1)] call twc_spawnDefend", getpos
 
 
 
-[_x] spawn twc_townSetup;
+[_x] spawn {
+params ["_this"];
+while {true} do {
+twc_maxenemy=((30*twc_difficulty)+((count(allPlayers - entities "HeadlessClient_F")*twc_diff_scaler)*(6*twc_difficulty))) min 80;
+publicVariable "twc_maxenemy";
+sleep 0.2;
 
+
+if ((pointLimit-totalpoints)<(twc_maxenemy)) then {
+twc_maxenemy=((50*twc_difficulty)+((count(allPlayers - entities "HeadlessClient_F")*twc_diff_scaler)*(6*twc_difficulty))) min 80;
+	};
+[_this] spawn twc_townSetup;
+sleep 30;};
+}
 
 
 // Creates a marker that marks the town
