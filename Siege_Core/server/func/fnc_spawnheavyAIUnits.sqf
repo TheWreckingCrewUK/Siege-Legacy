@@ -97,7 +97,7 @@ for "_i" from 1 to 2 do {
 		
 	}]} foreach (units _group);
 	//_num = _num + 1;
-	sleep 2 + (random 2);
+	sleep (2 + random 2);
 	twc_currentenemy=twc_currentenemy+ (count units _group);
 	publicVariable "twc_currentenemy";
 _group setFormation "LINE";
