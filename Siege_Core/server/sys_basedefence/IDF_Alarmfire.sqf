@@ -5,36 +5,76 @@ _shell = _this select 1;
 _direction = _shell getreldir _base;
 _distance = (_shooter) distance _base;
 
-//defines how close shells have to be before tripping the alarm. FOB kunduz is 40 as a baseline.
-_accuracy = if (isNil "idfbasesize") then { 40 } else { idfbasesize * 0.5 };
+//defines how close shells have to be aimed before tripping the alarm. FOB kunduz is 40 as a baseline.
+
+if(isNil "idfbasesize") then {idfbasesize = 40};
+
+if(isNil "lastidftime") then {lastidftime = -200};
+
+_accuracy = idfbasesize * 0.5;
+
 _distancescale = _accuracy * ((_distance * (_distance*0.2)) / 3500000);
+
+
+
+if(isNil "twc_idf_alarm") then{
+	twc_idf_alarm = 0;
+};
+
 //systemchat format ["%1, %2", _distancescale, _distance];
 
+if (isnil "idfreported") then { idfreported = 0};
 
-if (idfreported == 0) then {
-	if ((_shooter) distance _base < 5000) then {
-		if ((_shooter) distance _base > (idfbasesize * 1)) then {
-			if ((_direction > ((360 - _accuracy) + (_distancescale))) or {_direction < ((0 + _accuracy) - ( _distancescale))}) then {
-				basesafe = 0;
-				publicvariable "idfsafe";
+if (!alive idfradar) exitwith {};
+	
+	
+		//systemchat "1";
+		if ((_shooter) distance _base < 25000) then
+{			//systemchat "2";
+			if ((_shooter) distance _base > (idfbasesize *3)) then
+{			
 
-				idfreported = 1;
-				publicvariable "idfreported";
-
-				[_shooter, _distance] execvm "Siege_Core\server\sys_basedefence\IDF_marker.sqf";
-
-				terminate execVM "Siege_Core\server\sys_basedefence\IDF_cram.sqf";
-				//systemchat "middle man sees the shell";
 				
+			[_base, _shell, _distance, _shooter] spawn {
+			
+			
+			params ["_base", "_shell", "_distance", "_shooter"];
+			
+			[_shooter,_distance] execvm "siege_core\server\sys_basedefence\IDF_marker.sqf";
+		
+			
+			[_shell] execVM "siege_core\server\sys_basedefence\IDF_cram.sqf";
+			
+			//delay variable for automated siren vs human shouting. human shouting (90's) takes a little longer to register the call
+			_delay = 1.5;
+			if (twc_is90 == 1) then {_delay = 2;};
+			
+			waituntil {((_shell distance _base) < (((_shooter) distance _base) / _delay)) || !alive _shell};
+			
+			if (!alive _shell )exitwith {
+			//systemchat "base not the target"
+			};
+			
+			//systemchat "4";
+			basesafe = 0;
+			publicvariable "basesafe";
+
+			idfreported = 1;
+			publicvariable "idfreported";
+
+
+
+
 				if (idfon == 0) then {
-					execVM "Siege_Core\server\sys_basedefence\IDF_Alarm.sqf";
+				execVM "siege_core\server\sys_basedefence\IDF_Alarm.sqf";
+
 				};
 
-				if (clearing == 0) then {
-					execVM "Siege_Core\server\sys_basedefence\IDF_Clear.sqf";
-				};
+				
+			
 			};
+		
 		};
 	};
-};
+
 

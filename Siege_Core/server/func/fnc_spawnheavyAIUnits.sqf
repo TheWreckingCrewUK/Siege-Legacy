@@ -64,13 +64,13 @@ twc_artycount = twc_artycount * ( 1+ (random 0.5));
 */
 twc_artycount = 0;
 
-
+[_pos] spawn twc_spawnmortars;
 
 //_spawnPos = [(_spawnPos select 0) + 5,(_spawnPos select 1), (_spawnPos select 2)];
 
 
-if (twc_currentenemy > twc_maxenemy) exitwith {};
 {if (count units _x==0) then {deleteGroup _x}} forEach allGroups;
+if (twc_currentenemy > twc_maxenemy) exitwith {};
 
 if (twc_isspawning ==1) exitwith {};
 [] spawn {twc_isspawning = 1;
@@ -100,36 +100,40 @@ for "_i" from 1 to 2 do {
 	sleep (2 + random 2);
 	twc_currentenemy=twc_currentenemy+ (count units _group);
 	publicVariable "twc_currentenemy";
-_group setFormation "LINE";
-if (twc_siege_baseside == 0) then {
-for "_i" from 1 to twc_wpcount do {
-_group addwaypoint [[twc_basepos, 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos, 0]};
-_group addwaypoint [twc_basepos, 50 * twc_roamsize] call CBA_fnc_randPos;
-_group addwaypoint [twc_basepos, 20 * twc_roamsize] call CBA_fnc_randPos;
-[_group, twc_wpcount+2] setWaypointStatements ["true", "[this, twc_basepos,100] call CBA_fnc_taskDefend"]
-} else
-{ if ((random 2) > 1) then {
-systemchat "chasing";
-_enemy = playableUnits select (floor (random (count playableunits)));
+	
+	(units _group) allowGetIn true;
+	_group setFormation "LINE";
+	if (twc_siege_baseside == 0) then {
+	for "_i" from 1 to twc_wpcount do {
+		_group addwaypoint [[twc_basepos, 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos, 0]};
+		_group addwaypoint [twc_basepos, 50 * twc_roamsize] call CBA_fnc_randPos;
+		_group addwaypoint [twc_basepos, 20 * twc_roamsize] call CBA_fnc_randPos;
+		[_group, twc_wpcount+2] setWaypointStatements ["true", "[this, twc_basepos,100] call CBA_fnc_taskDefend"]
+	} else
+	{ 
+		if ((random 2) > 1) then {
+			systemchat "chasing";
+			_enemy = playableUnits select (floor (random (count playableunits)));
 
-_group addwaypoint [[getpos _enemy, 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos, 0];
-[_group] call twc_fnc_huntergroup;
-} else
-{
-for "_i" from 1 to twc_wpcount do {
-systemchat "base";
-
-
-deleteWaypoint [_group, currentwaypoint (_group)];
-_group addwaypoint [[twc_basepos, 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos, 0]};
-
-_group addwaypoint [twc_basepos, 20 * twc_roamsize];
-
-[_group, twc_wpcount + 1] setWaypointStatements ["true", "[this, twc_basepos] call CBA_fnc_taskDefend"]
-}
+			_group addwaypoint [[getpos _enemy, 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos, 0];
+			[_group] call twc_fnc_huntergroup;
+		} else
+		{
+			for "_i" from 1 to twc_wpcount do {
+				systemchat "base";
 
 
-};
+				deleteWaypoint [_group, currentwaypoint (_group)];
+				_group addwaypoint [[twc_basepos, 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos, 0]
+				};
+
+			_group addwaypoint [twc_basepos, 20 * twc_roamsize];
+
+			[_group, twc_wpcount + 1] setWaypointStatements ["true", "[this, twc_basepos] call CBA_fnc_taskDefend"]
+		}
+
+
+	};
 };
 //};
 sleep 2;
@@ -140,34 +144,34 @@ sleep 2;
 	if (totalPoints < (pointLimit)) then {
 		if (technicals > 0) then {
 			if (random 1 > 0.5) then {
-		technicals = technicals - 10;
-		publicVariable "technicals";
-_group2 = createGroup East;
+				technicals = technicals - 10;
+				publicVariable "technicals";
+				_group2 = createGroup East;
 
-_chosencar = enemyTechnical call BIS_fnc_selectRandom;
-_technical = _chosencar createVehicle _spawnPos;
+				_chosencar = enemyTechnical call BIS_fnc_selectRandom;
+				_technical = _chosencar createVehicle _spawnPos;
 
-_driver = _group2 createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];
-_gunner = _group2 createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];
-_driver moveInDriver _technical;
-_gunner moveInGunner _technical;
-_group2 addwaypoint [[twc_basepos, 300 * twc_roamsize, 500 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
-_wp1 = _group2 addwaypoint [[twc_basepos, 200 * twc_roamsize, 400 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
-_group2 addwaypoint [[twc_basepos, 200 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
-_group2 addwaypoint [[twc_basepos, 200 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
-_group2 addwaypoint [[twc_basepos, 200 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
- [_group, 4] setWaypointType "CYCLE";
- _wp1 setwaypointstatements ["true", "{this reveal [_x, 3];} foreach allplayers; {_x suppressfor 120} foreach thislist"];
-sleep 2;
+				_driver = _group2 createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];
+				_gunner = _group2 createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];
+				_driver moveInDriver _technical;
+				_gunner moveInGunner _technical;
+				_group2 addwaypoint [[twc_basepos, 300 * twc_roamsize, 500 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
+				_wp1 = _group2 addwaypoint [[twc_basepos, 200 * twc_roamsize, 400 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
+				_group2 addwaypoint [[twc_basepos, 200 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
+				_group2 addwaypoint [[twc_basepos, 200 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
+				_group2 addwaypoint [[twc_basepos, 200 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
+				 [_group, 4] setWaypointType "CYCLE";
+				 _wp1 setwaypointstatements ["true", "{this reveal [_x, 3];} foreach allplayers; {_x suppressfor 120} foreach thislist"];
+				sleep 2;
 
-//being excessive with the counting code because sometimes it counts at strange times so technicals ==1 could spawn 2 or more technicals
-technicals = technicals +9;
-publicVariable "technicals";
-waituntil {!alive _gunner};
+				//being excessive with the counting code because sometimes it counts at strange times so technicals ==1 could spawn 2 or more technicals
+				technicals = technicals +9;
+				publicVariable "technicals";
+				waituntil {!alive _gunner};
 
-_driver moveInGunner _technical;
+				_driver moveInGunner _technical;
 
-		};
+			};
 		};
 	};
 //sleep 30;

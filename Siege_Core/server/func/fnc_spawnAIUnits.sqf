@@ -33,8 +33,8 @@ if (twc_heavymode == 1) exitwith{[_town] call twc_spawnheavyAIUnits};
 
 sleep random 5;
 
-if (twc_currentenemy > twc_maxenemy) exitwith {};
 {if (count units _x==0) then {deleteGroup _x}} forEach allGroups;
+if (twc_currentenemy > twc_maxenemy) exitwith {};
 
 //systemchat format ["spawn %1", _spawnPos];
 if (twc_isspawning ==1) exitwith {};

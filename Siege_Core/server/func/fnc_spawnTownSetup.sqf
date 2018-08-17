@@ -22,9 +22,6 @@ _markerstr setMarkerShape "Ellipse";
 _markerstr setMarkerBrush "Grid";
 _markerstr setMarkerSize [100,100];
 */
-for "_i" from 1 to mortarcount do{
-[_pos] spawn twc_spawnmortars;
-};
 
 twc_currentenemy= ({alive _x && side _x == east} count allUnits) - twc_currentdefender;
 publicVariable "twc_currentenemy";

@@ -22,7 +22,7 @@ if (!isServer) exitWith {};
 		_marker setMarkerText "Base (ENEMY)";
 		_marker setMarkerColor "colorred";
 
-		pointLimit = pointLimit +30;
+		pointLimit = pointLimit +10;
 		publicVariable "pointLimit";
 
 		deletemarker "base"; 

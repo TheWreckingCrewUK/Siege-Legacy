@@ -1,5 +1,3 @@
-
-
 if (idfon == 0) then {
 idfon = 1;
 publicvariable "idfon";
@@ -27,10 +25,9 @@ if (random 2 > 1) then {
 	[_x, "TWC_sound_incomingvoice2"] call CBA_fnc_globalSay3d;
 } forEach sirenlist;
 };
-sleep 10;
+sleep 60;
 idfon = 0;
 publicvariable "idfon";
-sleep 30;
 };
 
 //playSound3D ["a3\data_f_curator\sound\cfgsounds\air_raid.wss", idfalarm, false, getposasl idfalarm,5];
@@ -40,8 +37,7 @@ sleep 20;
 //playSound3D ["a3\data_f_curator\sound\cfgsounds\air_raid.wss", idfalarm, false, getposasl idfalarm,5];
 
 sleep 6;
-alarm = 0;
-	publicvariable "alarm";
+
 	
 idfon = 0;
 publicvariable "idfon";
@@ -52,7 +48,7 @@ publicvariable "idfreported";
 		basesafe = 0;
 	publicvariable "idfsafe";
 
-terminate execVM "Siege_Core\server\sys_basedefence\IDF_Alarm.sqf";
+terminate execVM "siege_core\server\sys_basedefence\IDF_Alarm.sqf";
 };
 
 

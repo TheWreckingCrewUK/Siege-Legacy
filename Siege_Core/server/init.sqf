@@ -16,8 +16,17 @@ if(isNil "twc_heavymode") then{
 publicVariable "twc_heavymode";
 };
 
+if(isNil "twc_mortar_baseclear") then{
+	twc_mortar_baseclear = 1;
+};
+
 if(isNil "mortarcount") then{
 	mortarcount = 0;
+};
+
+if(isNil "twc_mortar_targetlist") then{
+	twc_mortar_targetlist = [];
+	publicVariable "twc_mortar_targetlist";
 };
 
 if(isNil "twc_is90") then{

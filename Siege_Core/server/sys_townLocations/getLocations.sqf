@@ -9,6 +9,10 @@ if (_enemycount>twc_maxenemy) exitwith
 // disregards the towns in the badTown array in initServer
 	if(!((text _x) in badTownArray))then{
 	
+	//ruha exceptions because umlauts are apparently difficult for arma
+	if (["huhtam", text _x] call BIS_fnc_inString) exitwith {};
+	if (["ojalan", text _x] call BIS_fnc_inString) exitwith {};
+	if (["hietal", text _x] call BIS_fnc_inString) exitwith {};
 	
 _spawnpos = getpos _x;
 

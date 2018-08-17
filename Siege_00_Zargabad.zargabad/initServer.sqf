@@ -11,6 +11,8 @@ twc_serverDebug = false;
 
 twc_surrenderVote = false;
 
+mortarcount = 0;
+if ((random 1) < 0.3) then {mortarcount = 1};
 /*
 * Denotes the style of building to be used, for dynamic compositions.
 * For example: the IED factory.

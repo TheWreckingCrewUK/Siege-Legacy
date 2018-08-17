@@ -31,7 +31,7 @@ sleep 5;
 	
 
 
-terminate execVM "Siege_Core\server\sys_basedefence\INF_Alarmclear.sqf";
+terminate execVM "siege_core\server\sys_basedefence\INF_Alarmclear.sqf";
 
 
 

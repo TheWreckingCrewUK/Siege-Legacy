@@ -26,7 +26,6 @@ mortarcount = mortarcount - 1;
 publicvariable "mortarcount";
 
 //Spawning mortar
-_group = createGroup East;
 _spawnPos = [_pos,[100,100], random 360, 0, [0,100]] call SHK_pos;
 //for "_i" from 1 to _total do{
 _mortartruck = "RHS_Ural_Open_Civ_01" createvehicle _spawnPos;
@@ -37,11 +36,18 @@ _mortar attachto [_mortartruck, [-0.053,-2.7,0.6]];
 _box = "ACE_Box_82mm_Mo_HE" createvehicle _spawnPos;
 _box attachto [_mortartruck, [0.45,-0.1,0]];
 
+
+
+[_pos, _mortar] spawn {
+params ["_pos", "_mortar"];
+_spawnPos = [_pos,[100,100], random 360, 0, [0,100]] call SHK_pos;
+sleep 10;
+_group = createGroup East;
 _unit = _group createUnit [(townSpawn select (floor random (count townspawn))), _spawnPos,[], 0.3, "NONE"];
-
-
-//the get in code is commented out because an ace update broke the firing function
 _unit moveIngunner _mortar;
+
+_unit disableai "AUTOTARGET";
+_unit disableai "TARGET";
 
 twc_currentenemy = twc_currentenemy + 1;
 publicVariable "twc_currentenemy";
@@ -54,37 +60,27 @@ _unit addEventHandler ["Killed",{
 	["TWC_Insurgency_adjustPoints", 1] call CBA_fnc_serverEvent;
 	
 }];
-
-/*
-group _unit addwaypoint [getmarkerpos "base", 300] call CBA_fnc_randPos;
-group _unit addwaypoint [getmarkerpos "base", 50] call CBA_fnc_randPos;
-group _unit addwaypoint [getmarkerpos "base", 50] call CBA_fnc_randPos;
-group _unit addwaypoint [getmarkerpos "base", 10] call CBA_fnc_randPos;
-*/
-
-_delay = 120 + (random 300);
-sleep _delay;
-	
-// eek. these are nasty on performance. is this necessary?
-while {true} do {
-	_mortar setvehicleammo 1;
-	_delay = 10 + (random 300);
-	sleep _delay;
-
-	// _unit doArtilleryFire [[getmarkerpos "base", 300] call CBA_fnc_randPos, "8Rnd_82mm_Mo_shells", 5];
-
-	_wp1 = group _unit addWaypoint [[getmarkerpos "base", 30] call CBA_fnc_randPos,200];
-	_wp1 setWaypointType "SCRIPTED";
-	_wp1 setWaypointScript "A3\functions_f\waypoints\fn_wpArtillery.sqf";
-	
-	_delay = 120 + (random 300);
-	sleep _delay;
-	
-	/*
-	if (idfon == 0) then {
-		execVM "Siege_Core\server\sys_basedefence\IDF_Alarm.sqf";
-	};
-	*/
-
-	sleep 40;
 };
+	_trg = createTrigger ["EmptyDetector", getmarkerpos "base"];
+	_trg setTriggerArea [150, 150, 0, false];
+	_trg setTriggerActivation ["East", "PRESENT", true];
+	_trg setTriggerTimeout[1, 1, 1, true];
+	_trg setTriggerStatements ["this","twc_mortar_baseclear = 0","twc_mortar_baseclear = 1"];
+
+sleep 20;
+
+[_mortar] spawn twc_mortarattack;
+
+sleep 20;
+
+if ((random 1) < 0.2) then {
+twc_mortar_targetlist pushback (twc_basepos);
+publicVariable "twc_mortar_targetlist";
+};
+
+for "_i" from 1 to 10 do {
+sleep (100 + random 2000);
+twc_mortar_targetlist pushback (getpos (allplayers call bis_fnc_selectrandom));
+publicVariable "twc_mortar_targetlist";
+};
+
