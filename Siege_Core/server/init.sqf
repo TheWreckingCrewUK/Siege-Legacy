@@ -10,6 +10,7 @@
 #include "sys_basedefence\init.sqf";
 #include "heavydefines.sqf";
 
+execvm "siege_core\client\sys_ragdoll\fn_initRagdoll.sqf";
 
 if(isNil "twc_heavymode") then{
 	twc_heavymode = 0;

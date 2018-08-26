@@ -43,6 +43,7 @@ _box addItemCargoGlobal ["ACE_salineIV_250",10 + _low];
 _box addItemCargoGlobal ["ACE_atropine",15 + _low];
 _box addItemCargoGlobal ["ACE_epinephrine",15 + _low];
 _box addItemCargoGlobal ["ACE_morphine",15 + _low];
+_box addItemCargoGlobal ["ACE_surgicalKit",1 + _low];
 
 //Respawn/Despawn Script
 
