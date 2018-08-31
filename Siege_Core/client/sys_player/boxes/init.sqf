@@ -105,6 +105,9 @@ if((typeOf player) in ["Modern_British_Squadleader","Modern_British_2IC","Modern
 	
 	_UKaction6 = ["SpawnmineCreate","Spawn Claymores","",{execvm "siege_core\client\sys_player\boxes\smallcratemines.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction6,true] call ace_interact_menu_fnc_addActionToClass;	
+	
+	_UKaction6 = ["SpawnmineCreate","Spawn Heavy AT","",{execvm "siege_core\client\sys_player\boxes\smallcratenlaw.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction6,true] call ace_interact_menu_fnc_addActionToClass;
 };
 
 
@@ -125,6 +128,9 @@ if((typeOf player) in ["Modern_pol_commander","Modern_pol_subcommander"])then{
 	
 	_UKaction6 = ["SpawnmineCreate","Spawn Claymores","",{execvm "siege_core\client\sys_player\boxes\smallcratemines.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction6,true] call ace_interact_menu_fnc_addActionToClass;	
+	
+	_UKaction6 = ["SpawnmineCreate","Spawn Heavy AT","",{execvm "siege_core\client\sys_player\boxes\smallcratenlaw.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction6,true] call ace_interact_menu_fnc_addActionToClass;
 };
 
 
@@ -229,6 +235,9 @@ if((typeOf player) in ["Modern_British_Quartermaster","Modern_British_FSTForward
 	
 	_fstaction7 = ["SpawnsmallUKCreate","Spawn Small UK Crate","",{execvm "siege_core\client\sys_player\boxes\smallcrateuk.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_fstaction7,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_UKaction6 = ["SpawnmineCreate","Spawn Heavy AT","",{execvm "siege_core\client\sys_player\boxes\smallcratenlaw.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction6,true] call ace_interact_menu_fnc_addActionToClass;
 };
 
 if((typeOf player) in ["Modern_British_Quartermaster","1990_British_quartermaster_Desert"])then{
