@@ -38,6 +38,7 @@ _box addItemCargoGlobal ["ACE_elasticBandage",30 + _mid];
 _box addItemCargoGlobal ["ACE_quikclot",20 + _mid];
 _box addItemCargoGlobal ["ACE_packingBandage",30 + _mid];
 _box addItemCargoGlobal ["ACE_personalAidKit",1];
+_box addItemCargoGlobal ["ACE_tourniquet",5 + _low];
 _box addItemCargoGlobal ["ACE_salineIV_500",10 + _low];
 _box addItemCargoGlobal ["ACE_salineIV_250",10 + _low];
 _box addItemCargoGlobal ["ACE_atropine",15 + _low];
