@@ -24,11 +24,12 @@ _targetpos = twc_mortar_targetlist select 0;
  if (!(typeName _param == "ARRAY")) then {_targetpos = getpos _targetpos};
 sleep (1 + random 30);
 
-_total = 3 +(random 7);
+_total = 5 +(random 10);
 
 if ((_mortar distance _targetpos) > 4000) exitwith {};
 
 _mortar setvehicleammodef 1;
+_mortar setvehicleammo 1;
 
 _mortar lookat (_targetpos);
 
@@ -46,6 +47,7 @@ publicVariable "twc_mortar_targetlist";
 _mortar lookat objnull;
 
 _mortar setvehicleammodef 0;
+_mortar setvehicleammo 0;
 
 sleep (1 + random 30);
 

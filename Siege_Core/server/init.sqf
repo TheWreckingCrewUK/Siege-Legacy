@@ -93,6 +93,11 @@ if(isNil "customlocations") then{
 	customlocations = [];
 };
 
+if(isNil "twc_spawnlist") then{
+	twc_spawnlist = [];
+	publicVariable "twc_spawnlist";
+};
+
 
 {_location = createLocation [ "NameVillage" , getpos _x, 100, 100];
 townLocationArray = townLocationArray + (nearestLocations [getpos _x, ["NameVillage","NameCity","NameCityCapital","nameLocal"], 2]);} foreach customlocations;
@@ -100,7 +105,7 @@ townLocationArray = townLocationArray + (nearestLocations [getpos _x, ["NameVill
 basemode = 1;
 publicvariable "basemode";
 
-[west, 10] call BIS_fnc_respawnTickets;
+[west, 5] call BIS_fnc_respawnTickets;
 
 twc_basepos = getmarkerpos "base";
 

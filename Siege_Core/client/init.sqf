@@ -8,7 +8,17 @@
 #include "func\init.sqf";
 #include "sys_basedefence\init.sqf";
 "iedRestrictionZone" setMarkerAlpha 0;
-[west, 6] call BIS_fnc_respawnTickets;
+
+
+if(isNil "twc_spawnlist") then{
+	twc_spawnlist = [];
+	publicVariable "twc_spawnlist";
+};
+
+if(!(name player in twc_spawnlist)) then {
+twc_spawnlist pushback name player;
+[west, 3] call BIS_fnc_respawnTickets;
+};
 
 player addEventHandler ["Killed",{[west, -1] call BIS_fnc_respawnTickets;
 
@@ -17,8 +27,16 @@ if (getMarkerColor "base" == "") then {
 if ((getMarkerColor "respawn_forwardBase" == "") ) then {"baselost" call BIS_fnc_endMissionServer;};
 };
 };
+
+_globalTickets = [missionNamespace] call BIS_fnc_respawnTickets;
+if (_globalTickets == 0) then {"tickets" call BIS_fnc_endMissionServer;};
 }];
 
+sleep 60;
+
+_forceMapForced = forcedMap select 0;
+_openMapForced = forcedMap select 1;
+if (_forceMapForced || _openMapForced) then {player setdamage 1; [west, 1] call BIS_fnc_respawnTickets;};
 
 
 /*

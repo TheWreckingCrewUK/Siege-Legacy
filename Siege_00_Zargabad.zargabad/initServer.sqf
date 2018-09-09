@@ -40,7 +40,7 @@ twc_diff_scaler = 1.6;
 //add in an object name and the game will create a location there and spawn enemies from it
 customlocations = [camp1, camp2, camp3];
 
-sirenlist = [idfalarm];
+sirenlist = [idfalarm, idfalarm_1];
 publicvariable "sirenlist";
 
 technicals = 1 + random 2;
@@ -78,7 +78,7 @@ waitUntil{scriptDone _script};
 
 badTownArray = ["Airport north","Zargabad","Falar","Faro","Guran","Feas"];
 
-[missionNamespace,"base","Main Base"] call BIS_fnc_addRespawnPosition;
+twc_basespawn = [missionNamespace,"base","Main Base"] call BIS_fnc_addRespawnPosition;
 
 //defines how close mortar shells have to be predicted to land before tripping the base alarm. FOB kunduz is 40 as a baseline.
 idfbasesize = 70;

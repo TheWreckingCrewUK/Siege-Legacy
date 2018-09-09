@@ -150,6 +150,7 @@ sleep 2;
 
 				_chosencar = enemyTechnical call BIS_fnc_selectRandom;
 				_technical = _chosencar createVehicle _spawnPos;
+				_technical setVehicleLock "LOCKEDPLAYER";
 
 				_driver = _group2 createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];
 				_gunner = _group2 createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];

@@ -26,6 +26,7 @@ if (!isServer) exitWith {};
 		publicVariable "pointLimit";
 
 		deletemarker "base"; 
+		twc_basespawn call BIS_fnc_removeRespawnPosition;
 		twc_siege_baseside = 1;
 		publicVariable "twc_siege_baseside";
 
@@ -50,6 +51,7 @@ if (!isServer) exitWith {};
 		_marker setMarkerType "b_hq";
 		_marker setMarkerText "Base (FRIENDLY)";
 		_marker setMarkerColor "colorBlufor";
+		twc_basespawn = [missionNamespace,"base","Main Base"] call BIS_fnc_addRespawnPosition;
 		deletemarker "dummybase"; 
 		twc_siege_baseside = 0;
 		publicVariable "twc_siege_baseside";

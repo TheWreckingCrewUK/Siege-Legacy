@@ -288,7 +288,7 @@ if((typeOf player) in ["1990_British_mg_assistant_Desert"])then{
 	
 };
 
-if((typeOf player) in ["1990_British_2IC_Desert","1990_British_SectionCommander_Desert"])then{
+if((typeOf player) in ["1990_British_2IC_Desert","1990_British_SectionCommander_Desert","1990_British_SectionCommander","1990_British_2IC"])then{
 
 	
 	_90UKaction = ["Spawnsmall90UKCreate","Spawn Ammo Crate","",{execvm "siege_core\client\sys_player\boxes\smallcrateuk90.sqf"},{true}] call ace_interact_menu_fnc_createAction;
