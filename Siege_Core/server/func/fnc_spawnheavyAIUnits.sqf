@@ -139,7 +139,7 @@ for "_i" from 1 to 2 do {
 sleep 2;
 
 
-
+if ((random 1) < 0.5) exitwith {};
 
 	if (totalPoints < (pointLimit)) then {
 		if (technicals > 0) then {

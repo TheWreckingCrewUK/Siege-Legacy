@@ -8,7 +8,7 @@ class EditorData
 	toggles=522;
 	class ItemIDProvider
 	{
-		nextID=2404;
+		nextID=2405;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2772.0884,26.014988,5680.9023};
-		dir[]={-0.3472943,-0.49850875,0.79443699};
-		up[]={-0.19974031,0.86680514,0.45690531};
-		aside[]={0.91639006,-1.0012882e-006,0.40061334};
+		pos[]={5108.5889,54.395378,1303.6095};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -45,13 +45,14 @@ addons[]=
 	"CUP_Buildings_Config",
 	"twc_modern",
 	"twc_framework_public_modern_us",
-	"A3_Structures_F_Exp_Civilian_Accessories"
+	"A3_Structures_F_Exp_Civilian_Accessories",
+	"twc_medical"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=18;
+		items=19;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -167,6 +168,12 @@ class AddonsMetaData
 			name="Arma 3 Apex - Civilian Buildings";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
+		};
+		class Item18
+		{
+			className="twc_medical";
+			name="twc_medical";
+			author="Bosenator";
 		};
 	};
 };
@@ -12683,7 +12690,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=108;
+		items=109;
 		class Item0
 		{
 			dataType="Marker";
@@ -12691,7 +12698,7 @@ class Mission
 			name="base";
 			text="BASE";
 			type="b_hq";
-			angle=222.33278;
+			angle=222.33272;
 			id=14;
 			atlOffset=-0.11553192;
 		};
@@ -16905,7 +16912,7 @@ class Mission
 			};
 			id=2383;
 			type="Land_SandbagBarricade_01_hole_F";
-			atlOffset=-0.36820889;
+			atlOffset=-0.36820793;
 		};
 		class Item94
 		{
@@ -16922,7 +16929,7 @@ class Mission
 			};
 			id=2384;
 			type="Land_SandbagBarricade_01_hole_F";
-			atlOffset=-0.26404858;
+			atlOffset=-0.26404762;
 		};
 		class Item95
 		{
@@ -17234,6 +17241,40 @@ class Mission
 			id=2402;
 			type="Land_Plank_01_4m_F";
 			atlOffset=1.1989393;
+		};
+		class Item108
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={-11235.526,25.01,11114.572};
+				angles[]={0,0,6.1514535};
+			};
+			id=2404;
+			type="TWC_Module_Medical";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="TWC_Module_Medical_enablePublicCPRChance";
+					expression="_this setVariable ['enablePublicCPRChance',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };

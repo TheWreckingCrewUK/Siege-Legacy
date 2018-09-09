@@ -1,3 +1,9 @@
+
+if(isNil "twc_activearmour") then{
+	twc_activearmour = 0;
+publicVariable "twc_activearmour";
+};
+
 // Includes
 #include "func\init.sqf";
 #include "sys_controllers\init.sqf";
@@ -53,10 +59,10 @@ if(isNil "twc_difficulty") then{
 
 	if (isNil "enemyTechnical") then {
 		if (twc_heavymode == 1) then {
-enemyTechnical =["rhs_btr70_msv","rhs_bmp1_msv","rhs_t72ba_tv"];
-		publicVariable "enemyTechnical";} else {
-enemyTechnical = ["CUP_O_LR_MG_TKM"];
-		publicVariable "enemyTechnical";}
+			enemyTechnical =["rhs_btr70_msv","rhs_bmp1_msv","rhs_t72ba_tv"];
+			publicVariable "enemyTechnical";} else {
+			enemyTechnical = ["CUP_O_LR_MG_TKM"];
+			publicVariable "enemyTechnical";}
 	};
 	
 	

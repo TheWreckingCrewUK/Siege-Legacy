@@ -37,11 +37,6 @@ _box = "ACE_Box_82mm_Mo_HE" createvehicle _spawnPos;
 _box attachto [_mortartruck, [0.45,-0.1,0]];
 
 
-
-[_pos, _mortar] spawn {
-params ["_pos", "_mortar"];
-_spawnPos = [_pos,[100,100], random 360, 0, [0,100]] call SHK_pos;
-sleep 10;
 _group = createGroup East;
 _unit = _group createUnit [(townSpawn select (floor random (count townspawn))), _spawnPos,[], 0.3, "NONE"];
 _unit moveIngunner _mortar;
@@ -60,7 +55,7 @@ _unit addEventHandler ["Killed",{
 	["TWC_Insurgency_adjustPoints", 1] call CBA_fnc_serverEvent;
 	
 }];
-};
+
 	_trg = createTrigger ["EmptyDetector", getmarkerpos "base"];
 	_trg setTriggerArea [150, 150, 0, false];
 	_trg setTriggerActivation ["East", "PRESENT", true];
@@ -80,7 +75,9 @@ publicVariable "twc_mortar_targetlist";
 
 for "_i" from 1 to 10 do {
 sleep (100 + random 2000);
+for "_i" from 1 to (random 3) do {
 twc_mortar_targetlist pushback (getpos (allplayers call bis_fnc_selectrandom));
 publicVariable "twc_mortar_targetlist";
+};
 };
 

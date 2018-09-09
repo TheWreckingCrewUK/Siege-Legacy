@@ -8,7 +8,7 @@ class EditorData
 	toggles=1537;
 	class ItemIDProvider
 	{
-		nextID=1850;
+		nextID=1851;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={15245.414,95.736633,12257.899};
-		dir[]={0.37592846,-0.39428115,0.83863002};
-		up[]={0.16129097,0.91898006,0.35980812};
-		aside[]={0.91255182,-4.9476512e-007,-0.40906596};
+		pos[]={4173.1328,163.96962,18236.26};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -52,13 +52,14 @@ addons[]=
 	"A3_Structures_F_Argo_Military_Fortifications",
 	"A3_Structures_F_Mil_Helipads",
 	"CUP_Buildings_Config",
-	"ace_trenches"
+	"ace_trenches",
+	"twc_medical"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=25;
+		items=26;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -217,6 +218,12 @@ class AddonsMetaData
 			name="ACE3 - Trenches";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
+		};
+		class Item25
+		{
+			className="twc_medical";
+			name="twc_medical";
+			author="Bosenator";
 		};
 	};
 };
@@ -12733,7 +12740,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=65;
+		items=66;
 		class Item0
 		{
 			dataType="Marker";
@@ -15554,6 +15561,40 @@ class Mission
 			id=1849;
 			type="ACE_envelope_big";
 			atlOffset=0.075622559;
+		};
+		class Item65
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4171.5884,138.96762,18258.076};
+				angles[]={-0,0,6.1514535};
+			};
+			id=1850;
+			type="TWC_Module_Medical";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="TWC_Module_Medical_enablePublicCPRChance";
+					expression="_this setVariable ['enablePublicCPRChance',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };

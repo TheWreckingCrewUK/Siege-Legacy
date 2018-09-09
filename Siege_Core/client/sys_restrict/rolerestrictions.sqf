@@ -69,7 +69,7 @@ player forceWalk false;
 
 
 
-if((typeOf player) in ["Modern_British_FSTAssistant","Modern_British_FSTCommander", "Modern_British_logitech", "Modern_British_FSTForwardObserver"])then{
+if((typeOf player) in ["Modern_British_FSTAssistant","Modern_British_FSTCommander", "Modern_British_logitech"])then{
 
 
 
@@ -80,7 +80,7 @@ execvm "siege_core\client\sys_restrict\fullFST.sqf";
 
 
 
-if((typeOf player) in ["Modern_British_VehicleCrew", "Modern_British_VehicleCommander"])then{
+if((typeOf player) in ["Modern_British_VehicleCrew", "Modern_British_VehicleCommander", "1990_British_Tank_Commander_Desert", "2000_British_Vehicle_Commander", "1990_British_Tank_Crew_Desert", "2000_British_Vehicle_Crew"])then{
 
 
 execvm "siege_core\client\sys_restrict\fullArmourCrew.sqf";
@@ -90,7 +90,7 @@ execvm "siege_core\client\sys_restrict\fullArmourCrew.sqf";
 
 
 
-if((typeOf player) in ["Modern_British_JetPilot"])then{
+if((typeOf player) in ["Modern_British_JetPilot", "Modern_British_FSTForwardObserver"])then{
 
 
 execvm "siege_core\client\sys_restrict\fulljetteam.sqf";

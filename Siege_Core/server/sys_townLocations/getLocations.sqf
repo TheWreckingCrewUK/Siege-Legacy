@@ -35,7 +35,9 @@ _trg setTriggerStatements ["this", format ["[(%1)] call twc_spawnDefend", getpos
 [_x] spawn {
 params ["_this"];
 while {true} do {
-twc_maxenemy=((30*twc_difficulty)+((count(allPlayers - entities "HeadlessClient_F")*twc_diff_scaler)*(6*twc_difficulty))) min 80;
+_armourmult = 1;
+if (twc_activearmour == 1) then {_armourmult = 1.5};
+twc_maxenemy=(((30*twc_difficulty)+((count(allPlayers - entities "HeadlessClient_F")*twc_diff_scaler)*(6*twc_difficulty))) * _armourmult) min 80;
 publicVariable "twc_maxenemy";
 sleep 0.2;
 

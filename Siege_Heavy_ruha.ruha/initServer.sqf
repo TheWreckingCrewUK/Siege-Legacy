@@ -10,11 +10,11 @@ server\sys_vehicles\VBIED.sqf
 twc_serverDebug = false;
 
 twc_heavymode = 1;
-technicals = 3 + random 2;
+technicals = 5 + random 10;
 
 enemyTechnical =["rhs_btr70_msv","rhs_bmp1_msv","rhs_t72ba_tv", "rhs_bmd1", "rhs_bmd1r", "rhs_bmd2"];
 
-mortarcount = random 4;
+mortarcount = (random 6);
 
 twc_surrenderVote = false;
 

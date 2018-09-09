@@ -8,11 +8,11 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=230;
+		nextID=231;
 	};
 	class Camera
 	{
-		pos[]={6717.623,382.27084,6909.019};
+		pos[]={6830.063,388.42047,6752.8901};
 		dir[]={0,-0.70710683,0.70710683};
 		up[]={0,0.70710677,0.70710677};
 		aside[]={0.99999994,0,-0};
@@ -39,13 +39,14 @@ addons[]=
 	"A3_Signs_F_Signs_Ad",
 	"A3_Structures_F_System",
 	"A3_Structures_F_EPC_Items_Electronics",
-	"UK3CB_BAF_Vehicles_LandRover"
+	"UK3CB_BAF_Vehicles_LandRover",
+	"twc_medical"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=17;
+		items=18;
 		class Item0
 		{
 			className="A3_Structures_F_Mil";
@@ -154,6 +155,12 @@ class AddonsMetaData
 			name="3CB BAF Vehicles - Land Rover";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
+		};
+		class Item17
+		{
+			className="twc_medical";
+			name="twc_medical";
+			author="Bosenator";
 		};
 	};
 };
@@ -12670,7 +12677,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=57;
+		items=58;
 		class Item0
 		{
 			dataType="Object";
@@ -12809,7 +12816,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={6717.623,357.27084,6934.019};
-			angle=4.011168;
+			angle=4.011167;
 			class Attributes
 			{
 				condition="call{count thislist >2}";
@@ -17040,6 +17047,40 @@ class Mission
 			id=229;
 			type="SignAd_Sponsor_F";
 			atlOffset=0.0026550293;
+		};
+		class Item57
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={6827.3789,324.19061,6810.7119};
+				angles[]={-0,0,6.1514535};
+			};
+			id=230;
+			type="TWC_Module_Medical";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="TWC_Module_Medical_enablePublicCPRChance";
+					expression="_this setVariable ['enablePublicCPRChance',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };

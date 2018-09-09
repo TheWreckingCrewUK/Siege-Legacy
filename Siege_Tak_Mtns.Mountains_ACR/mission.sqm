@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1666;
+		nextID=1667;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1904.0894,201.45341,5099.1348};
-		dir[]={0.29277733,-0.26396474,-0.91914701};
-		up[]={0.080123752,0.96453834,-0.25154039};
-		aside[]={-0.95292681,3.1269155e-007,-0.30354086};
+		pos[]={3123.5613,239.8051,5447.0298};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -48,13 +48,14 @@ addons[]=
 	"A3_Structures_F_EPC_Items_Electronics",
 	"CUP_WheeledVehicles_Datsun",
 	"A3_Structures_F_Argo_Military_Fortifications",
-	"CUP_WheeledVehicles_Mastiff"
+	"CUP_WheeledVehicles_Mastiff",
+	"twc_medical"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=21;
+		items=22;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -183,6 +184,12 @@ class AddonsMetaData
 		{
 			className="CUP_WheeledVehicles_Mastiff";
 			name="CUP_WheeledVehicles_Mastiff";
+		};
+		class Item21
+		{
+			className="twc_medical";
+			name="twc_medical";
+			author="Bosenator";
 		};
 	};
 };
@@ -12699,7 +12706,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=60;
+		items=61;
 		class Item0
 		{
 			dataType="Marker";
@@ -14371,7 +14378,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={1903.198,194.0555,5075.6958};
-			angle=3.2801018;
+			angle=3.2801015;
 			class Attributes
 			{
 				name="mainbase";
@@ -14613,7 +14620,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={1903.209,194.05368,5075.6738};
-			angle=3.2801018;
+			angle=3.2801015;
 			class Attributes
 			{
 				name="warning";
@@ -16185,6 +16192,7 @@ class Mission
 			};
 			id=1663;
 			type="CUP_B_Mastiff_HMG_GB_D";
+			atlOffset=0.0055084229;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16242,6 +16250,40 @@ class Mission
 								};
 							};
 							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item60
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={3122.8367,219.33577,5467.105};
+				angles[]={-0,0,6.1514535};
+			};
+			id=1666;
+			type="TWC_Module_Medical";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="TWC_Module_Medical_enablePublicCPRChance";
+					expression="_this setVariable ['enablePublicCPRChance',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
 						};
 					};
 				};

@@ -18,13 +18,14 @@
 params ["_mortar"];
 
 waituntil {(count twc_mortar_targetlist) > 0};
-waituntil {twc_mortar_baseclear == 1};
+waituntil {isnil "twc_mortar_baseclear" || twc_mortar_baseclear == 1};
 
 _targetpos = twc_mortar_targetlist select 0;
- if (!(typeName _param == "ARRAY")) then {_targetpos = getpos _targetpos};
+
+ //if ((typeName _mortar == "OBJECT")) then {_targetpos = getpos _targetpos};
 sleep (1 + random 30);
 
-_total = 5 +(random 10);
+_total = 5 +(random 5);
 
 if ((_mortar distance _targetpos) > 4000) exitwith {};
 
@@ -52,5 +53,3 @@ _mortar setvehicleammo 0;
 sleep (1 + random 30);
 
 [_mortar] spawn twc_mortarattack;
-
-if ((random 1) > 0.8) then {twc_mortar_targetlist pushback _targetpos; publicVariable "twc_mortar_targetlist"};
