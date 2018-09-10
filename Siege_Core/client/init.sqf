@@ -20,16 +20,19 @@ twc_spawnlist pushback name player;
 [west, 3] call BIS_fnc_respawnTickets;
 };
 
-player addEventHandler ["Killed",{[west, -1] call BIS_fnc_respawnTickets;
+player addEventHandler ["Killed",{
+	[west, -1] call BIS_fnc_respawnTickets;
 
-if (({isPlayer _x && alive _x} count allUnits)==0) then {
-if (getMarkerColor "base" == "") then { 
-if ((getMarkerColor "respawn_forwardBase" == "") ) then {"baselost" call BIS_fnc_endMissionServer;};
-};
-};
+	if (({isPlayer _x && alive _x} count allUnits)==0) then {
+		if (getMarkerColor "base" == "") then {
+			if ((getMarkerColor "respawn_forwardBase" == "") ) then {
+				"baselost" call BIS_fnc_endMissionServer;
+			};
+		};
+	};
 
-_globalTickets = [missionNamespace] call BIS_fnc_respawnTickets;
-if (_globalTickets == 0) then {"tickets" call BIS_fnc_endMissionServer;};
+	_globalTickets = [missionNamespace] call BIS_fnc_respawnTickets;
+	if (_globalTickets == 0) then {"tickets" call BIS_fnc_endMissionServer;};
 }];
 
 sleep 60;

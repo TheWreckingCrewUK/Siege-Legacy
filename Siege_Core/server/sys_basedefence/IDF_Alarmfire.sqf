@@ -47,7 +47,7 @@ if (!alive idfradar) exitwith {};
 			
 			//delay variable for automated siren vs human shouting. human shouting (90's) takes a little longer to register the call
 			_delay = 1.5;
-			if (twc_is90 == 1) then {_delay = 2;};
+			if (twc_is90 == 1) then {_delay = 2.3;};
 			
 			waituntil {((_shell distance _base) < (((_shooter) distance _base) / _delay)) || !alive _shell};
 			

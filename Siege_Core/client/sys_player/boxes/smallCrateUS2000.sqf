@@ -17,7 +17,7 @@ twc_ammotime=time+twc_ammotime_amount;
 publicVariable "twc_ammotime";
 _boxClass = "ACE_Box_Ammo";
 
-_box = _boxClass createVehicle (getPos ammoCrateSpawnPad);
+_box = _boxClass createVehicle (getPos AmmoBoxSpawner);
 
 
 //simple dynamic numbers system. Assign cost of each tier and then assign a tier to an item if you want that item's amount to scale with the player count.
