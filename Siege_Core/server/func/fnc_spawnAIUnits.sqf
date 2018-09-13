@@ -100,13 +100,17 @@ _group addwaypoint [twc_basepos, 20 * twc_roamsize];
 };
 
 
+_armourmult = 1;
+if (twc_activearmour == 1) then {_armourmult = 1.5 + (twc_maxenemy / 160)};
+if (twc_activefst == 1) then {_armourmult = _armourmult + 0.4};
 
 	if (totalPoints > (pointLimit / 2)) then {
-		if (technicals > 0) then {
-			if (random 1 > 0.7) then {
+		if ((technicals > 0) || (_armourmult > 1.5)) then {
+			if (random 1 > 0.6) then {
 		technicals = technicals - 10;
 		publicVariable "technicals";
 _group2 = createGroup East;
+_spawnPos = [_pos,100, random 360] call SHK_pos;
 
 _chosencar = enemyTechnical call BIS_fnc_selectRandom;
 _technical = _chosencar createVehicle _spawnPos;

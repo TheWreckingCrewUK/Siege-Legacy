@@ -11,6 +11,9 @@ twc_serverDebug = false;
 
 twc_surrenderVote = false;
 
+twc_wdveh = 0;
+publicVariable "twc_wdveh";
+
 /*
 * Denotes the style of building to be used, for dynamic compositions.
 * For example: the IED factory.

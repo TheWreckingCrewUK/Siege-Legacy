@@ -27,7 +27,7 @@ _group = createGroup East;
 //_chance = _town getvariable "active";
 _chance = 1;
 
-_total = (10 * _chance) / (twc_siege_baseside + 1);
+_total = (5 * _chance) / (twc_siege_baseside + 1);
 
 //if ( _town getvariable "defended" == 1) exitwith {systemchat "already defended"};
 

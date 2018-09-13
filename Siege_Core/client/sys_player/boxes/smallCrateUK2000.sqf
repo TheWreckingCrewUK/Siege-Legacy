@@ -32,6 +32,10 @@ clearBackpackCargoGlobal _box;
 clearMagazineCargoGlobal _box;
 clearitemCargoGlobal _box;
 
+if (twc_activearmour == 1) then {
+_box AddMagazineCargoGlobal ["UK3CB_BAF_9_30Rnd",2];
+};
+
 //Weapons
 _box AddWeaponCargoGlobal ["rhs_weap_m72a7",2];
 _box AddWeaponCargoGlobal ["twc_L5A4_white",1 + _low];

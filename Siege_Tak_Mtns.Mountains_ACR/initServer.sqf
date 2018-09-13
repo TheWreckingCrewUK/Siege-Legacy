@@ -11,6 +11,9 @@ twc_serverDebug = false;
 
 twc_surrenderVote = false;
 
+twc_wdveh = 0;
+publicVariable "twc_wdveh";
+
 //add in an object name and the game will create a location there and spawn enemies from it
 customlocations = [camp_1, camp_2, camp_3, camp_4];
 /*

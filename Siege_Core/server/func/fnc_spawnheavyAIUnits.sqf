@@ -138,14 +138,16 @@ for "_i" from 1 to 2 do {
 //};
 sleep 2;
 
+_armourmult = 0;
+if (twc_activearmour == 1) then {_armourmult = _armourmult + 0.5};
+if (twc_activefst == 1) then {_armourmult = _armourmult + 0.5};
+_tankchance = (0.3 + (count allplayers / 15) + _armourmult);
 
-if ((random 1) < 0.5) exitwith {};
+if ((random 1) > _tankchance) exitwith {};
 
 	if (totalPoints < (pointLimit)) then {
-		if (technicals > 0) then {
-			if (random 1 > 0.5) then {
-				technicals = technicals - 10;
-				publicVariable "technicals";
+	
+			
 				_group2 = createGroup East;
 
 				_chosencar = enemyTechnical call BIS_fnc_selectRandom;
@@ -162,18 +164,14 @@ if ((random 1) < 0.5) exitwith {};
 				_group2 addwaypoint [[twc_basepos, 200 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
 				_group2 addwaypoint [[twc_basepos, 200 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
 				 [_group, 4] setWaypointType "CYCLE";
-				 _wp1 setwaypointstatements ["true", "{this reveal [_x, 3];} foreach allplayers; {_x suppressfor 120} foreach thislist"];
 				sleep 2;
 
-				//being excessive with the counting code because sometimes it counts at strange times so technicals ==1 could spawn 2 or more technicals
-				technicals = technicals +9;
-				publicVariable "technicals";
+				
 				waituntil {!alive _gunner};
 
 				_driver moveInGunner _technical;
 
-			};
-		};
+		
 	};
 //sleep 30;
 //[_town] spawn twc_spawnAIUnits;

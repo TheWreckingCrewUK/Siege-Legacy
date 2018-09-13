@@ -16,6 +16,9 @@ if(!isMultiplayer)exitWith{};
 cutText ["", "Black", 0.001];
 player forceWalk true;
 
+twc_activefst = 0;
+publicVariable "twc_activefst";
+
 while {(count (units group player)) < 3}do{
 
 cutText ["", "Black", 0.001];
@@ -27,6 +30,11 @@ cutText ["", "Black", 0.001];
 };
 cutText ["","Black IN",5];
 player forceWalk false;
+
+
+twc_activefst = 1;
+publicVariable "twc_activefst";
+
 
 
 execvm "siege_core\client\sys_restrict\fullFST.sqf";

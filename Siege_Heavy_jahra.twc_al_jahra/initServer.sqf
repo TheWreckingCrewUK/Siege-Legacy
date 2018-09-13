@@ -10,7 +10,12 @@ server\sys_vehicles\VBIED.sqf
 twc_serverDebug = false;
 
 twc_heavymode = 1;
+publicVariable "twc_heavymode";
+
 technicals = 30 + random 2;
+
+twc_wdveh = 0;
+publicVariable "twc_wdveh";
 
 enemyTechnical =["rhs_btr70_msv","rhs_bmp1_msv","rhs_t72ba_tv", "rhs_bmd1", "rhs_bmd1r", "rhs_bmd2"];
 

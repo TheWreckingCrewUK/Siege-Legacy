@@ -12,7 +12,7 @@ if (twc_armourcount > 1) exitwith {hint "2 heavy vehicles have been spawned alre
 
 _spawnpos = getpos ammoboxspawner;
 
-if (!isnil twc_armourspawnpos) then {_spawnpos = getpos twc_armourspawnpos};
+if (!(getMarkerColor "twc_armourspawnpos" == "")) then {_spawnpos = getmarkerpos "twc_armourspawnpos"};
 
 _veh = _heli createvehicle _spawnpos;
 

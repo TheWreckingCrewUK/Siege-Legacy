@@ -37,6 +37,13 @@ _box AddWeaponCargoGlobal ["launch_NLAW_F",2];
 
 
 
+if (["USMC", typeof player] call BIS_fnc_inString) then {
+
+_box AddWeaponCargoGlobal ["UK3CB_BAF_Javelin_Slung_Tube",1];
+};
+
+
+
 
 
 [player, _box] call ace_cargo_fnc_startLoadIn;

@@ -25,9 +25,9 @@ _x setVariable ["defended",0];
 	_dis2 = (twc_basepos distance _x)/2;
 _trg = createTrigger ["EmptyDetector", _spawnpos];
 _trg setTriggerArea [_dis2 , _dis2, 0, false];
-_trg setTriggerActivation ["west", "PRESENT", true];
+_trg setTriggerActivation ["west", "PRESENT", false];
 _trg setTriggerTimeout [1,1,1, true];
-_trg setTriggerStatements ["this", format ["[(%1)] call twc_spawnDefend", getpos _x], format ["[(%1)] call twc_DeSpawnDefend", getpos _x]];
+_trg setTriggerStatements ["this", format ["[(%1)] call twc_spawnDefend", getpos _x], ""];
 
 
 
@@ -36,7 +36,8 @@ _trg setTriggerStatements ["this", format ["[(%1)] call twc_spawnDefend", getpos
 params ["_this"];
 while {true} do {
 _armourmult = 1;
-if (twc_activearmour == 1) then {_armourmult = 1.5};
+if (twc_activearmour == 1) then {_armourmult = 2 + (twc_maxenemy / 160)};
+if (twc_activefst == 1) then {_armourmult = _armourmult + 1};
 twc_maxenemy=(((30*twc_difficulty)+((count(allPlayers - entities "HeadlessClient_F")*twc_diff_scaler)*(6*twc_difficulty))) * _armourmult) min 80;
 publicVariable "twc_maxenemy";
 sleep 0.2;

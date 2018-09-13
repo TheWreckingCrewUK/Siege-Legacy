@@ -3,6 +3,10 @@ if(isNil "twc_activearmour") then{
 	twc_activearmour = 0;
 publicVariable "twc_activearmour";
 };
+if(isNil "twc_activefst") then{
+	twc_activefst = 0;
+publicVariable "twc_activefst";
+};
 
 // Includes
 #include "func\init.sqf";
@@ -17,6 +21,15 @@ publicVariable "twc_activearmour";
 #include "heavydefines.sqf";
 
 execvm "siege_core\client\sys_ragdoll\fn_initRagdoll.sqf";
+
+
+twc_missionname = missionname;
+publicVariable "twc_missionname";
+
+if(isNil "twc_wdveh") then{
+	twc_wdveh = 1;
+publicVariable "twc_wdveh";
+};
 
 if(isNil "twc_heavymode") then{
 	twc_heavymode = 0;
