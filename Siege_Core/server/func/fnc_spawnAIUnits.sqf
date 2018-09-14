@@ -104,9 +104,10 @@ _armourmult = 1;
 if (twc_activearmour == 1) then {_armourmult = 1.5 + (twc_maxenemy / 160)};
 if (twc_activefst == 1) then {_armourmult = _armourmult + 0.4};
 
-	if (totalPoints > (pointLimit / 2)) then {
+	//if (totalPoints > (pointLimit / 2)) then {
 		if ((technicals > 0) || (_armourmult > 1.5)) then {
-			if (random 1 > 0.6) then {
+			if (random 1 > 0.3) then {
+			systemchat "technical";
 		technicals = technicals - 10;
 		publicVariable "technicals";
 _group2 = createGroup East;
@@ -135,6 +136,6 @@ waituntil {!alive _gunner};
 _driver moveInGunner _technical;
 
 		};
-		};
-	};
+		} else {systemchat "no 1";};
+//	};
 

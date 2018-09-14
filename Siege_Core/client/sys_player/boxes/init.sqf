@@ -342,7 +342,35 @@ if((typeOf player) in ["2000_British_SectionCommander_Desert","2000_British_Sect
 	
 };
 
+if((typeOf player) in ["2000_British_FSTCommander_Desert"])then{
 
+	_fstaction1 = ["spawnl111","Spawn L111A1 HMG","",{execvm "siege_core\client\sys_player\boxes\staticL111A1.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_fstaction1,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_fstaction2 = ["spawnl134","Spawn L134 GMG","",{execvm "siege_core\client\sys_player\boxes\staticL134A1.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_fstaction2,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_fstaction21 = ["spawnl7","Spawn L7 GPMG","",{execvm "siege_core\client\sys_player\boxes\staticL7.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_fstaction21,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_fstaction3 = ["spawn50","Spawn .50 Ammo","",{execvm "siege_core\client\sys_player\boxes\50calammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_fstaction3,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_fstaction4 = ["spawn762","Spawn 7.62 Ammo","",{execvm "siege_core\client\sys_player\boxes\762ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_fstaction4,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_fstaction5 = ["spawnm6","Spawn M6","",{execvm "siege_core\client\sys_player\boxes\smallMortar.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_fstaction5,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_fstaction5 = ["spawnm6","Spawn M6 Ammo","",{execvm "siege_core\client\sys_player\boxes\60ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_fstaction5,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_fstaction6 = ["spawn40","Spawn 40mm Ammo","",{execvm "siege_core\client\sys_player\boxes\40ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_fstaction6,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_hUKaction3 = ["SpawnsmallUKCreate","Spawn UK Crate","",{execvm "siege_core\client\sys_player\boxes\smallcrateuk2000.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_hUKaction3,true] call ace_interact_menu_fnc_addActionToClass;
+};
 
 
 

@@ -25,10 +25,10 @@ publicVariable "twc_wdveh";
 */
 TWC_Building_Style = "MidEast";
 
-twc_difficulty = 1.5;
+twc_difficulty = 1.2;
 
 //roamsize multiplies the size of the random waypoint divergence from base. A setting of 1 means each waypoint is up to 100-200 meters away from base. Set higher for maps where there's a lot of cover and you don't want the enemies to just swim in so that you can use higher difficulties without swamping the base. The downside is that they take longer to get to engagement range so there's more downtime at mission start.
-twc_roamsize = 3;
+twc_roamsize = 1.5;
 
 
 //wpcount adds extra waypoints that scale by the roamsize variable. If left unset in the mission's initserver then it will default to 1. The game will add 2 waypoints near base regardless of this value. Set this to 0 to have them move straight to base, set to 2-4 if you want enemies to loiter around nearby a lot but not make a play for the base that often.
@@ -39,7 +39,7 @@ twc_roamsize = 3;
 twc_diff_scaler = 1.5;
 
 //add in an object name and the game will create a location there and spawn enemies from it
-customlocations = [camp1, camp2, camp3];
+customlocations = [camp1, camp2, camp3, camp4];
 
 twc_is90 = 1;
 publicVariable "twc_is90";

@@ -49,7 +49,7 @@ twc_diff_scaler = 1.2;
 //add in an object name and the game will create a location there and spawn enemies from it
 customlocations = [camp1, camp2, camp3, camp4, camp5, camp6];
 
-sirenlist = [idfalarm, idfalarm_1];
+sirenlist = [idfalarm, idfalarm_1, idfalarm_2];
 publicvariable "sirenlist";
 
 twc_is90 = 1;
