@@ -22,7 +22,7 @@ if (twc_wdveh == 1) then {
 
 
 
-if (typeof _veh == "RHS_M2A3_BUSKIII_wd") then {
+if (typeof _veh == "RHS_M2A3_BUSKIII") then {
 
 if (twc_wdveh == 1) then {
 	[
