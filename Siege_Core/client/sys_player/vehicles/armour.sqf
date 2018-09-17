@@ -26,7 +26,7 @@ if((typeOf player) in ["Modern_British_VehicleCommander"])then{
 	
 	
 	
-	_armouraction1 = ["spawnl111","Spawn Guardian","",{["rhsusf_M1117_D"] execvm "siege_core\client\sys_player\vehicles\spawnarmour.sqf"},{(twc_maxenemy > 30) && (count units group player > 1)}] call ace_interact_menu_fnc_createAction;
+	_armouraction1 = ["spawnl111","Spawn Guardian","",{["rhsusf_M1117_D"] execvm "siege_core\client\sys_player\vehicles\spawnarmour.sqf"},{(twc_maxenemy > 30) && (count units group player > 1) && (twc_wdveh == 0)}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawnwoodland"],_armouraction1,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	
