@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2907.1882,386.0455,6394.6616};
-		dir[]={-0.83438313,-0.38431206,-0.39512137};
-		up[]={-0.34733841,0.92320329,-0.16448192};
-		aside[]={-0.42798877,4.7730282e-009,0.90379304};
+		pos[]={2871.5393,386.0455,6328.9658};
+		dir[]={-0.55460364,-0.5262934,0.64454907};
+		up[]={-0.34326944,0.85030293,0.39894053};
+		aside[]={0.75802326,2.8207432e-007,0.65224105};
 	};
 };
 binarizationWanted=0;
@@ -56,7 +56,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=20;
+		items=19;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -160,24 +160,19 @@ class AddonsMetaData
 		};
 		class Item16
 		{
-			className="OPXmisc";
-			name="OPXmisc";
-		};
-		class Item17
-		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item18
+		class Item17
 		{
 			className="UK3CB_BAF_Vehicles_LandRover";
 			name="3CB BAF Vehicles - Land Rover";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item19
+		class Item18
 		{
 			className="A3_Structures_F_Exp_Civilian";
 			name="Arma 3 Apex - Civilian Buildings";
@@ -12707,7 +12702,7 @@ class Mission
 			name="base";
 			text="Base";
 			type="Empty";
-			angle=215.59998;
+			angle=215.59996;
 			id=14;
 			atlOffset=0.16876221;
 		};
@@ -16241,7 +16236,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2747.4844,364.29385,6408.9385};
-				angles[]={6.1979003,2.2153163,-0};
+				angles[]={6.1979003,2.2153163,0};
 			};
 			side="Empty";
 			flags=1;
@@ -18078,7 +18073,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2736.1235,364.50504,6424.3364};
-				angles[]={6.1913505,1.7854409,-0};
+				angles[]={6.1913505,1.7854409,0};
 			};
 			side="Empty";
 			flags=1;
@@ -18095,7 +18090,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2736.8508,364.86838,6427.6626};
-				angles[]={6.1658697,1.7818376,-0};
+				angles[]={6.1658697,1.7818376,0};
 			};
 			side="Empty";
 			flags=1;
@@ -18387,7 +18382,7 @@ class Mission
 			{
 			};
 			id=2575;
-			type="Land_antenna";
+			type="Land_Antenna";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -18588,7 +18583,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2840.7561,365.4249,6371.3462};
-				angles[]={6.138535,1.9016374,-0};
+				angles[]={6.138535,1.9016374,0};
 			};
 			side="Empty";
 			flags=1;
@@ -18605,7 +18600,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2849.0508,365.28241,6368.9971};
-				angles[]={6.1740675,4.868042,-0};
+				angles[]={6.1740675,4.868042,0};
 			};
 			side="Empty";
 			flags=1;
@@ -20256,7 +20251,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2737.873,365.37122,6430.9976};
-				angles[]={6.1128874,1.8368955,-0};
+				angles[]={6.1128874,1.8368955,0};
 			};
 			side="Empty";
 			flags=1;
@@ -21048,7 +21043,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2744.5996,366.18399,6429.2471};
-				angles[]={6.1594138,4.9793444,-0};
+				angles[]={6.1594138,4.9793444,0};
 			};
 			side="Empty";
 			flags=1;
@@ -21082,7 +21077,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2738.7324,365.84473,6433.8315};
-				angles[]={6.1335506,1.8368955,-0};
+				angles[]={6.1335506,1.8368955,0};
 			};
 			side="Empty";
 			flags=1;
@@ -21618,7 +21613,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2756.3672,365.93973,6413.814};
-				angles[]={0.043386329,3.7756994,-0};
+				angles[]={0.043386329,3.7756994,0};
 			};
 			side="Empty";
 			class Attributes

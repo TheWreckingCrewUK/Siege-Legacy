@@ -15,7 +15,7 @@ class EditorData
 		pos[]={6830.248,388.88696,6756.1929};
 		dir[]={0,-0.70710683,0.70710683};
 		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		aside[]={0.99999994,0,0};
 	};
 };
 binarizationWanted=0;
@@ -45,7 +45,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=18;
+		items=17;
 		class Item0
 		{
 			className="A3_Structures_F_Mil";
@@ -109,53 +109,48 @@ class AddonsMetaData
 		};
 		class Item9
 		{
-			className="OPXmisc";
-			name="OPXmisc";
-		};
-		class Item10
-		{
 			className="CUP_Misc3_Config";
 			name="CUP_Misc3_Config";
 		};
-		class Item11
+		class Item10
 		{
 			className="ace_trenches";
 			name="ACE3 - Trenches";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item12
+		class Item11
 		{
 			className="A3_Signs_F";
 			name="Arma 3 - Signs";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item13
+		class Item12
 		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item14
+		class Item13
 		{
 			className="UK3CB_BAF_Vehicles_LandRover";
 			name="3CB BAF Vehicles - Land Rover";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item15
+		class Item14
 		{
 			className="twc_1990";
 			name="twc_1990";
 		};
-		class Item16
+		class Item15
 		{
 			className="CUP_WheeledVehicles_HMMWV";
 			name="CUP_WheeledVehicles_HMMWV";
 		};
-		class Item17
+		class Item16
 		{
 			className="twc_medical";
 			name="twc_medical";
@@ -12815,7 +12810,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={6717.623,357.27084,6934.019};
-			angle=4.0111675;
+			angle=4.011167;
 			class Attributes
 			{
 				name="mainbase";
@@ -12894,7 +12889,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={6717.7061,356.79099,6934.1738};
-			angle=4.0111675;
+			angle=4.011167;
 			class Attributes
 			{
 				name="warning";
@@ -13739,7 +13734,7 @@ class Mission
 				name="idfalarm";
 			};
 			id=125;
-			type="Land_antenna";
+			type="Land_Antenna";
 			atlOffset=0.28656006;
 			class CustomAttributes
 			{
@@ -16396,7 +16391,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6826.7178,324.43115,6803.3892};
-				angles[]={-0,0,6.1514535};
+				angles[]={0,0,6.1514535};
 			};
 			id=269;
 			type="TWC_Module_Medical";

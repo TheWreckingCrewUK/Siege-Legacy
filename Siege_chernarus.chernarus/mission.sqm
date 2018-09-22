@@ -49,7 +49,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=18;
+		items=17;
 		class Item0
 		{
 			className="A3_Structures_F_Mil";
@@ -123,43 +123,38 @@ class AddonsMetaData
 		};
 		class Item11
 		{
-			className="OPXmisc";
-			name="OPXmisc";
-		};
-		class Item12
-		{
 			className="CUP_Misc3_Config";
 			name="CUP_Misc3_Config";
 		};
-		class Item13
+		class Item12
 		{
 			className="ace_trenches";
 			name="ACE3 - Trenches";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item14
+		class Item13
 		{
 			className="A3_Signs_F";
 			name="Arma 3 - Signs";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item15
+		class Item14
 		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item16
+		class Item15
 		{
 			className="UK3CB_BAF_Vehicles_LandRover";
 			name="3CB BAF Vehicles - Land Rover";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item17
+		class Item16
 		{
 			className="twc_medical";
 			name="twc_medical";
@@ -14758,7 +14753,7 @@ class Mission
 				name="idfalarm";
 			};
 			id=125;
-			type="Land_antenna";
+			type="Land_Antenna";
 			atlOffset=0.28656006;
 			class CustomAttributes
 			{

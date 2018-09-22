@@ -20,6 +20,8 @@ twc_spawnlist pushback name player;
 [west, 3] call BIS_fnc_respawnTickets;
 };
 
+waitUntil {!isNull player};
+
 player addEventHandler ["Killed",{
 	[west, -1] call BIS_fnc_respawnTickets;
 
@@ -35,7 +37,6 @@ player addEventHandler ["Killed",{
 	if (_globalTickets == 0) then {"tickets" call BIS_fnc_endMissionServer;};
 }];
 
-sleep 60;
 
 _forceMapForced = forcedMap select 0;
 _openMapForced = forcedMap select 1;
