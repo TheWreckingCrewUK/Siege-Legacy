@@ -38,9 +38,8 @@ player addEventHandler ["Killed",{
 }];
 
 
-_forceMapForced = forcedMap select 0;
-_openMapForced = forcedMap select 1;
-if (_forceMapForced || _openMapForced) then {player setdamage 1; [west, 1] call BIS_fnc_respawnTickets;};
+
+if ((!(forcedMap select 0)) && ((forcedMap select 1))) then {player setdamage 1};
 
 
 /*
