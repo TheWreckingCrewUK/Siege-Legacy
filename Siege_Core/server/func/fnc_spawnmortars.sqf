@@ -65,10 +65,13 @@ _unit addEventHandler ["Killed",{
 sleep 20;
 
 [_mortar] spawn twc_mortarattack;
+	
+	_mortar addEventHandler ["Fired", {
+		[_this select 6, _this select 7] call twc_fnc_mortarwalk_fnc_mortarwalk; }];
 
 sleep 20;
 
-if ((random 1) < 0.2) then {
+if ((random 1) < 0.3) then {
 twc_mortar_targetlist pushback (twc_basepos);
 publicVariable "twc_mortar_targetlist";
 };

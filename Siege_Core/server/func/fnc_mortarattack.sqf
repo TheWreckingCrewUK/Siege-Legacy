@@ -36,7 +36,7 @@ _mortar lookat (_targetpos);
 
 for "_i" from 1 to _total do {
 
-	_mortar doArtilleryFire [[_targetpos,150] call cba_fnc_randpos, currentmagazine _mortar, 1];
+	_mortar doArtilleryFire [_targetpos, currentmagazine _mortar, 1];
 
 	sleep (4 + random 3);
 
