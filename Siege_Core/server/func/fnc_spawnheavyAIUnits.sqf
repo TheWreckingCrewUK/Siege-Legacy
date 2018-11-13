@@ -153,6 +153,8 @@ if ((random 1) > _tankchance) exitwith {};
 				_chosencar = enemyTechnical call BIS_fnc_selectRandom;
 				_technical = _chosencar createVehicle _spawnPos;
 				_technical setVehicleLock "LOCKEDPLAYER";
+				_technical addEventHandler ["Fired", {
+					[_this select 1, _this select 6, _this select 7] call twc_fnc_gunwalk_fnc_gunwalk; }];
 
 				_driver = _group2 createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];
 				_gunner = _group2 createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];

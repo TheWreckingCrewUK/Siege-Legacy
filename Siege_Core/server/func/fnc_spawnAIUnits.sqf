@@ -120,6 +120,8 @@ _driver = _group2 createUnit [(townSpawn select (floor random (count townspawn))
 _gunner = _group2 createUnit [(townSpawn select (floor random (count townspawn))), _spawnPos,[], 0.3,"NONE"];
 _driver moveInDriver _technical;
 _gunner moveInGunner _technical;
+_technical addEventHandler ["Fired", {
+[_this select 1, _this select 6, _this select 7] call twc_fnc_gunwalk_fnc_gunwalk; }];
 _group2 addwaypoint [[twc_basepos, 300 * twc_roamsize, 500 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
 _group2 addwaypoint [[twc_basepos, 200 * twc_roamsize, 400 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
 _group2 addwaypoint [[twc_basepos, 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
