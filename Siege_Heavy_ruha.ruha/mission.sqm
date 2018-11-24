@@ -12698,7 +12698,7 @@ class Mission
 			name="base";
 			text="BASE";
 			type="b_hq";
-			angle=222.33263;
+			angle=222.33261;
 			id=14;
 			atlOffset=-0.11553192;
 		};

@@ -93,7 +93,7 @@ _group addwaypoint [[twc_basepos, 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 
 
 _group addwaypoint [twc_basepos, 20 * twc_roamsize];
 
-[_group, twc_wpcount + 1] setWaypointStatements ["true", "[this, twc_basepos] call CBA_fnc_taskDefend"]
+[_group, twc_wpcount + 1] setWaypointStatements ["true", "[this, twc_basepos] call CBA_fnc_taskDefend"];
 }
 
 
@@ -120,6 +120,14 @@ _driver = _group2 createUnit [(townSpawn select (floor random (count townspawn))
 _gunner = _group2 createUnit [(townSpawn select (floor random (count townspawn))), _spawnPos,[], 0.3,"NONE"];
 _driver moveInDriver _technical;
 _gunner moveInGunner _technical;
+
+
+if (_chosencar in twc_hasaps) then {
+	twc_APS_list pushback _technical;
+	publicVariable "twc_APS_list";
+};
+
+
 _technical addEventHandler ["Fired", {
 [_this select 1, _this select 6, _this select 7] call twc_fnc_gunwalk; }];
 _group2 addwaypoint [[twc_basepos, 300 * twc_roamsize, 500 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];

@@ -31,6 +31,25 @@ if(isNil "twc_wdveh") then{
 publicVariable "twc_wdveh";
 };
 
+if(isNil "twc_hasaps") then{
+	twc_hasaps = ["rhs_t90a_tv", "rhs_t72be_tv"];
+};
+
+if(isNil "twc_hasnoaps") then{
+	twc_hasnoaps = ["rhs_btr80a_msv", "rhs_btr80_msv", "rhs_bmp2d_msv", "rhs_bmp1_msv", "rhs_t80uk"];
+	publicVariable "twc_hasnoaps";
+};
+
+if(isNil "twc_nonAPS_list") then{
+	twc_nonAPS_list = [];
+	publicVariable "twc_nonAPS_list";
+};
+
+if(isNil "twc_APS_list") then{
+	twc_APS_list = [];
+	publicVariable "twc_APS_list";
+};
+
 if(isNil "twc_heavymode") then{
 	twc_heavymode = 0;
 publicVariable "twc_heavymode";

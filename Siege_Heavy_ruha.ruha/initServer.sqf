@@ -14,7 +14,8 @@ publicVariable "twc_heavymode";
 
 technicals = 5 + random 10;
 
-enemyTechnical =["rhs_btr70_msv","rhs_bmp1_msv","rhs_t72ba_tv", "rhs_bmd1", "rhs_bmd1r", "rhs_bmd2"];
+//enemyTechnical =["rhs_btr70_msv","rhs_bmp1_msv","rhs_t72ba_tv", "rhs_bmd1", "rhs_bmd1r", "rhs_bmd2"];
+enemyTechnical =["rhs_btr80a_msv", "rhs_btr80_msv", "rhs_bmp2d_msv", "rhs_bmp1_msv", "rhs_t72be_tv", "rhs_t80uk", "rhs_t90a_tv"];
 
 mortarcount = (random 6);
 
@@ -44,12 +45,13 @@ publicVariable "pointLimit";
 
 
 //multiplier for how much the enemy increases with player count, 1 is the standard figure. Set higher with lower overall difficulty for maps where there's a lot of ground for a small group to cover. Set lower for maps where higher player count doesn't make much difference to how difficult the area is to defend.
-twc_diff_scaler = 1.3;
+//twc_diff_scaler = 1.3;
+twc_diff_scaler = 0.9;
 
 //add in an object name and the game will create a location there and spawn enemies from it
 customlocations = [camp1, camp2, camp3, camp4, camp5, camp6];
 
-sirenlist = [idfalarm, idfalarm_1, idfalarm_2];
+sirenlist = [idfalarm, idfalarm_1];
 publicvariable "sirenlist";
 
 twc_is90 = 1;
