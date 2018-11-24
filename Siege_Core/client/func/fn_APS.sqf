@@ -39,8 +39,8 @@ _pos = [getpos (_this select 0), 20, 200, 10, 0, 1, 0, [], [getpos (_this select
 		
 		if (_dis1 > _dis2) then {
 			
-			
 			_gunner = gunner _x;
+			
 			//if it's far out and the turret is already pointed straight at it, fire the smoke early
 			
 			if ((_rocket distance _x) > 50) then {
@@ -67,8 +67,7 @@ _pos = [getpos (_this select 0), 20, 200, 10, 0, 1, 0, [], [getpos (_this select
 				};
 			};
 			
-			if ((!(_gunner == objnull))) then {
-			if ((alive _gunner)) then {
+			if ((!(_gunner == objnull)) && (alive _gunner)) then {
 			
 				waituntil {((_rocket distance _x) < 30) || (!alive _rocket) || (!alive _x)};
 				
@@ -97,7 +96,6 @@ _pos = [getpos (_this select 0), 20, 200, 10, 0, 1, 0, [], [getpos (_this select
 					};
 				};
 			};
-			};
 		};
 	};
 } foreach twc_nonAPS_list;
@@ -120,9 +118,9 @@ _pos = [getpos (_this select 0), 20, 200, 10, 0, 1, 0, [], [getpos (_this select
 		if (_dis1 > _dis2) then {
 			//if it's far out and the turret is already pointed straight at it, fire the smoke early
 			
+			_gunner = gunner _x;
 			if ((_rocket distance _x) > 500) then {
 			
-			_gunner = gunner _x;
 			
 			if ((!(_gunner == objnull)) && (alive _gunner)) then {
 			
