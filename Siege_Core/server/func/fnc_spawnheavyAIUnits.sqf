@@ -146,6 +146,7 @@ _tankchance = (0.3 + (count allplayers / 15) + _armourmult);
 if ((random 1) > _tankchance) exitwith {};
 
 	if (totalPoints < (pointLimit)) then {
+	//if (1 == 1) then {
 	
 			
 				_group2 = createGroup East;
@@ -183,14 +184,14 @@ if ((random 1) > _tankchance) exitwith {};
 					_Commander moveInCommander _technical;
 				};
 				
-				_group2 addwaypoint [[twc_basepos, 300 * twc_roamsize, 500 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
-				_wp1 = _group2 addwaypoint [[twc_basepos, 200 * twc_roamsize, 400 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
-				_group2 addwaypoint [[twc_basepos, 200 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
-				_group2 addwaypoint [[twc_basepos, 200 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
-				_group2 addwaypoint [[twc_basepos, 200 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos,0];
-				 [_group, 4] setWaypointType "CYCLE";
+				_group2 addwaypoint [[_technical] call twc_fnc_standoffpos,0];
+				_wp1 = _group2 addwaypoint [[_technical] call twc_fnc_standoffpos,0];
+				_group2 addwaypoint [[_technical] call twc_fnc_standoffpos,0];
+				_group2 addwaypoint [[_technical] call twc_fnc_standoffpos,0];
+				_group2 addwaypoint [[_technical] call twc_fnc_standoffpos,0];
+				 [_group2, 5] setWaypointType "CYCLE";
 				sleep 2;
-
+				_gunner dowatch twc_basepos;
 				
 				waituntil {!alive _gunner};
 
