@@ -42,6 +42,8 @@ _box AddMagazineCargoGlobal ["twc_l5a4_w",4 + _low];
 _box AddMagazineCargoGlobal ["twc_l5a4_r",4 + _low];
 _box AddMagazineCargoGlobal ["twc_l5a4_g",4 + _low];
 
+_box AddMagazineCargoGlobal ["ACE_SpareBarrel",1];
+
 _box AddMagazineCargoGlobal ["30Rnd_556x45_Stanag",20];
 _box AddMagazineCargoGlobal ["30Rnd_556x45_Stanag_Tracer_Red",5];
 

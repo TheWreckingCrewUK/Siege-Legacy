@@ -44,6 +44,7 @@ _box AddMagazineCargoGlobal ["rhs_100Rnd_762x54mmR_green",2];
 _box AddMagazineCargoGlobal ["rhs_VOG25",15];
 _box AddMagazineCargoGlobal ["rhs_GRD40_White",5];
 
+_box AddMagazineCargoGlobal ["ACE_SpareBarrel",1];
 
 _box addItemCargoGlobal ["ACE_fieldDressing",20];
 _box addItemCargoGlobal ["ACE_elasticBandage",20];

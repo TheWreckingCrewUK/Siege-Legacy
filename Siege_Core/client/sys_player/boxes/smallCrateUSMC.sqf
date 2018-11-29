@@ -53,6 +53,8 @@ _box AddMagazineCargoGlobal ["twc_l5a4_w",4 + _low];
 _box AddMagazineCargoGlobal ["twc_l5a4_r",4 + _low];
 _box AddMagazineCargoGlobal ["twc_l5a4_g",4 + _low];
 
+_box AddMagazineCargoGlobal ["ACE_SpareBarrel",1];
+
 _box AddMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m62_tracer",1 + _low];
 _box AddMagazineCargoGlobal ["rhsusf_100Rnd_762x51",4 + _low];
 
