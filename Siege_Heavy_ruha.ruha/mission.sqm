@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.78539819;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=522;
+	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2411;
+		nextID=2427;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2739.3794,24.482126,5741.4497};
-		dir[]={-0.054920241,-0.50993621,-0.85846376};
-		up[]={-0.032556929,0.86020923,-0.5089004};
-		aside[]={-0.99796349,-1.3783574e-007,0.063845076};
+		pos[]={2783.2568,24.819464,5718.9985};
+		dir[]={-0.79955786,-0.40835583,-0.44054309};
+		up[]={-0.35769999,0.91280484,-0.19708799};
+		aside[]={-0.48260781,-2.1513551e-007,0.87590456};
 	};
 };
 binarizationWanted=0;
@@ -46,13 +46,15 @@ addons[]=
 	"twc_modern",
 	"twc_framework_public_modern_us",
 	"A3_Structures_F_Exp_Civilian_Accessories",
-	"twc_medical"
+	"twc_medical",
+	"A3_Characters_F_Common",
+	"TWC_gearFixes"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=19;
+		items=21;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -174,6 +176,18 @@ class AddonsMetaData
 			className="twc_medical";
 			name="twc_medical";
 			author="Bosenator";
+		};
+		class Item19
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item20
+		{
+			className="TWC_gearFixes";
+			name="TWC_gearFixes";
 		};
 	};
 };
@@ -12690,7 +12704,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=111;
+		items=113;
 		class Item0
 		{
 			dataType="Marker";
@@ -14119,17 +14133,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2762.6094,12.974001,5699.2407};
+				position[]={2762.6089,12.97384,5699.2412};
 				angles[]={0,5.7102113,0};
 			};
 			side="Empty";
 			flags=1;
 			class Attributes
 			{
+				name="tt1";
 			};
 			id=2202;
 			type="Land_Trench_01_forest_F";
-			atlOffset=0.96116066;
+			atlOffset=0.96100044;
 		};
 		class Item34
 		{
@@ -17478,6 +17493,105 @@ class Mission
 			type="Empty";
 			id=2410;
 			atlOffset=0.00014686584;
+		};
+		class Item111
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2770.033,15.051689,5713.4258};
+						angles[]={0,4.2039394,0};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+					};
+					id=2426;
+					type="B_UAV_AI";
+					atlOffset=0.25304222;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=2426;
+						item1=2425;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=2424;
+			atlOffset=0.25304222;
+		};
+		class Item112
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2770.2659,17.544071,5713.3022};
+				angles[]={0,4.2039394,0};
+			};
+			side="West";
+			flags=2;
+			class Attributes
+			{
+				ammo=0;
+				init="call{if (!isserver) exitwith {}; this attachto [tt1];}";
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+				aiRadarUsage=1;
+			};
+			id=2425;
+			type="twc_B_AAA_System_01_F";
+			atlOffset=0.25304222;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };
