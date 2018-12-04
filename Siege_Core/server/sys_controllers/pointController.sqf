@@ -19,6 +19,15 @@ if(isNil "pointLimit") then{
 pointLimit = 200;
 publicVariable "pointLimit"; // init once
 };
+[] spawn {
+	sleep 120;
+	if ((count allplayers) < 5) then {
+	
+		_mult = 0.6 + ((5 - (count allplayers)) / 2);
+		pointLimit = (floor ((pointLimit / _mult) / 10))* 10;
+		publicVariable "pointLimit";
+	};
+};
 
 	if(isNil "totalPoints") then{
 totalPoints = 0;

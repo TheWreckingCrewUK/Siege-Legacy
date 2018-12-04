@@ -16,6 +16,8 @@
 * Public: No
 */
 
+if (totalPoints > pointLimit) exitwith {};
+
 if(isNil "twc_isspawning") then{
 	twc_isspawning = 0;
 };

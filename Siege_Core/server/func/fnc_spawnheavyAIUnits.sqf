@@ -72,6 +72,8 @@ twc_artycount = 0;
 {if (count units _x==0) then {deleteGroup _x}} forEach allGroups;
 if (twc_currentenemy > twc_maxenemy) exitwith {};
 
+if (totalPoints > pointLimit) exitwith {};
+
 if (twc_isspawning ==1) exitwith {};
 [] spawn {twc_isspawning = 1;
 sleep 5;
