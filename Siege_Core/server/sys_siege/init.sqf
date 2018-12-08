@@ -6,8 +6,11 @@ publicVariable "twc_maxenemy";
 twc_currentenemy=0;
 publicVariable "twc_currentenemy";
 
-twc_currentdefender=0;
+if(isNil "twc_currentdefender") then{
+	twc_currentdefender = 1;
 publicVariable "twc_currentdefender";
+};
+
 
 //difficulty setup, lower is easier. Use lower values for maps where the players spawn in areas that are more difficult to defend (like a woodland camp instead of a FOB). 1 is the default value as set here, set a new one in initserver of the mission folder to set a difficulty on a particular mission.
 

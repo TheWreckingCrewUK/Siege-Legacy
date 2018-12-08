@@ -21,6 +21,9 @@ enemyTechnical =["rhs_btr80a_msv", "rhs_bmp2d_msv", "rhs_t72be_tv", "rhs_t80um",
 
 twc_surrenderVote = false;
 
+twc_currentdefender = 10;
+publicVariable "twc_wdveh";
+
 /*
 * Denotes the style of building to be used, for dynamic compositions.
 * For example: the IED factory.

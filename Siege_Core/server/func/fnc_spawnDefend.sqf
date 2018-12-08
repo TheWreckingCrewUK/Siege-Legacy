@@ -38,23 +38,22 @@ if ((str _town) in defendedtownarray) exitwith {};
 defendedtownarray = defendedtownarray + [str _town];
 
 for "_i" from 1 to _total do{
-systemchat format ["spawning at %1", _spawnPos];
+	systemchat format ["spawning at %1", _spawnPos];
 	_unit = _group createUnit [(townSpawn select (floor random (count townspawn))), [_spawnPos,50] call CBA_fnc_randPos,[], 0.3,"NONE"];
 	
-		twc_currentdefender=twc_currentdefender+1;
-		publicVariable "twc_currentdefender";
+	twc_currentdefender=twc_currentdefender+1;
 	_unit addEventHandler ["Killed",{
 		[(_this select 0)] call twc_fnc_deleteDead;
 		["TWC_Insurgency_adjustPoints", 1] call CBA_fnc_serverEvent;
 		
 		twc_currentdefender=twc_currentdefender+1;
-		publicVariable "twc_currentdefender";
 		
-_act = (_town getvariable "active") / 1.1; _town setVariable ["active",_act];
+		_act = (_town getvariable "active") / 1.1; _town setVariable ["active",_act];
 	}];
 	_num = _num + 1;
 	
-	};
+};
+publicVariable "twc_currentdefender";
 //};
 _null = [leader _group, leader _group,250] spawn TWC_fnc_Defend;
 _group setBehaviour "SAFE";
