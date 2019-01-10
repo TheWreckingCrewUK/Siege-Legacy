@@ -79,13 +79,13 @@ publicVariable "twc_heavymode";
 
 technicals = 5 + random 10;
 
-enemyTechnical =["rhs_btr70_msv","rhs_bmp1_msv","rhs_t72ba_tv", "rhs_bmd1", "rhs_bmd1r", "rhs_bmd2"];
+enemyTechnical =["rhs_btr80a_msv", "rhs_btr80_msv", "rhs_bmp2d_msv", "rhs_bmp1_msv", "rhs_t72be_tv", "rhs_t80um", "rhs_t90a_tv"];
 
 _script = execVM "siege_core\SHK_pos\shk_pos_init.sqf";
 waitUntil{scriptDone _script};
 
 
-badTownArray = ["Jarlitz","Suttorf","Dormte","Oetzen","Guran","Feas"];
+badTownArray = ["Ratzlingen","Klein Malchau","Molbath","Schlieckau","Rassau","Hanstedt","Wellendorf","Pieperhofen","Tatern","Hanstedt"];
 
 twc_basespawn = [missionNamespace,"base","Main Base"] call BIS_fnc_addRespawnPosition;
 
