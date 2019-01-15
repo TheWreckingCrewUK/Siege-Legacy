@@ -5,17 +5,17 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=513;
+	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=181;
+		nextID=187;
 	};
 	class Camera
 	{
-		pos[]={2024.5525,103.81245,3492.1028};
-		dir[]={-0.049075048,-0.65276605,-0.75597113};
-		up[]={-0.042286277,0.75755876,-0.65139556};
-		aside[]={-0.9979015,6.4494088e-008,0.064780012};
+		pos[]={4070.9775,46.550343,3615.6179};
+		dir[]={-0.85027874,-0.23075758,-0.47311521};
+		up[]={-0.20164864,0.97301209,-0.11220164};
+		aside[]={-0.48623961,-4.4133049e-007,0.87386256};
 	};
 };
 binarizationWanted=0;
@@ -39,13 +39,15 @@ addons[]=
 	"UK3CB_BAF_Vehicles_LandRover",
 	"twc_medical",
 	"twc_modern",
-	"twc_framework_public_modern_us"
+	"twc_framework_public_modern_us",
+	"A3_Characters_F_Common",
+	"cba_ai"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=18;
+		items=20;
 		class Item0
 		{
 			className="A3_Structures_F_Argo";
@@ -158,6 +160,20 @@ class AddonsMetaData
 		{
 			className="twc_framework_public_modern_us";
 			name="twc_framework_public_modern_us";
+		};
+		class Item18
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item19
+		{
+			className="cba_ai";
+			name="Community Base Addons - Artificial Intelligence";
+			author="CBA Team";
+			url="https://www.github.com/CBATeam/CBA_A3";
 		};
 	};
 };
@@ -12670,12 +12686,12 @@ class Mission
 	};
 	class Entities
 	{
-		items=40;
+		items=44;
 		class Item0
 		{
 			dataType="Trigger";
 			position[]={4012.3601,25.066963,3584.063};
-			angle=1.9147468;
+			angle=1.9147466;
 			class Attributes
 			{
 				name="mainbase";
@@ -13749,7 +13765,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={4012.6111,25.071527,3584};
-			angle=1.9147468;
+			angle=1.9147466;
 			class Attributes
 			{
 				name="warning";
@@ -15204,6 +15220,142 @@ class Mission
 			{
 			};
 			id=178;
+		};
+		class Item40
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4023.3694,35.736797,3568.9871};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+					};
+					id=183;
+					type="B_UAV_AI";
+					atlOffset=0.8404007;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=183;
+						item1=182;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=181;
+			atlOffset=0.8404007;
+		};
+		class Item41
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4023.3694,36.235359,3568.937};
+			};
+			side="West";
+			flags=2;
+			class Attributes
+			{
+			};
+			id=182;
+			type="CBA_B_InvisibleTarget";
+			atlOffset=0.8404007;
+		};
+		class Item42
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4029.6765,33.530869,3589.99};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+					};
+					id=185;
+					type="B_UAV_AI";
+					atlOffset=1.5357399;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=185;
+						item1=186;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=184;
+			atlOffset=1.5357399;
+		};
+		class Item43
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4029.6768,34.02943,3589.9399};
+			};
+			side="West";
+			flags=2;
+			class Attributes
+			{
+			};
+			id=186;
+			type="CBA_B_InvisibleTarget";
+			atlOffset=1.5357399;
 		};
 	};
 };

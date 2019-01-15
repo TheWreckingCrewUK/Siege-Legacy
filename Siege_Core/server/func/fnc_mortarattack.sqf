@@ -34,6 +34,14 @@ _mortar setvehicleammo 1;
 
 _mortar lookat (_targetpos);
 
+if (missionNamespace getvariable ['twc_overridebaseobjs', 0] == 0) then {
+	twc_overridebaseobjs = 1;
+	[] spawn {
+		sleep 120;
+		twc_overridebaseobjs = 0;
+	};
+};
+
 for "_i" from 1 to _total do {
 
 	_mortar doArtilleryFire [_targetpos, currentmagazine _mortar, 1];

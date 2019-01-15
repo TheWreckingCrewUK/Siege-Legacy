@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1731;
+		nextID=1734;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1881.6061,227.51578,5033.9624};
-		dir[]={0.41380233,-0.66529608,0.62141103};
-		up[]={0.36874965,0.74657905,0.55375481};
-		aside[]={0.83234274,4.7730282e-009,-0.55426347};
+		pos[]={1900.8182,202.04213,5059.6929};
+		dir[]={0.32880837,-0.22967142,0.91605759};
+		up[]={0.077593625,0.97326714,0.21617371};
+		aside[]={0.94121593,-3.3876859e-008,-0.33783931};
 	};
 };
 binarizationWanted=0;
@@ -49,13 +49,15 @@ addons[]=
 	"CUP_WheeledVehicles_Mastiff",
 	"twc_medical",
 	"twc_modern",
-	"twc_framework_public_modern_us"
+	"twc_framework_public_modern_us",
+	"A3_Characters_F_Common",
+	"cba_ai"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=22;
+		items=23;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -190,6 +192,13 @@ class AddonsMetaData
 		{
 			className="twc_framework_public_modern_us";
 			name="twc_framework_public_modern_us";
+		};
+		class Item22
+		{
+			className="cba_ai";
+			name="Community Base Addons - Artificial Intelligence";
+			author="CBA Team";
+			url="https://www.github.com/CBATeam/CBA_A3";
 		};
 	};
 };
@@ -12706,7 +12715,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=63;
+		items=65;
 		class Item0
 		{
 			dataType="Marker";
@@ -15625,6 +15634,74 @@ class Mission
 			{
 			};
 			id=1726;
+		};
+		class Item63
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1910.1779,201.19041,5085.417};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+					};
+					id=1733;
+					type="B_UAV_AI";
+					atlOffset=2.6403198;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=1733;
+						item1=1732;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=1731;
+			atlOffset=2.6403198;
+		};
+		class Item64
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1910.1759,201.68889,5085.376};
+			};
+			side="West";
+			flags=2;
+			class Attributes
+			{
+			};
+			id=1732;
+			type="CBA_B_InvisibleTarget";
+			atlOffset=2.6403198;
 		};
 	};
 };
