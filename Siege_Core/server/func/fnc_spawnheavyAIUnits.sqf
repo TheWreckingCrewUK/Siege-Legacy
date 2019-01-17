@@ -156,8 +156,8 @@ if ((random 1) > _tankchance) exitwith {};
 				_chosencar = enemyTechnical call BIS_fnc_selectRandom;
 				_technical = _chosencar createVehicle _spawnPos;
 				_technical setVehicleLock "LOCKEDPLAYER";
-				_technical addEventHandler ["Fired", {
-					[_this select 1, _this select 6, _this select 7] call twc_fnc_gunwalk; }];
+				/*_technical addEventHandler ["Fired", {
+					[_this select 1, _this select 6, _this select 7] call twc_fnc_gunwalk; }];*/
 					
 				if (_chosencar in twc_hasaps) then {
 					twc_APS_list pushback _technical;
