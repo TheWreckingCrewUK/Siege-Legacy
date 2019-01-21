@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2721.354,17.291931,5708.0688};
-		dir[]={-0.33613312,-0.54366714,-0.76910132};
-		up[]={-0.21772304,0.83930123,-0.49816975};
-		aside[]={-0.91634625,1.0291114e-007,0.40048593};
+		pos[]={2754.1599,19.95278,5721.1104};
+		dir[]={0.87913156,-0.28155318,-0.38465554};
+		up[]={0.25795543,0.9595437,-0.11286531};
+		aside[]={-0.40087259,7.2247349e-007,-0.91619557};
 	};
 };
 binarizationWanted=0;
@@ -17138,17 +17138,16 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2720.2451,15.618628,5702.9922};
-				angles[]={6.0978374,2.4655919,0.044969428};
+				position[]={2720.2451,16.481544,5702.9922};
+				angles[]={0,2.4655919,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 			};
 			id=2501;
 			type="UK3CB_BAF_LandRover_WMIK_HMG_Green_B";
-			atlOffset=-0.28834343;
+			atlOffset=0.57457256;
 			class CustomAttributes
 			{
 				class Attribute0
