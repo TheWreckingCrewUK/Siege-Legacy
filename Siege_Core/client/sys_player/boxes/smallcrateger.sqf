@@ -30,6 +30,8 @@ clearitemCargoGlobal _box;
 
 
 
+_box AddWeaponCargoGlobal ["rhs_weap_rpg75",3];
+
 _box AddMagazineCargoGlobal ["CUP_30Rnd_556x45_G36",30];
 _box AddMagazineCargoGlobal ["CUP_30Rnd_TE1_Red_Tracer_556x45_G36",10];
 
