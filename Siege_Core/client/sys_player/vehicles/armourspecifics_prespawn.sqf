@@ -16,6 +16,40 @@ _heli = "rhsusf_m1a2sep1tuskiiwd_usarmy";
 };
 };
 
+if (_heli == "UK3CB_BAF_LandRover_WMIK_HMG_Green_B") then {
+_diffincamount = 1;
+if (twc_wdveh == 0) then {
+_heli = "UK3CB_BAF_LandRover_WMIK_HMG_Sand_A";
+};
+};
+
+if (_heli == "UK3CB_BAF_LandRover_WMIK_GMG_Green_B") then {
+_diffincamount = 2;
+if (twc_wdveh == 0) then {
+_heli = "UK3CB_BAF_LandRover_WMIK_GMG_Sand_A";
+};
+};
+
+if (_heli == "rhsusf_m1025_w_m2") then {
+
+if (twc_wdveh == 0) then {
+_heli = "rhsusf_m1025_d_m2";
+};
+};
+
+if (_heli == "rhsusf_m1025_w_mk19") then {
+_diffincamount = 2.5;
+if (twc_wdveh == 0) then {
+_heli = "rhsusf_m1025_d_Mk19";
+};
+};
+
+if ( _heli == "UK3CB_BAF_LandRover_WMIK_GPMG_Sand_A") then {
+
+if (twc_wdveh == 1) then {
+_heli = "UK3CB_BAF_LandRover_WMIK_GPMG_Green_B";
+};
+};
 
 if ( _heli == "CUP_B_LAV25_desert_USMC") then {
 

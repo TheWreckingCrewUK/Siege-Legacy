@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1734;
+		nextID=1735;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1900.8182,202.04213,5059.6929};
-		dir[]={0.32880837,-0.22967142,0.91605759};
-		up[]={0.077593625,0.97326714,0.21617371};
-		aside[]={0.94121593,-3.3876859e-008,-0.33783931};
+		pos[]={1930.3776,197.91412,5050.8418};
+		dir[]={-0.74315244,-0.28417134,0.60579884};
+		up[]={-0.22026509,0.95877403,0.17955466};
+		aside[]={0.63184708,-9.4412826e-008,0.77510732};
 	};
 };
 binarizationWanted=0;
@@ -47,8 +47,8 @@ addons[]=
 	"CUP_WheeledVehicles_Datsun",
 	"A3_Structures_F_Argo_Military_Fortifications",
 	"CUP_WheeledVehicles_Mastiff",
-	"twc_medical",
 	"twc_modern",
+	"twc_medical",
 	"twc_framework_public_modern_us",
 	"A3_Characters_F_Common",
 	"cba_ai"
@@ -179,14 +179,14 @@ class AddonsMetaData
 		};
 		class Item19
 		{
-			className="twc_medical";
-			name="twc_medical";
-			author="Bosenator";
+			className="twc_modern";
+			name="twc_modern";
 		};
 		class Item20
 		{
-			className="twc_modern";
-			name="twc_modern";
+			className="twc_medical";
+			name="twc_medical";
+			author="Bosenator";
 		};
 		class Item21
 		{
@@ -12715,7 +12715,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=65;
+		items=66;
 		class Item0
 		{
 			dataType="Marker";
@@ -15702,6 +15702,16 @@ class Mission
 			id=1732;
 			type="CBA_B_InvisibleTarget";
 			atlOffset=2.6403198;
+		};
+		class Item65
+		{
+			dataType="Marker";
+			position[]={1923.11,193.513,5073.104};
+			name="twc_armourspawnpos";
+			type="Empty";
+			angle=355.12411;
+			id=1734;
+			atlOffset=9.1552734e-005;
 		};
 	};
 };

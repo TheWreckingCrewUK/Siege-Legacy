@@ -146,6 +146,7 @@ if (twc_activefst == 1) then {_armourmult = _armourmult + 0.5};
 _tankchance = (0.3 + (count allplayers / 15) + _armourmult);
 
 if ((random 1) > _tankchance) exitwith {};
+if (technicals == 0) exitwith {};
 
 	if (totalPoints < (pointLimit)) then {
 	//if (1 == 1) then {

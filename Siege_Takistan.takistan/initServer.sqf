@@ -25,7 +25,7 @@ publicVariable "twc_wdveh";
 */
 TWC_Building_Style = "Med";
 
-twc_difficulty = 1.1;
+twc_difficulty = 1.0;
 publicVariable "twc_difficulty";
 
 //roamsize multiplies the size of the random waypoint divergence from base. A setting of 1 means each waypoint is up to 100-200 meters away from base. Set higher for maps where there's a lot of cover and you don't want the enemies to just swim in so that you can use higher difficulties without swamping the base. The downside is that they take longer to get to engagement range so there's more downtime at mission start.

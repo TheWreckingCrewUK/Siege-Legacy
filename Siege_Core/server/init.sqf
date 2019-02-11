@@ -152,9 +152,10 @@ execVM "Siege_Core\server\sys_townLocations\getLocations.sqf";
 // List of civilians who were already questioned
 nonQuestionableList = [];
 publicVariable "nonQuestionableList";
-
-// Array of the locations and the strongholds
-townLocationArray = townLocationArray + (nearestLocations [twc_basepos, ["NameVillage","NameCity","NameCityCapital","nameLocal"], 2500]);
+if ((missionnamespace getvariable ["twc_siege_skiptowns", 0]) == 0) then {
+	// Array of the locations and the strongholds
+	townLocationArray = townLocationArray + (nearestLocations [twc_basepos, ["NameVillage","NameCity","NameCityCapital","nameLocal"], 2500]);
+};
 _strongholdArray = [];
 
 /*

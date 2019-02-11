@@ -16,7 +16,7 @@
 */
 
 if(isNil "pointLimit") then{
-pointLimit = 200;
+pointLimit = 100;
 publicVariable "pointLimit"; // init once
 };
 [] spawn {
@@ -24,7 +24,7 @@ publicVariable "pointLimit"; // init once
 	if ((count allplayers) < 5) then {
 	
 		_mult = 0.6 + ((5 - (count allplayers)) / 2);
-		pointLimit = (floor ((pointLimit / _mult) / 10))* 10;
+		pointLimit = ((floor ((pointLimit / _mult) / 10))* 10) max 10;
 		publicVariable "pointLimit";
 	};
 };

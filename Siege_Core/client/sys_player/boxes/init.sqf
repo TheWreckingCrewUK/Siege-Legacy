@@ -73,6 +73,9 @@ if((typeOf player) in ["twc_ana_commander","twc_ana_subcommander"])then{
 
 	_anaaction = ["SpawnsmallanaCreate","Spawn Small ANA Crate","",{execvm "siege_core\client\sys_player\boxes\smallcrateANA.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_anaaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_hUKaction3 = ["SpawnsmallUKCreate","Spawn Repair Kit","",{execvm "siege_core\client\sys_player\boxes\RepairKit.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_hUKaction3,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_anaaction3 = ["spawn50","Spawn .50 Ammo","",{execvm "siege_core\client\sys_player\boxes\50calammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_anaaction3,true] call ace_interact_menu_fnc_addActionToClass;
@@ -90,6 +93,18 @@ if((typeOf player) in ["twc_ana_commander","twc_ana_subcommander"])then{
 
 
 if((typeOf player) in ["Modern_British_Squadleader","Modern_British_2IC","Modern_British_2IC_COIN", "Modern_British_Spotter_coin", "Modern_British_Sniper_coin"])then{
+
+	_armouraction1 = ["spawnl111","Spawn WMIK (GPMG)","",{["UK3CB_BAF_LandRover_WMIK_GPMG_Sand_A"] execvm "siege_core\client\sys_player\vehicles\spawnarmour_inf.sqf"},{(twc_maxenemy > 10) && (twc_maxenemy < 30) && (count units group player > 2)}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_armouraction1,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_armouraction1 = ["spawnl111","Spawn WMIK (HMG)","",{["UK3CB_BAF_LandRover_WMIK_HMG_Green_B"] execvm "siege_core\client\sys_player\vehicles\spawnarmour_inf.sqf"},{(twc_maxenemy >= 30) && (twc_maxenemy < 70) && (count units group player > 2)}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_armouraction1,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_armouraction1 = ["spawnl111","Spawn WMIK (MK19)","",{["UK3CB_BAF_LandRover_WMIK_GMG_Green_B"] execvm "siege_core\client\sys_player\vehicles\spawnarmour_inf.sqf"},{(twc_maxenemy >= 70) && (count units group player > 2)}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_armouraction1,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_hUKaction3 = ["SpawnsmallUKCreate","Spawn Repair Kit","",{execvm "siege_core\client\sys_player\boxes\RepairKit.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_hUKaction3,true] call ace_interact_menu_fnc_addActionToClass;
 
 	_UKaction = ["SpawnsmallUKCreate","Spawn Small UK Crate","",{execvm "siege_core\client\sys_player\boxes\smallcrateuk.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
@@ -116,6 +131,9 @@ if((typeOf player) in ["Modern_pol_commander","Modern_pol_subcommander", "Modern
 
 	_UKaction = ["SpawnsmallUKCreate","Spawn Small Polish Crate","",{execvm "siege_core\client\sys_player\boxes\smallcratepol.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_hUKaction3 = ["SpawnsmallUKCreate","Spawn Repair Kit","",{execvm "siege_core\client\sys_player\boxes\RepairKit.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_hUKaction3,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_UKaction3 = ["spawn50","Spawn .50 Ammo","",{execvm "siege_core\client\sys_player\boxes\50calammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction3,true] call ace_interact_menu_fnc_addActionToClass;
@@ -137,6 +155,9 @@ if((typeOf player) in ["Modern_ger_commander","Modern_ger_subcommander","Modern_
 
 	_UKaction = ["SpawnsmallUKCreate","Spawn Small German Crate","",{execvm "siege_core\client\sys_player\boxes\smallcrateger.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_hUKaction3 = ["SpawnsmallUKCreate","Spawn Repair Kit","",{execvm "siege_core\client\sys_player\boxes\RepairKit.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_hUKaction3,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_UKaction3 = ["spawn50","Spawn .50 Ammo","",{execvm "siege_core\client\sys_player\boxes\50calammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction3,true] call ace_interact_menu_fnc_addActionToClass;
@@ -157,6 +178,15 @@ if((typeOf player) in ["Modern_ger_commander","Modern_ger_subcommander","Modern_
 
 if((typeOf player) in ["twc_men_1990_us_w_SquadLeader","twc_men_1990_us_w_teamleader","twc_men_1990_us_d_SquadLeader","twc_men_1990_us_d_teamleader"])then{
 
+	_armouraction1 = ["spawnl111","Spawn HMMWV (M2)","",{["rhsusf_m1043_w_m2"] execvm "siege_core\client\sys_player\vehicles\spawnarmour_inf.sqf"},{(twc_maxenemy > 10) && (twc_maxenemy < 70) && (count units group player > 2)}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_armouraction1,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_armouraction1 = ["spawnl111","Spawn HMMWV (MK19)","",{["rhsusf_m1025_w_mk19"] execvm "siege_core\client\sys_player\vehicles\spawnarmour_inf.sqf"},{(twc_maxenemy >= 70) && (count units group player > 2)}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_armouraction1,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_hUKaction3 = ["SpawnsmallUKCreate","Spawn Repair Kit","",{execvm "siege_core\client\sys_player\boxes\RepairKit.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_hUKaction3,true] call ace_interact_menu_fnc_addActionToClass;
+
 	_usaction = ["SpawnsmallUKCreate","Spawn Small US Crate","",{execvm "siege_core\client\sys_player\boxes\smallCrateUS90.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_usaction,true] call ace_interact_menu_fnc_addActionToClass;
 	
@@ -174,6 +204,15 @@ if((typeOf player) in ["twc_men_1990_us_w_SquadLeader","twc_men_1990_us_w_teamle
 };
 
 if((typeOf player) in ["Modern_USMC_Squadleader","Modern_USMC_Teamleader", "Modern_USMC_Squadleader_d","Modern_USMC_Teamleader_d"])then{
+
+	_armouraction1 = ["spawnl111","Spawn HMMWV (M2)","",{["rhsusf_m1043_w_m2"] execvm "siege_core\client\sys_player\vehicles\spawnarmour_inf.sqf"},{(twc_maxenemy > 10) && (twc_maxenemy < 70) && (count units group player > 2)}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_armouraction1,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_armouraction1 = ["spawnl111","Spawn HMMWV (MK19)","",{["rhsusf_m1025_w_mk19"] execvm "siege_core\client\sys_player\vehicles\spawnarmour_inf.sqf"},{(twc_maxenemy >= 70) && (count units group player > 2)}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_armouraction1,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_hUKaction3 = ["SpawnsmallUKCreate","Spawn Repair Kit","",{execvm "siege_core\client\sys_player\boxes\RepairKit.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_hUKaction3,true] call ace_interact_menu_fnc_addActionToClass;
 
 	_charlieaction = ["SpawnsmallcharlieCreate","Spawn Small Charlie Crate","",{execvm "siege_core\client\sys_player\boxes\smallcrateUSMC.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_charlieaction,true] call ace_interact_menu_fnc_addActionToClass;
@@ -342,12 +381,21 @@ if((typeOf player) in ["1990_RM_British_2IC_Mix","1990_RM_British_SectionCommand
 
 
 
-
 if((typeOf player) in ["2000_British_SectionCommander_Desert","2000_British_SectionCommander","2000_British_2IC_Desert","2000_British_2IC"])then{
 
+	_armouraction1 = ["spawnl111","Spawn WMIK (GPMG)","",{["UK3CB_BAF_LandRover_WMIK_GPMG_Sand_A"] execvm "siege_core\client\sys_player\vehicles\spawnarmour_inf.sqf"},{(twc_maxenemy > 10) && (twc_maxenemy < 30) && (count units group player > 2)}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_armouraction1,true] call ace_interact_menu_fnc_addActionToClass;
 
+	_armouraction1 = ["spawnl111","Spawn WMIK (HMG)","",{["UK3CB_BAF_LandRover_WMIK_HMG_Green_B"] execvm "siege_core\client\sys_player\vehicles\spawnarmour_inf.sqf"},{(twc_maxenemy >= 30) && (twc_maxenemy < 70) && (count units group player > 2)}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_armouraction1,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_armouraction1 = ["spawnl111","Spawn WMIK (MK19)","",{["UK3CB_BAF_LandRover_WMIK_GMG_Green_B"] execvm "siege_core\client\sys_player\vehicles\spawnarmour_inf.sqf"},{(twc_maxenemy >= 70) && (count units group player > 2)}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_armouraction1,true] call ace_interact_menu_fnc_addActionToClass;
 
 	_hUKaction3 = ["SpawnsmallUKCreate","Spawn UK Crate","",{execvm "siege_core\client\sys_player\boxes\smallcrateuk2000.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_hUKaction3,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_hUKaction3 = ["SpawnsmallUKCreate","Spawn Repair Kit","",{execvm "siege_core\client\sys_player\boxes\RepairKit.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_hUKaction3,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_haction5 = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "siege_core\client\sys_player\boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;

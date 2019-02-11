@@ -44,7 +44,7 @@ publicVariable "pointLimit";
 
 
 //multiplier for how much the enemy increases with player count, 1 is the standard figure. Set higher with lower overall difficulty for maps where there's a lot of ground for a small group to cover. Set lower for maps where higher player count doesn't make much difference to how difficult the area is to defend.
-twc_diff_scaler = 3;
+twc_diff_scaler = 2;
 
 //add in an object name and the game will create a location there and spawn enemies from it
 customlocations = [camp1, camp2, camp3, camp4, camp5, camp6];
