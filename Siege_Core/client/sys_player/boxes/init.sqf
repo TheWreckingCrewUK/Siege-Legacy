@@ -124,10 +124,10 @@ if((typeOf player) in ["Modern_British_Squadleader","Modern_British_2IC","Modern
 	_UKaction6 = ["SpawnmineCreate","Spawn Heavy AT","",{execvm "siege_core\client\sys_player\boxes\smallcratenlaw.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction6,true] call ace_interact_menu_fnc_addActionToClass;
 
-	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Javelin Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratejav.sqf"},{(count units group player > 3) && ((missionnamespace getvariable ["twc_javspawned", 0]) == 0)}] call ace_interact_menu_fnc_createAction;
+	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Javelin Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratejav.sqf"},{((count units group player) > 3) && ((missionnamespace getvariable ["twc_javspawned", 0]) == 0)}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction,true] call ace_interact_menu_fnc_addActionToClass;
 
-	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Javelin Tube","",{execvm "siege_core\client\sys_player\boxes\smallcratejav_tube.sqf"},{(count units group player > 3)((missionnamespace getvariable ["twc_javspawned", 0]) == 1)}] call ace_interact_menu_fnc_createAction;
+	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Javelin Tube","",{execvm "siege_core\client\sys_player\boxes\smallcratejav_tube.sqf"},{((count units group player) > 3) && ((missionnamespace getvariable ["twc_javspawned", 0]) == 1)}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction,true] call ace_interact_menu_fnc_addActionToClass;
 };
 
@@ -217,10 +217,10 @@ if((typeOf player) in ["Modern_USMC_Squadleader","Modern_USMC_Teamleader", "Mode
 	_armouraction1 = ["spawnl111","Spawn HMMWV (MK19)","",{["rhsusf_m1025_w_mk19"] execvm "siege_core\client\sys_player\vehicles\spawnarmour_inf.sqf"},{(twc_maxenemy >= 70) && (count units group player > 2)}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_armouraction1,true] call ace_interact_menu_fnc_addActionToClass;
 
-	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Javelin Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratejav.sqf"},{(count units group player > 3) && ((missionnamespace getvariable ["twc_javspawned", 0]) == 0)}] call ace_interact_menu_fnc_createAction;
+	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Javelin Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratejav.sqf"},{((count units group player) > 3) && ((missionnamespace getvariable ["twc_javspawned", 0]) == 0)}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction,true] call ace_interact_menu_fnc_addActionToClass;
 
-	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Javelin Tube","",{execvm "siege_core\client\sys_player\boxes\smallcratejav_tube.sqf"},{(count units group player > 3)((missionnamespace getvariable ["twc_javspawned", 0]) == 1)}] call ace_interact_menu_fnc_createAction;
+	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Javelin Tube","",{execvm "siege_core\client\sys_player\boxes\smallcratejav_tube.sqf"},{((count units group player) > 3) && ((missionnamespace getvariable ["twc_javspawned", 0]) == 1)}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction,true] call ace_interact_menu_fnc_addActionToClass;
 
 	_hUKaction3 = ["SpawnsmallUKCreate","Spawn Repair Kit","",{execvm "siege_core\client\sys_player\boxes\RepairKit.sqf"},{true}] call ace_interact_menu_fnc_createAction;
@@ -465,10 +465,10 @@ if((typeOf player) in ["TWC_2000_US_Army_SectionCommander","TWC_2000_US_Army_Tea
 	_haction5 = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "siege_core\client\sys_player\boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_haction5,true] call ace_interact_menu_fnc_addActionToClass;
 
-	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Javelin Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratejav.sqf"},{(count units group player > 3) && ((missionnamespace getvariable ["twc_javspawned", 0]) == 0)}] call ace_interact_menu_fnc_createAction;
+	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Javelin Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratejav.sqf"},{((count units group player) > 3) && ((missionnamespace getvariable ["twc_javspawned", 0]) == 0)}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction,true] call ace_interact_menu_fnc_addActionToClass;
 
-	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Javelin Tube","",{execvm "siege_core\client\sys_player\boxes\smallcratejav_tube.sqf"},{(count units group player > 3)((missionnamespace getvariable ["twc_javspawned", 0]) == 1)}] call ace_interact_menu_fnc_createAction;
+	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Javelin Tube","",{execvm "siege_core\client\sys_player\boxes\smallcratejav_tube.sqf"},{((count units group player) > 3) && ((missionnamespace getvariable ["twc_javspawned", 0]) == 1)}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_hfstaction3 = ["spawn50","Spawn .50 Ammo","",{execvm "siege_core\client\sys_player\boxes\50calammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;

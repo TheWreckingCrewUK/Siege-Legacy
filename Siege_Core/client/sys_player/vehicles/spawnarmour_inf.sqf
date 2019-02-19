@@ -13,7 +13,7 @@ twc_ammotime=time+twc_ammotime_amount;
 publicVariable "twc_ammotime";
 _boxClass = "ACE_Box_Ammo";
 
-_diffincamount = 0.5;
+_diffincamount = 0.2;
 
 //pre spawn file to change classname to woodland/desert versions if necessary
 #include "armourspecifics_prespawn.sqf";

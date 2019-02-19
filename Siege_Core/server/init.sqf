@@ -79,8 +79,9 @@ publicVariable "twc_siege_baseside";
 
 if(isNil "twc_difficulty") then{
 		twc_difficulty = 1;
-		publicVariable "twc_difficulty";
+		
 	};
+publicVariable "twc_difficulty";
 
 	if (isNil "technicals") then {
 		technicals = 1;

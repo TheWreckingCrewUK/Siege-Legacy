@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=2544;
+		nextID=2547;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2700.8489,15.411946,5675.7764};
-		dir[]={0.777906,-0.15718335,-0.60849327};
-		up[]={0.12385219,0.98755395,-0.096879847};
-		aside[]={-0.61615694,4.5634806e-007,-0.78769666};
+		pos[]={2792.2925,51.911327,5800.5518};
+		dir[]={-0.43207082,-0.30761507,-0.8478204};
+		up[]={-0.13969852,0.95148766,-0.27412003};
+		aside[]={-0.89102173,1.2662495e-006,0.45409051};
 	};
 };
 binarizationWanted=0;
@@ -17440,7 +17440,7 @@ class Mission
 			};
 			id=2517;
 			type="Land_BagBunker_01_small_green_F";
-			atlOffset=-0.84339523;
+			atlOffset=-0.84339428;
 		};
 		class Item140
 		{
@@ -17582,7 +17582,7 @@ class Mission
 			};
 			id=2533;
 			type="CUP_Krovi_long";
-			atlOffset=-0.075566292;
+			atlOffset=-0.075565338;
 		};
 		class Item147
 		{
