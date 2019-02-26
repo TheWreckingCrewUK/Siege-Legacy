@@ -21,3 +21,6 @@ twc_fnc_calculateSpawnAmount = compile preprocessfilelinenumbers "siege_core\ser
 twc_fnc_changebase = compile preprocessfilelinenumbers "siege_core\server\func\fnc_changebase.sqf";
 twc_fnc_huntergroup = compile preprocessfilelinenumbers "siege_core\server\func\fnc_huntergroup.sqf";
 twc_fnc_standoffpos = compile preprocessfilelinenumbers "siege_core\server\func\fnc_standoffpos.sqf";
+twc_fnc_aps_server = compile preprocessfilelinenumbers "siege_core\server\func\fnc_APS_server.sqf";
+
+call twc_fnc_aps_server;

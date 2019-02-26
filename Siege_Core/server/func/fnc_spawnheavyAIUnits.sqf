@@ -55,6 +55,10 @@ if(isNil "twc_isspawning") then{
 	twc_isspawning = 0;
 };
 
+if(isNil "twc_3manvehs") then{
+	twc_3manvehs = ["rhs_t80um","rhs_t90a_tv","rhs_t72be_tv","rhs_t72ba_tv"];
+};
+
 /* removing artillery for the moment until I stop them firing on people at really bad times
 if(isNil "twc_artycount") then{
 	twc_artycount = 3;
@@ -182,7 +186,7 @@ if (technicals == 0) exitwith {};
 				_driver moveInDriver _technical;
 				_gunner moveInGunner _technical;
 				
-				if (_technical iskindof "Tank") then {
+				if (_technical in twc_3manvehs) then {
 					_Commander = _group2 createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];
 					_Commander moveInCommander _technical;
 				};

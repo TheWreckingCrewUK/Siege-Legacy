@@ -15,7 +15,7 @@ publicVariable "twc_heavymode";
 technicals = 5 + random 10;
 
 //enemyTechnical =["rhs_btr70_msv","rhs_bmp1_msv","rhs_t72ba_tv", "rhs_bmd1", "rhs_bmd1r", "rhs_bmd2"];
-enemyTechnical =["rhs_btr80a_msv", "rhs_btr80_msv", "rhs_bmp2d_msv", "rhs_bmp1_msv", "rhs_t72be_tv", "rhs_t80um", "rhs_t90a_tv"];
+enemyTechnical =["rhs_btr80a_msv", "rhs_btr80_msv", "rhs_bmp2d_msv", "rhs_bmp1p_tv", "rhs_t72be_tv", "rhs_t80um", "rhs_t90a_tv"];
 
 mortarcount = (random 6);
 

@@ -36,9 +36,9 @@ _veh setvariable ["twc_diffincamount", _diffincamount, true];
 	["DUKE_Hide",1]
 ] call BIS_fnc_initVehicle;
 };
-/*
+
 clearWeaponCargoGlobal _veh;
-clearBackpackCargoGlobal _veh;
+/*clearBackpackCargoGlobal _veh;
 clearMagazineCargoGlobal _veh;
 clearitemCargoGlobal _veh;
 */
