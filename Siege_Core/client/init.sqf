@@ -10,7 +10,12 @@
 "iedRestrictionZone" setMarkerAlpha 0;
 
 twc_fnc_aps = compile preprocessfilelinenumbers "Siege_Core\client\func\fn_APS.sqf";
+twc_news = compile preprocessfilelinenumbers "Siege_Core\client\news.sqf";
 
+
+
+_alphaaction = ["SpawnsmallAlphaCreate","TWC News","",{call twc_news},{true}] call ace_interact_menu_fnc_createAction;
+["TWC_Item_Public_Base_LOCSTAT",0,["ACE_MainActions"],_alphaaction,true] call ace_interact_menu_fnc_addActionToClass;
 
 if(isNil "twc_spawnlist") then{
 	twc_spawnlist = [];

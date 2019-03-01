@@ -1,3 +1,5 @@
 /*/Siege_Core/*
 ~*/
 *.pbo
+Siege_Core/client/membernews.sqf
+Siege_Core/client/managementnews.sqf
