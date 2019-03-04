@@ -20,7 +20,7 @@ pointLimit = 70;
 publicVariable "pointLimit"; // init once
 };
 [] spawn {
-	sleep 120;
+	sleep 600;
 	if ((count allplayers) < 5) then {
 	
 		_mult = 0.6 + ((5 - (count allplayers)) / 2);
