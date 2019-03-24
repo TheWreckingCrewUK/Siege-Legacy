@@ -38,14 +38,15 @@ while {true} do {
 _armourmult = 1;
 if (twc_activearmour == 1) then {_armourmult = 2 + (twc_maxenemy / 160)};
 if (twc_activefst == 1) then {_armourmult = _armourmult + 1};
-twc_maxenemy=(((30*twc_difficulty)+((count(allPlayers - entities "HeadlessClient_F")*twc_diff_scaler)*(6*twc_difficulty))) * _armourmult) min 100;
 publicVariable "twc_maxenemy";
 sleep 0.2;
 
 
 if ((pointLimit-totalpoints)<(twc_maxenemy)) then {
-twc_maxenemy=(((50*twc_difficulty)+((count(allPlayers - entities "HeadlessClient_F")*twc_diff_scaler)*(6*twc_difficulty))) * _armourmult) min 100;
-	};
+twc_maxenemy=(pointLimit-totalpoints) * 1.3;
+	} else {
+	twc_maxenemy=(((30*twc_difficulty)+((count(allPlayers - entities "HeadlessClient_F")*twc_diff_scaler)*(6*twc_difficulty))) * _armourmult) min 100;
+};
 [_this] spawn twc_townSetup;
 sleep 30;};
 }

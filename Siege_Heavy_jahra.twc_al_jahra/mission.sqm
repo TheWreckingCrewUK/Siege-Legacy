@@ -12902,7 +12902,7 @@ class Mission
 			};
 			id=108;
 			type="Land_InfoStand_V2_F";
-			atlOffset=-0.00018310547;
+			atlOffset=-0.0082397461;
 		};
 		class Item4
 		{

@@ -26,8 +26,9 @@ if(!(name player in twc_spawnlist)) then {
 twc_spawnlist pushback name player;
 [west, 3] call BIS_fnc_respawnTickets;
 };
-
+cutText ["","Black IN",0.001];
 waitUntil {!isNull player};
+cutText ["","Black IN",0.001];
 
 player addEventHandler ["Killed",{
 	[west, -1] call BIS_fnc_respawnTickets;
