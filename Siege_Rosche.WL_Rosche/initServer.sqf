@@ -22,15 +22,21 @@ twc_surrenderVote = false;
 */
 TWC_Building_Style = "Med";
 
+technicals = 5 + random 10;
+
 //add in an object name and the game will create a location there and spawn enemies from it
-customlocations = [camp1, camp2];
+customlocations = [camp1, camp2, camp3];
+
+
+mortarcount = (random 6);
+enemyTechnical =["rhs_btr80a_msv", "rhs_bmp2d_msv", "rhs_bmp1p_tv", "rhs_t72be_tv", "rhs_t90a_tv", "rhs_bmp2d_msv", "rhs_t72be_tv", "rhs_t90a_tv", "RHS_Mi8MTV3_heavy_vvsc", "rhs_mi28n_vvsc", "RHS_Su25SM_vvsc"];
 
 pointLimit = 40;
 publicVariable "pointLimit";
 
 twc_siege_skiptowns = 1;
 
-twc_difficulty = 0.5;
+twc_difficulty = 1.3;
 publicVariable "twc_difficulty";
 
 twc_is90 = 1;
@@ -45,7 +51,7 @@ publicVariable "twc_diff_scaler";
 
 
 //roamsize multiplies the size of the random waypoint divergence from base. A setting of 1 means each waypoint is up to 100-200 meters away from base. Set higher for maps where there's a lot of cover and you don't want the enemies to just swim in so that you can use higher difficulties without swamping the base. The downside is that they take longer to get to engagement range so there's more downtime at mission start.
-twc_roamsize = 0.8;
+twc_roamsize = 1.8;
 
 
 //wpcount adds extra waypoints that scale by the roamsize variable. If left unset in the mission's initserver then it will default to 1. The game will add 2 waypoints near base regardless of this value. Set this to 0 to have them move straight to base, set to 2-4 if you want enemies to loiter around nearby a lot but not make a play for the base that often.
@@ -84,9 +90,7 @@ vehicleList = ["CUP_C_UAZ_Unarmed_TK_CIV", "CUP_C_Skoda_Blue_CIV", "CUP_C_Datsun
 twc_heavymode = 1;
 publicVariable "twc_heavymode";
 
-technicals = 0;
 
-enemyTechnical =["rhs_btr80a_msv", "rhs_btr80_msv", "rhs_bmp2d_msv", "rhs_bmp1_msv", "rhs_t72be_tv", "rhs_t80um", "rhs_t90a_tv"];
 
 _script = execVM "siege_core\SHK_pos\shk_pos_init.sqf";
 waitUntil{scriptDone _script};

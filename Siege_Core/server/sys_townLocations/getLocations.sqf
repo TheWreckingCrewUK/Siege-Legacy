@@ -1,7 +1,7 @@
 _enemycount = 0;
 if (twc_heavymode == 1) then {_enemycount = (east countside allunits) - 40} else {_enemycount = (east countside allunits)};
 
-if (_enemycount>twc_maxenemy) exitwith
+if (_enemycount>(missionnamespace getvariable ["twc_maxenemy", 30])) exitwith
 {};
 
 //adding in enemy count just to save a bit of overhead

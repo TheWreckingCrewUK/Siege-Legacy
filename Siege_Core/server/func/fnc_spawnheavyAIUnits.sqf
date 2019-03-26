@@ -155,12 +155,50 @@ if (technicals == 0) exitwith {};
 	if (totalPoints < (pointLimit)) then {
 	//if (1 == 1) then {
 	
-			
+				_airmult = 1;
 				_group2 = createGroup East;
 
 				_chosencar = enemyTechnical call BIS_fnc_selectRandom;
+				_technical = objnull;
+				if (_chosencar iskindof "air") then {
+					_airmult = 2;
+					_spawnPos = _spawnPos vectoradd [0,0,150];
+					_technical = createVehicle [_chosencar, _spawnPos, [], 0, "FLY"];
+					if (_chosencar iskindof "plane") then {
+						_technical setvelocity [150 * (sin (getdir _technical )), 150 * (cos (getdir _technical )), 0] ;
+						_airmult = 3;
+					};
+					[_technical] spawn {
+						params ["_technical"];
+						waituntil {(fuel _technical) < 0.9};
+						systemchat "going home";
+						{deletewaypoint _x} foreach waypoints (group driver _technical);
+						{deletewaypoint _x} foreach waypoints (group driver _technical);
+						{deletewaypoint _x} foreach waypoints (group driver _technical);
+						{deletewaypoint _x} foreach waypoints (group driver _technical);
+						{deletewaypoint _x} foreach waypoints (group driver _technical);
+						(group driver _technical) addwaypoint [[0,0,0],0,0];
+						waituntil {(_technical distance [0,0,0]) < 2000};
+						{deletevehicle _x} foreach (units group driver _technical);
+						deletevehicle _technical;
+					};
+						
+				} else {
+				_spawnPos = _spawnPos vectoradd [0,0,10];
 				_technical = _chosencar createVehicle _spawnPos;
+				};
+				createVehicleCrew _technical;
+				sleep 2;
 				_technical setVehicleLock "LOCKEDPLAYER";
+				_driver = driver _technical;
+				_gunner = gunner _technical;
+				{_x addEventHandler ["Killed",{
+					[(_this select 0)] call twc_fnc_deleteDead;
+					twc_currentenemy=twc_currentenemy-1;
+					publicVariable "twc_currentenemy";
+					["TWC_Insurgency_adjustPoints", 2] call CBA_fnc_serverEvent;
+					
+				}]} foreach (units group _driver);
 				/*_technical addEventHandler ["Fired", {
 					[_this select 1, _this select 6, _this select 7] call twc_fnc_gunwalk; }];*/
 					
@@ -180,22 +218,23 @@ if (technicals == 0) exitwith {};
 					publicVariable "twc_nonAPS_list";
 				};
 */
-
+/*
 				_driver = _group2 createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];
 				_gunner = _group2 createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];
 				_driver moveInDriver _technical;
 				_gunner moveInGunner _technical;
-				
 				if (_technical in twc_3manvehs) then {
 					_Commander = _group2 createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];
 					_Commander moveInCommander _technical;
 				};
-				
-				_group2 addwaypoint [[_technical] call twc_fnc_standoffpos,0];
-				_wp1 = _group2 addwaypoint [[_technical] call twc_fnc_standoffpos,0];
-				_group2 addwaypoint [[_technical] call twc_fnc_standoffpos,0];
-				_group2 addwaypoint [[_technical] call twc_fnc_standoffpos,0];
-				_group2 addwaypoint [[_technical] call twc_fnc_standoffpos,0];
+				*/
+				_dis = 300 * (_airmult - 1);
+				_group2 = group _driver;
+				_group2 addwaypoint [[_technical] call twc_fnc_standoffpos,_dis];
+				_wp1 = _group2 addwaypoint [[_technical] call twc_fnc_standoffpos,_dis];
+				_group2 addwaypoint [[_technical] call twc_fnc_standoffpos,_dis];
+				_group2 addwaypoint [[_technical] call twc_fnc_standoffpos,_dis];
+				_group2 addwaypoint [[_technical] call twc_fnc_standoffpos,_dis];
 				 [_group2, 5] setWaypointType "CYCLE";
 				sleep 2;
 				_gunner dowatch twc_basepos;

@@ -34,7 +34,7 @@ _mortar setvehicleammo 1;
 
 _mortar lookat (_targetpos);
 
-if (missionNamespace getvariable ['twc_overridebaseobjs', 0] == 0) then {
+if ((missionNamespace getvariable ['twc_overridebaseobjs', 0] == 0) && (time > 600)) then {
 	twc_overridebaseobjs = 1;
 	[] spawn {
 		sleep 120;
