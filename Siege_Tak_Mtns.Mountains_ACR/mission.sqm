@@ -16,7 +16,7 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1930.3776,197.91412,5050.8418};
+		pos[]={1922.7715,197.60287,5051.6978};
 		dir[]={-0.74315244,-0.28417134,0.60579884};
 		up[]={-0.22026509,0.95877403,0.17955466};
 		aside[]={0.63184708,-9.4412826e-008,0.77510732};
@@ -49,15 +49,13 @@ addons[]=
 	"CUP_WheeledVehicles_Mastiff",
 	"twc_modern",
 	"twc_medical",
-	"twc_framework_public_modern_us",
-	"A3_Characters_F_Common",
-	"cba_ai"
+	"twc_framework_public_modern_us"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=23;
+		items=22;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -192,13 +190,6 @@ class AddonsMetaData
 		{
 			className="twc_framework_public_modern_us";
 			name="twc_framework_public_modern_us";
-		};
-		class Item22
-		{
-			className="cba_ai";
-			name="Community Base Addons - Artificial Intelligence";
-			author="CBA Team";
-			url="https://www.github.com/CBATeam/CBA_A3";
 		};
 	};
 };
@@ -12715,7 +12706,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=66;
+		items=64;
 		class Item0
 		{
 			dataType="Marker";
@@ -14477,7 +14468,7 @@ class Mission
 			};
 			id=1652;
 			type="Land_InfoStand_V2_F";
-			atlOffset=-0.0040588379;
+			atlOffset=-0.012115479;
 		};
 		class Item50
 		{
@@ -15637,79 +15628,11 @@ class Mission
 		};
 		class Item63
 		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={1910.1779,201.19041,5085.417};
-					};
-					side="West";
-					flags=2;
-					class Attributes
-					{
-					};
-					id=1733;
-					type="B_UAV_AI";
-					atlOffset=2.6403198;
-				};
-			};
-			class Attributes
-			{
-			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=1;
-				};
-				class Links
-				{
-					items=1;
-					class Item0
-					{
-						linkID=0;
-						item0=1733;
-						item1=1732;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-				};
-			};
-			id=1731;
-			atlOffset=2.6403198;
-		};
-		class Item64
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={1910.1759,201.68889,5085.376};
-			};
-			side="West";
-			flags=2;
-			class Attributes
-			{
-			};
-			id=1732;
-			type="CBA_B_InvisibleTarget";
-			atlOffset=2.6403198;
-		};
-		class Item65
-		{
 			dataType="Marker";
 			position[]={1923.11,193.513,5073.104};
 			name="twc_armourspawnpos";
 			type="Empty";
-			angle=355.12411;
+			angle=355.12408;
 			id=1734;
 			atlOffset=9.1552734e-005;
 		};
