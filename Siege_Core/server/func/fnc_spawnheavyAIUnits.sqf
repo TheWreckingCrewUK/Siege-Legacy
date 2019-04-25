@@ -106,6 +106,7 @@ for "_i" from 1 to 2 do {
 	sleep (2 + random 2);
 	twc_currentenemy=twc_currentenemy+ (count units _group);
 	publicVariable "twc_currentenemy";
+	[leader _group] execvm "Siege_Core\server\func\ai\fnc_aiscramble.sqf";
 	
 	(units _group) allowGetIn true;
 	_group setFormation "LINE";

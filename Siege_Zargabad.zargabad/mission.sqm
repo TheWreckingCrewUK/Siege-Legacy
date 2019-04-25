@@ -12,7 +12,7 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4070.9775,46.550343,3615.6179};
+		pos[]={4037.0916,41.70784,3597.3962};
 		dir[]={-0.85027874,-0.23075758,-0.47311521};
 		up[]={-0.20164864,0.97301209,-0.11220164};
 		aside[]={-0.48623961,-4.4133049e-007,0.87386256};
@@ -12675,7 +12675,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={4012.3601,25.066963,3584.063};
-			angle=1.9147465;
+			angle=1.9147464;
 			class Attributes
 			{
 				name="mainbase";
@@ -13749,7 +13749,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={4012.6111,25.071527,3584};
-			angle=1.9147465;
+			angle=1.9147464;
 			class Attributes
 			{
 				name="warning";

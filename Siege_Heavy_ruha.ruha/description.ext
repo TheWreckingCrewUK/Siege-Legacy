@@ -36,3 +36,5 @@ class CfgDebriefing {
 class ACE_Settings {
 	#include "Siege_Core\includes\AceSettings.hpp"
 };
+
+#include "Siege_Core\includes\killScreens.hpp"
