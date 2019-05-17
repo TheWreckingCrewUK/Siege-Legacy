@@ -55,7 +55,7 @@ highestPlayerCountReached = 0; // the highest count reached of total connected p
 		highestPlayerCountReached = _playerCount;
 		
 		if (highestPlayerCountReached > 8) then {
-			pointLimit = pointLimit + 50;
+			pointLimit = (pointLimit + 50) min 150;
 		};
 	};
 	publicVariable "pointLimit";

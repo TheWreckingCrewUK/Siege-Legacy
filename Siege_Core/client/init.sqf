@@ -45,6 +45,25 @@ player addEventHandler ["Killed",{
 	if (_globalTickets == 0) then {"tickets" call BIS_fnc_endMissionServer;};
 }];
 
+twc_pubcamo = 500;
+twc_firstspawned = 0;
+
+player addEventHandler ["Respawn", {
+	params ["_unit", "_corpse"];
+	
+	player setunittrait ["camouflageCoef", twc_pubcamo];
+	
+	
+	twc_lastspawned = time;
+	if (twc_firstspawned > 1) exitwith {};
+	twc_firstspawned = time;
+	twc_serstarttime = time;
+	
+	player addEventHandler ["GetInMan", {
+		params ["_unit", "_role", "_vehicle", "_turret"];
+		_vehicle setunittrait ["camouflageCoef", twc_pubcamo];
+	}];
+}];
 
 
 if ((!(forcedMap select 0)) && ((forcedMap select 1))) then {player setdamage 1};
