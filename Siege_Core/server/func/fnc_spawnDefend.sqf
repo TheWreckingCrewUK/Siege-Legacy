@@ -56,4 +56,5 @@ for "_i" from 1 to _total do{
 publicVariable "twc_currentdefender";
 //};
 _null = [leader _group, leader _group,250] spawn TWC_fnc_Defend;
+	[leader _group, 1] spawn TWC_fnc_aiscramble;
 _group setBehaviour "SAFE";

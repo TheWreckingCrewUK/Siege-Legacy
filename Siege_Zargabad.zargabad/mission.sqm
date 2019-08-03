@@ -12675,7 +12675,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={4012.3601,25.066963,3584.063};
-			angle=1.9147464;
+			angle=1.9147463;
 			class Attributes
 			{
 				name="mainbase";
@@ -13749,7 +13749,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={4012.6111,25.071527,3584};
-			angle=1.9147464;
+			angle=1.9147463;
 			class Attributes
 			{
 				name="warning";

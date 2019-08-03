@@ -22,6 +22,8 @@ publicVariable "twc_activefst";
 
 execvm "siege_core\client\sys_ragdoll\fn_initRagdoll.sqf";
 
+CIVILIAN setFriend [EAST, 1];
+
 
 twc_missionname = missionname;
 publicVariable "twc_missionname";

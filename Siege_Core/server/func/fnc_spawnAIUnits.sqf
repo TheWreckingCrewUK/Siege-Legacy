@@ -68,7 +68,8 @@ _spawnPos = [_pos,100, random 360] call SHK_pos;
 	
 
 };
-[leader _group] execvm "Siege_Core\server\func\ai\fnc_aiscramble.sqf";
+	[leader _group, 1] spawn TWC_fnc_aiscramble;
+
 //};
 
 _group setFormation "LINE";
