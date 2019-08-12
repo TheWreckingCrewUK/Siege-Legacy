@@ -130,11 +130,6 @@ if((typeOf player) in ["Modern_British_Squadleader","Modern_British_2IC","Modern
 	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Javelin Tube","",{execvm "siege_core\client\sys_player\boxes\smallcratejav_tube.sqf"},{((count units group player) > 3) && ((missionnamespace getvariable ["twc_javspawned", 0]) == 1)}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction,true] call ace_interact_menu_fnc_addActionToClass;
 
-	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Stinger Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratefim92launcher.sqf"},{((missionnamespace getvariable ["twc_fim92spawned", 0]) == 0)}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction,true] call ace_interact_menu_fnc_addActionToClass;
-
-	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Stinger Ammo","",{execvm "siege_core\client\sys_player\boxes\smallcratefim92ammo.sqf"},{((missionnamespace getvariable ["twc_fim92spawned", 0]) == 1)}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction,true] call ace_interact_menu_fnc_addActionToClass;
 };
 
 
