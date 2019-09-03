@@ -53,7 +53,7 @@ _box AddMagazineCargoGlobal ["twc_l5a4_g",4 + _low];
 
 _box AddMagazineCargoGlobal ["ACE_SpareBarrel",1];
 
-_box AddMagazineCargoGlobal ["UK3CB_BAF_762_100Rnd_T",5 + _low];
+_box AddMagazineCargoGlobal ["UK3CB_BAF_762_100Rnd_T",5 + _mid];
 
 _box AddMagazineCargoGlobal ["ACE_10Rnd_338_300gr_HPBT_Mag",5 + _mid];
 _box AddMagazineCargoGlobal ["ACE_10Rnd_338_API526_Mag",2 + _low];
@@ -65,8 +65,7 @@ _box AddMagazineCargoGlobal ["UGL_FlareWhite_F",5];
 _box AddMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",10];
 _box AddMagazineCargoGlobal ["1Rnd_Smoke_Grenade_shell",5];
 
-_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd",4 + _low];
-_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd_T",2 + _low];
+_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd_T",5 + _mid];
 
 _box AddMagazineCargoGlobal ["UK3CB_BAF_762_L42A1_20Rnd_T",2 + _low];
 _box AddMagazineCargoGlobal ["UK3CB_BAF_762_L42A1_20Rnd",5 + _low];

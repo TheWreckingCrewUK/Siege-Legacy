@@ -85,9 +85,6 @@ if((typeOf player) in ["twc_ana_commander","twc_ana_subcommander"])then{
 
 	_anaaction5 = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "siege_core\client\sys_player\boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_anaaction5,true] call ace_interact_menu_fnc_addActionToClass;	
-	
-	_anaaction6 = ["SpawnmineCreate","Spawn Claymores","",{execvm "siege_core\client\sys_player\boxes\smallcratemines.sqf"},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_anaaction6,true] call ace_interact_menu_fnc_addActionToClass;	
 };
 
 
@@ -118,10 +115,7 @@ if((typeOf player) in ["Modern_British_Squadleader","Modern_British_2IC","Modern
 	_UKaction5 = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "siege_core\client\sys_player\boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction5,true] call ace_interact_menu_fnc_addActionToClass;	
 	
-	_UKaction6 = ["SpawnmineCreate","Spawn Claymores","",{execvm "siege_core\client\sys_player\boxes\smallcratemines.sqf"},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction6,true] call ace_interact_menu_fnc_addActionToClass;	
-	
-	_UKaction6 = ["SpawnmineCreate","Spawn Heavy AT","",{execvm "siege_core\client\sys_player\boxes\smallcratenlaw.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	_UKaction6 = ["SpawnmineCreate","Spawn NLAWs","",{execvm "siege_core\client\sys_player\boxes\smallcratenlaw.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction6,true] call ace_interact_menu_fnc_addActionToClass;
 
 	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Javelin Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratejav.sqf"},{((count units group player) > 3) && ((missionnamespace getvariable ["twc_javspawned", 0]) == 0)}] call ace_interact_menu_fnc_createAction;
@@ -141,6 +135,12 @@ if((typeOf player) in ["Modern_pol_commander","Modern_pol_subcommander", "Modern
 
 	_hUKaction3 = ["SpawnsmallUKCreate","Spawn Repair Kit","",{execvm "siege_core\client\sys_player\boxes\RepairKit.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_hUKaction3,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_armouraction1 = ["spawnl111","Spawn HMMWV (M2)","",{["rhsusf_m1043_w_m2"] execvm "siege_core\client\sys_player\vehicles\spawnarmour_inf.sqf"},{(twc_maxenemy > 10) && (twc_maxenemy < 70) && (count units group player > 0)}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_armouraction1,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_armouraction1 = ["spawnl111","Spawn HMMWV (MK19)","",{["rhsusf_m1025_w_mk19"] execvm "siege_core\client\sys_player\vehicles\spawnarmour_inf.sqf"},{(twc_maxenemy >= 70) && (count units group player > 0)}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_armouraction1,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_UKaction3 = ["spawn50","Spawn .50 Ammo","",{execvm "siege_core\client\sys_player\boxes\50calammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction3,true] call ace_interact_menu_fnc_addActionToClass;
@@ -151,10 +151,7 @@ if((typeOf player) in ["Modern_pol_commander","Modern_pol_subcommander", "Modern
 	_UKaction5 = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "siege_core\client\sys_player\boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction5,true] call ace_interact_menu_fnc_addActionToClass;	
 	
-	_UKaction6 = ["SpawnmineCreate","Spawn Claymores","",{execvm "siege_core\client\sys_player\boxes\smallcratemines.sqf"},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction6,true] call ace_interact_menu_fnc_addActionToClass;	
-	
-	_UKaction6 = ["SpawnmineCreate","Spawn Heavy AT","",{execvm "siege_core\client\sys_player\boxes\smallcratenlaw.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	_UKaction6 = ["SpawnmineCreate","Spawn NLAWs","",{execvm "siege_core\client\sys_player\boxes\smallcratenlaw.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction6,true] call ace_interact_menu_fnc_addActionToClass;
 };
 
@@ -174,9 +171,6 @@ if((typeOf player) in ["Modern_ger_commander","Modern_ger_subcommander","Modern_
 
 	_UKaction5 = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "siege_core\client\sys_player\boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction5,true] call ace_interact_menu_fnc_addActionToClass;	
-	
-	_UKaction6 = ["SpawnmineCreate","Spawn Claymores","",{execvm "siege_core\client\sys_player\boxes\smallcratemines.sqf"},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction6,true] call ace_interact_menu_fnc_addActionToClass;	
 	
 	_UKaction6 = ["SpawnmineCreate","Spawn AT Rockets","",{execvm "siege_core\client\sys_player\boxes\smallcratecgrockets.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction6,true] call ace_interact_menu_fnc_addActionToClass;
@@ -205,9 +199,6 @@ if((typeOf player) in ["twc_men_1990_us_w_SquadLeader","twc_men_1990_us_w_teamle
 
 	_usaction5 = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "siege_core\client\sys_player\boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_usaction5,true] call ace_interact_menu_fnc_addActionToClass;	
-	
-	_usaction6 = ["SpawnmineCreate","Spawn Claymores","",{execvm "siege_core\client\sys_player\boxes\smallcratemines.sqf"},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_usaction6,true] call ace_interact_menu_fnc_addActionToClass;	
 };
 
 if((typeOf player) in ["Modern_USMC_Squadleader","Modern_USMC_Teamleader", "Modern_USMC_Squadleader_d","Modern_USMC_Teamleader_d"])then{
@@ -238,10 +229,13 @@ if((typeOf player) in ["Modern_USMC_Squadleader","Modern_USMC_Teamleader", "Mode
 
 	_charlieaction4 = ["spawn762","Spawn 7.62 Ammo","",{execvm "siege_core\client\sys_player\boxes\762ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_charlieaction4,true] call ace_interact_menu_fnc_addActionToClass;
-	
-	_charlieaction5 = ["SpawnmineCreate","Spawn Claymores","",{execvm "siege_core\client\sys_player\boxes\smallcratemines.sqf"},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_charlieaction5,true] call ace_interact_menu_fnc_addActionToClass;	
 
+	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Javelin Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratejav.sqf"},{((count units group player) > 3) && ((missionnamespace getvariable ["twc_javspawned", 0]) == 0)}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Javelin Tube","",{execvm "siege_core\client\sys_player\boxes\smallcratejav_tube.sqf"},{((count units group player) > 3) && ((missionnamespace getvariable ["twc_javspawned", 0]) == 1)}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction,true] call ace_interact_menu_fnc_addActionToClass;
+	
 		
 };
 
@@ -302,7 +296,7 @@ if((typeOf player) in ["Modern_British_Quartermaster","Modern_British_FSTForward
 	_fstaction7 = ["SpawnsmallUKCreate","Spawn Small UK Crate","",{execvm "siege_core\client\sys_player\boxes\smallcrateuk.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_fstaction7,true] call ace_interact_menu_fnc_addActionToClass;
 	
-	_UKaction6 = ["SpawnmineCreate","Spawn Heavy AT","",{execvm "siege_core\client\sys_player\boxes\smallcratenlaw.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	_UKaction6 = ["SpawnmineCreate","Spawn NLAWs","",{execvm "siege_core\client\sys_player\boxes\smallcratenlaw.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction6,true] call ace_interact_menu_fnc_addActionToClass;
 };
 

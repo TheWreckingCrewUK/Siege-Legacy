@@ -51,7 +51,7 @@ _box AddMagazineCargoGlobal ["UGL_FlareWhite_F",5];
 _box AddMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",20];
 _box AddMagazineCargoGlobal ["1Rnd_Smoke_Grenade_shell",5];
 
-_box AddMagazineCargoGlobal ["rhsusf_200Rnd_556x45_soft_pouch",5];
+_box AddMagazineCargoGlobal ["rhsusf_200Rnd_556x45_soft_pouch",5 + _low];
 
 _box AddMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m118_special_Mag",5];
 
