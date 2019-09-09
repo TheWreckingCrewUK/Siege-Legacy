@@ -106,7 +106,14 @@ for "_i" from 1 to 2 do {
 	sleep (2 + random 2);
 	twc_currentenemy=twc_currentenemy+ (count units _group);
 	publicVariable "twc_currentenemy";
+	
+
+if (twc_heavymode == 1) then {
+	[leader _group, 3] spawn TWC_fnc_aiscramble;
+} else 
+{
 	[leader _group, 1] spawn TWC_fnc_aiscramble;
+};
 	(units _group) allowGetIn true;
 	_group setFormation "LINE";
 	if (twc_siege_baseside == 0) then {
@@ -118,7 +125,7 @@ for "_i" from 1 to 2 do {
 	} else
 	{ 
 		if ((random 2) > 1) then {
-			systemchat "chasing";
+			
 			_enemy = playableUnits select (floor (random (count playableunits)));
 
 			_group addwaypoint [[getpos _enemy, 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos, 0];

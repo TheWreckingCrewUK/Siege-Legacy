@@ -56,5 +56,12 @@ for "_i" from 1 to _total do{
 publicVariable "twc_currentdefender";
 //};
 _null = [leader _group, leader _group,250] spawn TWC_fnc_Defend;
+
+
+if (twc_heavymode == 1) then {
+	[leader _group, 3] spawn TWC_fnc_aiscramble;
+} else 
+{
 	[leader _group, 1] spawn TWC_fnc_aiscramble;
+};
 _group setBehaviour "SAFE";

@@ -68,8 +68,13 @@ _spawnPos = [_pos,100, random 360] call SHK_pos;
 	
 
 };
-	[leader _group, 1] spawn TWC_fnc_aiscramble;
 
+if (twc_heavymode == 1) then {
+	[leader _group, 3] spawn TWC_fnc_aiscramble;
+} else 
+{
+	[leader _group, 1] spawn TWC_fnc_aiscramble;
+};
 //};
 
 _group setFormation "LINE";
@@ -81,7 +86,7 @@ _group addwaypoint [twc_basepos, 20 * twc_roamsize] call CBA_fnc_randPos;
 [_group, twc_wpcount+2] setWaypointStatements ["true", "[this, twc_basepos,100] call CBA_fnc_taskDefend"]
 } else
 { if ((random 2) > 1) then {
-systemchat "chasing";
+
 _enemy = playableUnits select (floor (random (count playableunits)));
 
 _group addwaypoint [[getpos _enemy, 100 * twc_roamsize, 300 * twc_roamsize, 3, 0, 20, 0] call BIS_fnc_findSafePos, 0];
