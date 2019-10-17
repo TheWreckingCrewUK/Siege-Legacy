@@ -35,8 +35,9 @@ clearitemCargoGlobal _box;
 
 //supplies
 
-_box addItemCargoGlobal ["ClaymoreDirectionalMine_Remote_Mag",5 - _low max 1];
+_box addItemCargoGlobal ["APERSTripMine_Wire_Mag",3 - _low max 1];
+_box addItemCargoGlobal ["ClaymoreDirectionalMine_Remote_Mag",3 - _low max 1];
 _box addItemCargoGlobal ["ACE_Clacker",3 - _low max 1];
 
-[player, _box] call ace_cargo_fnc_startLoadIn;
+//[player, _box] call ace_cargo_fnc_startLoadIn;
 };
