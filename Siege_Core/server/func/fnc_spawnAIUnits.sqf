@@ -116,7 +116,7 @@ if (twc_activefst == 1) then {_armourmult = _armourmult + 0.4};
 	//if (totalPoints > (pointLimit / 2)) then {
 		if ((technicals > 0) || (_armourmult > 1.5)) then {
 			if (random 1 > 0.3) then {
-			systemchat "technical";
+			
 		technicals = technicals - 10;
 		publicVariable "technicals";
 _group2 = createGroup East;
@@ -124,7 +124,7 @@ _spawnPos = [_pos,100, random 360] call SHK_pos;
 
 _chosencar = enemyTechnical call BIS_fnc_selectRandom;
 _technical = _chosencar createVehicle _spawnPos;
-
+_technical setvehiclelock "lockedplayer";
 _driver = _group2 createUnit [(townSpawn select (floor random (count townspawn))), _spawnPos,[], 0.3,"NONE"];
 _gunner = _group2 createUnit [(townSpawn select (floor random (count townspawn))), _spawnPos,[], 0.3,"NONE"];
 _driver moveInDriver _technical;

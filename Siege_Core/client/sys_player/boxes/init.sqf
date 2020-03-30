@@ -229,12 +229,6 @@ if((typeOf player) in ["Modern_USMC_Squadleader","Modern_USMC_Teamleader", "Mode
 
 	_charlieaction4 = ["spawn762","Spawn 7.62 Ammo","",{execvm "siege_core\client\sys_player\boxes\762ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_charlieaction4,true] call ace_interact_menu_fnc_addActionToClass;
-
-	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Javelin Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratejav.sqf"},{((count units group player) > 3) && ((missionnamespace getvariable ["twc_javspawned", 0]) == 0)}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction,true] call ace_interact_menu_fnc_addActionToClass;
-
-	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Javelin Tube","",{execvm "siege_core\client\sys_player\boxes\smallcratejav_tube.sqf"},{((count units group player) > 3) && ((missionnamespace getvariable ["twc_javspawned", 0]) == 1)}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction,true] call ace_interact_menu_fnc_addActionToClass;
 	
 		
 };

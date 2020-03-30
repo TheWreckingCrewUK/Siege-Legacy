@@ -171,6 +171,7 @@ if (technicals == 0) exitwith {};
 					_airmult = 2;
 					_spawnPos = _spawnPos vectoradd [0,0,150];
 					_technical = createVehicle [_chosencar, _spawnPos, [], 0, "FLY"];
+					_technical setvehiclelock "lockedplayer";
 					if (_chosencar iskindof "plane") then {
 						_technical setvelocity [150 * (sin (getdir _technical )), 150 * (cos (getdir _technical )), 0] ;
 						_airmult = 3;
@@ -178,7 +179,7 @@ if (technicals == 0) exitwith {};
 					[_technical] spawn {
 						params ["_technical"];
 						waituntil {(fuel _technical) < 0.9};
-						systemchat "going home";
+						
 						{deletewaypoint _x} foreach waypoints (group driver _technical);
 						{deletewaypoint _x} foreach waypoints (group driver _technical);
 						{deletewaypoint _x} foreach waypoints (group driver _technical);
