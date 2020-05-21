@@ -27,7 +27,7 @@ if ((random 1) < 0.3) then {mortarcount = 1};
 */
 TWC_Building_Style = "Med";
 
-twc_difficulty = 0.9;
+twc_difficulty = 1.1;
 
 //roamsize multiplies the size of the random waypoint divergence from base. A setting of 1 means each waypoint is up to 100-200 meters away from base. Set higher for maps where there's a lot of cover and you don't want the enemies to just swim in so that you can use higher difficulties without swamping the base. The downside is that they take longer to get to engagement range so there's more downtime at mission start.
 twc_roamsize = 1;
@@ -38,7 +38,7 @@ twc_roamsize = 1;
 
 
 //multiplier for how much the enemy increases with player count, 1 is the standard figure. Set higher with lower overall difficulty for maps where there's a lot of ground for a small group to cover. Set lower for maps where higher player count doesn't make much difference to how difficult the area is to defend.
-twc_diff_scaler = 1.6;
+twc_diff_scaler = 3;
 
 //add in an object name and the game will create a location there and spawn enemies from it
 customlocations = [camp1, camp2, camp3];

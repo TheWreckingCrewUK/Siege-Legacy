@@ -24,3 +24,12 @@ twc_fnc_standoffpos = compile preprocessfilelinenumbers "siege_core\server\func\
 twc_fnc_aps_server = compile preprocessfilelinenumbers "siege_core\server\func\fnc_APS_server.sqf";
 
 call twc_fnc_aps_server;
+
+addMissionEventHandler ["EntityKilled", {
+	params ["_unit", "_killer", "_instigator", "_useEffects"];
+	[_unit] spawn {
+		params ["_unit"];
+		sleep 30;
+		deletevehicle _unit;
+	};
+}];

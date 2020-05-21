@@ -105,6 +105,24 @@ if((typeOf player) in ["Modern_British_Squadleader","Modern_British_2IC","Modern
 
 	_UKaction = ["SpawnsmallUKCreate","Spawn Small UK Crate","",{execvm "siege_core\client\sys_player\boxes\smallcrateuk.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn FIM-92 Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratefim92launcher.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn FIM-92 Missiles","",{execvm "siege_core\client\sys_player\boxes\smallcratefim92ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn TOW Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratetowlauncher.sqf"},{(!(missionnamespace getvariable ["twc_towspawned", false]))}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towmissiles","Spawn TOW Missiles","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towhe","Tandem","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo_tandem.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "towmissiles"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towhe","HE","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo_he.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "towmissiles"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_UKaction3 = ["spawn50","Spawn .50 Ammo","",{execvm "siege_core\client\sys_player\boxes\50calammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction3,true] call ace_interact_menu_fnc_addActionToClass;
@@ -153,6 +171,25 @@ if((typeOf player) in ["Modern_pol_commander","Modern_pol_subcommander", "Modern
 	
 	_UKaction6 = ["SpawnmineCreate","Spawn NLAWs","",{execvm "siege_core\client\sys_player\boxes\smallcratenlaw.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction6,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn FIM-92 Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratefim92launcher.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn FIM-92 Missiles","",{execvm "siege_core\client\sys_player\boxes\smallcratefim92ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn TOW Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratetowlauncher.sqf"},{(!(missionnamespace getvariable ["twc_towspawned", false]))}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towmissiles","Spawn TOW Missiles","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towhe","Tandem","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo_tandem.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "towmissiles"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towhe","HE","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo_he.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "towmissiles"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+	
 };
 
 if((typeOf player) in ["Modern_ger_commander","Modern_ger_subcommander","Modern_ger_commander_d","Modern_ger_subcommander_d"])then{
@@ -174,6 +211,25 @@ if((typeOf player) in ["Modern_ger_commander","Modern_ger_subcommander","Modern_
 	
 	_UKaction6 = ["SpawnmineCreate","Spawn AT Rockets","",{execvm "siege_core\client\sys_player\boxes\smallcratecgrockets.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction6,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn FIM-92 Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratefim92launcher.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn FIM-92 Missiles","",{execvm "siege_core\client\sys_player\boxes\smallcratefim92ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn TOW Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratetowlauncher.sqf"},{(!(missionnamespace getvariable ["twc_towspawned", false]))}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towmissiles","Spawn TOW Missiles","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towhe","Tandem","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo_tandem.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "towmissiles"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towhe","HE","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo_he.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "towmissiles"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+	
 };
 
 
@@ -198,7 +254,26 @@ if((typeOf player) in ["twc_men_1990_us_w_SquadLeader","twc_men_1990_us_w_teamle
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_usaction4,true] call ace_interact_menu_fnc_addActionToClass;
 
 	_usaction5 = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "siege_core\client\sys_player\boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_usaction5,true] call ace_interact_menu_fnc_addActionToClass;	
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_usaction5,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn FIM-92 Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratefim92launcher.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn FIM-92 Missiles","",{execvm "siege_core\client\sys_player\boxes\smallcratefim92ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn TOW Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratetowlauncher.sqf"},{(!(missionnamespace getvariable ["twc_towspawned", false]))}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towmissiles","Spawn TOW Missiles","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towhe","Tandem","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo_tandem.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "towmissiles"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towhe","HE","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo_he.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "towmissiles"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+		
 };
 
 if((typeOf player) in ["Modern_USMC_Squadleader","Modern_USMC_Teamleader", "Modern_USMC_Squadleader_d","Modern_USMC_Teamleader_d"])then{
@@ -229,6 +304,25 @@ if((typeOf player) in ["Modern_USMC_Squadleader","Modern_USMC_Teamleader", "Mode
 
 	_charlieaction4 = ["spawn762","Spawn 7.62 Ammo","",{execvm "siege_core\client\sys_player\boxes\762ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_charlieaction4,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn FIM-92 Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratefim92launcher.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn FIM-92 Missiles","",{execvm "siege_core\client\sys_player\boxes\smallcratefim92ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn TOW Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratetowlauncher.sqf"},{(!(missionnamespace getvariable ["twc_towspawned", false]))}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towmissiles","Spawn TOW Missiles","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towhe","Tandem","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo_tandem.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "towmissiles"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towhe","HE","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo_he.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "towmissiles"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+	
 	
 		
 };
@@ -251,14 +345,6 @@ if((typeOf player) in ["Modern_Artillery_Commander"])then{
 
 };
 
-/*
-if((typeOf player) in ["Modern_British_Sniper_coin", "Modern_British_Spotter_coin"])then{
-
-	_snaction1 = ["Spawnsnipbox","Spawn Sniper Ammo Box","",{execvm "siege_core\client\sys_player\boxes\smallCratesniper.sqf"},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_snaction1,true] call ace_interact_menu_fnc_addActionToClass;
-};
-?
-*/
 
 
 if((typeOf player) in ["Modern_British_Quartermaster","Modern_British_FSTForwardObserver","Modern_British_FSTCommander"])then{
@@ -292,6 +378,25 @@ if((typeOf player) in ["Modern_British_Quartermaster","Modern_British_FSTForward
 	
 	_UKaction6 = ["SpawnmineCreate","Spawn NLAWs","",{execvm "siege_core\client\sys_player\boxes\smallcratenlaw.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction6,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn FIM-92 Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratefim92launcher.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn FIM-92 Missiles","",{execvm "siege_core\client\sys_player\boxes\smallcratefim92ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn TOW Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratetowlauncher.sqf"},{(!(missionnamespace getvariable ["twc_towspawned", false]))}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towmissiles","Spawn TOW Missiles","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towhe","Tandem","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo_tandem.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "towmissiles"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towhe","HE","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo_he.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "towmissiles"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+	
 };
 
 if((typeOf player) in ["Modern_British_Quartermaster","1990_British_quartermaster_Desert"])then{
@@ -407,6 +512,25 @@ if((typeOf player) in ["2000_British_SectionCommander_Desert","2000_British_Sect
 
 	_hfstaction4 = ["spawn762","Spawn 7.62 Ammo","",{execvm "siege_core\client\sys_player\boxes\762ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_hfstaction4,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn FIM-92 Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratefim92launcher.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn FIM-92 Missiles","",{execvm "siege_core\client\sys_player\boxes\smallcratefim92ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn TOW Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratetowlauncher.sqf"},{(!(missionnamespace getvariable ["twc_towspawned", false]))}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towmissiles","Spawn TOW Missiles","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towhe","Tandem","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo_tandem.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "towmissiles"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towhe","HE","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo_he.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "towmissiles"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+	
 	
 
 	
@@ -440,6 +564,25 @@ if((typeOf player) in ["2000_British_FSTCommander_Desert"])then{
 	
 	_hUKaction3 = ["SpawnsmallUKCreate","Spawn UK Crate","",{execvm "siege_core\client\sys_player\boxes\smallcrateuk2000.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_hUKaction3,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn FIM-92 Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratefim92launcher.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn FIM-92 Missiles","",{execvm "siege_core\client\sys_player\boxes\smallcratefim92ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn TOW Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratetowlauncher.sqf"},{(!(missionnamespace getvariable ["twc_towspawned", false]))}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towmissiles","Spawn TOW Missiles","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towhe","Tandem","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo_tandem.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "towmissiles"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towhe","HE","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo_he.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "towmissiles"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+	
 };
 
 
@@ -465,6 +608,25 @@ if((typeOf player) in ["TWC_2000_US_Army_SectionCommander","TWC_2000_US_Army_Tea
 
 	_hfstaction4 = ["spawn762","Spawn 7.62 Ammo","",{execvm "siege_core\client\sys_player\boxes\762ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_hfstaction4,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn FIM-92 Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratefim92launcher.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn FIM-92 Missiles","",{execvm "siege_core\client\sys_player\boxes\smallcratefim92ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["SpawnsmallUKCreate","Spawn TOW Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratetowlauncher.sqf"},{(!(missionnamespace getvariable ["twc_towspawned", false]))}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towmissiles","Spawn TOW Missiles","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towhe","Tandem","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo_tandem.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "towmissiles"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_UKaction = ["towhe","HE","",{execvm "siege_core\client\sys_player\boxes\smallcratetowammo_he.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "towmissiles"],_UKaction,true] call ace_interact_menu_fnc_addActionToClass;
+	
 	
 
 	

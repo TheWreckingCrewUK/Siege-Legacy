@@ -29,14 +29,14 @@ customlocations = [camp1, camp2, camp3];
 
 
 mortarcount = (random 6);
-enemyTechnical =["rhs_btr80a_msv", "rhs_bmp2d_msv", "rhs_bmp1p_tv", "rhs_t72be_tv", "rhs_t90a_tv", "rhs_bmp2d_msv", "rhs_t72be_tv", "rhs_t90a_tv", "RHS_Mi8MTV3_heavy_vvsc", "rhs_mi28n_vvsc", "RHS_Su25SM_vvsc"];
+enemyTechnical =["rhs_btr80a_vdv", "rhs_btr80a_vdv", "rhs_bmp2d_msv", "rhs_btr80a_vdv", "rhs_btr80a_vdv", "rhs_bmp2d_msv", "rhs_t72be_tv", "rhs_t90a_tv", "rhs_bmp2d_msv", "rhs_t72be_tv", "rhs_t90a_tv", "RHS_Mi8MTV3_heavy_vvsc", "rhs_mi28n_vvsc", "RHS_Su25SM_vvsc"];
 
 pointLimit = 40;
 publicVariable "pointLimit";
 
 twc_siege_skiptowns = 1;
 
-twc_difficulty = 1.3;
+twc_difficulty = 0.8;
 publicVariable "twc_difficulty";
 
 twc_is90 = 1;
@@ -46,12 +46,12 @@ twc_wdveh = 1;
 publicVariable "twc_wdveh";
 
 //multiplier for how much the enemy increases with player count, 1 is the standard figure. Set higher with lower overall difficulty for maps where there's a lot of ground for a small group to cover. Set lower for maps where higher player count doesn't make much difference to how difficult the area is to defend.
-twc_diff_scaler = 1.4;
+twc_diff_scaler = 2.5;
 publicVariable "twc_diff_scaler";
 
 
 //roamsize multiplies the size of the random waypoint divergence from base. A setting of 1 means each waypoint is up to 100-200 meters away from base. Set higher for maps where there's a lot of cover and you don't want the enemies to just swim in so that you can use higher difficulties without swamping the base. The downside is that they take longer to get to engagement range so there's more downtime at mission start.
-twc_roamsize = 1.8;
+twc_roamsize = 2.5;
 
 
 //wpcount adds extra waypoints that scale by the roamsize variable. If left unset in the mission's initserver then it will default to 1. The game will add 2 waypoints near base regardless of this value. Set this to 0 to have them move straight to base, set to 2-4 if you want enemies to loiter around nearby a lot but not make a play for the base that often.
@@ -105,11 +105,6 @@ idfbasesize = 70;
 publicvariable "idfbasesize";
 
 
-//Sets up the unit Caching. I have no idea why i have to sleep and wait.
-[]spawn{sleep 120;
-["AllVehicles","init",{
-	[false,(_this select 0),1000] spawn twc_fnc_initVehicleCache
-}, true, ["Man","Static"], true] call CBA_fnc_addClassEventHandler;
-};
+
 // event handlers run in the non-scheduled environment (can't be execVM)
 [] call compile preprocessFile "siege_core\server\init.sqf";

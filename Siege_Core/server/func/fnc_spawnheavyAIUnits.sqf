@@ -171,6 +171,7 @@ if (technicals == 0) exitwith {};
 					_airmult = 2;
 					_spawnPos = _spawnPos vectoradd [0,0,150];
 					_technical = createVehicle [_chosencar, _spawnPos, [], 0, "FLY"];
+					_technical setvariable ["twc_walk_onlydisperse", 1];
 					_technical setvehiclelock "lockedplayer";
 					if (_chosencar iskindof "plane") then {
 						_technical setvelocity [150 * (sin (getdir _technical )), 150 * (cos (getdir _technical )), 0] ;

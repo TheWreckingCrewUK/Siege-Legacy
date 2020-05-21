@@ -13,6 +13,8 @@ if ((twc_ammotime-time) > 0) then {
 	hint "More Ammunition Is Now Available From The Spawner";
 	
 	} else {
+twc_ammotime=time+twc_ammotime_amount;
+publicVariable "twc_ammotime";
 _boxClass = "ACE_Box_Ammo";
 
 _box = _boxClass createVehicle (getPos AmmoBoxSpawner);
@@ -35,6 +37,8 @@ _box AddWeaponCargoGlobal ["rhs_weap_M136",1];
 //supplies
 _box AddMagazineCargoGlobal ["30Rnd_556x45_Stanag",20 + _high];
 _box AddMagazineCargoGlobal ["30Rnd_556x45_Stanag_Tracer_Red",5 + _mid];
+
+_box AddMagazineCargoGlobal ["rhsusf_200Rnd_556x45_soft_pouch",5 + _low];
 
 _box AddMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",5 + _low];
 

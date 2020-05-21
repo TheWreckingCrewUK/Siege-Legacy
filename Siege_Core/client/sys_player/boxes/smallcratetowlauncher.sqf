@@ -15,9 +15,9 @@ if ((twc_ammotime-time) > 0) then {
 
 twc_ammotime=time+twc_ammotime_amount;
 publicVariable "twc_ammotime";
-
 _boxClass = "ACE_Box_Ammo";
-
+twc_towspawned = true;
+publicvariable "twc_towspawned";
 _box = _boxClass createVehicle (getPos AmmoBoxSpawner);
 
 
@@ -33,11 +33,8 @@ clearMagazineCargoGlobal _box;
 clearitemCargoGlobal _box;
 
 //Weapons
-_box AddMagazineCargoGlobal ["rhs_fim92_mag",3 + _low];
-
-
-
-
+_box AddWeaponCargoGlobal ["ace_compat_rhs_usf3_tow_carry",1];
+_box AddWeaponCargoGlobal ["ace_csw_m220CarryTripod",1];
 
 
 
