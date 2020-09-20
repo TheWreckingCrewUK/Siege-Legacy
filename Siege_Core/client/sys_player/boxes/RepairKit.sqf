@@ -13,7 +13,7 @@ if ((twc_ammotime-time) > 0) then {
 	} else {
 
 twc_ammotime=time+twc_ammotime_amount;
-publicVariable "twc_ammotime";
+
 _boxClass = "GroundWeaponHolder";
 
 

@@ -14,7 +14,6 @@ if ((twc_ammotime-time) > 0) then {
 	
 	} else {
 
-twc_ammotime=time+twc_ammotime_amount;
 publicVariable "twc_ammotime";
 
 
@@ -30,7 +29,9 @@ clearitemCargoGlobal _box;
 //Weapons
 
 //supplies
-_box AddMagazineCargoGlobal ["UK3CB_BAF_338_5Rnd",10];
+
+_box AddMagazineCargoGlobal ["ACE_10Rnd_338_300gr_HPBT_Mag",10 + _mid];
+_box AddMagazineCargoGlobal ["ACE_10Rnd_338_API526_Mag",2 + _low];
 
 _box AddMagazineCargoGlobal ["rhsusf_mag_17Rnd_9x19_JHP",10];
 

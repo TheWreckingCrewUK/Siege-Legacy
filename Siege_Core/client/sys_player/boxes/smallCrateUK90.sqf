@@ -13,6 +13,7 @@ if ((twc_ammotime-time) > 0) then {
 	hint "More Ammunition Is Now Available From The Spawner";
 	
 	} else {
+twc_ammotime=time+twc_ammotime_amount;
 _boxClass = "ACE_Box_Ammo";
 
 _box = _boxClass createVehicle (getPos AmmoBoxSpawner);

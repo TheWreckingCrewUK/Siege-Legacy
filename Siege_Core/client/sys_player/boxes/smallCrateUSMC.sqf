@@ -15,7 +15,6 @@ if ((twc_ammotime-time) > 0) then {
 	} else {
 
 twc_ammotime=time+twc_ammotime_amount;
-publicVariable "twc_ammotime";
 
 _boxClass = "ACE_Box_Ammo";
 
@@ -67,8 +66,8 @@ _box AddMagazineCargoGlobal ["1Rnd_Smoke_Grenade_shell",10];
 _box AddMagazineCargoGlobal ["rhsusf_200Rnd_556x45_soft_pouch",5 + _mid];
 
 _box AddMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",10 + _low];
-_box AddMagazineCargoGlobal ["rhsusf_8Rnd_00Buck",8];
-_box AddMagazineCargoGlobal ["rhsusf_8Rnd_Slug",8];
+_box AddMagazineCargoGlobal ["CUP_8Rnd_B_Beneli_74Pellets",8];
+_box AddMagazineCargoGlobal ["CUP_8Rnd_B_Beneli_74Slug",8];
 
 _box AddMagazineCargoGlobal ["rhsusf_10Rnd_762x51_m118_special_Mag",5 + _low];
 

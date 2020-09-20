@@ -6,9 +6,9 @@
 *
 *
 */
-if ((twc_ammotime-time+300) > 0) then {
-	hint format ["You can only spawn a crate every %1 seconds currently. %2 seconds remaining.", twc_ammotime_amount, ceil (twc_ammotime-time+300)];
-	waituntil {(twc_ammotime-time+300) < 0};
+if ((twc_ammotime-time) > 0) then {
+	hint format ["The spawner is on cooldown currently. %2 seconds remaining.", twc_ammotime_amount, ceil (twc_ammotime-time)];
+	waituntil {(twc_ammotime-time) < 0};
 	hint "More Ammunition Is Now Available From The Spawner";
 	
 	} else {
@@ -19,7 +19,6 @@ if ((twc_ammotime-time+300) > 0) then {
 _box = _boxClass createVehicle (getPos AmmoBoxSpawner);
 
 twc_ammotime=time+twc_ammotime_amount;
-publicVariable "twc_ammotime";
 
 //clearWeaponCargoGlobal _box;
 //clearBackpackCargoGlobal _box;

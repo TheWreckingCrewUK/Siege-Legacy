@@ -15,7 +15,6 @@ if ((twc_ammotime-time+600) > 0) then {
 	} else {
 
 twc_ammotime=time+twc_ammotime_amount;
-publicVariable "twc_ammotime";
 
 _players = ( count(allPlayers - entities "HeadlessClient_F"));
 _low = (_players * 0.3);

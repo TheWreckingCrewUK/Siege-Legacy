@@ -6,17 +6,16 @@
 *
 *
 */
-if ((twc_ammotime-time+300) > 0) then {
-	hint format ["The spawner is on cooldown currently and this is a special crate. %2 seconds remaining until this crate can be spawned.", twc_ammotime_amount, ceil (twc_ammotime-time+300)];
-	waituntil {(twc_ammotime-time+300) < 0};
-	hint "Special Ammunition Is Now Available From The Spawner";
+if ((twc_ammotime-time) > 0) then {
+	hint format ["The spawner is on cooldown currently. %2 seconds remaining.", twc_ammotime_amount, ceil (twc_ammotime-time)];
+	waituntil {(twc_ammotime-time) < 0};
+	hint "More Ammunition Is Now Available From The Spawner";
 	
 	} else {
 	
 
 
 twc_ammotime=time+twc_ammotime_amount;
-publicVariable "twc_ammotime";
 
 
 _boxClass = "UK3CB_BAF_Box_M6";

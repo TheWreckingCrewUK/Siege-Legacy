@@ -14,7 +14,6 @@ if ((twc_ammotime-time) > 0) then {
 	} else {
 
 twc_ammotime=time+twc_ammotime_amount;
-publicVariable "twc_ammotime";
 
 _boxClass = "ACE_Box_Ammo";
 
@@ -55,7 +54,7 @@ _box AddMagazineCargoGlobal ["ACE_SpareBarrel",1];
 
 _box AddMagazineCargoGlobal ["UK3CB_BAF_762_100Rnd_T",5 + _mid];
 
-_box AddMagazineCargoGlobal ["ACE_10Rnd_338_300gr_HPBT_Mag",5 + _mid];
+_box AddMagazineCargoGlobal ["ACE_10Rnd_338_300gr_HPBT_Mag",10 + _mid];
 _box AddMagazineCargoGlobal ["ACE_10Rnd_338_API526_Mag",2 + _low];
 
 _box AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd",20 + _high];
@@ -74,7 +73,6 @@ _box AddMagazineCargoGlobal ["rhsusf_mag_17Rnd_9x19_JHP",8 + _low];
 _box AddMagazineCargoGlobal ["UK3CB_BAF_12G_Pellets",8];
 _box AddMagazineCargoGlobal ["UK3CB_BAF_12G_Slugs",8];
 
-_box AddMagazineCargoGlobal ["UK3CB_BAF_338_5Rnd",10];
 _box addItemCargoGlobal ["ACE_fieldDressing",5 + _mid];
 _box addItemCargoGlobal ["ACE_elasticBandage",5 + _mid];
 _box addItemCargoGlobal ["ACE_quikclot",5 + _mid];

@@ -14,7 +14,6 @@ if ((twc_ammotime-time) > 0) then {
 	} else {
 
 twc_ammotime=time+twc_ammotime_amount;
-publicVariable "twc_ammotime";
 twc_fim92spawned = 1;
 publicVariable "twc_fim92spawned";
 _boxClass = "ACE_Box_Ammo";
