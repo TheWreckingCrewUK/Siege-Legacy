@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=325;
+		nextID=346;
 	};
 	class MarkerIDProvider
 	{
@@ -16,7 +16,7 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5069.3262,280.93921,4867.7739};
+		pos[]={5110.9272,293.54523,4836.6831};
 		dir[]={-0.67839742,-0.53954357,0.49881127};
 		up[]={-0.43472418,0.84192777,0.3196421};
 		aside[]={0.59242272,7.6554716e-007,0.80570984};
@@ -16383,7 +16383,7 @@ class Mission
 			position[]={5037.042,269.707,4875.02};
 			name="twc_armourspawnpos";
 			type="Empty";
-			angle=94.201988;
+			angle=94.201981;
 			id=323;
 			atlOffset=-2.8726196;
 		};

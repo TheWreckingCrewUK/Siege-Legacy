@@ -25,10 +25,10 @@ TWC_Building_Style = "Med";
 //add in an object name and the game will create a location there and spawn enemies from it
 customlocations = [camp1, camp2, camp3, camp4, camp5];
 
-pointLimit = 40;
+pointLimit = 60;
 publicVariable "pointLimit";
 
-twc_difficulty = 0.4;
+twc_difficulty = 0.6;
 publicVariable "twc_difficulty";
 
 twc_is90 = 1;
