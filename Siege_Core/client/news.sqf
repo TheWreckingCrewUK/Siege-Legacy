@@ -18,7 +18,7 @@ _title  = "<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align=
  
  //secondary files for member and management news, not viewable on github
  //#include "membernews.sqf";
- #include "managementnews.sqf";
+ //#include "managementnews.sqf";
  
  _news = parsetext (_title + _text1 + _titlemem + _textmem + _titlemgmt + _textmgmt);
  
