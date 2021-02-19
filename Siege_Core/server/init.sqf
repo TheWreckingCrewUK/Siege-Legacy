@@ -34,11 +34,11 @@ publicVariable "twc_wdveh";
 };
 
 if(isNil "twc_hasaps") then{
-	twc_hasaps = ["rhs_t90a_tv", "rhs_t72be_tv"];
+	twc_hasaps = ["CUP_O_T90_RU", "CUP_O_T72_RU"];
 };
 
 if(isNil "twc_hasnoaps") then{
-	twc_hasnoaps = ["rhs_btr80a_msv", "rhs_btr80_msv", "rhs_bmp2d_msv", "rhs_bmp1_msv", "rhs_t80uk"];
+	twc_hasnoaps = ["CUP_O_BTR80_GREEN_RU", "CUP_O_BTR80_GREEN_RU", "CUP_O_BMP2_RU", "CUP_O_BMP2_RU", "CUP_O_T90_RU"];
 	publicVariable "twc_hasnoaps";
 };
 
@@ -94,7 +94,7 @@ publicVariable "twc_difficulty";
 
 	if (isNil "enemyTechnical") then {
 		if (twc_heavymode == 1) then {
-			enemyTechnical =["rhs_btr70_msv","rhs_bmp1_msv","rhs_t72ba_tv"];
+			enemyTechnical =["CUP_O_BTR60_Green_RU","CUP_O_BMP2_RU","CUP_O_T72_RU"];
 			publicVariable "enemyTechnical";} else {
 			enemyTechnical = ["CUP_O_LR_MG_TKM"];
 			publicVariable "enemyTechnical";}

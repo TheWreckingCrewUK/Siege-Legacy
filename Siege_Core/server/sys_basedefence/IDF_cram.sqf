@@ -80,7 +80,6 @@ _pos = getpos _shell;
 
 
 deletevehicle _shell;
-'rhs_ammo_ptb1500' createvehicle _pos;
 _complete = 1;
 
 		if (1 == 1) exitwith {

@@ -28,14 +28,6 @@ twc_difficulty = twc_difficulty + _diffincamount;
 publicVariable "twc_difficulty";
 
 _veh setvariable ["twc_diffincamount", _diffincamount, true];
-	
-	if (typeof _veh == "rhsusf_M1117_D") then {
-[
-	_veh,
-	["desert",1], 
-	["DUKE_Hide",1]
-] call BIS_fnc_initVehicle;
-};
 
 clearWeaponCargoGlobal _veh;
 /*clearBackpackCargoGlobal _veh;

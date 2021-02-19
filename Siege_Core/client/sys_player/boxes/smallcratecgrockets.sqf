@@ -31,9 +31,9 @@ clearBackpackCargoGlobal _box;
 clearMagazineCargoGlobal _box;
 clearitemCargoGlobal _box;
 
-_box AddMagazineCargoGlobal ["rhs_mag_maaws_HEDP",3];
-_box AddMagazineCargoGlobal ["rhs_mag_maaws_HEAT",3];
-_box AddMagazineCargoGlobal ["rhs_mag_maaws_HE",3];
+_box AddMagazineCargoGlobal ["CUP_MAAWS_HEDP_MDP",3];
+_box AddMagazineCargoGlobal ["CUP_MAAWS_HEAT_M",3];
+_box AddMagazineCargoGlobal ["CUP_MAAWS_HEDP_M",3];
 
 
 

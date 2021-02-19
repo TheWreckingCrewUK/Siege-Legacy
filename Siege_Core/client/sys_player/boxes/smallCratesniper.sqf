@@ -33,7 +33,7 @@ clearitemCargoGlobal _box;
 _box AddMagazineCargoGlobal ["ACE_10Rnd_338_300gr_HPBT_Mag",10 + _mid];
 _box AddMagazineCargoGlobal ["ACE_10Rnd_338_API526_Mag",2 + _low];
 
-_box AddMagazineCargoGlobal ["rhsusf_mag_17Rnd_9x19_JHP",10];
+_box AddMagazineCargoGlobal ["CUP_17Rnd_9x19_glock17",10];
 
 _box AddMagazineCargoGlobal ["UK3CB_BAF_762_L42A1_20Rnd_T",2];
 _box AddMagazineCargoGlobal ["UK3CB_BAF_762_L42A1_20Rnd",7];

@@ -154,10 +154,10 @@ if((typeOf player) in ["Modern_pol_commander","Modern_pol_subcommander", "Modern
 	_hUKaction3 = ["SpawnsmallUKCreate","Spawn Repair Kit","",{execvm "siege_core\client\sys_player\boxes\RepairKit.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_hUKaction3,true] call ace_interact_menu_fnc_addActionToClass;
 
-	_armouraction1 = ["spawnl111","Spawn HMMWV (M2)","",{["rhsusf_m1043_w_m2"] execvm "siege_core\client\sys_player\vehicles\spawnarmour_inf.sqf"},{(twc_maxenemy > 10) && (twc_maxenemy < 70) && (count units group player > 0)}] call ace_interact_menu_fnc_createAction;
+	_armouraction1 = ["spawnl111","Spawn HMMWV (M2)","",{["CUP_B_HMMWV_M2_USMC"] execvm "siege_core\client\sys_player\vehicles\spawnarmour_inf.sqf"},{(twc_maxenemy > 10) && (twc_maxenemy < 70) && (count units group player > 0)}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_armouraction1,true] call ace_interact_menu_fnc_addActionToClass;
 	
-	_armouraction1 = ["spawnl111","Spawn HMMWV (MK19)","",{["rhsusf_m1025_w_mk19"] execvm "siege_core\client\sys_player\vehicles\spawnarmour_inf.sqf"},{(twc_maxenemy >= 70) && (count units group player > 0)}] call ace_interact_menu_fnc_createAction;
+	_armouraction1 = ["spawnl111","Spawn HMMWV (MK19)","",{["CUP_B_HMMWV_MK19_USMC"] execvm "siege_core\client\sys_player\vehicles\spawnarmour_inf.sqf"},{(twc_maxenemy >= 70) && (count units group player > 0)}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_armouraction1,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_UKaction3 = ["spawn50","Spawn .50 Ammo","",{execvm "siege_core\client\sys_player\boxes\50calammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
@@ -235,10 +235,10 @@ if((typeOf player) in ["Modern_ger_commander","Modern_ger_subcommander","Modern_
 
 if((typeOf player) in ["twc_men_1990_us_w_SquadLeader","twc_men_1990_us_w_teamleader","twc_men_1990_us_d_SquadLeader","twc_men_1990_us_d_teamleader"])then{
 
-	_armouraction1 = ["spawnl111","Spawn HMMWV (M2)","",{["rhsusf_m1043_w_m2"] execvm "siege_core\client\sys_player\vehicles\spawnarmour_inf.sqf"},{(twc_maxenemy > 10) && (twc_maxenemy < 70) && (count units group player > 0)}] call ace_interact_menu_fnc_createAction;
+	_armouraction1 = ["spawnl111","Spawn HMMWV (M2)","",{["CUP_B_HMMWV_M2_USMC"] execvm "siege_core\client\sys_player\vehicles\spawnarmour_inf.sqf"},{(twc_maxenemy > 10) && (twc_maxenemy < 70) && (count units group player > 0)}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_armouraction1,true] call ace_interact_menu_fnc_addActionToClass;
 	
-	_armouraction1 = ["spawnl111","Spawn HMMWV (MK19)","",{["rhsusf_m1025_w_mk19"] execvm "siege_core\client\sys_player\vehicles\spawnarmour_inf.sqf"},{(twc_maxenemy >= 70) && (count units group player > 0)}] call ace_interact_menu_fnc_createAction;
+	_armouraction1 = ["spawnl111","Spawn HMMWV (MK19)","",{["CUP_B_HMMWV_MK19_USMC"] execvm "siege_core\client\sys_player\vehicles\spawnarmour_inf.sqf"},{(twc_maxenemy >= 70) && (count units group player > 0)}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_armouraction1,true] call ace_interact_menu_fnc_addActionToClass;
 
 	_hUKaction3 = ["SpawnsmallUKCreate","Spawn Repair Kit","",{execvm "siege_core\client\sys_player\boxes\RepairKit.sqf"},{true}] call ace_interact_menu_fnc_createAction;
@@ -279,10 +279,10 @@ if((typeOf player) in ["twc_men_1990_us_w_SquadLeader","twc_men_1990_us_w_teamle
 
 if((typeOf player) in ["Modern_USMC_Squadleader","Modern_USMC_Teamleader", "Modern_USMC_Squadleader_d","Modern_USMC_Teamleader_d"])then{
 
-	_armouraction1 = ["spawnl111","Spawn HMMWV (M2)","",{["rhsusf_m1043_w_m2"] execvm "siege_core\client\sys_player\vehicles\spawnarmour_inf.sqf"},{(twc_maxenemy > 10) && (twc_maxenemy < 70) && (count units group player > 0)}] call ace_interact_menu_fnc_createAction;
+	_armouraction1 = ["spawnl111","Spawn HMMWV (M2)","",{["CUP_B_HMMWV_M2_USMC"] execvm "siege_core\client\sys_player\vehicles\spawnarmour_inf.sqf"},{(twc_maxenemy > 10) && (twc_maxenemy < 70) && (count units group player > 0)}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_armouraction1,true] call ace_interact_menu_fnc_addActionToClass;
 	
-	_armouraction1 = ["spawnl111","Spawn HMMWV (MK19)","",{["rhsusf_m1025_w_mk19"] execvm "siege_core\client\sys_player\vehicles\spawnarmour_inf.sqf"},{(twc_maxenemy >= 70) && (count units group player > 0)}] call ace_interact_menu_fnc_createAction;
+	_armouraction1 = ["spawnl111","Spawn HMMWV (MK19)","",{["CUP_B_HMMWV_MK19_USMC"] execvm "siege_core\client\sys_player\vehicles\spawnarmour_inf.sqf"},{(twc_maxenemy >= 70) && (count units group player > 0)}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_armouraction1,true] call ace_interact_menu_fnc_addActionToClass;
 
 	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Javelin Launcher","",{execvm "siege_core\client\sys_player\boxes\smallcratejav.sqf"},{((count units group player) > 3) && ((missionnamespace getvariable ["twc_javspawned", 0]) == 0)}] call ace_interact_menu_fnc_createAction;

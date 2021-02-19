@@ -20,46 +20,6 @@ if (twc_wdveh == 1) then {
 	};
 };
 
-
-
-if (typeof _veh == "RHS_M2A3_BUSKIII") then {
-
-if (twc_wdveh == 1) then {
-	[
-		_veh,
-		["standard",1], 
-		["DUKE_Hide",1,"IFF_Panels_Hide",0]
-	] call BIS_fnc_initVehicle;
-	} else {
-	[
-		_veh,
-		["Desert",1], 
-		["DUKE_Hide",1,"IFF_Panels_Hide",0]
-	] call BIS_fnc_initVehicle;
-	};
-};
-
-
-
-if (typeof _veh == "RHS_M2A2_wd") then {
-
-if (twc_wdveh == 1) then {
-	[
-		_veh,
-		["standard",1], 
-		["DUKE_Hide",1,"IFF_Panels_Hide",0]
-	] call BIS_fnc_initVehicle;
-	} else {
-	[
-		_veh,
-		["Desert",1], 
-		["DUKE_Hide",1,"IFF_Panels_Hide",0]
-	] call BIS_fnc_initVehicle;
-	};
-};
-
-
-
 if (typeof _veh == "CUP_B_Challenger2_2CW_BAF") then {
 
 if (twc_wdveh == 1) then {
@@ -102,47 +62,6 @@ if (typeof _veh == "CUP_B_MCV80_GB_W_SLAT") then {
 ] call BIS_fnc_initVehicle;
 };
 };
-
-
-
-
-if (typeof _veh == "rhsusf_m1a2sep1tuskid_usarmy") then {
-
-if (twc_wdveh == 1) then {
-	[
-	_veh,
-	["woodland",1], 
-	["IFF_Panels_Hide",0,"Miles_Hide",1,"showCamonetTurret",0,"showCamonetHull",0]
-	] call BIS_fnc_initVehicle;
-	} else {
-
-[
-	_veh,
-	["desert",1], 
-	["IFF_Panels_Hide",0,"Miles_Hide",1,"showCamonetTurret",0,"showCamonetHull",0]
-	] call BIS_fnc_initVehicle;
-	};
-};
-
-if (typeof _veh == "rhsusf_m1a1aimwd_usarmy") then {
-
-if (twc_wdveh == 1) then {
-	[
-	_veh,
-	["woodland",1], 
-	["IFF_Panels_Hide",1,"Miles_Hide",1,"showCamonetTurret",0,"showCamonetHull",0]
-	] call BIS_fnc_initVehicle;
-	} else {
-
-[
-	_veh,
-	["desert",1], 
-	["IFF_Panels_Hide",1,"Miles_Hide",1,"showCamonetTurret",0,"showCamonetHull",0]
-	] call BIS_fnc_initVehicle;
-	};
-};
-
-
 
 
 

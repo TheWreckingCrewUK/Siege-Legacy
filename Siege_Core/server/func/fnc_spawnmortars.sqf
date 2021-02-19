@@ -28,9 +28,9 @@ publicvariable "mortarcount";
 //Spawning mortar
 _spawnPos = [_pos,[100,100], random 360, 0, [0,100]] call SHK_pos;
 //for "_i" from 1 to _total do{
-_mortartruck = "RHS_Ural_Open_MSV_01" createvehicle _spawnPos;
+_mortartruck = "CUP_C_Ural_Open_Civ_03" createvehicle _spawnPos;
 
-_mortar = "Rhs_2b14_82mm_ins" createvehicle _spawnPos;
+_mortar = "CUP_O_2b14_82mm_RU" createvehicle _spawnPos;
 _mortar attachto [_mortartruck, [-0.053,-2.7,0.6]];
 
 _box = "ACE_Box_82mm_Mo_HE" createvehicle _spawnPos;

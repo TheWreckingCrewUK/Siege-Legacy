@@ -32,7 +32,7 @@ clearMagazineCargoGlobal _box;
 clearitemCargoGlobal _box;
 
 //Weapons
-_box AddMagazineCargoGlobal ["rhs_fim92_mag",3 + _low];
+
 
 
 

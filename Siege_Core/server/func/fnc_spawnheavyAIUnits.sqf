@@ -56,7 +56,7 @@ if(isNil "twc_isspawning") then{
 };
 
 if(isNil "twc_3manvehs") then{
-	twc_3manvehs = ["rhs_t80um","rhs_t90a_tv","rhs_t72be_tv","rhs_t72ba_tv"];
+	twc_3manvehs = ["CUP_O_T90_RU","CUP_O_T90_RU","CUP_O_T72_RU","CUP_O_T72_RU"];
 };
 
 /* removing artillery for the moment until I stop them firing on people at really bad times

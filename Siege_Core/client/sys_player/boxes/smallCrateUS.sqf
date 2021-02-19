@@ -24,15 +24,12 @@ clearMagazineCargoGlobal _box;
 clearitemCargoGlobal _box;
 
 //Weapons
-_box AddWeaponCargoGlobal ["rhs_weap_M136",2];
-_box AddWeaponCargoGlobal ["twc_L5A4_white",1 + _low];
-_box AddWeaponCargoGlobal ["twc_L5A4_red",1 + _low];
-_box AddWeaponCargoGlobal ["twc_L5A4_green",1 + _low];
+_box AddWeaponCargoGlobal ["CUP_launch_M136",2];
 
 
 if (twc_heavymode == 1) then {
 
-_box AddWeaponCargoGlobal ["rhs_weap_M136",1 + _low];
+_box AddWeaponCargoGlobal ["CUP_launch_M136",1 + _low];
 
 };
 
@@ -50,11 +47,11 @@ _box AddMagazineCargoGlobal ["UGL_FlareWhite_F",5];
 _box AddMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",20];
 _box AddMagazineCargoGlobal ["1Rnd_Smoke_Grenade_shell",5];
 
-_box AddMagazineCargoGlobal ["rhsusf_200Rnd_556x45_soft_pouch",5 + _low];
+_box AddMagazineCargoGlobal ["CUP_200Rnd_TE4_Red_Tracer_556x45_M249",5 + _low];
 
-_box AddMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m118_special_Mag",5];
+_box AddMagazineCargoGlobal ["CUP_20Rnd_762x51_DMR",5];
 
-_box AddMagazineCargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP",10];
+_box AddMagazineCargoGlobal ["CUP_5Rnd_762x51_M24",10];
 _box AddMagazineCargoGlobal ["CUP_8Rnd_B_Beneli_74Pellets",5];
 _box AddMagazineCargoGlobal ["CUP_8Rnd_B_Beneli_74Slug",5];
 

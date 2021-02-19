@@ -2,19 +2,6 @@
 
 */
 
-if (_heli == "rhsusf_m1a2sep1tuskid_usarmy") then {
-
-if (twc_wdveh == 1) then {
-_heli = "rhsusf_m1a2sep1tuskiwd_usarmy";
-};
-};
-
-if (_heli == "rhsusf_m1a2sep1tuskiid_usarmy") then {
-
-if (twc_wdveh == 1) then {
-_heli = "rhsusf_m1a2sep1tuskiiwd_usarmy";
-};
-};
 
 if (_heli == "UK3CB_BAF_LandRover_WMIK_HMG_Green_B") then {
 _diffincamount = 0.4;
@@ -30,17 +17,17 @@ _heli = "UK3CB_BAF_LandRover_WMIK_GMG_Sand_A";
 };
 };
 
-if (_heli == "rhsusf_m1025_w_m2") then {
+if (_heli == "CUP_B_HMMWV_M2_USMC") then {
 
 if (twc_wdveh == 0) then {
-_heli = "rhsusf_m1025_d_m2";
+_heli = "CUP_B_HMMWV_M2_USA";
 };
 };
 
-if (_heli == "rhsusf_m1025_w_mk19") then {
+if (_heli == "CUP_B_HMMWV_MK19_USMC") then {
 _diffincamount = 0.7;
 if (twc_wdveh == 0) then {
-_heli = "rhsusf_m1025_d_Mk19";
+_heli = "CUP_B_HMMWV_MK19_USA";
 };
 };
 
@@ -66,10 +53,10 @@ _heli = "ukcw_cvrt_Scim_w";
 };
 
 
-if ( _heli == "rhsusf_m113d_usarmy_M240") then {
+if ( _heli == "CUP_B_M113_desert_USA") then {
 
 if (twc_wdveh == 1) then {
-_heli = "rhsusf_m113_usarmy_M240";
+_heli = "CUP_B_M113_USA";
 };
 };
 

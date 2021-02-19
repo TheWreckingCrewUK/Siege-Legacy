@@ -32,14 +32,14 @@ clearMagazineCargoGlobal _box;
 clearitemCargoGlobal _box;
 
 //Weapons
-_box AddWeaponCargoGlobal ["rhs_weap_m72a7",2];
+_box AddWeaponCargoGlobal ["CUP_launch_M72A6",2];
 _box AddWeaponCargoGlobal ["twc_L5A4_white",1 + _low];
 _box AddWeaponCargoGlobal ["twc_L5A4_red",1 + _low];
 _box AddWeaponCargoGlobal ["twc_L5A4_green",1 + _low];
 
 if (twc_heavymode == 1) then {
 
-_box AddWeaponCargoGlobal ["rhs_weap_m72a7",1 + _low];
+_box AddWeaponCargoGlobal ["CUP_launch_M72A6",1 + _low];
 
 };
 
@@ -69,7 +69,7 @@ _box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd_T",5 + _mid];
 _box AddMagazineCargoGlobal ["UK3CB_BAF_762_L42A1_20Rnd_T",2 + _low];
 _box AddMagazineCargoGlobal ["UK3CB_BAF_762_L42A1_20Rnd",5 + _low];
 
-_box AddMagazineCargoGlobal ["rhsusf_mag_17Rnd_9x19_JHP",8 + _low];
+_box AddMagazineCargoGlobal ["CUP_17Rnd_9x19_glock17",8 + _low];
 _box AddMagazineCargoGlobal ["UK3CB_BAF_12G_Pellets",8];
 _box AddMagazineCargoGlobal ["UK3CB_BAF_12G_Slugs",8];
 
@@ -89,7 +89,7 @@ _box addItemCargoGlobal ["SmokeShellRed",2];
 
 _box addItemCargoGlobal ["ACRE_PRC343",2 + _mid];
 _box addItemCargoGlobal ["ACE_EarPlugs",2 + _mid];
-_box addItemCargoGlobal ["rhsusf_ANPVS_14",2 + _mid];
+_box addItemCargoGlobal ["CUP_NVG_PVS14",2 + _mid];
 
 [player, _box] call ace_cargo_fnc_startLoadIn;
 };

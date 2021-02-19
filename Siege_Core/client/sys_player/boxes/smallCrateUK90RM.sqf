@@ -29,7 +29,7 @@ clearMagazineCargoGlobal _box;
 clearitemCargoGlobal _box;
 
 //Weapons
-_box AddWeaponCargoGlobal ["rhs_weap_m72a7",2];
+_box AddWeaponCargoGlobal ["CUP_launch_M72A6",2];
 
 
 //supplies
@@ -54,7 +54,7 @@ _box addItemCargoGlobal ["SmokeShellRed",2];
 
 _box addItemCargoGlobal ["ACRE_PRC343",2 + _mid];
 _box addItemCargoGlobal ["ACE_EarPlugs",2 + _mid];
-_box addItemCargoGlobal ["rhsusf_ANPVS_14",2 + _mid];
+_box addItemCargoGlobal ["CUP_NVG_PVS14",2 + _mid];
 
 [player, _box] call ace_cargo_fnc_startLoadIn;
 }

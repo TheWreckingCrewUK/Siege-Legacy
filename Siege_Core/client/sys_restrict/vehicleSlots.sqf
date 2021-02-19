@@ -22,7 +22,7 @@ _list=[
 		]],5
 	],
 	
-		["rhsusf_m1a2sep1wd_usarmy",[ 
+		["CUP_B_M1A2_TUSK_MG_US_Army",[ 
 		["driver", 
 			["Modern_USMC_VehicleCrew"]
 		],
@@ -33,7 +33,7 @@ _list=[
 			["Modern_USMC_VehicleCommander"]
 		]],0
 	],
-		["rhsusf_m1a2sep1tuskiid_usarmy",[ 
+		["CUP_B_M1A2_TUSK_MG_US_Army",[ 
 		["driver", 
 			["Modern_British_VehicleCrew"]
 		],
@@ -44,7 +44,7 @@ _list=[
 			["Modern_British_VehicleCommander"]
 		]],0
 	],
-		["rhsusf_m1a2sep1tuskiiwd_usarmy",[ 
+		["CUP_B_M1A2_TUSK_MG_US_Army",[ 
 		["driver", 
 			["Modern_British_VehicleCrew"]
 		],
@@ -55,7 +55,7 @@ _list=[
 			["Modern_British_VehicleCommander"]
 		]],0
 	],
-		["rhsusf_m1a2sep1d_usarmy",[ 
+		["CUP_B_M1A2_TUSK_MG_DES_US_Army",[ 
 		["driver", 
 			["Modern_USMC_VehicleCrew"]
 		],
@@ -66,7 +66,7 @@ _list=[
 			["Modern_USMC_VehicleCommander"]
 		]],12
 	],
-		["rhsusf_m1a1aimwd_usarmy",[ 
+		["CUP_B_M1A1_Woodland_US_Army",[ 
 		["driver", 
 			["2000_British_Vehicle_Crew"]
 		],
@@ -77,31 +77,23 @@ _list=[
 			["2000_British_Vehicle_Commander"]
 		]],1
 	],
-	
-		["rhsusf_M1117_D",[ 
-		["driver", 
-			["Modern_British_VehicleCrew","Modern_British_VehicleCommander"]
-		],["gunner", 
-			["Modern_British_VehicleCrew","Modern_British_VehicleCommander"]
-		]],0
-	],
-		["rhsusf_m113d_usarmy_MK19",[ 
+		["CUP_B_M113_desert_USA",[ 
 		["driver", 
 			["Modern_USMC_VehicleCrew","Modern_USMC_VehicleCommander"]
 		]],6
 	],
-			["rhsusf_m113d_usarmy",[ 
+			["CUP_B_M113_desert_USA",[ 
 		["driver", 
 			["Modern_USMC_VehicleCrew","Modern_USMC_VehicleCommander"]
 		]],0
 	],
 		
-		["rhsusf_m113_usarmy_MK19",[ 
+		["CUP_B_M113_USA",[ 
 		["driver", 
 			["Modern_USMC_VehicleCrew","Modern_USMC_VehicleCommander"]
 		]],0
 	],
-			["rhsusf_m113_usarmy",[ 
+			["CUP_B_M113_USA",[ 
 		["driver", 
 			["Modern_USMC_VehicleCrew","Modern_USMC_VehicleCommander"]
 		]],0
@@ -130,7 +122,7 @@ _list=[
 			["Modern_British_VehicleCommander","2000_British_Vehicle_Commander"]
 		]],0
 	],	
-			["RHS_M2A3_BUSKIII",[ 
+			["CUP_B_M2A3Bradley_USA_W",[ 
 		["driver", 
 			["Modern_British_VehicleCrew"]
 		],
@@ -193,13 +185,13 @@ _list=[
 		]],0
 	],	
 	
-		["rhsusf_m113d_usarmy_M240",[ 
+		["CUP_B_M113_desert_USA",[ 
 		["driver", 
 			["Modern_British_VehicleCrew","Modern_British_VehicleCommander"]
 		]],0
 	],
 	
-		["rhsusf_m113_usarmy_M240",[ 
+		["CUP_B_M113_USA",[ 
 		["driver", 
 			["Modern_British_VehicleCrew","Modern_British_VehicleCommander"]
 		]],0
@@ -217,13 +209,13 @@ _list=[
 		]],0
 	],
 		
-		["rhsusf_m113d_usarmy_medical",[ 
+		["CUP_B_M113_desert_USA_medical",[ 
 		["driver", 
 			["Modern_British_VehicleCrew","Modern_British_VehicleCommander","Modern_USMC_VehicleCrew","Modern_USMC_VehicleCommander","Modern_USMC_Medic","Modern_British_Medic"]
 		]]
 	],
 		
-		["rhsusf_m113_usarmy_medical",[ 
+		["CUP_B_M113_USA_medical",[ 
 		["driver", 
 			["Modern_British_VehicleCrew","Modern_British_VehicleCommander","Modern_USMC_VehicleCrew","Modern_USMC_VehicleCommander","Modern_USMC_Medic","Modern_British_Medic"]
 		]]
@@ -241,7 +233,7 @@ _list=[
 		]],0
 	],
 	
-		["RHS_M2A2_wd",[ 
+		["CUP_B_M2Bradley_USA_W",[ 
 		["driver", 
 			["2000_British_Vehicle_Crew"]
 		],
@@ -313,7 +305,7 @@ _list=[
 	],
 	
 
-		["RHS_AH64D",[ 
+		["UK3CB_BAF_Apache_AH1_DynamicLoadout",[ 
 		["driver", 
 			["Modern_British_HeliPilot"]
 		],
@@ -322,7 +314,7 @@ _list=[
 		]],7
 	],
 
-		["RHS_AH1Z",[ 
+		["CUP_B_AH1Z_Dynamic_USMC",[ 
 		["driver", 
 			["Modern_British_HeliPilot"]
 		],
@@ -338,7 +330,7 @@ _list=[
 			["Modern_British_crewchief"]
 		]],3
 	],	
-		["rhsgref_cdf_b_Mi24D_Early",[ 
+		["CUP_B_Mi24_D_Dynamic_CDF",[ 
 		["driver", 
 			["Modern_British_HeliPilot"]
 		],
@@ -346,7 +338,7 @@ _list=[
 			["Modern_British_crewchief"]
 		]],3
 	],	
-		["rhsgref_cdf_Mi24D_Early",[ 
+		["CUP_B_Mi24_D_Dynamic_CDF",[ 
 		["driver", 
 			["Modern_British_HeliPilot"]
 		],
@@ -390,7 +382,7 @@ _list=[
 			["Modern_British_crewchief","Modern_British_MERT_HeliPilot"]
 		]],3
 	],	
-		["RHS_UH1Y_d",[ 
+		["CUP_B_UH1Y_UNA_USMC",[ 
 		["driver", 
 			["Modern_British_HeliPilot"]
 		],
@@ -407,7 +399,7 @@ _list=[
 		]],3
 	],	
 	
-		["RHS_UH60M",[ 
+		["CUP_B_UH60M_US",[ 
 		["driver", 
 			["Modern_British_HeliPilot","Modern_British_MERT_HeliPilot"]
 		],
@@ -482,7 +474,7 @@ _list=[
 ;
 {twc_restrictedVehicleSlots pushback _x} foreach _list;
 
-twc_fullvehicles = ["ukcw_cvrt_Scim_w", "ukcw_cvrt_Scim_d", "CUP_B_MCV80_GB_D_SLAT", "CUP_B_MCV80_GB_W_SLAT", "RHS_AH64D", "RHS_AH1Z", "CUP_B_LAV25_desert_USMC", "CUP_B_LAV25_USMC", "CUP_B_M1130_CV_M2_Woodland_Slat","CUP_B_M1126_ICV_M2_Woodland_Slat", "CUP_B_M1130_CV_M2_Desert_Slat", "CUP_B_AAV_USMC", "RHS_M2A3_BUSKIII", "rhsusf_m1a2sep1tuskiid_usarmy","rhsusf_m1a2sep1tuskiiwd_usarmy", "rhsusf_M1117_D"];
+twc_fullvehicles = ["ukcw_cvrt_Scim_w", "ukcw_cvrt_Scim_d", "CUP_B_MCV80_GB_D_SLAT", "CUP_B_MCV80_GB_W_SLAT", "UK3CB_BAF_Apache_AH1_DynamicLoadout", "CUP_B_AH1Z_Dynamic_USMC", "CUP_B_LAV25_desert_USMC", "CUP_B_LAV25_USMC", "CUP_B_M1130_CV_M2_Woodland_Slat","CUP_B_M1126_ICV_M2_Woodland_Slat", "CUP_B_M1130_CV_M2_Desert_Slat", "CUP_B_AAV_USMC", "CUP_B_M2A3Bradley_USA_W", "CUP_B_M1A2_TUSK_MG_US_Army","CUP_B_M1A2_TUSK_MG_US_Army"];
 
 
 TWC_fnc_notAllowedInSeat = {

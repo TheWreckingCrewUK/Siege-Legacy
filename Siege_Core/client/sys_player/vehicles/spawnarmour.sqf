@@ -19,15 +19,6 @@ _veh = _heli createvehicle _spawnpos;
 twc_armourcount = twc_armourcount +1;
 publicVariable "twc_armourcount";
 
-	
-	if (typeof _veh == "rhsusf_M1117_D") then {
-[
-	_veh,
-	["desert",1], 
-	["DUKE_Hide",1]
-] call BIS_fnc_initVehicle;
-};
-
 clearWeaponCargoGlobal _veh;
 clearBackpackCargoGlobal _veh;
 clearMagazineCargoGlobal _veh;

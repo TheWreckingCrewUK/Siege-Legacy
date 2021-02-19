@@ -35,15 +35,15 @@ clearitemCargoGlobal _box;
 //supplies
 
 
-_box AddMagazineCargoGlobal ["rhs_rpg7_OG7V_mag",3];
-_box AddMagazineCargoGlobal ["rhs_rpg7_PG7V_mag",2];
+_box AddMagazineCargoGlobal ["CUP_OG7_M",3];
+_box AddMagazineCargoGlobal ["CUP_PG7V_M",2];
 
-_box AddMagazineCargoGlobal ["rhs_10Rnd_762x54mmR_7N1",7 + _low];
+_box AddMagazineCargoGlobal ["CUP_10Rnd_762x54_SVD_M",7 + _low];
 
-_box AddMagazineCargoGlobal ["rhs_30Rnd_762x39mm",20 + _high];
-_box AddMagazineCargoGlobal ["rhs_30Rnd_762x39mm_tracer",5 + _mid];
+_box AddMagazineCargoGlobal ["CUP_30Rnd_762x39_AK47_M",20 + _high];
+_box AddMagazineCargoGlobal ["CUP_30Rnd_762x39_AK47_M",5 + _mid];
 
-_box AddMagazineCargoGlobal ["rhs_100Rnd_762x54mmR_green",5 + _low];
+_box AddMagazineCargoGlobal ["CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Red_M",5 + _low];
 
 _box AddMagazineCargoGlobal ["ACE_SpareBarrel",1];
 

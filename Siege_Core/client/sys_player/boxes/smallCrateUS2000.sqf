@@ -48,14 +48,14 @@ _box AddMagazineCargoGlobal ["twc_l5a4_g",4 + _low];
 
 _box AddMagazineCargoGlobal ["ACE_SpareBarrel",1];
 
-_box AddMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855_Stanag",20 + _high];
-_box AddMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",5 + _mid];
+_box AddMagazineCargoGlobal ["30Rnd_556x45_Stanag",20 + _high];
+_box AddMagazineCargoGlobal ["30Rnd_556x45_Stanag_Tracer_Red",5 + _mid];
 
 _box AddMagazineCargoGlobal ["UGL_FlareWhite_F",5];
 _box AddMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",10];
 _box AddMagazineCargoGlobal ["1Rnd_Smoke_Grenade_shell",5];
 
-_box AddMagazineCargoGlobal ["rhs_200rnd_556x45_T_SAW",6 + _mid];
+_box AddMagazineCargoGlobal ["CUP_200Rnd_TE4_Red_Tracer_556x45_M249",6 + _mid];
 
 _box addItemCargoGlobal ["ACE_fieldDressing",5 + _mid];
 _box addItemCargoGlobal ["ACE_elasticBandage",5 + _mid];
@@ -73,7 +73,7 @@ _box addItemCargoGlobal ["SmokeShellRed",2];
 
 _box addItemCargoGlobal ["ACRE_PRC148",2 + _mid];
 _box addItemCargoGlobal ["ACE_EarPlugs",2 + _mid];
-_box addItemCargoGlobal ["rhsusf_ANPVS_14",2 + _mid];
+_box addItemCargoGlobal ["CUP_NVG_PVS14",2 + _mid];
 
 [player, _box] call ace_cargo_fnc_startLoadIn;
 

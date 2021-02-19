@@ -33,8 +33,8 @@ clearMagazineCargoGlobal _box;
 clearitemCargoGlobal _box;
 
 //Weapons
-_box AddWeaponCargoGlobal ["rhs_weap_fim92",1];
-_box AddMagazineCargoGlobal ["rhs_fim92_mag",2];
+_box AddWeaponCargoGlobal ["CUP_launch_FIM92Stinger",1];
+
 
 
 
