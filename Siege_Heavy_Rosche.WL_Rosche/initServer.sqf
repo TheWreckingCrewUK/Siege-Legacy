@@ -29,7 +29,7 @@ customlocations = [camp1, camp2, camp3];
 
 
 mortarcount = (random 6);
-enemyTechnical =["rhs_btr80a_vdv", "rhs_btr80a_vdv", "rhs_bmp2d_msv", "rhs_btr80a_vdv", "rhs_btr80a_vdv", "rhs_bmp2d_msv", "rhs_t72be_tv", "rhs_t90a_tv", "rhs_bmp2d_msv", "rhs_t72be_tv", "rhs_t90a_tv", "RHS_Mi8MTV3_heavy_vvsc", "rhs_mi28n_vvsc", "RHS_Su25SM_vvsc"];
+enemyTechnical =["CUP_O_BTR80A_GREEN_RU", "CUP_O_BTR80A_GREEN_RU", "CUP_O_BMP2_RU", "CUP_O_BTR80A_GREEN_RU", "CUP_O_BTR80A_GREEN_RU", "CUP_O_BMP2_RU", "CUP_O_T72_RU", "CUP_O_T90_RU", "CUP_O_BMP2_RU", "CUP_O_T72_RU", "CUP_O_T90_RU", "CUP_O_Mi8AMT_RU", "CUP_O_Ka52_RU", "CUP_O_Su25_Dyn_RU"];
 
 pointLimit = 40;
 publicVariable "pointLimit";
@@ -77,9 +77,9 @@ paradropVehicleWhitelist = ["CUP_B_C130J_GB", "CUP_B_C130J_Cargo_GB"];
 
 cacheBoxType = "Box_FIA_Wps_F";
 
-townSpawn = ["rhs_msv_sergeant","rhs_msv_machinegunner","rhs_msv_rifleman","rhs_msv_rifleman","rhs_msv_rifleman","rhs_msv_machinegunner_assistant","rhs_msv_LAT"];
+townSpawn = ["CUP_O_RU_Soldier_SL_EMR","CUP_O_RU_Soldier_MG_EMR","CUP_O_RU_Soldier_EMR","CUP_O_RU_Soldier_EMR","CUP_O_RU_Soldier_EMR","CUP_O_RU_Soldier_MG_EMR_assistant","CUP_O_RU_Soldier_LAT_EMR"];
 
-squad = [(configfile >> "CfgGroups" >> "East" >> "rhs_faction_msv" >> "rhs_group_rus_msv_infantry" >> "rhs_group_rus_msv_infantry_squad"),(configfile >> "CfgGroups" >> "East" >> "rhs_faction_msv" >> "rhs_group_rus_msv_infantry" >> "rhs_group_rus_msv_infantry_section_AT"),(configfile >> "CfgGroups" >> "East" >> "rhs_faction_msv" >> "rhs_group_rus_msv_infantry" >> "rhs_group_rus_msv_infantry_section_MG")];
+squad = [(configfile >> "CfgGroups" >> "East" >> "CUP_O_RU" >> "Infantry_EMR" >> "CUP_O_RU_InfSquad_EMR"),(configfile >> "CfgGroups" >> "East" >> "CUP_O_RU" >> "Infantry_EMR" >> "CUP_O_RU_InfSection_AT_EMR"),(configfile >> "CfgGroups" >> "East" >> "CUP_O_RU" >> "Infantry_EMR" >> "CUP_O_RU_InfSection_MG_EMR")];
 
 townSquadWave = ["twc_greek_officer","twc_greek_rifleman","twc_greek_rifleman_fal","twc_greek_ar","twc_greek_rifleman_at","twc_greek_grenadier","twc_greek_rifleman","twc_greek_mg","twc_greek_officer","twc_greek_rifleman","twc_greek_rifleman_fal","twc_greek_ar","twc_greek_rifleman_fal","twc_greek_grenadier","twc_greek_rifleman","twc_greek_mg","twc_greek_officer","twc_greek_rifleman","twc_greek_rifleman_2","twc_greek_ar","twc_greek_at2","twc_greek_grenadier","twc_greek_rifleman","twc_greek_mg","twc_greek_officer","twc_greek_rifleman","twc_greek_smg","twc_greek_ar","twc_greek_rifleman_at","twc_greek_grenadier","twc_greek_rifleman","twc_greek_mg","twc_greek_officer","twc_greek_rifleman","twc_greek_rifleman_2","twc_greek_ar","twc_greek_at2","twc_greek_grenadier","twc_greek_rifleman","twc_greek_mg","twc_greek_officer","twc_greek_rifleman","twc_greek_smg","twc_greek_ar","twc_greek_rifleman_at","twc_greek_grenadier","twc_greek_rifleman","twc_greek_mg","twc_greek_officer","twc_greek_rifleman","twc_greek_rifleman_2","twc_greek_ar","twc_greek_rifleman_at","twc_greek_farmer","twc_greek_rifleman","twc_greek_mg","twc_greek_farmer","twc_greek_rifleman","twc_greek_rifleman_2","twc_greek_ar","twc_greek_farmer","twc_greek_grenadier","twc_greek_rifleman","twc_greek_mg","twc_greek_officer","twc_greek_rifleman","twc_greek_smg","twc_greek_ar","twc_greek_at2","twc_greek_grenadier","twc_greek_rifleman","twc_greek_mg","twc_greek_farmer","twc_greek_rifleman","twc_greek_rifleman_2","twc_greek_ar","twc_greek_rifleman_at","twc_greek_grenadier","twc_greek_rifleman","twc_greek_mg","twc_greek_officer","twc_greek_rifleman","twc_greek_rifleman_2","twc_greek_ar","twc_greek_rifleman_at","twc_greek_grenadier","twc_greek_rifleman","twc_greek_mg","twc_greek_officer","twc_greek_rifleman","twc_greek_rifleman_2","twc_greek_ar","twc_greek_rifleman_at","twc_greek_grenadier","twc_greek_rifleman","twc_greek_mg","twc_greek_officer","twc_greek_rifleman","twc_greek_rifleman_2","twc_greek_ar","twc_greek_rifleman_at","twc_greek_grenadier","twc_greek_rifleman","twc_greek_mg"];
 

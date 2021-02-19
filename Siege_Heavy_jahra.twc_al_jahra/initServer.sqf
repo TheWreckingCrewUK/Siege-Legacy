@@ -17,7 +17,7 @@ technicals = 30 + random 2;
 twc_wdveh = 0;
 publicVariable "twc_wdveh";
 
-enemyTechnical =["rhs_btr80a_msv", "rhs_bmp2d_msv", "rhs_t72be_tv", "rhs_t80um", "rhs_t90a_tv"];
+enemyTechnical =["CUP_O_BTR80A_GREEN_RU", "CUP_O_BMP2_RU", "CUP_O_T72_RU", "CUP_O_T90_RU", "CUP_O_T90_RU"];
 
 twc_surrenderVote = false;
 
@@ -74,7 +74,7 @@ paradropVehicleWhitelist = ["CUP_B_C130J_GB", "CUP_B_C130J_Cargo_GB"];
 
 cacheBoxType = "Box_FIA_Wps_F";
 
-townSpawn = ["rhs_msv_emr_sergeant","rhs_msv_emr_efreitor","rhs_msv_emr_grenadier_rpg","rhs_msv_emr_strelok_rpg_assist","rhs_msv_emr_machinegunner","rhs_msv_emr_machinegunner_assistant","rhs_msv_emr_marksman","rhs_msv_emr_sergeant"];
+townSpawn = ["CUP_O_RU_Soldier_SL_EMR","CUP_O_RU_Soldier_GL_EMR","CUP_O_RU_Soldier_AT_EMR","CUP_O_RU_Soldier_EMR","CUP_O_RU_Soldier_MG_EMR","CUP_O_RU_Soldier_MG_EMR_assistant","CUP_O_RU_Soldier_Marksman_EMR","CUP_O_RU_Soldier_SL_EMR"];
 
 townSquadWave = ["CUP_O_TK_INS_Soldier_AR","Tak_twc_ins_Men_R1","CUP_O_TK_INS_Soldier","CUP_O_TK_INS_Soldier_MG","Tak_twc_ins_Men_R2","Tak_twc_ins_Men_AR1","Tak_twc_ins_Men_MG1","Tak_twc_ins_Men_R3","Tak_twc_ins_Men_R3","Tak_twc_ins_Men_a2","CUP_O_TK_INS_Soldier_TL","CUP_O_TK_INS_Soldier_AR","Tak_twc_ins_Men_R1","CUP_O_TK_INS_Soldier","CUP_O_TK_INS_Soldier_MG","Tak_twc_ins_Men_R2","Tak_twc_ins_Men_AR1","Tak_twc_ins_Men_MG1","Tak_twc_ins_Men_R3","Tak_twc_ins_Men_R3","Tak_twc_ins_Men_a2","Tak_twc_ins_Men_a1","CUP_O_TK_INS_Soldier_TL","CUP_O_TK_INS_Soldier_AR","Tak_twc_ins_Men_R1","CUP_O_TK_INS_Soldier","CUP_O_TK_INS_Soldier_MG","Tak_twc_ins_Men_R2","Tak_twc_ins_Men_AR1","Tak_twc_ins_Men_MG1","Tak_twc_ins_Men_R3","Tak_twc_ins_Men_R3","Tak_twc_ins_Men_a2","CUP_O_TK_INS_Soldier_TL","CUP_O_TK_INS_Soldier_AR","Tak_twc_ins_Men_R1","CUP_O_TK_INS_Soldier","CUP_O_TK_INS_Soldier_MG","Tak_twc_ins_Men_R2","Tak_twc_ins_Men_AR1","Tak_twc_ins_Men_MG1","Tak_twc_ins_Men_R3","Tak_twc_ins_Men_R3","Tak_twc_ins_Men_a2","Tak_twc_ins_Men_a1","CUP_O_TK_INS_Soldier_TL","Tak_twc_ins_Men_RPG1","CUP_O_TK_INS_Soldier_AT"];
 
